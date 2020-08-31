@@ -1,0 +1,236 @@
+---
+title: "in_class_week_01"
+author: "Sean Mussenden"
+date: "8/30/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries and settings
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(tidycensus)
+library(maps)
+library(mapview)
+library(scales)
+library(mapview)
+library(ggthemes)
+library(sf)
+library(leaflet)
+library(leafpop)
+library(leafem)
+#library(raster)
+library(tigris)
+library(DT)
+library(moderndive)
+
+# Define API Key
+census_api_key("549950d36c22ff16455fe196bbbd01d63cfbe6cf")
+```
+
+
+## Load Data
+
+```{r}
+# Read in data from the New York Times county-by-county COVID tracking from GitHub
+# Read in on Sunday, August 30
+### covid_county <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/live/us-counties.csv") 
+
+# Write to CSV
+### write_csv(covid_county, "covid_county_nyt.csv") 
+
+# Read in nyt covid data as of Sunday, August 30
+covid_county <- read_csv("covid_county_nyt.csv")
+
+# Clean it to to keep only columns I care about
+covid_county <- covid_county %>%
+  rename(fips_code = fips) %>%
+  dplyr::select(fips_code, county, state, cases, deaths) 
+
+# Pull county population data from the census
+population_county <- get_acs(geography="county", variables=c("B01001_001"),geometry = FALSE, year=2018) 
+
+# Get percentage white
+county_pct_white <- get_acs(geography = "county", variables = "B02001_002", summary_var = "B01001_001", year = 2018) %>%
+  dplyr::select(geoid = GEOID, white_pop = estimate, total_pop = summary_est) %>%
+  mutate(fips_code = as.character(geoid)) %>%
+  mutate(pop_pct_white = round(white_pop/total_pop*100,2)) %>%
+  mutate(majority_flag = case_when(pop_pct_white  >= 50 ~ "majority_white",
+                                   TRUE~"majority_nonwhite")) %>%
+  dplyr::select(-geoid, -white_pop, -total_pop)
+
+# Clean population to keep only what I care about
+population_county <- population_county %>%
+  clean_names() %>%
+  dplyr::select(fips_code=geoid,
+         population=estimate) 
+
+# Join population and covid stats together
+covid_county_population <- covid_county %>%
+  inner_join(population_county, by=c("fips_code"))  %>%
+  inner_join(county_pct_white, by=c("fips_code"))
+
+# Calculate a death per 100K rate and cases per 100K rate
+
+covid_county_population <- covid_county_population %>%
+  mutate(deaths_per_100k = deaths/population*100000,
+         cases_per_100k = cases/population*100000) %>%
+  dplyr::select(fips_code, county, state, deaths_per_100k, cases_per_100k, deaths, cases, population)
+
+# Load shapefiles
+counties <- counties(cb = TRUE)
+
+# Load NYT all historical 
+nyt_covid_county_historical <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv") 
+
+# Rearrange columns
+nyt_covid_county_historical <- nyt_covid_county_historical %>%
+  dplyr::select(fips_code = fips, county, state, date, cases, deaths) %>%
+  mutate(month = month(date)) %>%
+  group_by(fips_code, county, state, month) %>%
+  summarise(cases = sum(cases)) %>%
+  filter(month %in% c(3,4,5,6,7,8)) %>%
+  mutate(month = paste0("month_",month,"_cum_cases_per_100k")) %>%
+  inner_join(population_county, by=c("fips_code")) %>%
+  mutate(cases_per_100k = cases/population*100000) %>%
+  dplyr::select(fips_code:month, cases_per_100k) %>%
+  pivot_wider(names_from = month, values_from = cases_per_100k) %>%
+  mutate_if(is.numeric , replace_na, replace = 0) %>%
+  ungroup() %>%
+  mutate(month_3_rank_per_100k = dplyr::ntile(month_3_cum_cases_per_100k, 100),
+         month_4_rank_per_100k = dplyr::ntile(month_4_cum_cases_per_100k, 100),
+         month_5_rank_per_100k = dplyr::ntile(month_5_cum_cases_per_100k, 100),
+         month_6_rank_per_100k = dplyr::ntile(month_6_cum_cases_per_100k, 100),
+         month_7_rank_per_100k = dplyr::ntile(month_7_cum_cases_per_100k, 100),
+         month_8_rank_per_100k = dplyr::ntile(month_8_cum_cases_per_100k, 100)
+         ) %>%
+  dplyr::select(fips_code: state, month_3_rank_per_100k:month_8_rank_per_100k, month_3_cum_cases_per_100k:month_8_cum_cases_per_100k)
+
+```
+
+# Analysis
+
+Q: As of August 30, what state had the highest average death rate (deaths per 100K)
+
+```{r}
+covid_county_population %>%
+  group_by(state) %>%
+  summarise(deaths = sum(deaths),
+            population = sum(population)) %>%
+  mutate(deaths_per_100k = deaths/population*100000) %>%
+  dplyr::select(state, deaths_per_100k) %>%
+  arrange(desc(deaths_per_100k))
+  
+```
+
+Q: As of August 30, what state had the highest average case rate (cases per 100K)
+
+```{r}
+covid_county_population %>%
+  group_by(state) %>%
+  summarise(cases = sum(cases),
+            population = sum(population)) %>%
+  mutate(cases_per_100k = cases/population*100000) %>%
+  dplyr::select(state, cases_per_100k) %>%
+  arrange(desc(cases_per_100k))
+  
+```
+
+Q: As of August 30, what county had the highest death rate (deaths per 100K people)
+```{r}
+
+covid_county_population %>%
+  arrange(desc(deaths_per_100k))
+
+```
+Q: As of August 30, what county had the highest case rate (cases per 100K people)
+
+```{r}
+
+covid_county_population %>%
+  arrange(desc(cases_per_100k))
+
+```
+
+Q: Are there any trends we can detect geographically with cases?
+
+```{r}
+# Join county shapes to other shapes
+covid_county_population_geo <- geo_join(counties, covid_county_population, 'GEOID', 'fips_code', how = "inner")  
+
+# Define Color Scheme
+binpal <- colorBin("plasma", covid_county_population_geo$cases_per_100k, 10, pretty = FALSE)
+
+# Draw map
+
+leaflet(covid_county_population_geo) %>%
+   addProviderTiles(providers$CartoDB.Positron) %>%
+   #addProviderTiles(providers$Wikimedia) %>%
+   addPolygons(fillColor = ~binpal(cases_per_100k), weight = 1, smoothFactor = 0.5, opacity = 0.1, fillOpacity = 0.5, color="black", popup = popupTable(covid_county_population_geo)) %>%
+   setView(-95, 39.335359608681216, 4) %>%
+    addLegend("bottomleft", 
+             pal = binpal, 
+             values = covid_county_population_geo$cases_per_100k,
+    title = "Cases per 100K",
+    labFormat = labelFormat(prefix = ""),
+    opacity = 1
+  ) 
+```
+Q: Are there any trends we can detect geographically with deaths?
+
+```{r}
+# Join county shapes to other shapes
+covid_county_population_geo <- geo_join(counties, covid_county_population, 'GEOID', 'fips_code', how = "inner")  
+
+# Define Color Scheme
+binpal <- colorBin("plasma", covid_county_population_geo$deaths_per_100k, 10, pretty = FALSE)
+
+# Draw map
+
+leaflet(covid_county_population_geo) %>%
+   addProviderTiles(providers$CartoDB.Positron) %>%
+   #addProviderTiles(providers$Wikimedia) %>%
+   addPolygons(fillColor = ~binpal(deaths_per_100k), weight = 1, smoothFactor = 0.5, opacity = 0.1, fillOpacity = 0.5, color="black", popup = popupTable(covid_county_population_geo)) %>%
+   setView(-95, 39.335359608681216, 4) %>%
+    addLegend("bottomleft", 
+             pal = binpal, 
+             values = covid_county_population_geo$deaths_per_100k,
+    title = "Deaths per 100K",
+    labFormat = labelFormat(prefix = ""),
+    opacity = 1
+  ) 
+```
+# 
+
+
+# Compute national covid averages
+covid_us <- covid_county %>%
+  filter(!is.na(deaths)) %>%
+  summarise(cases=sum(cases),
+            deaths=sum(deaths)) %>%
+  mutate(fips_code = "1",
+         county = "US totals",
+         state = "US totals") %>%
+  select(fips_code, county, state, cases,deaths) %>%
+  inner_join(population_us, by=c("fips_code"))
+
+# join us and counties of interest together and calculate rate of 100k
+covid_county_of_interest <- covid_county %>%
+  inner_join(population_county, by=c("fips_code")) %>%
+  inner_join(counties_of_interest, by=c("fips_code")) %>%
+  select(fips_code, county, state, cases,deaths, population) %>%
+  bind_rows(covid_us) %>%
+  mutate(deaths_per_100k = deaths/population*100000,
+         cases_per_100k = cases/population*100000) %>%
+  select(county, state, deaths_per_100k, cases_per_100k, deaths, cases)
+
+
+
+```
+
