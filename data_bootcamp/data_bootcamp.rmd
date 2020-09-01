@@ -133,18 +133,18 @@ covid_state_us_current <- covid_state_us %>%
 covid_county_monthly_case_rate <- covid_county %>%
   filter(str_detect(date,"2020-03-30|2020-04-30|2020-05-30|2020-06-30|2020-07-30|2020-08-30")) %>%
   mutate(date = paste0("d-",date)) %>%
-  mutate(cases_per_100k = cases/population*100000) %>%
-  select(county:date, cases_per_100k) %>%
-  pivot_wider(names_from = date, values_from = cases_per_100k) %>%
+  mutate(cases_per_1000 = cases/population*1000) %>%
+  select(county:date, cases_per_1000) %>%
+  pivot_wider(names_from = date, values_from = cases_per_1000) %>%
   mutate_if(is.numeric , replace_na, replace = 0)
 
 ### Dataframe of cumulative monthly deaths per capita as of 30th day of each month
 covid_county_monthly_death_rate <- covid_county %>%
   filter(str_detect(date,"2020-03-30|2020-04-30|2020-05-30|2020-06-30|2020-07-30|2020-08-30")) %>%
   mutate(date = paste0("d-",date)) %>%
-  mutate(deaths_per_100k = deaths/population*100000) %>%
-  select(county:date, deaths_per_100k) %>%
-  pivot_wider(names_from = date, values_from = deaths_per_100k) %>%
+  mutate(deaths_per_1000 = deaths/population*1000) %>%
+  select(county:date, deaths_per_1000) %>%
+  pivot_wider(names_from = date, values_from = deaths_per_1000) %>%
   mutate_if(is.numeric , replace_na, replace = 0)
 
 # Write sheets
@@ -156,212 +156,6 @@ sheet_write(covid_county_monthly_death_rate, ss = intro_to_data_journalism_1 , s
 
 
 
-
-```
-
-### Dataframe of cumulitive totals on 30th day of each month
-
-# Join population and covid stats together to create county current sheet
-covid_county_current <- covid_county_current %>%
-  left_join(population_county, by=c("fips_code")) %>%
-  filter(county != "Unknown") %>%
-  mutate(population = case_when(county == "New York City" ~ 8398748,
-                                county == "Kansas City" ~ 491918,
-                                county == "Joplin" ~ 50657,
-                                TRUE~population)) %>%
-  filter(!state %in% c("Northern Mariana Islands","Puerto Rico","Virgin Islands"))
-
-
-# Join population and covid stats together to 
-covid_state_current <- covid_county_current %>%
-  group_by(state) %>%
-  summarise(cases = sum(cases),
-            deaths = sum(deaths),
-            population = sum(population))
-
-nyt_covid_county_historical <- nyt_covid_county_historical %>%
-  dplyr::select(fips_code = fips, county, state, date, cases, deaths) %>%
-  mutate(month = month(date)) %>%
-  group_by(fips_code, county, state, month) %>%
-  summarise(cases = sum(cases)) %>%
-  filter(month %in% c(3,4,5,6,7,8)) %>%
-  mutate(month = paste0("month_",month,"_cum_cases_per_100k")) %>%
-  left_join(population_county, by=c("fips_code")) %>%
-  mutate(cases_per_100k = cases/population*100000) %>%
-  dplyr::select(fips_code:month, cases_per_100k) %>%
-  pivot_wider(names_from = month, values_from = cases_per_100k) %>%
-  mutate_if(is.numeric , replace_na, replace = 0) %>%
-  ungroup() %>%
-  mutate(month_3_rank_per_100k = dplyr::ntile(month_3_cum_cases_per_100k, 100),
-         month_4_rank_per_100k = dplyr::ntile(month_4_cum_cases_per_100k, 100),
-         month_5_rank_per_100k = dplyr::ntile(month_5_cum_cases_per_100k, 100),
-         month_6_rank_per_100k = dplyr::ntile(month_6_cum_cases_per_100k, 100),
-         month_7_rank_per_100k = dplyr::ntile(month_7_cum_cases_per_100k, 100),
-         month_8_rank_per_100k = dplyr::ntile(month_8_cum_cases_per_100k, 100)
-         ) %>%
-  dplyr::select(fips_code: state, month_3_rank_per_100k:month_8_rank_per_100k, month_3_cum_cases_per_100k:month_8_cum_cases_per_100k)
-
-
-# Write sheets
-sheet_write(covid_county_current, ss = intro_to_data_journalism_1 , sheet = "covid_county_current")
-sheet_write(covid_state_current, ss = intro_to_data_journalism_1 , sheet = "covid_state_current")
-
-
-```
-
-# Load NYT all historical 
-nyt_covid_county_historical <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv") 
-
-# Rearrange columns
-nyt_covid_county_historical <- nyt_covid_county_historical %>%
-  dplyr::select(fips_code = fips, county, state, date, cases, deaths) %>%
-  mutate(month = month(date)) %>%
-  group_by(fips_code, county, state, month) %>%
-  summarise(cases = sum(cases)) %>%
-  filter(month %in% c(3,4,5,6,7,8)) %>%
-  mutate(month = paste0("month_",month,"_cum_cases_per_100k")) %>%
-  inner_join(population_county, by=c("fips_code")) %>%
-  mutate(cases_per_100k = cases/population*100000) %>%
-  dplyr::select(fips_code:month, cases_per_100k) %>%
-  pivot_wider(names_from = month, values_from = cases_per_100k) %>%
-  mutate_if(is.numeric , replace_na, replace = 0) %>%
-  ungroup() %>%
-  mutate(month_3_rank_per_100k = dplyr::ntile(month_3_cum_cases_per_100k, 100),
-         month_4_rank_per_100k = dplyr::ntile(month_4_cum_cases_per_100k, 100),
-         month_5_rank_per_100k = dplyr::ntile(month_5_cum_cases_per_100k, 100),
-         month_6_rank_per_100k = dplyr::ntile(month_6_cum_cases_per_100k, 100),
-         month_7_rank_per_100k = dplyr::ntile(month_7_cum_cases_per_100k, 100),
-         month_8_rank_per_100k = dplyr::ntile(month_8_cum_cases_per_100k, 100)
-         ) %>%
-  dplyr::select(fips_code: state, month_3_rank_per_100k:month_8_rank_per_100k, month_3_cum_cases_per_100k:month_8_cum_cases_per_100k)
-
-```
-
-# Analysis
-
-Q: As of August 30, what state had the highest average death rate (deaths per 100K)
-
-```{r}
-covid_county_population %>%
-  group_by(state) %>%
-  summarise(deaths = sum(deaths),
-            population = sum(population)) %>%
-  mutate(deaths_per_100k = deaths/population*100000) %>%
-  dplyr::select(state, deaths_per_100k) %>%
-  arrange(desc(deaths_per_100k))
-  
-```
-
-Q: As of August 30, what state had the highest average case rate (cases per 100K)
-
-```{r}
-covid_county_population %>%
-  group_by(state) %>%
-  summarise(cases = sum(cases),
-            population = sum(population)) %>%
-  mutate(cases_per_100k = cases/population*100000) %>%
-  dplyr::select(state, cases_per_100k) %>%
-  arrange(desc(cases_per_100k))
-  
-```
-
-Q: As of August 30, what county had the highest death rate (deaths per 100K people)
-```{r}
-
-covid_county_population %>%
-  arrange(desc(deaths_per_100k))
-
-```
-Q: As of August 30, what county had the highest case rate (cases per 100K people)
-
-```{r}
-
-covid_county_population %>%
-  arrange(desc(cases_per_100k))
-
-```
-
-Q: Are there any trends we can detect geographically with cases?
-
-```{r}
-# Join county shapes to other shapes
-covid_county_population_geo <- geo_join(counties, covid_county_population, 'GEOID', 'fips_code', how = "inner")  
-
-# Define Color Scheme
-binpal <- colorBin("plasma", covid_county_population_geo$cases_per_100k, 10, pretty = FALSE)
-
-# Draw map
-
-leaflet(covid_county_population_geo) %>%
-   addProviderTiles(providers$CartoDB.Positron) %>%
-   #addProviderTiles(providers$Wikimedia) %>%
-   addPolygons(fillColor = ~binpal(cases_per_100k), weight = 1, smoothFactor = 0.5, opacity = 0.1, fillOpacity = 0.5, color="black", popup = popupTable(covid_county_population_geo)) %>%
-   setView(-95, 39.335359608681216, 4) %>%
-    addLegend("bottomleft", 
-             pal = binpal, 
-             values = covid_county_population_geo$cases_per_100k,
-    title = "Cases per 100K",
-    labFormat = labelFormat(prefix = ""),
-    opacity = 1
-  ) 
-```
-Q: Are there any trends we can detect geographically with deaths?
-
-```{r}
-# Join county shapes to other shapes
-covid_county_population_geo <- geo_join(counties, covid_county_population, 'GEOID', 'fips_code', how = "inner")  
-
-# Define Color Scheme
-binpal <- colorBin("plasma", covid_county_population_geo$deaths_per_100k, 10, pretty = FALSE)
-
-# Draw map
-
-leaflet(covid_county_population_geo) %>%
-   addProviderTiles(providers$CartoDB.Positron) %>%
-   #addProviderTiles(providers$Wikimedia) %>%
-   addPolygons(fillColor = ~binpal(deaths_per_100k), weight = 1, smoothFactor = 0.5, opacity = 0.1, fillOpacity = 0.5, color="black", popup = popupTable(covid_county_population_geo)) %>%
-   setView(-95, 39.335359608681216, 4) %>%
-    addLegend("bottomleft", 
-             pal = binpal, 
-             values = covid_county_population_geo$deaths_per_100k,
-    title = "Deaths per 100K",
-    labFormat = labelFormat(prefix = ""),
-    opacity = 1
-  ) 
-```
-# 
-
-
-# Compute national covid averages
-covid_us <- covid_county %>%
-  filter(!is.na(deaths)) %>%
-  summarise(cases=sum(cases),
-            deaths=sum(deaths)) %>%
-  mutate(fips_code = "1",
-         county = "US totals",
-         state = "US totals") %>%
-  select(fips_code, county, state, cases,deaths) %>%
-  inner_join(population_us, by=c("fips_code"))
-
-# join us and counties of interest together and calculate rate of 100k
-covid_county_of_interest <- covid_county %>%
-  inner_join(population_county, by=c("fips_code")) %>%
-  inner_join(counties_of_interest, by=c("fips_code")) %>%
-  select(fips_code, county, state, cases,deaths, population) %>%
-  bind_rows(covid_us) %>%
-  mutate(deaths_per_100k = deaths/population*100000,
-         cases_per_100k = cases/population*100000) %>%
-  select(county, state, deaths_per_100k, cases_per_100k, deaths, cases)
-
-
-# Get percentage white
-county_pct_white <- get_acs(geography = "county", variables = "B02001_002", summary_var = "B01001_001", year = 2018) %>%
-  dplyr::select(geoid = GEOID, white_pop = estimate, total_pop = summary_est) %>%
-  mutate(fips_code = as.character(geoid)) %>%
-  mutate(pop_pct_white = round(white_pop/total_pop*100,2)) %>%
-  mutate(majority_flag = case_when(pop_pct_white  >= 50 ~ "majority_white",
-                                   TRUE~"majority_nonwhite")) %>%
-  dplyr::select(-geoid, -white_pop, -total_pop)
 
 ```
 
