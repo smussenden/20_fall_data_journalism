@@ -15,9 +15,11 @@
 * Welcome everyone to Data Journalism.
 * I'm Sean Mussenden, data editor of the Howard Center for Investigative Journalism and a senior lecturer of computational journalism.
 * A few notes before we get started:
-  Please mute your microphone.
-  I encourage you to ask questions as we go! If you have a question, please use the “hand raise” function or type it in the chat or just speak up.  I’ll be stopping at regular intervals to check for questions.   
-  If you have something else you’re working on unrelated to this class, I’d ask you to put it away for now.   
+  * Right now, please pull up the chat and just type, I'm here!
+  * I am recording video and audio of this session, and keeping a record of the chat transcript. 
+  * Please mute your microphone, unless you're speaking.
+  * I encourage you to ask questions as we go! If you have a question you can do one of the following. Please use the type it in the chat or just speak up.  I’ll be stopping at regular intervals to check for questions.   
+  * If you have something else you’re working on unrelated to this class, I’d ask you to put it away for now.   
 
 * We're going to go over the syllabus in a bit, and explain this course in detail, but first I want to show you all something that I think will give you a taste of what this course is all about and to show you some of the work you'll be able to do at the end of 14 weeks if you put in the effort in this class.
 
@@ -79,6 +81,7 @@
  * Stories: Our goal is to tell stories, not to present a bunch of data and say "look at this data".  That can happen in lots of forms, including text, graphics, video, podcasts, social platforms. We'll talk a lot about this.
 
 ##### Introductions
-* Your name. Why you're interested in learning about data journalism, and how do you hope it will help you after you graduate.  If the answer is: I needed a class and this fit in my schedule, that's FINE by the way.  
+* What's your name, and is it different than what's on your zoom name.  
+* Tell us why you're interested in learning about data journalism, and how do you hope it will help you after you graduate.  If the answer is: I needed a class and this fit in my schedule, that's FINE by the way.  
 
 ##### Syllabus review
