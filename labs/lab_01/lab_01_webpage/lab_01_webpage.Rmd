@@ -49,7 +49,8 @@ knitr::include_url("https://www.youtube.com/embed/zNzZ1PfUDNk")
 ### Objective 01_b: Set up a GitHub repository for classwork 
 
 To complete this objective, you'll need to: 
-  * Create an account on GitHub.com, a code repository website where we'll be storing much of the work you do in this class.  
+
+  * Create an account on [GitHub.com](https://github.com), a code repository website where we'll be storing much of the work you do in this class, and sign up for [GitHub student developer pack](https://education.github.com/students).   
   * Create a private repository on GitHub.com specifically for this class and give me permission to access it. 
   * Use GitHub Desktop to pull your class repository to your local machine, a process called "cloning".  
   
@@ -64,6 +65,7 @@ knitr::include_url("https://www.youtube.com/embed/zNzZ1PfUDNk")
 ### Objective 01_c: Develop an understanding of how we'll use RStudio
 
 To complete this objective, you'll need to:
+
   * Watch me tour the RStudio workspace.
   * Load a sample RMarkdown file, a file format designed for "data notebooks" that we'll use all semester. 
   * Make some minor edits to the sample RMarkdown file and run some very basic code. [Download link for the file]("https://www.youtube.com/embed/zNzZ1PfUDNk")
@@ -75,6 +77,7 @@ Before moving on to the next objective, please watch the video in full and compl
 ### Objective 01_d: Develop an understanding of how to submit changes to GitHub, and submit to ELMS
 
 To complete this objective, you'll need to:
+
   * Save changes you've made to the RMarkdown file
   * Upload those changes from your local machine to your code repository on GitHub.com.
   * Submit your lab assignment on ELMS by sending the link to your GitHub.com repository. 
