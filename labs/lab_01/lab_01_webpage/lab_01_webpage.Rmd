@@ -33,8 +33,8 @@ To complete this objective, you'll need to install on your machine the necessary
 
 They are:
 
-  * R, the programming language we'll be using to do data programming in this course. [Download link](https://cloud.r-project.org/)
-  * R Studio, the software tool we'll be using to write R code and load, clean and analyze data. [Download link](https://rstudio.com/products/rstudio/download/#download)
+  * R, the programming language we'll be using to do data programming in this course. [Download link](https://cloud.r-project.org/). [About R](https://www.r-project.org/about.html)
+  * R Studio, the software tool we'll be using to write R code and load, clean and analyze data. [Download link](https://rstudio.com/products/rstudio/download/#download). [Brief explainer video](https://rstudio.com/products/rstudio/)
   * GitHub Desktop, a software tool we'll be using to transfer code to our local machine to the GitHub.com website. [Download link](https://desktop.github.com/)
 
 In the video below, I show you step-by-step how to do that, while offering some thoughts on what each thing does.  
