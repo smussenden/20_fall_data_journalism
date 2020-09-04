@@ -62,6 +62,13 @@ gs4_user()
 # Read in US historical data on Aug 31
 #covid_us <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv")
 #write_csv(covid_us, "covid_us_current_08_31_2020.csv") 
+# Read in mask usage data
+county_mask_use <- read_csv("https://github.com/nytimes/covid-19-data/raw/master/mask-use/mask-use-by-county.csv")
+#######################
+#Data Journalism 1 ####
+#######################
+
+fips_codes
 
 ### Read in stored data pulled from NYT Github on Aug 31
 covid_county <- read_csv("covid_county_current_08_31_2020.csv") %>%
@@ -119,7 +126,7 @@ rm(population_county, population_state, population_us)
 covid_state_us <- covid_state %>%
   bind_rows(covid_us)
 
-rm(covid_state, covid_us)
+#rm(covid_state, covid_us)
 
 ### Dataframe of current cases 
 covid_county_current <- covid_county %>%
@@ -153,9 +160,82 @@ sheet_write(covid_state_us_current, ss = intro_to_data_journalism_1 , sheet = "c
 sheet_write(covid_county_monthly_case_rate, ss = intro_to_data_journalism_1 , sheet = "covid_county_monthly_case_rate")
 sheet_write(covid_county_monthly_death_rate, ss = intro_to_data_journalism_1 , sheet = "covid_county_monthly_death_rate")
 
+```
+
+```{r}
+#######################
+#Data Journalism 2 ####
+#######################
+
+# Read in covid county data, one row is county data on one date
+covid_county <- read_csv("covid_county_current_08_31_2020.csv")
+
+# Read in mask usage data
+county_mask_use <- read_csv("https://github.com/nytimes/covid-19-data/raw/master/mask-use/mask-use-by-county.csv") %>%
+  clean_names() %>%
+  rename(fips_code = countyfp)
+
+### Create a dataframe of all counties by case rate, including cumulative data. 
+covid_county <- covid_county %>%
+    group_by(state, county) %>%
+    arrange(date, .by_group = TRUE) %>%
+    mutate(daily_unique_cases = cases - lag(cases, default = first(cases)),
+           daily_unique_deaths = deaths - lag(deaths, default = first(deaths))
+           ) %>%
+    mutate(daily_unique_cases = case_when(date == min(date) ~ cases,
+                              TRUE ~ daily_unique_cases),
+           daily_unique_deaths = case_when(date == min(date) ~ deaths,
+                              TRUE ~ daily_unique_deaths)
+           ) %>%
+    select(fips_code = fips, county, state, date, daily_unique_cases, daily_unique_deaths, cumulative_cases_to_date = cases, cumulative_deaths_to_date = deaths) %>%
+  filter(!state %in% c("Northern Mariana Islands","Puerto Rico","Virgin Islands", "Guam")) %>%
+  filter(!county %in% c("Unknown"))
+
+### Clean and bind mask usage
+covid_county <- covid_county %>%
+  left_join(county_mask_use) %>%
+  select(fips_code, county, state, date, everything()) %>%
+  mutate_at(c("never", "rarely","sometimes","frequently","always"), ~round(.*100,2)) %>%
+  rename_at(c("never", "rarely","sometimes","frequently","always"), funs(paste0(.,"_mask_pct")))
+
+### Read in population and race data from census
+county_census_stats <- get_acs(geography = "county", variables = "B02001_002", summary_var = "B01001_001", year = 2018) %>%
+  select(geoid = GEOID, white_pop = estimate, total_pop = summary_est) %>%
+  mutate(geoid = as.character(geoid)) %>%
+  mutate(pop_pct_white = round(white_pop/total_pop*100,2)) %>%
+  mutate(pop_pct_nonwhite = 100-pop_pct_white) %>%
+  mutate(majority_flag = case_when(pop_pct_white  >= 50 ~ "majority_white",
+                                   TRUE~"majority_nonwhite")) %>%
+  mutate(nonwhite_pop = total_pop-white_pop) %>%
+  select(fips_code = geoid,white_pop, nonwhite_pop, everything())
+
+###Join population data to covid data
+covid_county <- covid_county %>%
+  left_join(county_census_stats, by=c("fips_code")) %>%
+  mutate(total_pop = case_when(county == "New York City" ~ 8398748,
+                                county == "Kansas City" ~ 491918,
+                                county == "Joplin" ~ 50657,
+                                TRUE~total_pop)) %>%
+  mutate(sometimes_mask_pct = rarely_mask_pct+sometimes_mask_pct+frequently_mask_pct) %>%
+  filter(date >= "2020-07-01") %>%
+  mutate(daily_unique_cases = case_when(daily_unique_cases < 0 ~ 0,
+                                        TRUE ~ daily_unique_cases)) %>%
+  mutate(daily_unique_deaths = case_when(daily_unique_deaths < 0 ~ 0,
+                                        TRUE ~ daily_unique_deaths)) %>%
+  select(-fips_code, -cumulative_cases_to_date, -cumulative_deaths_to_date, -rarely_mask_pct, -sometimes_mask_pct, -always_mask_pct, -nonwhite_pop, -pop_pct_white, -white_pop, -frequently_mask_pct) #%>%
+  #select(state, county, date, daily_unique_cases, daily_unique_deaths, total_pop)
+  #mutate_at(is.numeric , replace_na, replace = 0)
+  glimpse(covid_county)
 
 
+         
+write_csv(covid_county,"covid_county.csv")
 
 
 ```
 
+```{r}
+
+    
+
+```

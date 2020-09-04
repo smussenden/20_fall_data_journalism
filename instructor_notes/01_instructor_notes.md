@@ -2,21 +2,25 @@
 
 ### To Have Up on Desktop
 
-1. Session 01 Instructor Notes
-2. Webpage of roster pictures on UMEG
-3. Course Canvas Page
-4. Slides https://docs.google.com/presentation/d/1Wol-o16bhaGAbUbd6LmmMrzlFYmOO2sMk-Bu4I4eyWU/edit#slide=id.g6056882942_0_50
-5. Document What is Data Journalism https://docs.google.com/document/d/14umxQK1mYVqQ6wd7yyTZMEaiM28RLK3bvTfmS8dsj-E/edit#
+1. Session 01 Instructor Notes - X
+2. Webpage of roster pictures on UMEG - X
+3. Roster sheet with presence - https://docs.google.com/spreadsheets/d/1HKt0Dr6YajcRXLu-0IpWRWBMb4C9J-detlI0TE45jh8/edit#gid=1136077922
+3. Course Canvas Page - X
+4. Slides https://docs.google.com/presentation/d/1Wol-o16bhaGAbUbd6LmmMrzlFYmOO2sMk-Bu4I4eyWU/edit#slide=id.g6056882942_0_50 X
+5. Document What is Data Journalism https://docs.google.com/document/d/14umxQK1mYVqQ6wd7yyTZMEaiM28RLK3bvTfmS8dsj-E/edit# X
 6. R Studio with Intro COVID Notebook
 7. R Studio HTML output page
+8. ZOOM main window. Zoom participants window. Zoom chat.
+9. Spreadsheet of roster
+
 
 #### Introduction
 
 * Welcome everyone to Data Journalism.
-* I'm Sean Mussenden, data editor of the Howard Center for Investigative Journalism and a senior lecturer of computational journalism.
+* I'm Sean Mussenden, data editor of the Howard Center for Investigative Journalism and a senior lecturer of data and computational journalism.
 * A few notes before we get started:
-  * Right now, please pull up the chat and just type, I'm here!
-  * I am recording video and audio of this session, and keeping a record of the chat transcript. 
+  * Right now, please pull up the chat and just type, I'm here! I just want to figure out who is here.
+  * I am recording video and audio of this session, and keeping a record of the chat transcript.
   * Please mute your microphone, unless you're speaking.
   * I encourage you to ask questions as we go! If you have a question you can do one of the following. Please use the type it in the chat or just speak up.  I’ll be stopping at regular intervals to check for questions.   
   * If you have something else you’re working on unrelated to this class, I’d ask you to put it away for now.   
@@ -69,6 +73,8 @@
 * It turns out that if you ask 10 people who do data journalism what data journalism is, you'll get 10 different answers.
 * We're going to do a small group exercise.  I want to find out what you think it is, and then I'll share my definition.
 * [PULL UP GOOGLE DOC, SHOW HOW TO FIND IN ELMS]
+* BEFORE we create the rooms, does everyone have access to the doc.  Please type in the chat when you have it.
+* [ASSIGN PEOPLE TO ROOMS]
 
 ##### My Definition
  * Transparency.  We are open about how we did our work and we freely share it and document it.  People don't trust journalists, and you can't just drop a story based on data analysis without backing it up. This is why I love these data notebooks.
