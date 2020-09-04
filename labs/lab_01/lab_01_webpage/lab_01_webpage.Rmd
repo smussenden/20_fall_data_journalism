@@ -23,7 +23,8 @@ The objectives are:
 
 ## How this lab works
 
-You should read the text on this web page and watch the embedded videos, and follow the instructions I give as you go along.  It's very important to watch the videos, because, in addition to showing you how to do things step-by-step, the audio track also contains some key contextual information to help make sense of what you're seeing.     
+You should read the text on this web page and watch the embedded videos, and follow the instructions I give as you go along.  It's very important to watch the videos, because, in addition to showing you how to do things step-by-step, the audio track also contains some key contextual information to help make sense of what you're seeing.  
+
 ## Objectives 
 
 ### Objective 01_a: Install on your local machine the necessary software tools for this course.
