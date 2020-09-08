@@ -76,15 +76,16 @@ When you do request the database, you will ask for a waiver of fees in any writt
 
 ## Key things to keep in mind
 
+Three key things to keep in mind:
+
 * In talking with agencies, you should always identify yourself as a reporter for the Howard Center for Investigative Journalism, a non-profit investigative reporting unit based in Maryland.  If someone asks if you're a student, please say yes, but don't volunteer that you're a student or that this is for a class.  We are seeking information that could be used in a news story.
+* Explain that you're working on a national project on evictions and are submitting public records requests to public housing authorities that manage and operate public housing. Confirm that they do. Some smaller housing authorities don’t have their own housing and provide housing assistance through other programs, such as Section 8. We’re only interested in those that manage their own public housing. So if you’ve been assigned an PHA that doesn’t have public housing, contact Sean right away, so he can give you another one. I've confirmed most of these places do have public housing.
 * This is a reporting project. You may need to do web research to identify the correct agencies to contact, and the people in those agencies to contact. But it will take a lot more than web research.  You will need to call people and email them to identify who keeps the data, what it's called, what's in it, and attempt to coax it out of them -- either with a public records request or without one. And you will need to be politely persistent in dealing with them.  If you tell me you sent someone an email and didn't hear back for two weeks and didn't follow up with several phone calls, that is inadequate.  
 * When requesting data for this project, you shouldn’t immediately volunteer why you’re requesting data or share details of the project.  But during negotiations for access to data, you may find it necessary to share some details, and that’s okay.  
 
 
-## Municipality assignments
+## Housing authority assignments
 
-* https://www.hud.gov/program_offices/public_indian_housing/pha/contacts
-* https://docs.google.com/spreadsheets/d/1vlwv9BxF_MWiedgu_bjmS49ubAyEurtheUvtTzrzyPU/edit#gid=0
-https://docs.google.com/spreadsheets/d/1vlwv9BxF_MWiedgu_bjmS49ubAyEurtheUvtTzrzyPU/edit#gid=0
+We're going to be requesting data from the 20 largest cities in the U.S. You have been assigned a specific housing authority, in a specific city.  Please note that some cities have more than one housing authority, so be sure to stick to the one I've assigned.
 
-Explain that you're working on a national project on evictions and are submitting public records requests to public housing authorities that manage and operate public housing. Confirm that they do. Some smaller housing authorities don’t have their own housing and provide housing assistance through other programs, such as Section 8. We’re only interested in those that manage their own public housing. So if you’ve been assigned an PHA that doesn’t have public housing, contact Sean right away, so he can give you another one.
+You can find your [random assignments in this spreadsheet](https://docs.google.com/spreadsheets/d/1vlwv9BxF_MWiedgu_bjmS49ubAyEurtheUvtTzrzyPU).
