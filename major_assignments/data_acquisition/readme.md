@@ -22,6 +22,8 @@ You will be assigned a public housing authority from which to request data and o
 * A list of buildings owned or operated by the authority with the number of units and unit addresses
 * The authority’s policies and procedures for evictions (or a link to them, if they are available online)
 
+What is public housing? The National Housing Law Project [has a good breakdown](https://www.nhlp.org/resource-center/public-housing/).
+
 ## Grading and Deadlines
 
 This project is worth 10 percent of your total final grade.
