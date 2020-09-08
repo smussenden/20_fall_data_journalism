@@ -1,0 +1,224 @@
+---
+title: "JOUR472/772 in_class_02 | opioid shipment analysis"
+author: "Sean Mussenden"
+date: "9/7/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook 
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_02.  They include technical concepts like:
+
+* Loading packages.
+* The Tidyverse suite of packages, and its opinionated approach to data analysis. 
+* Programming with pre-built functions, specifically those made available with the Tidyverse.
+* Loading data. 
+* Exploring data.
+* Rearranging columns with select().  
+* Sorting with arrange()
+* Chaining together functions to transform data in an orderly way. 
+* Debugging problems.
+
+## Packages
+
+### About R Packages
+
+R packages are pre-written bundles of code that provide shortcuts -- typically functions -- to help you do all kinds of things in the data programming universe -- visualize data, clean data, pull data from Twitter, scrape websites, and a whole lot more -- with less work than would be required if you wrote them on your own. 
+
+There are thousands of free packages available for your use. 
+
+You can load packages from directly from RStudio from the [CRAN repository](https://cran.r-project.org/web/packages/index.html). 
+
+There are lots of packages people post on GitHub, and it's possible to load directly from GitHub.      
+
+* [All packages are on the CRAN repository](https://cran.r-project.org/)
+* [Some greatest hits](https://awesome-r.com/)
+* Some of my favorites do very specific things:
+  * [Tidycensus](https://github.com/walkerke/tidycensus)
+  * [rTweet](https://github.com/ropensci/rtweet)
+  * [Opioid data](https://cran.r-project.org/web/packages/arcos/index.html)
+  * [baseballr](https://github.com/BillPetti/baseballr)
+  
+### About The Tidyverse
+
+One particularly useful collection of packages is called the Tidyverse, a collection of related packages that make doing data cleaning, data wrangling, data analysis and data visualization easier. 
+
+This tutorial makes use of several Tidyverse packages to load, wrangle and analyze data. You can do everything we're doing with the base R language, but it's more of a slog.  My recommendation: if you're using R, use Tidyverse methods instead of base R whenever possible. When we work in this class, we'll generally be in the Tidyverse.  
+
+* [Tidyverse Site](https://www.Tidyverse.org/)
+* [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+* [List of Tidvyerse packages](https://www.Tidyverse.org/packages/)
+  * [Data viz with ggplot2](https://ggplot2.tidyverse.org/)
+  * [Loading data with readr](https://readr.tidyverse.org/)
+  * [Analyzing data with dplyr](https://dplyr.tidyverse.org/)
+* [Canonical Book](https://r4ds.had.co.nz/index.html)
+* [Tutorials](https://rstudio.cloud/learn/primers/)
+
+### Install packages
+
+To use a package, and the functions and methods it enables, you first have to install it. The function to install a package is install.packages().  Though there are exceptions, you typically need to install a package once -- the first time you're using a new machine. 
+
+```{r}
+install.packages('tidyverse')
+```
+
+### Loading Packages
+
+Once a package is installed, you have to load it.  Using the library() function is one way to do that. 
+
+```{r}
+# Load the tidyverse suite of packages
+library(tidyverse)
+```
+
+We can see that it's installed by looking for a check mark next to "tidyverse" in the packages window.  The packages that load as part of the tidyverse also have check marks. 
+
+Though you only have to install a package once, you have to load it at the beginning of every new session. And if you restart R, you'll have to reload packages. 
+
+Let's restart R by going to the top menu > Session > Terminate R.  Look back at the package window, and you'll notice everything is unchecked.  Go above and reload it. 
+
+## Loading Data
+
+Using a function from the readr package called read_csv(), we're going to read in data on opioid shipments from the Washington Post's release of DEA ARCOS data.  This is aggregate data, compiled by Washington Post reporters from the raw data.  Here's the [direct link to the readr package page](https://readr.tidyverse.org/index.html)
+
+For each pharmacy in Mingo County, West Virginia, it lists the total number of pills shipped between 2006 and 2014 (total_dosage_unit) and the number of shipments (total_records).
+
+
+```{r}
+
+arcos_wv_mingo <- read_csv("data/arcos-wv-mingo-54059-pharmacy.csv")
+
+```
+
+## Examining data
+
+There are several ways to get a sense of the data. 
+
+We can examine the summary data in the environment window, or open it up like a spreadsheet.  
+
+The glimpse() function is useful to get a sense of the data.
+
+```{r}
+
+glimpse(arcos_wv_mingo)
+
+```
+
+It tells us how many rows and columns we have.  It tells us each column name, plus offers a sample of the data.  And it tells us the "data types".  The first five columns, which are text, are <chr> or "character".  The last two, which are numbers, are <dbl> or "double", which is a kind of number. The "data type" can affect how we can use a column later.  It's hard to do math on a character column. 
+
+We can also print it out below a markdown block.
+```{r}
+
+arcos_wv_mingo 
+
+```
+
+## Select Data
+
+One of the most basic things we can do a dataframe we've loaded is to trim it to only keep certain columns.  For that, we use a select() function, which is part of dplyr. Here's the link to the [dplyr reference page](https://dplyr.tidyverse.org/index.html). 
+
+We're also using a "pipe", which is what we call the %>% sign. It's a core part of the tidyverse, and it's what allows us to chain together functions.  In English, it means "and then.
+
+What we're saying below is "Take the acros_wv_mingo dataframe AND THEN select only the column called buyer_name, and print it out in the markdown document"
+
+```{r}
+
+arcos_wv_mingo %>%
+  select(buyer_name)
+
+```
+We can also store this as a new object called "arcos_wv_mingo_pharmacies", which makes it available for later use as just a list of pharmacy names. 
+
+
+"Take the acros_wv_mingo dataframe AND THEN select only the column called buyer_name, and store it as a new dataframe called arcos_wv_mingo_pharmacies"
+
+```{r}
+
+arcos_wv_mingo_pharmacies <- arcos_wv_mingo %>%
+  select(buyer_name)
+
+```
+
+There's lots more we can do with select, but we'll save that for this week's lab. 
+
+For now, let's just use select to keep only a handful of columns that we want, and move others around.  So as not to overwrite the original data, let's save it as a new object called: arcos_wv_mingo_trimmed. The five columns we want to keep are: buyer_dea_no, buyer_name, buyer_city, total_dosage_unit, total_records.
+ 
+
+```{r}
+
+arcos_wv_mingo_trimmed <- arcos_wv_mingo %>%
+  select(buyer_dea_no, buyer_name, buyer_city, total_dosage_unit, total_records)
+
+```
+
+## Sorting
+
+By working in RStudio's spreadsheet view, we can click on a column header to re-order our spreadsheet from highest to lowest or lowest to highest, based on the values in that column.
+
+And, of course, we can do it with code, using the arrange function, and passing in the name of a column. This puts them in order of total pills sent to each pharmacy.   
+
+```{r}
+arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
+  arrange(total_dosage_unit)
+
+```
+
+We can also sort on the same column, highest to lowest, by wrapping the column name INSIDE of another function, called desc(), which is short for descending.  
+
+```{r}
+arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
+  arrange(desc(total_dosage_unit))
+
+```
+
+That spreadsheet we just created serves to answer this question: which pharmacy in Mingo, W.V. got more total pills than any other pharmacy in the county between 2006 and 2014?  The answer: Strosnider. We already know that Mingo had one of the highest rates of pills per person in the country.  Could this pharmacy be a jumping off point for further reporting on a story?  Maybe. 
+
+Let's try sorting by total_records, which is shipments.  
+
+```{r}
+arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
+  arrange(desc(total_records))
+
+```
+
+That spreadsheet we just created serves to answer this question: which pharmacy in Mingo, W.V. got more total shipments than any other pharmacy in the county between 2006 and 2014?  The answer: Hurley Drug Company.  [Story](https://www.wvgazettemail.com/news/health/drug-firms-shipped-20-8m-pain-pills-to-wv-town-with-2-900-people/article_ef04190c-1763-5a0c-a77a-7da0ff06455b.html) 
+
+## Putting it all together
+
+We started by selecting columns, and then moved onto filtering.  We did this in two separate steps, but there's no reason we have to do it that way. The beauty of the Tidyverse is chaining steps together. 
+
+The function below, in English, says: "create a new object called arcos_wv_mingo_trimmed_sorted that takes the original arcos_wv_mingo dataframe AND THEN keeps only the five columns we want AND THEN sorts the whole thing from highest to lowest on total shipments. 
+
+```{r}
+arcos_wv_mingo_trimmed_sorted <- arcos_wv_mingo %>%
+  select(buyer_dea_no, buyer_name, buyer_city, total_dosage_unit, total_records) %>%
+  arrange(desc(total_records))
+
+```
+
+## Errors
+
+What's wrong with this code? 
+
+```{r}
+arcos_wv_mingo_trimmed <- arcos_wv_mingo %>%
+  select(buer_dea_no)
+```
+
+## Exercise
+
+There's a spreadsheet in the data folder called arcos-md-baltimore-city-24510-pharmacy.csv.  Like the mingo data we've been working with, it includes the total number of pills and total number of shipments to each pharmacy in Baltimore City between 2006 and 2014.   
+
+Create as many codeblocks below as you need to.  Your task is to read in the data and answer these question by writing code: which pharmacy in Baltimore got the most total shipments?  Which one got the most pills?  
+
+You'll go into breakout rooms to do this. 
+
+

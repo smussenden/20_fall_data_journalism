@@ -43,7 +43,11 @@ You'll get some practice in this class.
 
 You all killed it on this.
 
+[PULL UP in_class_02_lecture_demo.Rmd]
+
 In the raw data, each row is a shipment of a unique unit of pills that has the date, manufacturer, distributor, end pharmacy (including address), number of pills, info about the type of pill and more.   
+
+
 
 * A: A total of 76 billion opioids shipped between 2006 and 2012.
   * Q: How did they calculate this, just in English, don't worry about what the code might look like?
@@ -72,11 +76,14 @@ A few takeaways here:
 
 ##### Q: How do we know what fields mean?
 
+What does dosage_unit
 * Show post data dictionary
 https://github.com/wpinvestigative/arcos-api/blob/master/data/data_dictionary.csv
 * Show example data
 https://www.scribd.com/document/353876856/ARCOS-Registrant-Handbook#download
 * What do we do if we still dont' know what this means. Call someone.
+
+Documentation is key. ALWAYS LOOK FOR THIS
 
 ### Why Data Journalism
 
