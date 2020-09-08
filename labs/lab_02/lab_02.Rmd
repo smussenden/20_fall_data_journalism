@@ -1,0 +1,370 @@
+---
+title: "JOUR472/772 in_class_02 | opioid shipment analysis"
+author: "Sean Mussenden"
+date: "9/7/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook 
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_02.  They include technical concepts like:
+
+* Loading packages.
+* The Tidyverse suite of packages, and its opinionated approach to data analysis. 
+* Programming with pre-built functions, specifically those made available with the Tidyverse.
+* Loading data. 
+* Exploring data.
+* Rearranging columns with select().  
+* Sorting with arrange()
+* Chaining together functions to transform data in an orderly way. 
+* Debugging problems.
+
+## Packages
+
+### About R Packages
+
+R packages are pre-written bundles of code that provide shortcuts -- typically functions -- to help you do all kinds of things in the data programming universe -- visualize data, clean data, pull data from Twitter, scrape websites, and a whole lot more -- with less work than would be required if you wrote them on your own. There are thousands of free packages available for your use. 
+
+You can load packages from directly from RStudio from the [CRAN repository](https://cran.r-project.org/web/packages/index.html). 
+
+There are lots of packages people post on GitHub, and it's possible to load directly from GitHub.      
+
+* [All packages are on the CRAN repository](https://cran.r-project.org/)
+* [Some greatest hits](https://awesome-r.com/)
+* Some of my favorites do very specific things:
+  * [Tidycensus](https://github.com/walkerke/tidycensus)
+  * [rTweet](https://github.com/ropensci/rtweet)
+  * [Opioid data](https://cran.r-project.org/web/packages/arcos/index.html)
+  * [baseballr](https://github.com/BillPetti/baseballr)
+  
+You can also examine the list of installed packages by looking at the "packages" tab at right. 
+
+### About The Tidyverse
+
+One particularly useful collection of packages is called the Tidyverse, a collection of related packages that make doing data cleaning, data wrangling, data analysis and data visualization easier. 
+
+This tutorial makes use of several Tidyverse packages to load, wrangle and analyze data. You can do everything we're doing with the base R language, but it's more of a slog.  My recommendation: if you're using R, use Tidyverse methods instead of base R whenever possible. When we work in this class, we'll generally be in the Tidyverse.  
+
+* [Tidyverse Site](https://www.Tidyverse.org/)
+* [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+* [List of Tidvyerse packages](https://www.Tidyverse.org/packages/)
+  * [Data viz with ggplot2](https://ggplot2.tidyverse.org/)
+  * [Loading data with readr](https://readr.tidyverse.org/)
+  * [Analyzing data with dplyr](https://dplyr.tidyverse.org/)
+* [Canonical Book](https://r4ds.had.co.nz/index.html)
+* [Tutorials](https://rstudio.cloud/learn/primers/)
+
+### Install packages
+
+To use a package, and the functions and methods it enables, you first have to install it. The function to install a package is install.packages().  It takes one argument, the name of the package in quotes. Though there are exceptions, you typically need to install a package once -- the first time you're using a new machine. 
+
+```{r}
+install.packages('tidyverse')
+```
+
+### Loading Packages
+
+Once a package is installed, you have to load it.  Using the library() function is one way to do that. 
+
+```{r}
+# Load the tidyverse suite of packages
+library(tidyverse)
+```
+
+We can see that it's installed by looking for a check mark next to "tidyverse" in the packages window.  The packages that load as part of the tidyverse also have check marks. 
+
+Though you only have to install a package once, you have to load it at the beginning of every new session. And if you restart R, you'll have to reload packages. 
+
+Let's restart R by going to the top menu > Session > Terminate R.  Look back at the package window, and you'll notice everything is unchecked.  Go above and reload it. 
+
+## Restart R
+
+```{r}
+
+```
+
+
+## Load libraries and settings
+
+Behind the scenes, we're loading pre-written packages of code that other people have written to help make our analysis easier.   
+
+```{r include=FALSE}
+## Load libraries and settings
+library(tidyverse)
+
+```
+
+
+## Load Data
+
+For this analysis, we're load and cleaning data from the [U.S. Census](https://www.census.gov/) and the New York Times [repository of COVID-19 cases and deaths](https://github.com/nytimes/covid-19-data). We've reviewed the documentation and we undestand its flaws. 
+
+```{r include=FALSE}
+
+### Read in current data from the New York Times county-by-county COVID tracking from GitHub
+# Read in county historical data on Aug 31
+#covid_county <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv")
+#write_csv(covid_county, "covid_county_current_08_31_2020.csv") 
+# Read in state historical data on Aug 31
+#covid_state <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv")
+#write_csv(covid_state, "covid_state_current_08_31_2020.csv") 
+# Read in US historical data on Aug 31
+#covid_us <- read_csv("https://raw.githubusercontent.com/nytimes/covid-19-data/master/us.csv")
+#write_csv(covid_us, "covid_us_current_08_31_2020.csv") 
+
+### Read in stored data pulled from NYT Github on Aug 31
+covid_county <- read_csv("covid_county_current_08_31_2020.csv") %>%
+  filter(!state %in% c("Northern Mariana Islands","Puerto Rico","Virgin Islands", "Guam")) %>%
+  filter(!county %in% c("Unknown")) %>%
+  dplyr::select(fips_code = fips, county, state, date, cases, deaths)
+
+covid_state <- read_csv("covid_state_current_08_31_2020.csv") %>%
+  filter(!state %in% c("Northern Mariana Islands","Puerto Rico","Virgin Islands", "Guam"))  %>%
+  dplyr::select(fips_code = fips, state, date, cases, deaths)
+  
+covid_us <- read_csv("covid_us_current_08_31_2020.csv") %>%
+  mutate(location="US") %>%
+  dplyr::select(location, everything())
+
+### Read in population data from census
+population_county <- get_acs(geography="county", variables=c("B01001_001"),geometry = FALSE, year=2018) %>%
+  clean_names() %>%
+  dplyr::select(fips_code=geoid,
+         population=estimate) 
+
+population_state<- get_acs(geography="state", variables=c("B01001_001"),geometry = FALSE, year=2018) %>%
+  clean_names() %>%
+  dplyr::select(fips_code=geoid,
+         population=estimate) 
+
+population_us <- get_acs(geography="us", variables=c("B01001_001"),geometry = FALSE, year=2018) %>%
+  clean_names() %>%
+  dplyr::select(fips_code=geoid,
+         population=estimate) 
+
+###Join population data to covid data
+covid_county <- covid_county %>%
+  left_join(population_county, by=c("fips_code")) %>%
+  mutate(population = case_when(county == "New York City" ~ 8398748,
+                                county == "Kansas City" ~ 491918,
+                                county == "Joplin" ~ 50657,
+                                TRUE~population)) %>%
+  mutate(deaths_per_1000 = deaths/population*1000,
+         cases_per_1000 = cases/population*1000) %>%
+  dplyr::select(fips_code, county, state, date,deaths_per_1000, cases_per_1000, deaths, cases, population)
+
+covid_state <- covid_state %>%
+  left_join(population_state, by=c("fips_code")) %>%
+  rename(location = state) %>%
+  mutate(deaths_per_1000 = deaths/population*1000,
+         cases_per_1000 = cases/population*1000) %>%
+  dplyr::select(fips_code, location, date, deaths_per_1000, cases_per_1000, deaths, cases, population)
+
+covid_us <- covid_us %>%
+  mutate(fips_code = "1") %>%
+  left_join(population_us, by=c("fips_code")) %>%
+  mutate(deaths_per_1000 = deaths/population*1000,
+         cases_per_1000 = cases/population*1000) %>%
+  dplyr::select(fips_code, location, date, deaths_per_1000, cases_per_1000, deaths, cases, population)
+
+rm(population_county, population_state, population_us)
+
+# Join state and us data
+
+covid_state_us <- covid_state %>%
+  bind_rows(covid_us)
+
+rm(covid_state, covid_us)
+
+### Make a dataframe of current cases 
+covid_county_current <- covid_county %>%
+  filter(date == "2020-08-30")
+
+covid_state_us_current <- covid_state_us %>%
+  filter(date == "2020-08-30")
+
+### Make a dataframe of cumulative monthly cases per capita as of 30th day of each month
+
+covid_county_monthly_case_rate <- covid_county %>%
+  filter(str_detect(date,"2020-03-30|2020-04-30|2020-05-30|2020-06-30|2020-07-30|2020-08-30")) %>%
+  mutate(date = paste0("d-",date)) %>% 
+  mutate(date = str_replace_all(date,"-","_")) %>%
+  mutate(cases_per_1000 = cases/population*1000) %>%
+  dplyr::select(county:date, cases_per_1000) %>%
+  pivot_wider(names_from = date, values_from = cases_per_1000) %>%
+  mutate_if(is.numeric , replace_na, replace = 0)
+
+### Dataframe of cumulative monthly deaths per capita as of 30th day of each month
+covid_county_monthly_death_rate <- covid_county %>%
+  filter(str_detect(date,"2020-03-30|2020-04-30|2020-05-30|2020-06-30|2020-07-30|2020-08-30")) %>%
+  mutate(date = paste0("d_",date)) %>%
+   mutate(date = str_replace_all(date,"-","_")) %>%
+  mutate(deaths_per_1000 = deaths/population*1000) %>%
+  dplyr::select(county:date, deaths_per_1000) %>%
+  pivot_wider(names_from = date, values_from = deaths_per_1000) %>%
+  mutate_if(is.numeric , replace_na, replace = 0)
+
+### Shapefiles
+counties <- counties(cb = TRUE)
+
+```
+
+## The Interview
+
+### Q1 State death rate
+**Q:** As of August 30, what state had the highest average death rate (deaths per 1000)?
+
+**A:** New Jersey, at 1.79 deaths per 1000.  Hawaii had the lowest. 
+
+```{r echo=FALSE}
+covid_state_us_current %>%
+  dplyr::select(location, deaths_per_1000) %>%
+  arrange(desc(deaths_per_1000))  %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), fixed_thead = T)
+
+  
+```
+
+### Q2 State case rate
+**Q:** As of August 30, what state had the highest average case rate (cases per 1000)?
+
+**A:** Louisiana at 31.75 cases per 1000. Hawaii had the lowest. 
+
+
+```{r echo=FALSE}
+covid_state_us_current %>%
+  dplyr::select(location, cases_per_1000) %>%
+  arrange(desc(cases_per_1000)) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), fixed_thead = T)
+
+  
+```
+
+### Q3 County death rate
+**Q:** As of August 30, what county had the highest death rate (deaths per 1000 people)?
+
+**A:** Hancock, Georgia at 4.59 deaths/1000
+
+```{r echo=FALSE}
+
+covid_county_current %>%
+  dplyr::select(county, state, deaths_per_1000) %>%
+  arrange(desc(deaths_per_1000)) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), fixed_thead = T)
+
+```
+
+### Q4 County case rate
+**Q:** As of August 30, what county had the highest case rate (cases per 1000 people)?
+
+**A:** Trousdale, Tenneessee at 169 cases per 1000
+```{r echo=FALSE}
+
+covid_county_current %>%
+  dplyr::select(county, state, cases_per_1000) %>%
+  arrange(desc(cases_per_1000)) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), fixed_thead = T)
+
+
+```
+
+### Q5 Mapping deaths
+**Q:** Are there any trends we can detect geographically with deaths?
+
+**A:** Again, the south has been uniquely hard hit relative to the rest of the country.
+
+```{r echo=FALSE}
+# Join county shapes to other shapes
+covid_county_population_geo <- geo_join(counties, covid_county_current, 'GEOID', 'fips_code', how = "inner")  
+
+# Define Color Scheme
+binpal <- colorBin("plasma", covid_county_population_geo$deaths_per_1000, 10, pretty = FALSE)
+
+# Draw map
+
+leaflet(covid_county_population_geo) %>%
+   addProviderTiles(providers$CartoDB.Positron) %>%
+   #addProviderTiles(providers$Wikimedia) %>%
+   addPolygons(fillColor = ~binpal(deaths_per_1000), weight = 1, smoothFactor = 0.5, opacity = 0.1, fillOpacity = 0.5, color="black", popup = popupTable(covid_county_population_geo)) %>%
+   setView(-95, 39.335359608681216, 4) %>%
+    addLegend("bottomleft", 
+             pal = binpal, 
+             values = covid_county_population_geo$deaths_per_1000,
+    title = "Deaths per 100K",
+    labFormat = labelFormat(prefix = ""),
+    opacity = 1
+  ) 
+```
+
+### Q6 Mapping cases
+**Q:**  Are there any trends we can detect geographically with cases?
+
+**A:** The south has been uniquely hard hit, relative to the rest of the country
+
+```{r echo=FALSE}
+# Join county shapes to other shapes
+covid_county_population_geo <- geo_join(counties, covid_county_current, 'GEOID', 'fips_code', how = "inner")  
+
+# Define Color Scheme
+binpal <- colorBin("plasma", covid_county_population_geo$cases_per_1000, 10, pretty = FALSE)
+
+# Draw map
+
+leaflet(covid_county_population_geo) %>%
+   addProviderTiles(providers$CartoDB.Positron) %>%
+   #addProviderTiles(providers$Wikimedia) %>%
+   addPolygons(fillColor = ~binpal(cases_per_1000), weight = 1, smoothFactor = 0.5, opacity = 0.1, fillOpacity = 0.5, color="black", popup = popupTable(covid_county_population_geo)) %>%
+   setView(-95, 39.335359608681216, 4) %>%
+    addLegend("bottomleft", 
+             pal = binpal, 
+             values = covid_county_population_geo$cases_per_1000,
+    title = "Cases per 100K",
+    labFormat = labelFormat(prefix = ""),
+    opacity = 1
+  ) 
+```
+
+### Q7 Recent increases in deaths
+**Q:** In which counties have deaths gone up the most over the last month?
+
+**A:** A lot of places in the South.
+
+```{r echo=FALSE}
+
+covid_county_monthly_death_rate %>%
+  dplyr::select(county, state, d_2020_07_30, d_2020_08_30) %>%
+  mutate(late_july_to_late_august_pct_change_death_rate = (d_2020_08_30-d_2020_07_30)/d_2020_07_30*100) %>%
+  arrange(desc(late_july_to_late_august_pct_change_death_rate)) %>%
+  filter(d_2020_07_30 != 0) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), fixed_thead = T)
+
+```
+
+### Q8 Recent increases in cases
+**Q:** In which counties have cases gone up the most over the last month?
+
+**A:** A lot of places in the Midwest.
+
+```{r echo=FALSE}
+
+covid_county_monthly_case_rate %>%
+  dplyr::select(county, state, d_2020_07_30, d_2020_08_30) %>%
+  mutate(late_july_to_late_august_pct_change_case_rate = (d_2020_08_30-d_2020_07_30)/d_2020_07_30*100) %>%
+  arrange(desc(late_july_to_late_august_pct_change_case_rate)) %>%
+  kable() %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), fixed_thead = T)
+
+```

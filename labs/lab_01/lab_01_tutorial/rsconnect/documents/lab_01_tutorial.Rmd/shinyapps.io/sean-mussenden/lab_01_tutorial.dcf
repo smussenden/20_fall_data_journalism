@@ -1,0 +1,12 @@
+name: lab_01_tutorial
+title: lab_01_tutorial
+username:
+account: sean-mussenden
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2758559
+bundleId: 3596520
+url: https://sean-mussenden.shinyapps.io/lab_01_tutorial/
+when: 1599319866.1737
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,33 +1,48 @@
 ---
-title: "JOUR472/772 lab_01 | Environment Setup "
+title: "JOUR472/772 lab_01 | Environment setup"
 author: "Sean Mussenden"
-date: "9/4/2020"
-output: html_document
+date: "9/2/2020"
+output:
+  html_document:
+    theme: cerulean
+    highlight: pygments
+    toc: true
+    toc_float:
+      collapsed: true
+      smooth_scroll: false
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Lab objectives
+## Lab overview
 
-This lab serves as a foundation for all the work we'll be doing this semester, helping you set up your computer to do classwork and submit completed classwork for grading. 
+This lab serves as a foundation for all the work we'll be doing this semester. It will help you set up your computer to do classwork by installing the necessary software tools.  It will give you an overview of how to use those tools.  And it will show you how to submit completed labwork for grading. 
 
-This lab has several objectives for you to complete, and will walk you step-by-step through completing those objectives.  
+This lab describes several **objectives** for you to complete, and it will walk you step-by-step through completing those objectives.  
+
 The objectives are:
 
-* Objective 01_a: Install on your local machine the necessary software tools for this course.
-* Objective 01_b: Set up a GitHub repository for classwork
-* Objective 01_c: Develop an understanding of how we'll use RStudio
-* Objective 01_d: Develop an understanding of how to submit lab to ELMS, and submit it
+* **Objective 01_a**: Install on your local machine the necessary software tools for this course.
+* **Objective 01_b**: Set up a GitHub repository for classwork.
+* **Objective 01_c**: Develop an understanding of the basics of RStudio, and write code and text in RMarkdown files.
+* **Objective 01_d**: Develop an understanding of how to submit changes you've made locally to your repo on GitHub.com, and submit to ELMS.
 
 ## How this lab works
 
-You should read the text on this web page and watch the embedded videos, and follow the instructions I give as you go along.  It's very important to watch the videos, because, in addition to showing you how to do things step-by-step, the audio track also contains some key contextual information to help make sense of what you're seeing.  
+You should read the text on this web page and watch the embedded videos, and follow the instructions I give as you go along.  
 
-## Objectives 
+It's very important to watch the videos. 
 
-### Objective 01_a: Install on your local machine the necessary software tools for this course.
+In addition to showing you how to do things step-by-step, the audio track also contains some key contextual information to help make sense of what you're doing.
+
+You'll know you're done the lab when you successfully work through each objective as described in the text and videos, and submit a link to the edited R Markdown file stored in your GitHub.com repo to the lab_01 assignment on ELMS.
+
+## Objectives to complete
+
+### Objective 01_a 
+#### Install on your local machine the necessary software tools for this course
 
 To complete this objective, you'll need to install on your machine the necessary software tools for this course. 
 
@@ -39,53 +54,61 @@ They are:
 
 In the video below, I show you step-by-step how to do that, while offering some thoughts on what each thing does.  
 
-Before moving on to the next objective, please watch the video in full and complete the objective by successfully installing the three items named above.      
+Before moving on to the next objective, please watch the video in full and complete the objective by successfully installing the three things listed above.     
+
+**For windows users**: in the video, I show how to install the R language for a Mac.  To install for Windows, go to [https://cloud.r-project.org/](https://cloud.r-project.org/), and click Download R for Windows. On the next page, click the first link, "base". On the next page, click the top link to download for Windows.
 
 ```{r echo=FALSE}
-knitr::include_url("https://www.youtube.com/embed/zNzZ1PfUDNk")
-
+knitr::include_url("https://www.youtube.com/embed/ulKZkmcMiHQ")
 ```
 
-### Objective 01_b: Set up a GitHub repository for classwork 
+### Objective 01_b
+#### Set up a GitHub repository for classwork 
 
 To complete this objective, you'll need to: 
 
-  * Create an account on [GitHub.com](https://github.com), a code repository website where we'll be storing much of the work you do in this class, and sign up for [GitHub student developer pack](https://education.github.com/students).   
-  * Create a private repository on GitHub.com specifically for this class and give me permission to access it. 
-  * Use GitHub Desktop to pull your class repository to your local machine, a process called "cloning".  
+  * Create an account on [GitHub.com](https://github.com), a code repository website where we'll be storing much of the work you do in this class. You should also  sign up for [GitHub student developer pack](https://education.github.com/students), which gives you free access to several features that you would otherwise have to pay for.   
+  * Create a private repository (or public if you wish) on GitHub.com specifically for this class and give me permission to access it. 
+  * Use GitHub Desktop to pull your class repository to your local machine, a process called "cloning."  
   
-In the video below, I show you step-by-step how to do that, while explaining what you need to know about GitHub, as we'll use it in this class. 
+In the video below, I show you step-by-step how to do each of those things, while explaining what you need to know about GitHub as we'll use it in this class. 
 
-Before moving on to the next objective, please watch the video in full and complete the objective by successfully doing the three objectives above.      
+Before moving on to the next objective, please watch the video in full and complete the objective by successfully doing the three things listed above.      
 
 ```{r echo=FALSE}
-knitr::include_url("https://www.youtube.com/embed/zNzZ1PfUDNk")
+knitr::include_url("https://www.youtube.com/embed/je0rdg81p7s")
 ```
 
-### Objective 01_c: Develop an understanding of how we'll use RStudio
+### Objective 01_c 
+#### Develop an understanding of the basics of RStudio, and write code and text in RMarkdown files
 
 To complete this objective, you'll need to:
 
-  * Watch me tour the RStudio workspace.
-  * Load a sample RMarkdown file, a file format designed for "data notebooks" that we'll use all semester. 
-  * Make some minor edits to the sample RMarkdown file and run some very basic code. [Download link for the file]("https://www.youtube.com/embed/zNzZ1PfUDNk")
+  * Watch me describe the RStudio workspace.
+  * Load a sample RMarkdown file, a file format tailor made for the "data notebooks" that we'll use all semester. [Right click to download the file lab_01_workbook](https://raw.githubusercontent.com/smussenden/20_fall_data_journalism/master/labs/lab_01/lab_01_workbook/lab_01_workbook.Rmd)
+  * Make some minor edits to the sample RMarkdown file I've provided and run some very basic code. 
   
-In the video below, I show you step-by-step how to do that, while explaining some fundamentals about R, RStudio and RMarkdown. 
+In the video below, I show you step-by-step how to do each of those things, while explaining some fundamentals about R, RStudio and RMarkdown. 
 
-Before moving on to the next objective, please watch the video in full and complete the objective by successfully doing the three objectives above.      
-
-### Objective 01_d: Develop an understanding of how to submit changes to GitHub, and submit to ELMS
-
-To complete this objective, you'll need to:
-
-  * Save changes you've made to the RMarkdown file
-  * Upload those changes from your local machine to your code repository on GitHub.com.
-  * Submit your lab assignment on ELMS by sending the link to your GitHub.com repository. 
-  
-In the video below, I show you step-by-step how to do that, while explaining some fundamentals about GitHub
+Before moving on to the next objective, please watch the video in full and complete the objective by successfully doing the three things listed above.      
 
 ```{r echo=FALSE}
-knitr::include_url("https://www.youtube.com/embed/zNzZ1PfUDNk")
+knitr::include_url("https://www.youtube.com/embed/SzqJLGEoIyY")
+```
+
+### Objective 01_d 
+#### Develop an understanding of how to submit changes you've made locally to your repo on GitHub.com, and submit to ELMS
+
+To complete this objective, you'll need to:
+
+  * Save changes you've made to the RMarkdown file in RStudio. 
+  * Upload the changes made to your local repository to your code repository on GitHub.com.
+  * Submit your lab assignment on ELMS by pasting in the url to your RMarkdown file in your GitHub.com repository. 
+  
+In the video below, I show you step-by-step how to do that, while explaining some fundamentals about GitHub.
+
+```{r echo=FALSE}
+knitr::include_url("https://www.youtube.com/embed/Ds4idIBjVvM")
 ```
 
 ## Lab complete
