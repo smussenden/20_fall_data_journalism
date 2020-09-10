@@ -209,6 +209,14 @@ county_census_stats <- get_acs(geography = "county", variables = "B02001_002", s
   mutate(nonwhite_pop = total_pop-white_pop) %>%
   select(fips_code = geoid,white_pop, nonwhite_pop, everything())
 
+# Filter to make sheet smaller by just keeping largest states
+
+largest_states_list <- get_acs(geography = "state", variables = "B01001_001", year = 2018) %>%
+  clean_names() %>%
+  arrange(desc(estimate)) %>%
+  filter(estimate >= 5778394) %>%
+  select(name) 
+
 ###Join population data to covid data
 covid_county <- covid_county %>%
   left_join(county_census_stats, by=c("fips_code")) %>%
@@ -222,12 +230,15 @@ covid_county <- covid_county %>%
                                         TRUE ~ daily_unique_cases)) %>%
   mutate(daily_unique_deaths = case_when(daily_unique_deaths < 0 ~ 0,
                                         TRUE ~ daily_unique_deaths)) %>%
-  select(-fips_code, -cumulative_cases_to_date, -cumulative_deaths_to_date, -rarely_mask_pct, -sometimes_mask_pct, -always_mask_pct, -nonwhite_pop, -pop_pct_white, -white_pop, -frequently_mask_pct) #%>%
-  #select(state, county, date, daily_unique_cases, daily_unique_deaths, total_pop)
-  #mutate_at(is.numeric , replace_na, replace = 0)
+  select(-fips_code, -cumulative_cases_to_date, -cumulative_deaths_to_date, -rarely_mask_pct, -sometimes_mask_pct, -always_mask_pct, -nonwhite_pop, -pop_pct_white, -white_pop, -frequently_mask_pct) %>%
+  inner_join(largest_states_list, by=c("state" = "name"))
   glimpse(covid_county)
 
-
+x <- covid_county %>%
+  group_by(state) %>%
+  count()
+  
+#
          
 write_csv(covid_county,"covid_county.csv")
 
@@ -236,6 +247,6 @@ write_csv(covid_county,"covid_county.csv")
 
 ```{r}
 
-    
+
 
 ```

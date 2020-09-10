@@ -1,0 +1,38 @@
+---
+title: "JOUR472/772 in_class_02 | opioid shipment analysis"
+author: "Sean Mussenden"
+date: "9/7/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries
+
+```{r}
+library(tidyverse)
+library(janitor)
+```
+
+## Load Data
+
+```{r}
+
+arcos_wv_mingo_raw <- read_csv("data/arcos-wv-mingo-54059-itemized.csv") %>%
+  clean_names() %>%
+  select(transaction_date, combined_labeler_name, reporter_name, buyer_dea_no, buyer_name, buyer_city, buyer_state, drug_name, dosage_unit)
+
+```
+```{r}
+glimpse(arcos_wv_mingo_raw)
+
+```
+
+
+

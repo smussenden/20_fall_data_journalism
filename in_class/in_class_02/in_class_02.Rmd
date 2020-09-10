@@ -121,6 +121,10 @@ arcos_wv_mingo
 
 ```
 
+-30-
+
+
+
 ## Select Data
 
 One of the most basic things we can do a dataframe we've loaded is to trim it to only keep certain columns.  For that, we use a select() function, which is part of dplyr. Here's the link to the [dplyr reference page](https://dplyr.tidyverse.org/index.html). 
