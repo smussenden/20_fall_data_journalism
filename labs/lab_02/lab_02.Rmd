@@ -1,5 +1,5 @@
 ---
-title: "JOUR472/772 lab_02 | opioid shipment analysis"
+title: "JOUR472/772 lab_02 | loading packages, loading data, select, and arrange"
 author: "Sean Mussenden"
 date: "9/7/2020"
 output: 
@@ -15,38 +15,36 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## About this notebook 
 
-This notebook will review the concepts from the in_class_02 assignment.  
+This notebook will review the concepts introduced in the in_class_02 assignment:  
 
 * Loading packages.
 * Overview of the Tidyverse suite of packages, and its opinionated approach to data analysis. 
 * Programming with pre-built functions, specifically those made available with the Tidyverse.
 * Loading data and getting a brief overview of what it contains. 
 
-We will also introduce some new concepts, including
+It will also introduce some new concepts, including
 
-* Rearranging columns with select().  
-* Sorting with arrange()
+* Rearranging columns with select() functions.  
+* Sorting with arrange() functions.
 * Chaining together functions to transform data in an orderly way. 
 * Debugging problems.
 
-## How to work through it
+## How to work through this notebook
 
-This notebook contains text, code that I have written.  
+This notebook contains text and code that I have written.  
 
-When you see **Task**, that's an indication that you should do one of three things as instructed: 
+You should read the text.  When you see **Task**, that's an indication that you should do one of two things as instructed: 
 
 * Run some code I've written.
-* Modify some code I've written and run it.
-* Write some code of your own and run it. 
-* Write some text. 
+* Write some code of your own and run it, sometimes including a comment inside of the codeblock. 
 
-In a separate video I've given you access to, I'll work through this notebook, and you should follow along the video as you work through, pausing as you need to in order to complete tasks. 
+There is an accompanying video for this notebook.  You should following along with the video, pausing it as needed to complete tasks.  Throughout the text of this notebook, you will notice **Details in Video** at various points.  
 
-When you see **Details in Video**, that's an indication that I'll demonstrate something in the video, or explain a concept in more detail, so it will be critical to watch and listen. 
+That tag is an indication that I'll demonstrate something in the video that isn't written out in the notebook text, so it's extra important to pay attention to that section of the video before moving on.
 
 ## Submission details
 
-When you're finished all the tasks, you should save your file, commit the changes in GitHub desktop and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS. 
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS. 
 
 ## Packages
 
@@ -96,27 +94,28 @@ To use a package, and the functions and methods it enables, you first have to in
 
 Though there are exceptions, you typically need to install a package once -- the first time you're using a new machine. 
 
-**Task**: Run the code block below to install the Tidyverse.  You may have already done this in class.  If you have, there's no harm in reinstalling it now.  If you run into errors, please reach out to your professor or a classmate to debug. 
+**Task (Run Code)**: Run the code block below to install the Tidyverse.  You may have already done this in class.  If you have, there's no harm in reinstalling it now.  If you run into errors, please reach out to your professor or a classmate to debug. 
 
 ```{r}
 # Install the tidyverse
 install.packages('tidyverse')
 ```
 
+**Details in Video**: A review of what happens when you install an R package.
+
 ### Loading Packages
 
-Once a package is installed on your system, you shouldn't have to install it again -- unless you want to update it to get new features.  But generally, we only need to install a package once. 
-But to make use of a package, we have to load it every time we start a new session.  
+Once a package is installed on your system, you shouldn't have to install it again -- unless you want to update it to get new features.  But generally, we only need to install a package once. To make use of a package, we have to load it every time we start a new session.  
 
 Using the `library()` function is one way to do that. 
 
-**Task**: Run the code block below to load the Tidyverse.  
+**Task (Run Code)**: Run the code block below to load the Tidyverse.  
 
 ```{r}
 # Load the tidyverse suite of packages
 library(tidyverse)
 ```
-**Details in Video**: I'll show you what it will look like if you've installed and loaded the tidyverse correctly.  
+**Details in Video**: A review of what should happen if you've installed and loaded the tidyverse correctly. (My notes: review what the output looks like. Show how packages are loaded in file explorer)
 
 ## Loading Data
 
@@ -124,14 +123,14 @@ Using a function from the readr package called `read_csv()`, we're going to read
 
 The data we'll load has a row for each pharmacy in Mingo County, West Virginia. It lists the total number of pills shipped between 2006 and 2014 (total_dosage_unit) and the number of shipments (total_records).
 
-**Task**: Run the code block below to load the data.
+**Task (Run Code)**: Run the code block below to load the data.
 
 ```{r}
 # Read in data for Mingo, WV
 arcos_wv_mingo <- read_csv("data/arcos-wv-mingo-54059-pharmacy.csv")
 
 ```
-**Details in Video**: I review in more detail what the code above means in English, a few other details about loading data in general, and some additional information about this specific data set we're loading. 
+**Details in Video**: More detail on what the code above is doing, in English; a few other details about loading data in general; and some additional information about this specific data set we're loading. (My notes: Review column names; Object Names could be anything; cleaning up environment; folder path matters; Restart R and try to load; show how to reload tidyverse and how to debug)
 
 We read in the data using a function, `read_csv()`, from the readr package, which is part of the tidyverse.  We're just scratching the surface of what we can do with readr, and we'll get more advanced as the semester progresses. 
 
@@ -139,9 +138,10 @@ Here are some great resources for getting help with loading data using readr.
 
 * [readr package page](https://readr.tidyverse.org/index.html).
 * [details on readr functions](https://readr.tidyverse.org/reference/index.html)
+* [details on the read_csv function](https://readr.tidyverse.org/reference/read_delim.html)
 * [readr cheatsheet](https://rawgit.com/rstudio/cheatsheets/master/data-import.pdf)
 
-**Task**: Now it's your turn.  There's a csv file in the data folder called "arcos-md-baltimore-city-24510-pharmacy.csv".  It contains the same type of information as the Mingo, WV file we read in above, but it has pill and shipment totals per pharmacy in Baltimore City.  
+**Task (Write Code and Run It)**: There's a csv file in the data folder called "arcos-md-baltimore-city-24510-pharmacy.csv".  It contains the same type of information as the Mingo, WV file we read in above, but it has pill and shipment totals per pharmacy in Baltimore City.  
 
 In the empty codeblock below, read in the Baltimore data and store it as an object called acros_md_baltimorecity
 
@@ -149,17 +149,16 @@ In the empty codeblock below, read in the Baltimore data and store it as an obje
 
 ```
 
-**Details in Video**: I'll show you the answer, and review some common mistakes.  
+**Details in Video**: I'll show you the answer, and review some common mistakes. (My notes: Show answer, show what happens if they screw up the file path) 
 
 ## Examining data
 
-Now that we've loaded data in, there are several ways to get a sense of the data before beginning analysis. I'll run through three common methods. 
+Now that we've loaded data in, there are several ways to get a general overview of the data before beginning analysis. I'll run through three common methods. 
 
 ### Option 1: glimpse
 The `glimpse()` function is useful to get a sense of the data. 
 
-**Task**: run the codeblock below to use the `glimpse()` function to get a sense of the Mingo, WV data. 
-**Details in Video**: I'll go over how to make sense of the output of the glimpse function after you run it. 
+**Task (Run Code)**: run the codeblock below to use the `glimpse()` function to get a sense of the Mingo, WV data. 
 
 ```{r}
 
@@ -167,8 +166,9 @@ glimpse(arcos_wv_mingo)
 
 ```
 
+**Details in Video**: I'll go over how to make sense of the output of the glimpse function after you run it. (My notes: Review column names and data types)
 
-**Task**: Now it's your turn. In the empty codeblock below, use the `glimpse()` function to get a sense of the Baltimore data. 
+**Task (Write Code and Run It)**: Now it's your turn. In the empty codeblock below, use the `glimpse()` function to get a sense of the Baltimore data you loaded above. 
 
 ```{r}
 
@@ -178,8 +178,8 @@ glimpse(arcos_wv_mingo)
 
 By just writing the name of the object we want to explore, we can display it in our markdown document. 
 
-**Task**: run the codeblock below to display the Mingo, WV data in the markdown document. 
-**Details in Video**: I'll go over how to cycle through the data after you've printed it. 
+**Task (Run Code)**: run the codeblock below to display the Mingo, WV data in the markdown document. 
+
 
 ```{r}
 
@@ -187,7 +187,9 @@ arcos_wv_mingo
 
 ```
 
-**Task**: Now it's your turn. In the empty codeblock below, display the Mingo, WV data in the markdown document. 
+**Details in Video**: I'll go over how to cycle through the data after you've printed it. (My notes: Review how to use this)
+
+**Task (Write Code and Run It)**: Now it's your turn. In the empty codeblock below, display the Baltimore data in the markdown document. 
 
 ```{r}
 
@@ -195,19 +197,21 @@ arcos_wv_mingo
 
 ### Option 3: open the data from the environment window
 
-We can also click on the object name in the environment window and interact with it, resorting it to get a sense of the rows and columns. 
+We can also click on the object name in the environment window and interact with it. 
 
-**Details in Video**: I'll show you how to do this.
+**Details in Video**: I'll show you how to do this. (My notes: Review how to do this)
  
-## Select Data
+## Selecting Data
 
-One of the most basic things we can do a dataframe we've loaded is to trim it to only keep certain columns.  
+### Getting started with select
 
-For that, we use a select() function, which is part of dplyr. Here's the link to the [dplyr reference page](https://dplyr.tidyverse.org/index.html). 
+One of the most basic things we can do with dataframe we've loaded is "select" certain columns -- that is, keep some columns while hiding others, or rearranging them.  
 
-We're also using a "pipe", which is what we call the %>% sign. It's a core part of the tidyverse, and it's what allows us to chain together functions.  In English, it means "and then.
+On its own, selecting doesn't help us answer specific questions.  But it is a foundational methods that we'll use over and over again in concert with other methods that will help us answer questions.  
 
-What we're saying below is "Take the acros_wv_mingo dataframe AND THEN select only the column called buyer_name, and print it out in the markdown document"
+This two line chunk of code below takes our Mingo, WV dataframe, selects only the column with the name of each pharmacy -- buyer_name -- and excludes the rest and displays the output in the markdown document. 
+
+**Task (Run Code)**: run the codeblock below to select the column buyer_name and exclude all of the others, printing the results in the markdown file.   
 
 ```{r}
 
@@ -215,10 +219,26 @@ arcos_wv_mingo %>%
   select(buyer_name)
 
 ```
+
+**Details in Video**: I'll break down what the code says in English, and explain some key concepts about select and what the %>% symbol (called a pipe in tidyverse lingo) does. (My notes: Show the original data to show we've only selected one column.  Show that it doesn't edit the original data, that's still preserved. Explain that tidyverse pipe and what it does. Show an error when we get column name wrong)
+
+The `select()` function is part of another tidyverse package, dplyr, that we'll be making heavy use of this semester. A lot of the key things we'll do with data -- sorting, filtering, grouping and summarizing -- we'll be doing come from the dplyr package. 
+
+Here are some places to go to get help with select and dplyr. 
+* [dplyr package page](https://dplyr.tidyverse.org/).
+* [details on all dplyr functions](https://dplyr.tidyverse.org/reference/index.html)
+* [details on the select function](https://dplyr.tidyverse.org/reference/select.html)
+* [dplyr cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf)
+
+The R for data science book has a great explanation about how the tidyverse pipe -- which, in English, means "and then" -- works.
+
+* [pipes review in R for Data Science](https://r4ds.had.co.nz/pipes.html)
+
+### Selecting Data and Storing as a New Object
+
 We can also store this as a new object called "arcos_wv_mingo_pharmacies", which makes it available for later use as just a list of pharmacy names. 
 
-
-"Take the acros_wv_mingo dataframe AND THEN select only the column called buyer_name, and store it as a new dataframe called arcos_wv_mingo_pharmacies"
+**Task (Run Code)**: run the codeblock below to select the column buyer_name and exclude all of the others, storing it as a new object called arcos_wv_mingo_pharmacies.  
 
 ```{r}
 
@@ -227,10 +247,24 @@ arcos_wv_mingo_pharmacies <- arcos_wv_mingo %>%
 
 ```
 
-There's lots more we can do with select, but we'll save that for this week's lab. 
+**Details in Video**: I'll breakdown what the code above does and show you some details about creating objects.  (My notes: Show storing object doesn't overwrite original data. Show how to overwrite the original data, then go back up and read it in again)
 
-For now, let's just use select to keep only a handful of columns that we want, and move others around.  So as not to overwrite the original data, let's save it as a new object called: arcos_wv_mingo_trimmed. The five columns we want to keep are: buyer_dea_no, buyer_name, buyer_city, total_dosage_unit, total_records.
- 
+**Task (Write Code and Run It)**: Now it's your turn.  Using the Baltimore data you loaded above, create a new object called arcos_md_baltimorecity_pharmacies that takes the raw baltimore data and selects only the buyer_name column.   
+
+```{r}
+
+
+```
+
+**Details in Video**: I'll show you how to complete the task above. 
+
+### Selecting more than one column, rearranging
+
+We can select more than one column at a time.  The order in which we list the column names determines the order in which they'll display. 
+
+The following code selects the last five columns of our Mingo, WV data and stores them as an object called arcos_wv_mingo_trimmed.  
+
+**Task (Run Code)**: run the codeblock below and examine the data by clicking on arcos_wv_mingo_trimmed in the environment window. 
 
 ```{r}
 
@@ -239,11 +273,46 @@ arcos_wv_mingo_trimmed <- arcos_wv_mingo %>%
 
 ```
 
+**Details in Video**: A review of what the code above does.  
+
+Changing the position of a column name inside the select statement changes the order in which it appears. 
+
+The following code selects the last five columns of our Mingo, WV data and stores it as an object called arcos_wv_mingo_trimmed. But, it rearranges the order of the columns, putting buyer_name BEFORE buyer_dea_no. That's different than agove. 
+
+**Task (Run Code)**: run the codeblock below and examine the data by clicking on arcos_wv_mingo_trimmed in the environment window. 
+
+```{r}
+
+arcos_wv_mingo_trimmed <- arcos_wv_mingo %>%
+  select(buyer_name, buyer_dea_no, buyer_city, total_dosage_unit, total_records)
+
+```
+
+**Details in Video**: I'll show you how the columns have been re-ordered, and also what happened when we reuse an object name. I'll also show you an alternative way of selecting the same five columns by excluding the first two columns.  (My notes: show all that)
+
+There's a lot more we can do with `select()`, but that's enough to get started.  To end this section, one last task for you to complete. 
+
+**Task (Write Code and Run it)**: In the empty codeblock below, select the last five columns of the Baltimore data, and store it as an object called arcos_wv_baltimorecity_trimmed.  
+
+```{r}
+
+
+```
+
+**Details in Video**: I'll show you the answer to the above block. 
+
 ## Sorting
 
-By working in RStudio's spreadsheet view, we can click on a column header to re-order our spreadsheet from highest to lowest or lowest to highest, based on the values in that column.
+### Getting started with sorting
 
-And, of course, we can do it with code, using the arrange function, and passing in the name of a column. This puts them in order of total pills sent to each pharmacy.   
+Selecting, on its own, isn't entirely useful in helping us answer questions.  
+
+But another common method -- sorting -- is an important way to answer questions like: "which one is the biggest?" or "which one is the smallest?" 
+
+In the tidyverse, we sort with a function called `arrange()`. The code below allows us to answer the question: "Which pharmacy in Mingo, WV had the smallest number of pills sent to it between 2006 and 2014?"
+
+**Task (Run Code)**: run the codeblock below and examine the data by clicking on arcos_wv_mingo_sorted in the environment window. 
+
 
 ```{r}
 arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
@@ -251,7 +320,39 @@ arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
 
 ```
 
-We can also sort on the same column, highest to lowest, by wrapping the column name INSIDE of another function, called desc(), which is short for descending.  
+**Details in Video**: We'll review what this code means, in English, and review what the `arrange()` function does. 
+
+The `arrange()` function is also a part of the dplyr package. Here are some places to go to get help with arrange and dplyr. 
+* [dplyr package page](https://dplyr.tidyverse.org/).
+* [details on all dplyr functions](https://dplyr.tidyverse.org/reference/index.html)
+* [details on the arrange function](https://dplyr.tidyverse.org/reference/arrange.html)
+* [dplyr cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf)
+
+By default, the arrange function sorts the column name you feed it from highest to lowest value. 
+
+If it's a number column, as in the code above, that means it's sorted from lowest to highest, or in ascending order. 
+
+If it's a text column, that means alphabetically from A to Z, as in the example below. 
+
+**Task (Run Code)**: run the codeblock below and examine the data by clicking on arcos_wv_mingo_sorted in the environment window. 
+
+```{r}
+arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
+  arrange(buyer_name)
+
+```
+
+**Details in Video**: We'll review what this code means. 
+
+### Sorting from highest to lowest
+
+We can also sort from lowest to highest by wrapping the column name INSIDE of another function, called `desc()`, which is short for descending. 
+
+Descending means highest to lowest. It's the opposite of ascending.  
+
+The codeblock below allows us to find the answer to  the question: "which pharmacy in Mingo, WV had the most pills sent to it between 2006 and 2014?"
+
+**Task (Run Code)**: run the codeblock below and examine the data by clicking on arcos_wv_mingo_sorted in the environment window. 
 
 ```{r}
 arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
@@ -259,46 +360,58 @@ arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
 
 ```
 
-That spreadsheet we just created serves to answer this question: which pharmacy in Mingo, W.V. got more total pills than any other pharmacy in the county between 2006 and 2014?  The answer: Strosnider. We already know that Mingo had one of the highest rates of pills per person in the country.  Could this pharmacy be a jumping off point for further reporting on a story?  Maybe. 
+**Details in Video**: We'll review what this code means and review the results.  
 
-Let's try sorting by total_records, which is shipments.  
+**Task (Write Code and Run It)**: Now it's your turn. Write the code below to answer the question: "Which pharmacy in Baltimore City, Maryland had the most pills sent to it between 2006 and 2014?" Hint: use the arcos_md_baltimorecity_trimmed dataframe as a starting point to answer this question.
 
 ```{r}
-arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
-  arrange(desc(total_records))
+
 
 ```
 
-That spreadsheet we just created serves to answer this question: which pharmacy in Mingo, W.V. got more total shipments than any other pharmacy in the county between 2006 and 2014?  The answer: Hurley Drug Company.  [Story](https://www.wvgazettemail.com/news/health/drug-firms-shipped-20-8m-pain-pills-to-wv-town-with-2-900-people/article_ef04190c-1763-5a0c-a77a-7da0ff06455b.html) 
+**Details in Video**: We'll review the answer. 
 
-## Putting it all together
+## Combining functions
 
-We started by selecting columns, and then moved onto filtering.  We did this in two separate steps, but there's no reason we have to do it that way. The beauty of the Tidyverse is chaining steps together. 
+We started by selecting columns, and then moved onto filtering.  
+
+We did this in two separate steps, but there's no reason we have to do it that way. The beauty of the Tidyverse is that we can "chain" steps together using the pipe symbol: %>%.  
 
 The function below, in English, says: "create a new object called arcos_wv_mingo_trimmed_sorted that takes the original arcos_wv_mingo dataframe AND THEN keeps only the five columns we want AND THEN sorts the whole thing from highest to lowest on total shipments. 
+
+**Task (Run Code)**: run the codeblock below. 
 
 ```{r}
 arcos_wv_mingo_trimmed_sorted <- arcos_wv_mingo %>%
   select(buyer_dea_no, buyer_name, buyer_city, total_dosage_unit, total_records) %>%
-  arrange(desc(total_records))
+  arrange(desc(total_dosage_unit))
 
 ```
 
-## Errors
+**Details in Video**: We'll review this code.
 
-What's wrong with this code? 
+Notice that it starts with the raw data, and then combines both selecting and sorting into one step. 
+
+## Exercise Questions
+
+Answer the question below by writing code in the empty codeblock.  Edit the comment in the codeblock with the answer.
+
+**Task (Write Code and Run It)**: 1. In Baltimore City, which pharmacy got the most shipments between 2006 and 2014? How many shipments did it get?  Hint: the total_records column reflects the number of shipments
 
 ```{r}
-arcos_wv_mingo_trimmed <- arcos_wv_mingo %>%
-  select(buer_dea_no)
+# Answer to question 1: 
+
 ```
 
-## Exercise
+**Task (Write Code and Run It)**: 2. In Baltimore City, which pharmacy got the smallest number of pills between 2006 and 2014? How many pills did it get?  Hint: the total_dosage_unit column reflects the number of pills.
 
-There's a spreadsheet in the data folder called arcos-md-baltimore-city-24510-pharmacy.csv.  Like the mingo data we've been working with, it includes the total number of pills and total number of shipments to each pharmacy in Baltimore City between 2006 and 2014.   
+```{r}
+# Answer to question 2: 
 
-Create as many codeblocks below as you need to.  Your task is to read in the data and answer these question by writing code: which pharmacy in Baltimore got the most total shipments?  Which one got the most pills?  
+```
 
-You'll go into breakout rooms to do this. 
+## You're Done
+
+When you're finished all the tasks and the exercise questions, save your file in R Studio. Commit the changes in GitHub desktop and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS. 
 
 
