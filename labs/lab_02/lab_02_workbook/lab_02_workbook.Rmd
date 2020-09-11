@@ -373,7 +373,7 @@ arcos_wv_mingo_sorted <- arcos_wv_mingo_trimmed %>%
 
 ## Combining functions
 
-We started by selecting columns, and then moved onto filtering.  
+We started by selecting columns, and then moved onto sorting.  
 
 We did this in two separate steps, but there's no reason we have to do it that way. The beauty of the Tidyverse is that we can "chain" steps together using the pipe symbol: %>%.  
 
