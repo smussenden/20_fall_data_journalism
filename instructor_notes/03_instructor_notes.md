@@ -24,6 +24,8 @@
 [PULL UP SLIDES]
 https://docs.google.com/presentation/d/1zWgyrPyrkwmv08ynnTX8JARzBcks5wiL8L8VgOh9U8w/edit#slide=id.g98a4be9239_0_10
 
+FIRST, before we go through what we're doing today, here's how to get help from me.
+
 Here's what we're doing today.
 
 1.  Review answers from previous lab.
