@@ -2,6 +2,7 @@ Class.
 
 1.  Review answers from previous lab.
 2.  Review excuses forum post, talking about common features.
+  * Everyone's were great, but a few common ones I hear all the time.  
   * We don't keep our data that way
     * Kara: report before making a request.  
     * Alexandra: heard from Columbus that they don't keep it as a spreadsheet. Her follow: okay, how do you keep it.
@@ -20,14 +21,14 @@ Class.
     * Ask for fee waiver.  Many states have exemptions for journalist requests.
 3.  Data assignment
     * What have you heard so far?  Help people work through problems.
-    * What's due this week.
 4.  Review data reporting project 1
     * Groups
-    * Assignment
+    * Assignment (Show example of story for this week for reading, and show first example)
     * How reading for this week fit in.
 5. BREAK.
 6. WORK THROUGH ASSIGNMENT
-  
+7. WHAT'S DUE THIS WEEK
+
 
 
 

@@ -33,7 +33,8 @@ This project is worth 20 percent of your total final grade.
 * Deliverable 4 (week 10 or week 11) - 20 percent
   * Giving a short, group presentation (about 5 minutes) on key points from your memo.
   * Leading the class in a screen-share walkthrough of your data notebook.  The class will load a copy of your data notebook and work through it as you present.    
-* Peer review - 10 percent
+* Peer review and teamwork - 10 percent
+  * Your teammates will be asked to anonymously review your level of effort and contribution to the project. No one will see these reviews but me. I will use these reviews, in concert with my own observations, as a guide in determining this portion of your grade. This is designed to make sure everyone on the team pulls their weight.   
 
 ## Groups
 
