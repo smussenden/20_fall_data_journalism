@@ -69,14 +69,15 @@ The groups I've assigned are [here](https://umd.instructure.com/courses/1288268/
 ## Notes and Backup Stories
 * *sm_note* for the future, this is a good place to look for data notebooks for stories to reverse engineer. [https://github.com/silva-shih/open-journalism](https://github.com/silva-shih/open-journalism). The following orgs are regularly adding story repos, some of which may be appropriate when this project needs a refresh:
   * [CPI](https://github.com/publici)
-  * [BuzzFeed](https://github.com/BuzzFeedNews)
+  * [BuzzFeed](https://github.com/BuzzFeedNews) | [BuzzFeed repos](https://github.com/BuzzFeedNews/everything#data-and-analyses)
   * [Markup](https://github.com/the-markup)
   * [LA Times](https://github.com/datadesk)
   * [Reveal](https://github.com/cirlabs)
-  * [WRAL](https://www.wral.com/nc-s-alarming-disparity-of-black-student-arrests-among-worst-in-country/17515727/)
+  * [WRAL](https://github.com/wraldata/civil-rights-ed-data)
   * [FiveThirtyEight](https://github.com/fivethirtyeight)
   * [ChicagoTribune](https://github.com/newsapps/public-notebooks)
   * [The Atlantic](https://github.com/theatlantic)
+  * [The Pudding](https://github.com/the-pudding)
 
 
 *  [GitHub repo for story with data](https://github.com/wraldata/civil-rights-ed-data). [nc-s-alarming-disparity-of-black-student-arrests-among-worst-in-country](https://www.wral.com/nc-s-alarming-disparity-of-black-student-arrests-among-worst-in-country/17515727/)
@@ -86,3 +87,4 @@ The groups I've assigned are [here](https://umd.instructure.com/courses/1288268/
 * [Failure factories](https://projects.tampabay.com/projects/2015/investigations/pinellas-failure-factories/) but need to see if they have data they can share, raw may be too complicated for this project.
 * [Reuters Lead Data](https://github.com/chris-prener/LeadMappingTutorial). Need to get data from them, or extract it from webapp.
 https://www.reuters.com/investigates/graphics/lead-water/en/data/lead-testing.yaml
+* [How the nation’s growing racial diversity is changing our schools | Washington Post](https://www.washingtonpost.com/graphics/2019/local/school-diversity-data/); [GitHub repo with code behind analysis](https://github.com/WPMedia/student_integration_analysis))

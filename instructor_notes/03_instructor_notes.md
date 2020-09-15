@@ -1,3 +1,53 @@
+Class.
+
+1.  Review answers from previous lab.
+2.  Review excuses forum post, talking about common features.
+  * We don't keep our data that way
+    * Kara: report before making a request.  
+    * Alexandra: heard from Columbus that they don't keep it as a spreadsheet. Her follow: okay, how do you keep it.
+    * Find out how they keep it, and get it in whatever format they keep it in. They're obligated to give you what they have, not to create something new.  
+  * We keep it on a computer OR, We keep it on a computer but we're giving you paper.
+      * Audrey: get the paper or PDFs and start typing. Make your own database.
+      * State law often says if it exists electronically, they HAVE to give it to you that way.  
+  * It's not a public record or Part of it's public and part of it's not, so we're not giving you any of it. SHOW LINK - https://www.rcfp.org/open-government-guide/
+    * Jeremy, Sara, Jummy: show me the statute.  The law is your friend.  Get to know the law in your state.  
+    * Aadit: To that, I would say, take it out -- delete those columns or rows -- and give me what's left.
+  * We don't know how to do that/we can't do that. The person who does it is gone.
+    * Spencer: "We'll show you how".  
+    * Ask to talk to data person.
+  * It will cost you a LOT of money.
+    * Tori: ask for charge breakdown.
+    * Ask for fee waiver.  Many states have exemptions for journalist requests.
+3.  Data assignment
+    * What have you heard so far?  Help people work through problems.
+    * What's due this week.
+4.  Review data reporting project 1
+    * Groups
+    * Assignment
+    * How reading for this week fit in.
+5. BREAK.
+6. WORK THROUGH ASSIGNMENT
+  * Install devtools, install vembedr
+  * Show filtering, mutate, 
+
+
+
+HAVE THEM INSTALL THIS SO I CAN EMBED YOUTUBE VIDEOS NEXT TIME IN RMD
+
+```{r}
+#install.packages("devtools")
+#devtools::install_github("ijlyttle/vembedr")
+library(vembedr)
+```
+
+```{r}
+embed_url("https://www.youtube.com/watch?v=uV4UpCq2azs")
+```
+
+TALK ABOUT INITIAL CONTACTS WITH AGENCIES -- ALEXANDRA RESPONSE!
+
+
+
 # Session 02 Instructor Notes
 
 ## To Have Up on Desktop
@@ -135,4 +185,4 @@ Rename it in_class_02
 Go to GitHub desktop and pull > comitt changes > push origin
 Open R studio
 Open In_class_02.Rmd
-Two options here. If you have a big enough screen, you can switch back and forth and run code as I go. IF NOT, just watch me and there will be time at the end to do it on your own. 
+Two options here. If you have a big enough screen, you can switch back and forth and run code as I go. IF NOT, just watch me and there will be time at the end to do it on your own.

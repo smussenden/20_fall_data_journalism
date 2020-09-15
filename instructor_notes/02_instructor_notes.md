@@ -61,7 +61,10 @@ You all killed it on this.
 
 [PULL UP in_class_02_lecture_demo.Rmd]
 
-In the raw data, each row is a shipment of a unique unit of pills that has the date, manufacturer, distributor, end pharmacy (including address), number of pills, info about the type of pill and more.   
+In the raw data, each row is a shipment of a unique unit of pills that has the date, manufacturer (labeler), distributor (reporter), end pharmacy (buyer name, city and state), drug type, number of pills, info about the type of pill and.
+
+This is a small slice of it, I'm not showing you all the columns in this raw data set, which has a lot more.   
+This is just for Mingo WV. 45K unique shipments from 2006 to 2014.    
 
 
 * A: A total of 76 billion opioids shipped between 2006 and 2012.
@@ -123,6 +126,10 @@ Now I'm going to introduce you to the data acquisition project, which is worth 1
 
 #### IN CLASS EXERCISE
 
+NOTE: THIS TOOK FOREVER and we didn't get past loading the tidyverse.  This is better as a lesson where we just load tidyverse and help peeople debug the next time we do this. If we end early, we end early
+
+SAVE ALL THE other stuff in in class assignment 2 for the lab.
+
 Go to Modules Page
 Go to live class assignemnt
 CLick link to download zip file
@@ -135,4 +142,5 @@ Rename it in_class_02
 Go to GitHub desktop and pull > comitt changes > push origin
 Open R studio
 Open In_class_02.Rmd
-Two options here. If you have a big enough screen, you can switch back and forth and run code as I go. IF NOT, just watch me and there will be time at the end to do it on your own. 
+Two options here. If you have a big enough screen, you can switch back and forth and run code as I go. IF NOT, just watch me and there will be time at the end to do it on your own.
+At the end, I'll send you to breakdout rooms to work together
