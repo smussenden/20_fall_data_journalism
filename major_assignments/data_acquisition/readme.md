@@ -46,8 +46,8 @@ The grading breaks down this way.
       * About the negotiation: Tell us about your contacts with the agency. Did officials put up barriers to access or accommodate you? Did they object to releasing the data in electronic form? What was the outcome?
       * Looking ahead: If you have not obtained the data, what steps are you planning to take next?  Have you followed up recently with your agency? What have they told you?
       * Lessons learned: What did you learn from this project that you might be able to apply to future reporting efforts and that would be useful for other students to know?  Did you learn anything about yourself? Your insights here are an important feature of the assignment.
-* Week 10 Presentation (Lightning Talk) - 10 percent
-     * In week 10, you will update the class verbally on two things in a presentation with a hard cap of three minutes:
+* Week 9 Presentation (Lightning Talk) - 10 percent
+     * In week 9, you will update the class verbally on two things in a presentation with a hard cap of three minutes:
       * Where your data request stands.  Have you obtained the data? If not, why?
       * Tell us a brief story about a single part of the data acquisition process, and the lesson you learned from it that you think is worth sharing from the class.  
 
