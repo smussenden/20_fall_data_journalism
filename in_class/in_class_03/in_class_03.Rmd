@@ -1,0 +1,197 @@
+---
+title: "JOUR472/772 in_class_03 | covid analysis, filtering, mutate"
+author: "Sean Mussenden"
+date: "9/15/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook 
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_03.  In particular, it will show:
+
+* subsetting a dataframe with filter()
+* creating a new column with mutate()
+
+## Install packages
+
+We're going to install one new package today that you'll need for lab_03.  It will allow you to watch the lab explainer videos directly in the lab R Markdown document, without having to go to another web page. 
+
+The package is called Vembedr. [GitHub link](https://github.com/ijlyttle/vembedr)
+
+**Task (Run Code)**: run the code below to install vembedr, using the install.packages() function. 
+
+```{r}
+install.packages('vembedr')
+```
+
+## Load packages
+
+Remember, we typically need to install packages only once on our computer.  But we have to load them every time we want to make use of them during an R session.  
+
+Today, we're going to load two packages:
+
+* The tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+* Vembedr, the package we just installed. 
+
+**Task (Run Code)**: run the code below to load the tidyverse and vembedr, using the library() function
+
+```{r}
+# Load the tidyverse, vembedr
+library(tidyverse)
+library(vembedr)
+```
+
+## Test Vembedr
+
+If you've successfully installed and loaded vembedr, a YouTube video should appear below the next codeblock after you run it. 
+**Task (Run Code)**: run the code below to make a YouTube video display below the codeblock.
+
+```{r}
+# Display a YouTube video of Hamilton below this codeblock. 
+embed_url("https://www.youtube.com/watch?v=uV4UpCq2azs")
+```
+
+## Load Data
+
+We're going to load a dataframe of COVID case rates by U.S. county on the 30th day of each month between March and August.
+
+* Source [NYT Covid GitHub repo](https://github.com/nytimes/covid-19-data)
+* Documentation description: One row per U.S. county, with the cumulative COVID-19 death rate as of the 30th day of each month between March and August.  Death rate is number of cases per 100,000 people.   Population via U.S. Census American Community Survey, most recent data (2018 5 year average).  Caveat: the geographic unit is MOSTLY counties, but it contains some cities (i.e. New York City).
+
+**Task (Run Code)**: run the code below to load the data.
+
+```{r}
+covid_county_monthly_case_rate <- read_csv("data/covid_county_monthly_case_rate.csv")
+```
+## Examine data 
+
+First, use the glimpse() function to get a sense of the data. 
+
+**Task (Run Code)**: run the code below to glimpse() the data.
+
+```{r}
+
+glimpse(covid_county_monthly_case_rate)
+
+```
+Then, display the first 1,000 rows below the codeblock. 
+
+**Task (Run Code)**: run the code below to display the data below the codeblock.
+
+```{r}
+
+covid_county_monthly_case_rate
+
+```
+
+Lastly, click the dataframe name in the file explorer to open it as a sortable spreadsheet. 
+
+**Task (Run Code)**: click the dataframe name to open it as a spreadsheet you can sort, then examine the data.
+
+## Refresher: Selecting and Sorting
+
+Our data has a lot of columns.  Let's suppose we wanted to only examine the most recent numbers for each county, August. And let's suppose we wanted to sort from highest to lowest on the August case rate, to see which county had the highest case rate in the country.  
+
+**Task (Run Code)**: Run the code below to create a new object called august_covid_county_case_rate, select only three columns (county and state, and the August case rate), and sort from highest to lowest on case rate. It then prints the results it out below the codeblock. 
+
+```{r}
+# Select only three columns, then sort from highest to lowest on August case rate
+covid_county_august_case_rate <- covid_county_monthly_case_rate %>%
+  select(county, state, d_2020_08_30) %>%
+  arrange(desc(d_2020_08_30))
+
+# Print the results below the codeblock
+covid_county_august_case_rate
+
+```
+
+## Filtering
+
+Just as select() allows us to pick which columns to display, filter() allows us to pick which rows to display.  It allows us to *subset* our data based on some criteria we give it.  
+
+Let's suppose we wanted to easily answer the question "which Maryland county had the highest case rate on August 30.  
+
+We can filter the state column to only return Maryland data.
+
+**Task (Run Code)**: Run the code below to filter for only Maryland counties. Note the double equals sign, and what happens if you change it to one equals sign.
+
+```{r}
+# Select only three columns, then sort from highest to lowest on August case rate
+covid_maryland_august_case_rate <- covid_county_august_case_rate %>%
+  filter(state == "Maryland")
+
+```
+
+**Task (Write Code)**: In the codeblock below, create a new object called covid_virginia_august_case rate.  It should filter covid_county_august_case_rate to only examine Virginia counties, similar to what we did above with Virginia.   
+
+```{r}
+
+```
+
+The lab will review a bit more on filtering. 
+
+## Mutate 
+
+There are few ways in the tidyverse to create new columns, but one of the most common ones is mutate().  
+
+In this example, we'll create a new column to calculate percent change in the cumulative case rate between July and August.   
+
+We'll start with our original data, covid_county_monthly case rate. With mutate, we create a new column called jul_aug_pct_change and use the formula for percent change: NEW-OLD/OLD. 
+
+**Task (Run Code)**: Run the code below to create a new pct change column at the end of our data.
+
+```{r}
+covid_county_july_aug_pct_change <- covid_county_monthly_case_rate %>%
+  mutate(jul_aug_pct_change = (d_2020_08_30 - d_2020_07_30)/d_2020_07_30)
+
+```
+
+## Putting it all together
+
+Just like with select and arrange, we can combine mutate and filter together in step-by-step operations. 
+
+Let's answer the question: which Maryland county had the highest percentage jump in its case rate between July and August?
+
+The code below will do the following:
+* create a new object called covid_maryland_july_aug_pct_change 
+* start with the original data and do the following:
+  * select() four columns: county, state, july case rate, august case rate
+  * filter() just Maryland counties 
+  * uses mutate() to create a new column that calculates percent change between July and August. This time, we'll multiply it by 100 to make it a little more percent like.
+  * finally, uses arrange() to sort from highest to lowest on percent change 
+
+**Task (Run Code)**: Run the code below to answer the question which Maryland county had the highest percentage jump in its case rate between July and August?
+
+```{r}
+
+covid_maryland_july_aug_pct_change <- covid_county_monthly_case_rate %>%
+  select(county, state, d_2020_07_30, d_2020_08_30) %>%
+  filter(state == "Maryland") %>%
+  mutate(jul_aug_pct_change = (d_2020_08_30 - d_2020_07_30)/d_2020_07_30*100) %>%
+  arrange(desc(jul_aug_pct_change))
+
+```
+
+## Exercise
+
+I'm going to send you to breakout rooms to work together to answer this question: 
+
+Which Florida county had the *smallest* percent change in monthly case rate between *June* 30 and *August* 30? What was that change? 
+
+To answer this question, you should create a new codeblock below.  
+
+Then, create an object called covid_florida_jun_aug_pct_change that uses the necessary steps to get the answer.  
+
+After you get the answer, in a comment inside the codeblock, write a sentence that describes your findings as simply as you can, as you might put it in a news story.    
+
+
+
+

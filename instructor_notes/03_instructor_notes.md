@@ -27,8 +27,7 @@ Class.
     * How reading for this week fit in.
 5. BREAK.
 6. WORK THROUGH ASSIGNMENT
-  * Install devtools, install vembedr
-  * Show filtering, mutate, 
+  
 
 
 
