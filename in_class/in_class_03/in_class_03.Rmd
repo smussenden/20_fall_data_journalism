@@ -180,11 +180,11 @@ covid_maryland_july_aug_pct_change <- covid_county_monthly_case_rate %>%
 
 ```
 
-## Exercise
+## Breakout Room Exercise
 
-I'm going to send you to breakout rooms to work together to answer this question: 
+I'm going to send you to breakout rooms to work together to answer this question. 
 
-Which Florida county had the *smallest* percent change in monthly case rate between *June* 30 and *August* 30? What was that change? 
+Q: Which Florida county had the *smallest* percent change in monthly case rate between *June* 30 and *August* 30? What was that change? 
 
 To answer this question, you should create a new codeblock below.  
 
@@ -192,6 +192,6 @@ Then, create an object called covid_florida_jun_aug_pct_change that uses the nec
 
 After you get the answer, in a comment inside the codeblock, write a sentence that describes your findings as simply as you can, as you might put it in a news story.    
 
-
+-30-
 
 
