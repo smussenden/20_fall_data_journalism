@@ -26,7 +26,7 @@ The **objectives** is:  Download the zip file linked below to your local compute
 
 ## How this lab works
 
-First, download [this zip file](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_03/lab_03_workbook/lab_03.zip) to your desktop and open it up. [Click the link to download](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_03/lab_03_workbook/lab_03.zip).
+First, download [this zip file](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_03/lab_03_workbook/lab_03_workbook.zip) to your desktop and open it up. [Click the link to download](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_03/lab_03_workbook/lab_03_workbook.zip).
 
 Then, unpack the zip file.  Drag it into your labs folder in your GitHub repo.  Commit the changes in GitHub desktop and push the changes to your repo on GitHub.com.  
 
