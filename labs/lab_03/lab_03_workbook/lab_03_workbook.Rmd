@@ -1,0 +1,428 @@
+---
+title: "JOUR472/772 lab_03 | covid analysis, filtering, mutate"
+author: "Sean Mussenden"
+date: "9/7/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook 
+
+This notebook will review the concepts introduced in the in_class_03 assignment:  
+
+* subsetting a dataframe, with filter()
+* creating new columns, with mutate()
+
+In each of those areas we will go a bit deeper than the basics introduced during the in_class_03 assignment. 
+
+## How to work through this notebook
+
+This notebook contains text and code that I have written.  
+
+You should read the text.  
+
+When you see **Task**, that's an indication that you should do one of several things as instructed: 
+
+* **Task (Run Code): ** Run some code I've written in a codeblock and examine the output, answering a question if required. 
+* **Task (Edit and Run Code): ** Edit some code I've written in a codeblock, run it, and examine the output, answering a question if required. 
+* **Task (Write and Run Code): ** Write some code of your own inside of a codeblock I've already created and run it, answering a question if required. 
+* **Task (Create a Codeblock, Write and Run Code):** Create a codeblock in the existing whitespace of the markdown file, write some code inside of it, run it and answer a question if required. 
+* **Task (Watch Video): ** Run a codeblock that contains a YouTube video, and then watch the video. In the video, I may explain a concept, or assign you to do something that is not detailed in the text. 
+
+## Submission details
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS. 
+
+## Load Packages
+
+There are two packages you'll need to load today:
+
+* The Tidyverse, so we can analyze data the tidyverse way.
+* Vembedr, so you can load the videos directly in the markdown notebook.
+
+**Task (Run Code)**: Run the code block below to load the Tidyverse and Vembedr. Note the special instructions in comments, if you are using a new computer to run this notebook.
+
+```{r}
+# If you are on a new machine you haven't used before, you may need to install these packages before loading.  If that's the case, remove the comment # from in front of the next two lines before running the codeblock, to install the packages before loading. 
+# install.packages('tidyverse')
+# install.packages('vembedr')
+
+# Load the tidyverse, vembedr
+library(tidyverse)
+library(vembedr)
+```
+
+## Load Data
+
+We're going to load a dataframe of COVID case rates by U.S. county on the 30th day of each month between March and August.
+
+* Source [NYT Covid GitHub repo](https://github.com/nytimes/covid-19-data) and U.S. Census data via TidyCensus package. 
+* Documentation description: 
+  * One row per U.S. county, with the cumulative COVID-19 death rate as of the 30th day of each month between March and August.  
+  * Case rate is number of cases per 1000 people.   
+  * Caveat: the geographic unit is MOSTLY counties, but it contains some cities (i.e. New York City).
+
+```{r}
+# covid county monthly case rate
+covid_county_monthly_case_rate <- read_csv("data/covid_county_monthly_case_rate.csv")
+```
+
+**Task (Watch Video)**: Watch video below, as I review the data, and give you a task to complete after the video ends. 
+
+```{r}
+# Video 1 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("w0tFpq3oqLw", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/w0tFpq3oqLw
+
+```
+
+**Task (Edit and Run Code)**: In the codeblock below, edit code as instructed in the previous video to load death rate data.
+
+```{r}
+covid_county_monthly_death_rate <- read_csv()
+```
+
+## Examining data with glimpse()
+
+Now that we've loaded data in, there are several ways to get a general overview of the data before beginning analysis. One common method: Use the glimpse() function to get a sense of the data.  
+
+**Task (Edit code)**:  In the empty codeblock below, edit the existing code to glimpse the covid case rate dataframe. You'll need to add the name of the dataframe inside the glimpse function. 
+```{r}
+
+glimpse()
+
+```
+
+**Task (Create a Codeblock and Write Code):** Create a new codeblock below. Inside of it, write the code necessary to glimpse the covid DEATH rate dataframe.
+
+**Task (Watch Video)**: Watch the video below, and I'll review the correct answers to the glimpse function codeblocks, and review two other common methods for getting a sense of data.
+
+```{r}
+# Video 2 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("2LCO4xFLIbU", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/2LCO4xFLIbU
+
+```
+
+## Subsetting rows with filter()
+
+Just as select() allows us to pick which columns to display, filter() allows us to pick which rows to display.  It allows us to *subset* our data based on some criteria we give it. 
+
+We're going to show some filtering basics. For the future, here are some great resources to go deeper with filtering. 
+
+* [details on the filter function](https://dplyr.tidyverse.org/reference/filter.html)
+* [Examples from R 4 Data Science online textbook](https://r4ds.had.co.nz/transform.html#filter-rows-with-filter)
+* [dplyr cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf)
+
+### Filtering based on text
+
+We can filter based on columns that contain text. 
+
+Let's suppose we wanted to easily answer the question "Which Maryland county had the highest case rate on August 30?"
+
+We can filter the state column to only return Maryland data.
+
+**Task (Run Code)**: Run the code below to answer the question, "which Maryland county had the highest case rate on August 30?" Edit the comment at the end of the codeblock with the answer.    
+
+```{r}
+
+# This code creates a new object called covid_maryland_august_case_rate  
+# It starts with covid_county_monthly_case_rate 
+# AND THEN selects three columns we need to answer the question 
+# AND THEN filters to keep only Maryland counties 
+# AND THEN sorts on the August case rate column from highest to lowest. 
+
+covid_maryland_august_case_rate <- covid_county_monthly_case_rate %>%
+  select(county, state, d_2020_08_30) %>%
+  filter(state == "Maryland") %>%
+  arrange(desc(d_2020_08_30))
+
+# This code displays the results of the code we created above
+
+covid_maryland_august_case_rate
+
+# Q: Which Maryland county had the highest case rate on August 30? What was the case rate (cases per 1000)?
+# A: (Put the answer here)
+
+```
+
+**Task (Edit and Run Code):** In the codeblock below, edit one line of the existing code to answer this question: "Which Virginia county had the LOWEST case rate on August 30?"  Edit the comment at the end of the codeblock with the answer.    
+
+```{r}
+
+# This code creates a new object called covid_virginia_august_case_rate  
+# It starts with covid_county_monthly_case_rate 
+# AND THEN selects three columns we need to answer the question
+# AND THEN you should edit the currently empty filter function to keep only Virginia areas
+# AND THEN sorts on the August case rate column from lowest to highest
+
+covid_virginia_august_case_rate <- covid_county_monthly_case_rate %>%
+  select(county, state, d_2020_08_30) %>%
+  filter() %>%
+  arrange(d_2020_08_30)
+
+# This code displays the results of the code we created above in the markdown document
+
+covid_virginia_august_case_rate
+
+# Q: Which Virginia county had the highest case rate on August 30? What was the case rate (cases per 1000)?
+# A: 
+
+```
+
+**Task (Watch Video)**: Watch the video below, and I'll review the correct answer to the above task.
+
+```{r}
+# Video 3 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("lWdgmDIS_Bg", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/lWdgmDIS_Bg
+
+```
+
+### Filtering based on numbers
+
+We can filter based on text values, as the exercises above demonstrated.  We can also filter based on numeric values, using traditional math (eek!) operators:
+
+* Equal to ==
+* Greater than > 
+* Greater than or equal to >=
+* Less than < 
+* Less than or equal to <= 
+* Not equal to !=
+
+Let's try it out by answering the question: "How many areas in the U.S. had a death rate above 4 per 1,000 in August? Which ones were they?"
+
+**Task (Run Code)**: Run the code below to answer the question, "How many areas in the U.S. had a death rate above 4 per 1,000 in August? Which ones were they?" Edit the comment at the end of the codeblock with the answer.    
+
+```{r}
+
+# This code creates a new object called covid_four_plus_august_death_rate
+# It starts with covid_county_monthly_death_rate 
+# AND THEN selects three columns we need to answer the question
+# AND THEN filters to keep only counties with a death rate above 4 per 1,000
+# AND THEN sorts on the August case rate column from highest to lowest
+
+covid_four_plus_august_death_rate <- covid_county_monthly_death_rate %>%
+  select(county, state, d_2020_08_30) %>%
+  filter(d_2020_08_30 > 4) %>%
+  arrange(desc(d_2020_08_30))
+
+# This code displays the results of the code we created above in the markdown document
+
+covid_four_plus_august_death_rate
+
+# Q: "How many areas in the U.S. had a death rate above 4 per 1,000 in August? Which ones were they?"
+# A: 
+
+```
+
+### Combining filters 
+
+We can also filter by more than one column at once.  
+
+Let's answer the question: "Which Maryland counties had a death rate higher than 1 per 1,000 in August?   
+
+**Task (Run Code)**: Run the code below to answer the question, "Which Maryland counties had a death rate higher than 1 per 1,000 in August?" Edit the comment at the end of the codeblock with the answer.    
+
+```{r}
+
+# This code creates a new object called covid_maryland_one_plus_august_death_rate
+# It starts with covid_county_monthly_death_rate 
+# AND THEN selects three columns we need to answer the question 
+# AND THEN filters to keep only Maryland counties with a death rate above 1 per 1,000 
+# AND THEN sorts the August case rate from highest to lowest. 
+
+covid_maryland_one_plus_august_death_rate <- covid_county_monthly_death_rate %>%
+  select(county, state, d_2020_08_30) %>%
+  filter(state == "Maryland", d_2020_08_30 > 1) %>%
+  arrange(desc(d_2020_08_30))
+
+# This code displays the results of the code we created above in the markdown document
+
+covid_maryland_one_plus_august_death_rate
+
+# Q: "Which Maryland counties had a death rate higher than 1 per 1,000 in August?"
+# A: 
+
+
+```
+
+**Task (Edit and Run Code)**: In the codeblock below, edit one line of the existing code to answer this question: "Which Virginia areas had a death rate higher than 2 per 1,000 in August?"  Edit the comment at the end of the codeblock with the answer.    
+
+```{r}
+
+# This code creates a new object called covid_virginia_one_plus_august_death_rate
+# It starts with covid_county_monthly_death_rate 
+# AND THEN selects three columns we need to answer the question 
+# AND THEN you should edit the currently empty filter function to keep only Virginia areas with a death rate above 2
+# AND THEN sorts the August case rate from highest to lowest. 
+
+covid_virginia_one_plus_august_death_rate <- covid_county_monthly_death_rate %>%
+  select(county, state, d_2020_08_30) %>%
+  filter() %>%
+  arrange(desc(d_2020_08_30))
+
+# This code displays the results of the code we created above in the markdown document
+
+covid_virginia_one_plus_august_death_rate
+
+# Q: "Which Virginia areas had a death rate higher than 2 per 1,000 in August? 
+# A: 
+
+```
+
+### Review and advanced filtering
+
+**Task (Watch Video)**: Watch the video below, and I'll review the correct answer to the above task and demonstrate some other filtering concepts. 
+
+```{r}
+# Video 4 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("p8Uwm5Zs6Hg", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/p8Uwm5Zs6Hg
+
+```
+
+## Creating new columns with mutate()
+
+When we load data into our R environment, we can answer questions just using those columns that were in the original data set. 
+
+But doing that will limit the questions we can ask.  Often, to answer a specific question, we need to use information in existing columns to CREATE a new column.  
+
+Here's one example: in our case rate data set, for each county we know the cumulative case rate in July and August.  
+
+Let's say we wanted to figure out where covid cases have gone up a lot recently. Our specific question: "Which county had the biggest jump in cumulative case rate between July and August?"
+
+To answer that, we're going to create a new column that calculates the difference between July and August case rate for each county.  
+
+And to create a new column, we use the mutate() function. 
+
+**Task (Run Code)**: Run the code below to answer the question: "Which county had the biggest jump in cumulative case rate between July and August?" Edit the comment at the end of the codeblock with the answer.
+
+```{r}
+# This code creates a new object called covid_county_jul_aug_change
+# It starts with covid_county_monthly_case_rate 
+# AND THEN selects the four columns we need to answer the question 
+# AND THEN creates a new column called jul_aug_change by subtracting the July rate from the August rate
+# AND THEN sorts from lowest to highest on the column we just created
+
+
+covid_county_jul_aug_change <- covid_county_monthly_case_rate %>%
+  select(county, state, d_2020_07_30, d_2020_08_30) %>%
+  mutate(jul_aug_change = d_2020_08_30 - d_2020_07_30) %>%
+  arrange(desc(jul_aug_change))
+
+# This code displays the results of the code we created above in the markdown document
+
+covid_county_jul_aug_change
+
+# Q: "Which county had the biggest jump in cumulative case rate between July and August?" 
+# A: 
+
+```
+
+The new column we created, jul_aug_change, calculated absolute difference.  
+
+But let's suppose we want to calculate percentage change, to answer this slightly different question: "Which county had the biggest percerntage jump in cumulative case rate between July and August?"
+
+The formula for percent change is (NEW-OLD)/OLD or (August-July)/July. 
+
+**Task (Run Code)**: Run the code below to answer the question: "Which county had the biggest percentage jump in cumulative case rate between July and August?" Edit the comment at the end of the codeblock with the answer.
+
+```{r}
+# This code creates a new object called covid_county_jul_aug_pct_change
+# It starts with covid_county_monthly_case_rate 
+# AND THEN selects the four columns we need to answer the question 
+# AND THEN creates a new column called jul_aug_pct_change by using NEW-OLD/OLD to subtract July from August then dividing by July. 
+# AND THEN sorts from lowest to highest on the column we just created
+
+covid_county_jul_aug_pct_change <- covid_county_monthly_case_rate %>%
+  select(county, state, d_2020_07_30, d_2020_08_30) %>%
+  mutate(jul_aug_pct_change = (d_2020_08_30 - d_2020_07_30)/d_2020_07_30) %>%
+  arrange(desc(jul_aug_pct_change))
+
+# This code displays the results of the code we created above in the markdown document
+
+covid_county_jul_aug_pct_change
+
+# Q: "Which county had the biggest percentage jump in cumulative case rate between July and August?" 
+# A: 
+
+```
+
+**Task (Watch Video)**: Watch the video below, and I'll review the correct answer to the above task and demonstrate some other filtering concepts. 
+
+```{r}
+# Video 4 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("_Ki-KATXvT0", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/_Ki-KATXvT0
+
+```
+
+If you want to know more about mutate here are some great resources. 
+
+* [details on the mutate function](https://dplyr.tidyverse.org/reference/mutate.html)
+* [Examples from R 4 Data Science online textbook](https://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate)
+* [dplyr cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf)
+
+## Putting it all together
+
+To finish the lab, you have three exercises to complete. 
+
+* **Exercise 1**: You'll answer a question I give you in an empty codeblock I've created for you. 
+* **Exercise 2**: You'll answer a question I give you, but you'll need to create the empty codeblock.
+* **Exercise 3**: You'll need to create your own question, create an empty codeblock and answer it.  
+
+Pay close attention to exactly what the questions are asking.  Imagine you're going to take the answer you get and put them into a news story! If you get the wrong answer, it could lead to a correction.  So, be precise, and check your work. 
+
+### Exercise 1
+
+**Task (Write and Run Code): ** In the codeblock below, answer the question: which Maryland county had the largest percentage change in cumulative death rate between June and August?     
+
+```{r}
+# Write your code to answer the question below by creating a new object.
+
+# Write the name of the object you just created below so it displays below in the markdown document
+
+# Q: which Maryland county had the largest percentage change in cumulative death rate between June and August? 
+# A: write the answer here
+
+```
+
+### Exercise 2
+
+**Task (Create a Codeblock, Write and Run Code): ** In the codeblock below, answer the question: which Texas county had the smallest percentage change in cumulative case rate between May and August? You'll need to create a codeblock.    
+
+### Exercise 3
+
+**Task (Create a Codeblock, Write and Run Code): ** Develop your own question, and write code to answer it below.  It can be anything you like, but be sure to use mutate() and filter() in developing an answer. 
+
+## You're done
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS. 

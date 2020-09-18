@@ -1,3 +1,10 @@
+Lab video 1
+* explain what the data is.
+* 
+
+
+
+
 # Session 03 Instructor Notes
 
 ## To Have Up on Desktop
@@ -18,7 +25,7 @@
 [START RECORDING]
 * I'm recording.
 * Reminders to mute your microphone.  
-* And unless you've sent me a note explaining that you don't want to keep your video on during class, I'd ask that you turn it on now.  I won't force you to do it, just a reminder that it helps me teach.  
+* And unless you've sent me a note explaining that you don't want to keep your video on during class, I'3 ask that you turn it on now.  I won't force you to do it, just a reminder that it helps me teach.  
 * And also a reminder to keep the chat up, cause I'll be asking you questions.
 
 [PULL UP SLIDES]
