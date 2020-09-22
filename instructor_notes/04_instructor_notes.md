@@ -12,7 +12,7 @@
   * A lot of you are still sorting from lowest to highest by using desc()
   * In some of your code, it's clear to me you're not running before you submit (or getting an error and not fixing). A common one I'm seeing is misspelled column names.
 # WHat are people hearing from data acquistion assignment and what's due.
-
+  * Problmems people are running into
 # Reading based discussion, on data points from the climate story.
   #### Clues to data driven sentences
   * Comparison: something was the highest or lowest, or higher and lower than something else. "McElderry Park, which despite its lyrical name offers little green space, is one of these: the hottest neighborhood in Baltimore, a city whose climate has long been classified as humid subtropical."
@@ -58,7 +58,7 @@
 
 
 # What's due
-* Upcoming reading Ida B Wells - pioneering investigative journalist - in the reading she groups and summarizes. We'll talk more about her next week. 
+* Upcoming reading Ida B Wells - pioneering investigative journalist - in the reading she groups and summarizes. We'll talk more about her next week.
 * Lab this week
 * Data acquistion memo due this week
 * You should be reaching out to your groups
