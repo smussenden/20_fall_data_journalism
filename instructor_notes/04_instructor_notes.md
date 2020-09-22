@@ -1,8 +1,23 @@
+
+# Session 03 Instructor Notes
+
+## To Have Up on Desktop
+
+1. Session 03 Instructor Notes -
+2. Webpage of roster pictures on UMEG -
+3. Roster sheet with presence - https://docs.google.com/spreadsheets/d/1HKt0Dr6YajcRXLu-0IpWRWBMb4C9J-detlI0TE45jh8/edit#gid=1136077922
+3. Course Canvas Page - https://umd.instructure.com/courses/1288268/modules
+4. Slides - NO SLIDES TODAY
+8. GitHub Desktop
+9. R Studio with lab_03 in my file to show exercises
+11. Email to check at regular intervals at beginning.
+12. Phone to check for "can't get in texts"
+
 # Review of answers to previous lab.
  * Call on people who got it right to answer question
  * Q1: Sara, Kellina, Hana, Rona, Sasha, Susannah, Jummy
  * Q2: Rayonna, Jack, Hana, Rona, Sasha, Jummy
- * Q3: A lot of variations on other qeustions, which looked great.
+ * Q3: A lot of variations on other qesustions, which looked great.
       * Call on Spencer.  He created change and percent change in the same block! Double mutate.
       * Call on Kara to show what she tried to do, filtering by 23%
       * Call on Audrey to show str_detect()
