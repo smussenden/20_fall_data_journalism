@@ -1,0 +1,260 @@
+---
+title: "JOUR472/772 in_class_03 | heat analysis, grouping and summarizing"
+author: "Sean Mussenden"
+date: "9/22/2020"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook 
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_04.  In particular, it will show:
+
+* grouping data by one or more features
+* calculating summary statistics, including counting, averages, min and max
+
+## Install packages
+
+We're going to install one new package today that you'll need for lab_04. 
+
+The package is called [Lubridate](https://lubridate.tidyverse.org/index.html), and it's a package that is part of the tidyverse family, but it doesn't load as part of the core tidyverse.  So, we need to load it separately. Lubridate has a bunch of helper functions to make it easy to work with dates. 
+
+**Task (Run Code)**: run the code below to install lubridate, using the install.packages() function. 
+
+```{r}
+install.packages('lubridate')
+```
+
+## Load packages
+
+Remember, we typically need to install packages only once on our computer.  But we have to load them every time we want to make use of them during an R session.  
+
+Today, we're going to load two packages:
+
+* The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+* Lubridate. [Lubridate](https://lubridate.tidyverse.org/index.html)
+
+**Task (Write and Run Code)**: write the necessary code below to load the tidyverse and lubridate, using the library() function.
+
+```{r}
+# Load the tidyverse, lubridate
+library(lubridate)
+library(tidyverse)
+```
+
+## Load Data
+
+We're going to load two dataframes today, which contain temperature, humidity and heat index readings that were captured by sensors placed inside the homes of residents in Baltimore's McElderry Park neighborhood during the hottest part of Summer 2019.  
+
+The raw data contains readings about every 15 seconds.  These pre-processed dataframes contain one reading per hour, with values representing an average of all values captured during that time. 
+
+The data has eight variables:
+
+* date_hour (datetime) - date and hour of sensor reading placed in person's home.
+* mean_indoor_temperature (numeric) - average degrees F for readings captured during a given date_hour. 
+* mean_indoor_heat_index (numeric) - average degrees F for readings captured during a given date_hour. Heat index -- how hot it feels -- is a function of temperature and humidity. [Explanation](https://www.weather.gov/ama/heatindex)  
+* mean_indoor_relative_humidity (numeric) - average of relative humidity readings captured during a given date_hour. Relative humidity is a measure of the water content of the air, on a 0 to 100 scale.  [Explanation](https://www.weather.gov/ama/heatindex)    
+* mean_outdoor_temperature (numeric) - average degrees F temperature for readings captured during a given date_hour at Baltimore Inner Harbor monitoring station, adjusted for neighborhood level temp differences. 
+* mean_outdoor_heat_index (numeric) - average degrees F temperature for readings captured during a given date_hour at Baltimore Inner Harbor monitoring station, adjusted for neighborhood level temp differences. Heat index -- how hot it feels -- is a function of temperature and humidity. [Explanation](https://www.weather.gov/ama/heatindex)  
+* indoor_temperature_difference (numeric) - difference between indoor and outdoor temperature in degrees F at a given date_hour.
+* indoor_heat_index_difference (numeric) - difference between indoor and outdoor heat index in degrees F at a given date_hour.
+
+We will load data for two residents:
+
+* Stephanie
+* Michael
+
+### Load Stephanie
+
+**Task (Run Code)**: Run the codeblock to load Stephanie values. 
+
+```{r}
+stephanie_day_hourly_averages <- read_csv("data/temperature_sensors/stephanie/stephanie_day_hourly_averages.csv")
+```
+
+### Load Michael
+
+**Task (Write and Run Code)**: Write code necessary to load Michael values as a new ojbject called michael_day_hourly_averages
+
+```{r}
+
+```
+
+## Examine data 
+
+Now, follow the standard steps to examine the data you loaded. 
+
+**Task (Write and Run Code)**: run the code below to glimpse() the stephanie dataframe.
+
+```{r}
+
+```
+
+**Task (Create a New Codeblock, Write Code and Run It)**: create a new codeblock and write the necessary code to display the stephanie dataframe in the markdown document below the codeblock. 
+
+## Grouping and Summarizing
+
+Today, we'll be asking a series of questions about temperature, heat and humidity values inside our characters' houses and outdoors on a given set of days in summer 2019.  
+
+But our data is stored by hour, not by day. Each row, represents an hour.  
+
+To calculate values by hour, we need to do the following:
+
+* Use our "date_hour" column to create a new column with just the date.  
+* Group all of the values on a given day together.
+* Calculate some summary statistic (count, average, min, max)
+
+For those of you who have worked in Excel or Google Sheets and created a "pivot table", this is the same process. 
+
+And it's an important one, because this process allows us to work with data in it's more original form.  We don't have to rely on others to do the summarization for us! 
+
+## Preparing data for analysis
+
+First, let's prepare the data.  This code does the following:
+
+* Overwrites our stephanie_day_hourly_averages dataframe with changes we're making. 
+* Uses the date() function from lubridate to make a new column that contains just the date, not the hour. 
+* Reorders the columns to put the newly created date column first, followed by all other columns, using the everything() function.
+* Filters to keep just the readings during the heat wave -- July 16 to July 22. 
+
+I'll review what's happening by running this step by step. 
+
+**Task (Run Code)**: Run the codeblock to prepare our data for further analysis. 
+
+```{r}
+stephanie_day_hourly_averages <- stephanie_day_hourly_averages %>%
+  mutate(date = date(date_hour)) %>%
+  select(date, everything()) %>%
+  filter(date >= "2019-07-16") %>%
+  filter(date <= "2019-07-22")
+
+```
+
+## Grouping and Summarizing | Counting Rows
+
+Let's answer some questions! 
+
+Q: How many hourly readings do we have on each day in Stephanie's house?
+
+**Task (Run Code)**: Run the codeblock below and examine the answer.  
+
+```{r}
+
+# Code to count the number of readings on each day
+# I'll review what's happening here.
+stephanie_daily_count <- stephanie_day_hourly_averages %>%
+  group_by(date) %>%
+  count()
+
+# Display below
+stephanie_daily_count
+
+# Write the answer in a comment
+# Q: How many hourly readings do we have on each day in Stephanie's house?
+# A: 
+```
+Here's a slightly more complicated way of answering that exact same question.  I'm showing you this method, because it will set us up for the future. 
+
+**Task (Run Code)**: Run the codeblock below and examine the answer.
+
+```{r}
+
+# Code to count the number of readings on each day
+# I'll review what's happening here, including what happens when we change column name
+
+stephanie_daily_count <- stephanie_day_hourly_averages %>%
+  group_by(date) %>%
+  summarise(count=n())
+
+# Display below
+stephanie_daily_count
+
+# Write the answer in a comment
+# Q: How many hourly readings do we have on each day in Stephanie's house?
+# A: 
+```
+
+## Grouping and Summarizing | Calculating Averages
+
+Q: What is the average heat index value on each day inside of Stephanie's house? Which day had the highest?
+
+**Task (Run Code)**: Run the codeblock below and examine the answer.
+
+```{r}
+# Code to calculate the average heat index on each day in Stephanie's house
+# I'll review what's happening here, including what happens when we change column name
+
+stephanie_daily_average <- stephanie_day_hourly_averages %>%
+  group_by(date) %>%
+  summarise(heat_index_averages=mean(mean_indoor_heat_index))
+
+# Display below
+stephanie_daily_average
+
+# Write the answer in a comment
+# Q: What is the average heat index value on each day inside of Stephanie's house? Which day had the highest?
+# A: 
+
+
+```
+
+## Grouping and Summarizing | Calculating Min and Max
+
+We can also calculate the smallest and largest heat index values on a given day.  By doing this, I'll also show you how to calculate more than one value at once.
+
+Q: During the seven day heat wave, what was the lowest recorded heat index value in Stephanie's house?  What was the highest heat index value, and on what day did it occur?
+
+**Task (Run Code)**: Run the codeblock below and examine the answer.
+
+```{r}
+# Code to calculate the min and max heat index values
+# I'll review what's happening here.
+
+stephanie_daily_min_max <- stephanie_day_hourly_averages %>%
+  group_by(date) %>%
+  summarise(heat_index_max=max(mean_indoor_heat_index),
+            heat_index_min=min(mean_indoor_heat_index))
+
+# Display below
+stephanie_daily_min_max
+
+# Write the answer in a comment
+# Q: During the seven day heat wave, what was the lowest recorded heat index value in Stephanie's house?  What was the highest heat index value, and on what day did it occur?
+# A: 
+
+
+```
+
+## Breakout Room Exercise
+
+Okay, now it's your turn to examine Michael's house and answer some questions.  
+
+**Task (Create a codeblock, write and run)**: 
+
+Create a codeblock and write code necessary to output a **single table** that groups and summarizes to do the following:
+
+* Has one row per day, but only for dates on or between July 16 and July 22
+* Has the following columns: 
+  * date 
+  * maximum heat index value on that day 
+  * minimum heat index value on that day 
+  * the average heat index value on that day 
+  * the number of hourly readings on that day 
+
+That should allow you to answer the following questions:
+
+* Q: What was the highest heat index value measured in Michael's house? On what day did it occur?
+* Q: The heat index never fell below what value during the period we measured? 
+* Q: What was the average heat index value on each day during the period measured? 
+* Q: Is there anything concerning the number of hourly readings on each day that could affect the results you're getting?
+  
+-30-
+
+

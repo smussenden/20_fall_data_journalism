@@ -1,8 +1,3 @@
-Lab video 1
-* explain what the data is.
-* 
-
-
 
 
 # Session 03 Instructor Notes
