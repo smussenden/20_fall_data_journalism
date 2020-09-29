@@ -1,0 +1,3150 @@
+fips_code,county,state,date,cases,deaths
+01001,Autauga,Alabama,2020-08-30,1438,23
+01003,Baldwin,Alabama,2020-08-30,4525,40
+01005,Barbour,Alabama,2020-08-30,757,7
+01007,Bibb,Alabama,2020-08-30,550,7
+01009,Blount,Alabama,2020-08-30,1277,10
+01011,Bullock,Alabama,2020-08-30,550,14
+01013,Butler,Alabama,2020-08-30,864,37
+01015,Calhoun,Alabama,2020-08-30,2533,35
+01017,Chambers,Alabama,2020-08-30,1027,40
+01019,Cherokee,Alabama,2020-08-30,404,12
+01021,Chilton,Alabama,2020-08-30,1178,13
+01023,Choctaw,Alabama,2020-08-30,326,12
+01025,Clarke,Alabama,2020-08-30,988,14
+01027,Clay,Alabama,2020-08-30,370,6
+01029,Cleburne,Alabama,2020-08-30,204,5
+01031,Coffee,Alabama,2020-08-30,1079,7
+01033,Colbert,Alabama,2020-08-30,1456,22
+01035,Conecuh,Alabama,2020-08-30,484,11
+01037,Coosa,Alabama,2020-08-30,135,3
+01039,Covington,Alabama,2020-08-30,1091,26
+01041,Crenshaw,Alabama,2020-08-30,466,27
+01043,Cullman,Alabama,2020-08-30,1627,14
+01045,Dale,Alabama,2020-08-30,1093,37
+01047,Dallas,Alabama,2020-08-30,1614,25
+01049,DeKalb,Alabama,2020-08-30,2144,16
+01051,Elmore,Alabama,2020-08-30,2183,44
+01053,Escambia,Alabama,2020-08-30,1402,22
+01055,Etowah,Alabama,2020-08-30,2790,39
+01057,Fayette,Alabama,2020-08-30,313,6
+01059,Franklin,Alabama,2020-08-30,1562,27
+01061,Geneva,Alabama,2020-08-30,430,4
+01063,Greene,Alabama,2020-08-30,284,15
+01065,Hale,Alabama,2020-08-30,558,28
+01067,Henry,Alabama,2020-08-30,365,4
+01069,Houston,Alabama,2020-08-30,2039,18
+01071,Jackson,Alabama,2020-08-30,1317,9
+01073,Jefferson,Alabama,2020-08-30,16278,303
+01075,Lamar,Alabama,2020-08-30,289,2
+01077,Lauderdale,Alabama,2020-08-30,1429,23
+01079,Lawrence,Alabama,2020-08-30,472,5
+01081,Lee,Alabama,2020-08-30,4451,54
+01083,Limestone,Alabama,2020-08-30,1678,16
+01085,Lowndes,Alabama,2020-08-30,619,26
+01087,Macon,Alabama,2020-08-30,432,19
+01089,Madison,Alabama,2020-08-30,6428,52
+01091,Marengo,Alabama,2020-08-30,638,18
+01093,Marion,Alabama,2020-08-30,786,28
+01095,Marshall,Alabama,2020-08-30,3616,42
+01097,Mobile,Alabama,2020-08-30,12197,260
+01099,Monroe,Alabama,2020-08-30,544,7
+01101,Montgomery,Alabama,2020-08-30,7976,163
+01103,Morgan,Alabama,2020-08-30,2902,24
+01105,Perry,Alabama,2020-08-30,516,5
+01107,Pickens,Alabama,2020-08-30,560,11
+01109,Pike,Alabama,2020-08-30,958,8
+01111,Randolph,Alabama,2020-08-30,510,12
+01113,Russell,Alabama,2020-08-30,1614,2
+01117,Shelby,Alabama,2020-08-30,4527,47
+01115,St. Clair,Alabama,2020-08-30,1833,28
+01119,Sumter,Alabama,2020-08-30,403,19
+01121,Talladega,Alabama,2020-08-30,1752,20
+01123,Tallapoosa,Alabama,2020-08-30,1044,82
+01125,Tuscaloosa,Alabama,2020-08-30,5848,97
+01127,Walker,Alabama,2020-08-30,1907,75
+01129,Washington,Alabama,2020-08-30,518,13
+01131,Wilcox,Alabama,2020-08-30,514,11
+01133,Winston,Alabama,2020-08-30,573,11
+02013,Aleutians East Borough,Alaska,2020-08-30,4,0
+02016,Aleutians West Census Area,Alaska,2020-08-30,92,0
+02020,Anchorage,Alaska,2020-08-30,3109,21
+02050,Bethel Census Area,Alaska,2020-08-30,64,1
+02060,Bristol Bay Borough,Alaska,2020-08-30,68,0
+02068,Denali Borough,Alaska,2020-08-30,4,0
+02070,Dillingham Census Area,Alaska,2020-08-30,26,0
+02090,Fairbanks North Star Borough,Alaska,2020-08-30,680,8
+02100,Haines Borough,Alaska,2020-08-30,10,0
+02110,Juneau City and Borough,Alaska,2020-08-30,256,0
+02122,Kenai Peninsula Borough,Alaska,2020-08-30,568,1
+02130,Ketchikan Gateway Borough,Alaska,2020-08-30,62,0
+02150,Kodiak Island Borough,Alaska,2020-08-30,57,0
+02158,Kusilvak Census Area,Alaska,2020-08-30,8,0
+02164,Lake and Peninsula Borough,Alaska,2020-08-30,5,0
+02170,Matanuska-Susitna Borough,Alaska,2020-08-30,482,2
+02180,Nome Census Area,Alaska,2020-08-30,43,0
+02185,North Slope Borough,Alaska,2020-08-30,43,0
+02188,Northwest Arctic Borough,Alaska,2020-08-30,66,0
+02195,Petersburg Borough,Alaska,2020-08-30,11,0
+02198,Prince of Wales-Hyder Census Area,Alaska,2020-08-30,25,0
+02220,Sitka City and Borough,Alaska,2020-08-30,51,0
+02240,Southeast Fairbanks Census Area,Alaska,2020-08-30,32,0
+NA,Unknown,Alaska,2020-08-30,59,0
+02261,Valdez-Cordova Census Area,Alaska,2020-08-30,121,0
+02275,Wrangell City and Borough,Alaska,2020-08-30,17,0
+02290,Yukon-Koyukuk Census Area,Alaska,2020-08-30,73,1
+04001,Apache,Arizona,2020-08-30,3338,154
+04003,Cochise,Arizona,2020-08-30,1818,62
+04005,Coconino,Arizona,2020-08-30,3318,125
+04007,Gila,Arizona,2020-08-30,1106,47
+04009,Graham,Arizona,2020-08-30,714,22
+04011,Greenlee,Arizona,2020-08-30,58,2
+04012,La Paz,Arizona,2020-08-30,498,15
+04013,Maricopa,Arizona,2020-08-30,133641,2962
+04015,Mohave,Arizona,2020-08-30,3606,206
+04017,Navajo,Arizona,2020-08-30,5598,220
+04019,Pima,Arizona,2020-08-30,21189,576
+04021,Pinal,Arizona,2020-08-30,9524,186
+04023,Santa Cruz,Arizona,2020-08-30,2754,57
+04025,Yavapai,Arizona,2020-08-30,2303,78
+04027,Yuma,Arizona,2020-08-30,12230,321
+05001,Arkansas,Arkansas,2020-08-30,282,3
+05003,Ashley,Arkansas,2020-08-30,388,7
+05005,Baxter,Arkansas,2020-08-30,137,0
+05007,Benton,Arkansas,2020-08-30,5334,51
+05009,Boone,Arkansas,2020-08-30,356,3
+05011,Bradley,Arkansas,2020-08-30,289,5
+05013,Calhoun,Arkansas,2020-08-30,23,0
+05015,Carroll,Arkansas,2020-08-30,465,7
+05017,Chicot,Arkansas,2020-08-30,962,10
+05019,Clark,Arkansas,2020-08-30,229,3
+05021,Clay,Arkansas,2020-08-30,180,6
+05023,Cleburne,Arkansas,2020-08-30,258,7
+05025,Cleveland,Arkansas,2020-08-30,136,3
+05027,Columbia,Arkansas,2020-08-30,293,15
+05029,Conway,Arkansas,2020-08-30,202,3
+05031,Craighead,Arkansas,2020-08-30,1851,15
+05033,Crawford,Arkansas,2020-08-30,916,9
+05035,Crittenden,Arkansas,2020-08-30,1641,34
+05037,Cross,Arkansas,2020-08-30,275,5
+05039,Dallas,Arkansas,2020-08-30,127,2
+05041,Desha,Arkansas,2020-08-30,239,5
+05043,Drew,Arkansas,2020-08-30,303,4
+05045,Faulkner,Arkansas,2020-08-30,1679,8
+05047,Franklin,Arkansas,2020-08-30,162,2
+05049,Fulton,Arkansas,2020-08-30,69,0
+05051,Garland,Arkansas,2020-08-30,1407,29
+05053,Grant,Arkansas,2020-08-30,192,1
+05055,Greene,Arkansas,2020-08-30,632,4
+05057,Hempstead,Arkansas,2020-08-30,330,3
+05059,Hot Spring,Arkansas,2020-08-30,1717,20
+05061,Howard,Arkansas,2020-08-30,423,5
+05063,Independence,Arkansas,2020-08-30,760,6
+05065,Izard,Arkansas,2020-08-30,102,0
+05067,Jackson,Arkansas,2020-08-30,182,1
+05069,Jefferson,Arkansas,2020-08-30,2091,50
+05071,Johnson,Arkansas,2020-08-30,754,4
+05073,Lafayette,Arkansas,2020-08-30,66,2
+05075,Lawrence,Arkansas,2020-08-30,248,10
+05077,Lee,Arkansas,2020-08-30,1002,11
+05079,Lincoln,Arkansas,2020-08-30,1600,13
+05081,Little River,Arkansas,2020-08-30,278,14
+05083,Logan,Arkansas,2020-08-30,364,1
+05085,Lonoke,Arkansas,2020-08-30,717,4
+05087,Madison,Arkansas,2020-08-30,295,2
+05089,Marion,Arkansas,2020-08-30,44,0
+05091,Miller,Arkansas,2020-08-30,601,7
+05093,Mississippi,Arkansas,2020-08-30,1349,21
+05095,Monroe,Arkansas,2020-08-30,94,0
+05097,Montgomery,Arkansas,2020-08-30,96,3
+05099,Nevada,Arkansas,2020-08-30,162,12
+05101,Newton,Arkansas,2020-08-30,120,15
+05103,Ouachita,Arkansas,2020-08-30,157,4
+05105,Perry,Arkansas,2020-08-30,63,1
+05107,Phillips,Arkansas,2020-08-30,404,9
+05109,Pike,Arkansas,2020-08-30,174,1
+05111,Poinsett,Arkansas,2020-08-30,486,6
+05113,Polk,Arkansas,2020-08-30,224,3
+05115,Pope,Arkansas,2020-08-30,1732,14
+05117,Prairie,Arkansas,2020-08-30,115,0
+05119,Pulaski,Arkansas,2020-08-30,7024,105
+05121,Randolph,Arkansas,2020-08-30,309,12
+05125,Saline,Arkansas,2020-08-30,1567,12
+05127,Scott,Arkansas,2020-08-30,86,0
+05129,Searcy,Arkansas,2020-08-30,100,0
+05131,Sebastian,Arkansas,2020-08-30,2862,33
+05133,Sevier,Arkansas,2020-08-30,1157,12
+05135,Sharp,Arkansas,2020-08-30,147,5
+05123,St. Francis,Arkansas,2020-08-30,1344,4
+05137,Stone,Arkansas,2020-08-30,194,2
+05139,Union,Arkansas,2020-08-30,690,19
+NA,Unknown,Arkansas,2020-08-30,904,0
+05141,Van Buren,Arkansas,2020-08-30,118,2
+05143,Washington,Arkansas,2020-08-30,6883,61
+05145,White,Arkansas,2020-08-30,524,11
+05147,Woodruff,Arkansas,2020-08-30,27,0
+05149,Yell,Arkansas,2020-08-30,1143,23
+06001,Alameda,California,2020-08-30,18061,258
+06003,Alpine,California,2020-08-30,2,0
+06005,Amador,California,2020-08-30,238,14
+06007,Butte,California,2020-08-30,1948,23
+06009,Calaveras,California,2020-08-30,236,2
+06011,Colusa,California,2020-08-30,441,6
+06013,Contra Costa,California,2020-08-30,13802,175
+06015,Del Norte,California,2020-08-30,122,1
+06017,El Dorado,California,2020-08-30,958,2
+06019,Fresno,California,2020-08-30,24821,263
+06021,Glenn,California,2020-08-30,437,3
+06023,Humboldt,California,2020-08-30,368,4
+06025,Imperial,California,2020-08-30,10667,292
+06027,Inyo,California,2020-08-30,160,13
+06029,Kern,California,2020-08-30,29230,286
+06031,Kings,California,2020-08-30,6284,72
+06033,Lake,California,2020-08-30,329,4
+06035,Lassen,California,2020-08-30,715,0
+06037,Los Angeles,California,2020-08-30,240749,5769
+06039,Madera,California,2020-08-30,3674,54
+06041,Marin,California,2020-08-30,6143,95
+06043,Mariposa,California,2020-08-30,73,2
+06045,Mendocino,California,2020-08-30,696,17
+06047,Merced,California,2020-08-30,7890,115
+06049,Modoc,California,2020-08-30,9,0
+06051,Mono,California,2020-08-30,162,2
+06053,Monterey,California,2020-08-30,7850,56
+06055,Napa,California,2020-08-30,1414,13
+06057,Nevada,California,2020-08-30,442,5
+06059,Orange,California,2020-08-30,48444,979
+06061,Placer,California,2020-08-30,2973,32
+06063,Plumas,California,2020-08-30,39,0
+06065,Riverside,California,2020-08-30,51918,1007
+06067,Sacramento,California,2020-08-30,17587,274
+06069,San Benito,California,2020-08-30,1090,8
+06071,San Bernardino,California,2020-08-30,47373,716
+06073,San Diego,California,2020-08-30,38363,682
+06075,San Francisco,California,2020-08-30,9431,83
+06077,San Joaquin,California,2020-08-30,17493,307
+06079,San Luis Obispo,California,2020-08-30,2917,21
+06081,San Mateo,California,2020-08-30,8074,131
+06083,Santa Barbara,California,2020-08-30,8052,92
+06085,Santa Clara,California,2020-08-30,17013,245
+06087,Santa Cruz,California,2020-08-30,1746,7
+06089,Shasta,California,2020-08-30,562,12
+06091,Sierra,California,2020-08-30,6,0
+06093,Siskiyou,California,2020-08-30,128,0
+06095,Solano,California,2020-08-30,5393,46
+06097,Sonoma,California,2020-08-30,5654,78
+06099,Stanislaus,California,2020-08-30,14544,255
+06101,Sutter,California,2020-08-30,1368,10
+06103,Tehama,California,2020-08-30,417,1
+06105,Trinity,California,2020-08-30,12,0
+06107,Tulare,California,2020-08-30,13890,232
+06109,Tuolumne,California,2020-08-30,181,2
+06111,Ventura,California,2020-08-30,10705,115
+06113,Yolo,California,2020-08-30,2386,52
+06115,Yuba,California,2020-08-30,909,6
+08001,Adams,Colorado,2020-08-30,7541,197
+08003,Alamosa,Colorado,2020-08-30,238,9
+08005,Arapahoe,Colorado,2020-08-30,8195,367
+08007,Archuleta,Colorado,2020-08-30,47,0
+08009,Baca,Colorado,2020-08-30,16,0
+08011,Bent,Colorado,2020-08-30,11,0
+08013,Boulder,Colorado,2020-08-30,2295,79
+08014,Broomfield,Colorado,2020-08-30,532,33
+08015,Chaffee,Colorado,2020-08-30,316,19
+08017,Cheyenne,Colorado,2020-08-30,9,0
+08019,Clear Creek,Colorado,2020-08-30,35,1
+08021,Conejos,Colorado,2020-08-30,31,0
+08023,Costilla,Colorado,2020-08-30,32,0
+08025,Crowley,Colorado,2020-08-30,73,1
+08027,Custer,Colorado,2020-08-30,17,0
+08029,Delta,Colorado,2020-08-30,162,2
+08031,Denver,Colorado,2020-08-30,11225,429
+08033,Dolores,Colorado,2020-08-30,2,0
+08035,Douglas,Colorado,2020-08-30,2088,60
+08037,Eagle,Colorado,2020-08-30,1179,9
+08041,El Paso,Colorado,2020-08-30,6030,153
+08039,Elbert,Colorado,2020-08-30,121,2
+08043,Fremont,Colorado,2020-08-30,157,0
+08045,Garfield,Colorado,2020-08-30,839,4
+08047,Gilpin,Colorado,2020-08-30,17,0
+08049,Grand,Colorado,2020-08-30,62,1
+08051,Gunnison,Colorado,2020-08-30,290,7
+08053,Hinsdale,Colorado,2020-08-30,3,0
+08055,Huerfano,Colorado,2020-08-30,9,1
+08057,Jackson,Colorado,2020-08-30,9,0
+08059,Jefferson,Colorado,2020-08-30,4777,237
+08063,Kit Carson,Colorado,2020-08-30,74,3
+08067,La Plata,Colorado,2020-08-30,240,2
+08065,Lake,Colorado,2020-08-30,80,0
+08069,Larimer,Colorado,2020-08-30,1938,42
+08071,Las Animas,Colorado,2020-08-30,20,0
+08073,Lincoln,Colorado,2020-08-30,8,0
+08075,Logan,Colorado,2020-08-30,684,5
+08077,Mesa,Colorado,2020-08-30,407,5
+08079,Mineral,Colorado,2020-08-30,19,0
+08081,Moffat,Colorado,2020-08-30,34,1
+08083,Montezuma,Colorado,2020-08-30,124,5
+08085,Montrose,Colorado,2020-08-30,342,13
+08087,Morgan,Colorado,2020-08-30,713,48
+08089,Otero,Colorado,2020-08-30,82,6
+08091,Ouray,Colorado,2020-08-30,23,1
+08093,Park,Colorado,2020-08-30,43,1
+08095,Phillips,Colorado,2020-08-30,19,0
+08097,Pitkin,Colorado,2020-08-30,197,2
+08099,Prowers,Colorado,2020-08-30,84,0
+08101,Pueblo,Colorado,2020-08-30,866,34
+08103,Rio Blanco,Colorado,2020-08-30,23,0
+08105,Rio Grande,Colorado,2020-08-30,94,2
+08107,Routt,Colorado,2020-08-30,132,8
+08109,Saguache,Colorado,2020-08-30,110,2
+08111,San Juan,Colorado,2020-08-30,4,0
+08113,San Miguel,Colorado,2020-08-30,93,0
+08115,Sedgwick,Colorado,2020-08-30,12,1
+08117,Summit,Colorado,2020-08-30,363,4
+08119,Teller,Colorado,2020-08-30,162,3
+08121,Washington,Colorado,2020-08-30,53,0
+08123,Weld,Colorado,2020-08-30,4051,146
+08125,Yuma,Colorado,2020-08-30,63,0
+09001,Fairfield,Connecticut,2020-08-30,18774,1413
+09003,Hartford,Connecticut,2020-08-30,13392,1426
+09005,Litchfield,Connecticut,2020-08-30,1688,139
+09007,Middlesex,Connecticut,2020-08-30,1446,192
+09009,New Haven,Connecticut,2020-08-30,13622,1109
+09011,New London,Connecticut,2020-08-30,1554,106
+09013,Tolland,Connecticut,2020-08-30,1126,65
+NA,Unknown,Connecticut,2020-08-30,104,0
+09015,Windham,Connecticut,2020-08-30,789,15
+10001,Kent,Delaware,2020-08-30,2608,109
+10003,New Castle,Delaware,2020-08-30,8139,300
+10005,Sussex,Delaware,2020-08-30,6317,195
+NA,Unknown,Delaware,2020-08-30,279,0
+11001,District of Columbia,District of Columbia,2020-08-30,13959,606
+12001,Alachua,Florida,2020-08-30,5193,33
+12003,Baker,Florida,2020-08-30,1151,5
+12005,Bay,Florida,2020-08-30,5355,78
+12007,Bradford,Florida,2020-08-30,729,5
+12009,Brevard,Florida,2020-08-30,7201,210
+12011,Broward,Florida,2020-08-30,70950,1183
+12013,Calhoun,Florida,2020-08-30,568,8
+12015,Charlotte,Florida,2020-08-30,2656,110
+12017,Citrus,Florida,2020-08-30,2082,57
+12019,Clay,Florida,2020-08-30,3960,76
+12021,Collier,Florida,2020-08-30,11604,176
+12023,Columbia,Florida,2020-08-30,3335,33
+12027,DeSoto,Florida,2020-08-30,1478,22
+12029,Dixie,Florida,2020-08-30,712,4
+12031,Duval,Florida,2020-08-30,26391,254
+12033,Escambia,Florida,2020-08-30,11151,186
+12035,Flagler,Florida,2020-08-30,1310,15
+12037,Franklin,Florida,2020-08-30,542,3
+12039,Gadsden,Florida,2020-08-30,2316,31
+12041,Gilchrist,Florida,2020-08-30,460,10
+12043,Glades,Florida,2020-08-30,454,3
+12045,Gulf,Florida,2020-08-30,824,11
+12047,Hamilton,Florida,2020-08-30,697,6
+12049,Hardee,Florida,2020-08-30,1092,9
+12051,Hendry,Florida,2020-08-30,1969,39
+12053,Hernando,Florida,2020-08-30,2601,83
+12055,Highlands,Florida,2020-08-30,1821,67
+12057,Hillsborough,Florida,2020-08-30,37013,547
+12059,Holmes,Florida,2020-08-30,622,5
+12061,Indian River,Florida,2020-08-30,2834,98
+12063,Jackson,Florida,2020-08-30,2335,66
+12065,Jefferson,Florida,2020-08-30,498,6
+12067,Lafayette,Florida,2020-08-30,1202,7
+12069,Lake,Florida,2020-08-30,6385,116
+12071,Lee,Florida,2020-08-30,18633,418
+12073,Leon,Florida,2020-08-30,6293,33
+12075,Levy,Florida,2020-08-30,907,6
+12077,Liberty,Florida,2020-08-30,433,7
+12079,Madison,Florida,2020-08-30,867,14
+12081,Manatee,Florida,2020-08-30,10418,258
+12083,Marion,Florida,2020-08-30,8469,179
+12085,Martin,Florida,2020-08-30,4450,114
+12086,Miami-Dade,Florida,2020-08-30,156558,2403
+12087,Monroe,Florida,2020-08-30,1727,16
+12089,Nassau,Florida,2020-08-30,1659,19
+12091,Okaloosa,Florida,2020-08-30,4133,77
+12093,Okeechobee,Florida,2020-08-30,1239,15
+12095,Orange,Florida,2020-08-30,35769,375
+12097,Osceola,Florida,2020-08-30,11091,129
+12099,Palm Beach,Florida,2020-08-30,41863,1117
+12101,Pasco,Florida,2020-08-30,8028,174
+12103,Pinellas,Florida,2020-08-30,19888,650
+12105,Polk,Florida,2020-08-30,16894,442
+12107,Putnam,Florida,2020-08-30,1774,37
+12113,Santa Rosa,Florida,2020-08-30,4659,55
+12115,Sarasota,Florida,2020-08-30,7193,202
+12117,Seminole,Florida,2020-08-30,8006,172
+12109,St. Johns,Florida,2020-08-30,4321,57
+12111,St. Lucie,Florida,2020-08-30,6975,235
+12119,Sumter,Florida,2020-08-30,1848,50
+12121,Suwannee,Florida,2020-08-30,2431,60
+12123,Taylor,Florida,2020-08-30,1199,5
+12125,Union,Florida,2020-08-30,592,5
+NA,Unknown,Florida,2020-08-30,998,0
+12127,Volusia,Florida,2020-08-30,9244,189
+12129,Wakulla,Florida,2020-08-30,886,7
+12131,Walton,Florida,2020-08-30,1636,20
+12133,Washington,Florida,2020-08-30,1006,16
+13001,Appling,Georgia,2020-08-30,885,23
+13003,Atkinson,Georgia,2020-08-30,405,3
+13005,Bacon,Georgia,2020-08-30,516,8
+13007,Baker,Georgia,2020-08-30,71,3
+13009,Baldwin,Georgia,2020-08-30,1652,50
+13011,Banks,Georgia,2020-08-30,370,6
+13013,Barrow,Georgia,2020-08-30,1725,37
+13015,Bartow,Georgia,2020-08-30,2426,70
+13017,Ben Hill,Georgia,2020-08-30,620,13
+13019,Berrien,Georgia,2020-08-30,379,6
+13021,Bibb,Georgia,2020-08-30,5375,119
+13023,Bleckley,Georgia,2020-08-30,349,16
+13025,Brantley,Georgia,2020-08-30,304,8
+13027,Brooks,Georgia,2020-08-30,476,21
+13029,Bryan,Georgia,2020-08-30,855,9
+13031,Bulloch,Georgia,2020-08-30,1919,21
+13033,Burke,Georgia,2020-08-30,650,8
+13035,Butts,Georgia,2020-08-30,564,40
+13037,Calhoun,Georgia,2020-08-30,227,7
+13039,Camden,Georgia,2020-08-30,1013,7
+13043,Candler,Georgia,2020-08-30,348,14
+13045,Carroll,Georgia,2020-08-30,2310,61
+13047,Catoosa,Georgia,2020-08-30,860,17
+13049,Charlton,Georgia,2020-08-30,558,6
+13051,Chatham,Georgia,2020-08-30,7012,121
+13053,Chattahoochee,Georgia,2020-08-30,1113,2
+13055,Chattooga,Georgia,2020-08-30,553,5
+13057,Cherokee,Georgia,2020-08-30,4817,78
+13059,Clarke,Georgia,2020-08-30,2842,26
+13061,Clay,Georgia,2020-08-30,111,2
+13063,Clayton,Georgia,2020-08-30,6458,137
+13065,Clinch,Georgia,2020-08-30,285,4
+13067,Cobb,Georgia,2020-08-30,16896,391
+13069,Coffee,Georgia,2020-08-30,1775,37
+13071,Colquitt,Georgia,2020-08-30,1751,26
+13073,Columbia,Georgia,2020-08-30,3109,44
+13075,Cook,Georgia,2020-08-30,508,11
+13077,Coweta,Georgia,2020-08-30,2244,26
+13079,Crawford,Georgia,2020-08-30,151,3
+13081,Crisp,Georgia,2020-08-30,466,15
+13083,Dade,Georgia,2020-08-30,192,3
+13085,Dawson,Georgia,2020-08-30,669,7
+13089,DeKalb,Georgia,2020-08-30,16498,298
+13087,Decatur,Georgia,2020-08-30,986,21
+13091,Dodge,Georgia,2020-08-30,323,6
+13093,Dooly,Georgia,2020-08-30,283,14
+13095,Dougherty,Georgia,2020-08-30,2977,179
+13097,Douglas,Georgia,2020-08-30,3154,64
+13099,Early,Georgia,2020-08-30,409,32
+13101,Echols,Georgia,2020-08-30,234,2
+13103,Effingham,Georgia,2020-08-30,1054,16
+13105,Elbert,Georgia,2020-08-30,464,1
+13107,Emanuel,Georgia,2020-08-30,765,22
+13109,Evans,Georgia,2020-08-30,360,5
+13111,Fannin,Georgia,2020-08-30,439,8
+13113,Fayette,Georgia,2020-08-30,1568,38
+13115,Floyd,Georgia,2020-08-30,2269,31
+13117,Forsyth,Georgia,2020-08-30,3079,33
+13119,Franklin,Georgia,2020-08-30,537,11
+13121,Fulton,Georgia,2020-08-30,24801,515
+13123,Gilmer,Georgia,2020-08-30,745,7
+13125,Glascock,Georgia,2020-08-30,34,2
+13127,Glynn,Georgia,2020-08-30,3032,70
+13129,Gordon,Georgia,2020-08-30,1522,29
+13131,Grady,Georgia,2020-08-30,662,12
+13133,Greene,Georgia,2020-08-30,433,16
+13135,Gwinnett,Georgia,2020-08-30,24182,333
+13137,Habersham,Georgia,2020-08-30,1327,63
+13139,Hall,Georgia,2020-08-30,7605,125
+13141,Hancock,Georgia,2020-08-30,356,39
+13143,Haralson,Georgia,2020-08-30,330,7
+13145,Harris,Georgia,2020-08-30,723,21
+13147,Hart,Georgia,2020-08-30,408,10
+13149,Heard,Georgia,2020-08-30,169,5
+13151,Henry,Georgia,2020-08-30,4399,78
+13153,Houston,Georgia,2020-08-30,2616,67
+13155,Irwin,Georgia,2020-08-30,220,4
+13157,Jackson,Georgia,2020-08-30,1480,25
+13159,Jasper,Georgia,2020-08-30,195,3
+13161,Jeff Davis,Georgia,2020-08-30,639,11
+13163,Jefferson,Georgia,2020-08-30,654,16
+13165,Jenkins,Georgia,2020-08-30,309,25
+13167,Johnson,Georgia,2020-08-30,312,13
+13169,Jones,Georgia,2020-08-30,449,5
+13171,Lamar,Georgia,2020-08-30,323,16
+13173,Lanier,Georgia,2020-08-30,247,5
+13175,Laurens,Georgia,2020-08-30,1323,45
+13177,Lee,Georgia,2020-08-30,660,24
+13179,Liberty,Georgia,2020-08-30,929,17
+13181,Lincoln,Georgia,2020-08-30,192,7
+13183,Long,Georgia,2020-08-30,184,3
+13185,Lowndes,Georgia,2020-08-30,3468,65
+13187,Lumpkin,Georgia,2020-08-30,701,12
+13193,Macon,Georgia,2020-08-30,205,10
+13195,Madison,Georgia,2020-08-30,532,8
+13197,Marion,Georgia,2020-08-30,169,6
+13189,McDuffie,Georgia,2020-08-30,512,12
+13191,McIntosh,Georgia,2020-08-30,245,5
+13199,Meriwether,Georgia,2020-08-30,481,9
+13201,Miller,Georgia,2020-08-30,212,0
+13205,Mitchell,Georgia,2020-08-30,710,44
+13207,Monroe,Georgia,2020-08-30,591,41
+13209,Montgomery,Georgia,2020-08-30,213,3
+13211,Morgan,Georgia,2020-08-30,414,2
+13213,Murray,Georgia,2020-08-30,708,3
+13215,Muscogee,Georgia,2020-08-30,5440,134
+13217,Newton,Georgia,2020-08-30,2295,60
+13219,Oconee,Georgia,2020-08-30,551,20
+13221,Oglethorpe,Georgia,2020-08-30,280,9
+13223,Paulding,Georgia,2020-08-30,2262,34
+13225,Peach,Georgia,2020-08-30,564,16
+13227,Pickens,Georgia,2020-08-30,517,6
+13229,Pierce,Georgia,2020-08-30,518,12
+13231,Pike,Georgia,2020-08-30,276,8
+13233,Polk,Georgia,2020-08-30,1212,15
+13235,Pulaski,Georgia,2020-08-30,210,7
+13237,Putnam,Georgia,2020-08-30,610,20
+13239,Quitman,Georgia,2020-08-30,33,1
+13241,Rabun,Georgia,2020-08-30,278,5
+13243,Randolph,Georgia,2020-08-30,310,27
+13245,Richmond,Georgia,2020-08-30,5965,125
+13247,Rockdale,Georgia,2020-08-30,1638,32
+13249,Schley,Georgia,2020-08-30,94,2
+13251,Screven,Georgia,2020-08-30,281,9
+13253,Seminole,Georgia,2020-08-30,282,8
+13255,Spalding,Georgia,2020-08-30,1163,50
+13257,Stephens,Georgia,2020-08-30,820,26
+13259,Stewart,Georgia,2020-08-30,354,11
+13261,Sumter,Georgia,2020-08-30,852,59
+13263,Talbot,Georgia,2020-08-30,154,5
+13265,Taliaferro,Georgia,2020-08-30,19,0
+13267,Tattnall,Georgia,2020-08-30,671,7
+13269,Taylor,Georgia,2020-08-30,156,7
+13271,Telfair,Georgia,2020-08-30,347,13
+13273,Terrell,Georgia,2020-08-30,318,31
+13275,Thomas,Georgia,2020-08-30,1396,49
+13277,Tift,Georgia,2020-08-30,1499,49
+13279,Toombs,Georgia,2020-08-30,1056,17
+13281,Towns,Georgia,2020-08-30,204,6
+13283,Treutlen,Georgia,2020-08-30,204,4
+13285,Troup,Georgia,2020-08-30,2588,84
+13287,Turner,Georgia,2020-08-30,277,19
+13289,Twiggs,Georgia,2020-08-30,165,7
+13291,Union,Georgia,2020-08-30,474,10
+NA,Unknown,Georgia,2020-08-30,2598,4
+13293,Upson,Georgia,2020-08-30,659,55
+13295,Walker,Georgia,2020-08-30,1025,21
+13297,Walton,Georgia,2020-08-30,1458,47
+13299,Ware,Georgia,2020-08-30,1333,44
+13301,Warren,Georgia,2020-08-30,117,5
+13303,Washington,Georgia,2020-08-30,609,4
+13305,Wayne,Georgia,2020-08-30,954,25
+13307,Webster,Georgia,2020-08-30,38,2
+13309,Wheeler,Georgia,2020-08-30,147,5
+13311,White,Georgia,2020-08-30,511,13
+13313,Whitfield,Georgia,2020-08-30,3971,51
+13315,Wilcox,Georgia,2020-08-30,222,20
+13317,Wilkes,Georgia,2020-08-30,222,3
+13319,Wilkinson,Georgia,2020-08-30,290,17
+13321,Worth,Georgia,2020-08-30,497,28
+15001,Hawaii,Hawaii,2020-08-30,340,0
+15003,Honolulu,Hawaii,2020-08-30,7584,54
+15007,Kauai,Hawaii,2020-08-30,57,0
+15009,Maui,Hawaii,2020-08-30,334,8
+16001,Ada,Idaho,2020-08-30,11109,125
+16003,Adams,Idaho,2020-08-30,25,0
+16005,Bannock,Idaho,2020-08-30,666,2
+16007,Bear Lake,Idaho,2020-08-30,37,0
+16009,Benewah,Idaho,2020-08-30,110,1
+16011,Bingham,Idaho,2020-08-30,470,6
+16013,Blaine,Idaho,2020-08-30,605,6
+16015,Boise,Idaho,2020-08-30,61,1
+16017,Bonner,Idaho,2020-08-30,220,0
+16019,Bonneville,Idaho,2020-08-30,1789,10
+16021,Boundary,Idaho,2020-08-30,43,1
+16023,Butte,Idaho,2020-08-30,19,0
+16025,Camas,Idaho,2020-08-30,4,0
+16027,Canyon,Idaho,2020-08-30,7205,76
+16029,Caribou,Idaho,2020-08-30,43,0
+16031,Cassia,Idaho,2020-08-30,581,4
+16033,Clark,Idaho,2020-08-30,21,0
+16035,Clearwater,Idaho,2020-08-30,21,0
+16037,Custer,Idaho,2020-08-30,32,0
+16039,Elmore,Idaho,2020-08-30,279,3
+16041,Franklin,Idaho,2020-08-30,59,0
+16043,Fremont,Idaho,2020-08-30,115,2
+16045,Gem,Idaho,2020-08-30,210,2
+16047,Gooding,Idaho,2020-08-30,227,0
+16049,Idaho,Idaho,2020-08-30,40,0
+16051,Jefferson,Idaho,2020-08-30,349,1
+16053,Jerome,Idaho,2020-08-30,597,6
+16055,Kootenai,Idaho,2020-08-30,2170,29
+16057,Latah,Idaho,2020-08-30,233,0
+16059,Lemhi,Idaho,2020-08-30,70,0
+16061,Lewis,Idaho,2020-08-30,9,0
+16063,Lincoln,Idaho,2020-08-30,67,0
+16065,Madison,Idaho,2020-08-30,241,0
+16067,Minidoka,Idaho,2020-08-30,553,2
+16069,Nez Perce,Idaho,2020-08-30,284,19
+16071,Oneida,Idaho,2020-08-30,21,0
+16073,Owyhee,Idaho,2020-08-30,303,5
+16075,Payette,Idaho,2020-08-30,663,4
+16077,Power,Idaho,2020-08-30,131,0
+16079,Shoshone,Idaho,2020-08-30,196,15
+16081,Teton,Idaho,2020-08-30,128,0
+16083,Twin Falls,Idaho,2020-08-30,1673,35
+16085,Valley,Idaho,2020-08-30,84,1
+16087,Washington,Idaho,2020-08-30,271,4
+17001,Adams,Illinois,2020-08-30,769,7
+17003,Alexander,Illinois,2020-08-30,44,0
+17005,Bond,Illinois,2020-08-30,143,3
+17007,Boone,Illinois,2020-08-30,860,23
+17009,Brown,Illinois,2020-08-30,20,0
+17011,Bureau,Illinois,2020-08-30,360,6
+17013,Calhoun,Illinois,2020-08-30,26,0
+17015,Carroll,Illinois,2020-08-30,133,4
+17017,Cass,Illinois,2020-08-30,297,11
+17019,Champaign,Illinois,2020-08-30,2423,20
+17021,Christian,Illinois,2020-08-30,231,5
+17023,Clark,Illinois,2020-08-30,116,2
+17025,Clay,Illinois,2020-08-30,78,0
+17027,Clinton,Illinois,2020-08-30,692,17
+17029,Coles,Illinois,2020-08-30,952,21
+17031,Cook,Illinois,2020-08-30,126003,5054
+17033,Crawford,Illinois,2020-08-30,77,0
+17035,Cumberland,Illinois,2020-08-30,137,3
+17039,De Witt,Illinois,2020-08-30,42,1
+17037,DeKalb,Illinois,2020-08-30,1136,35
+17041,Douglas,Illinois,2020-08-30,217,5
+17043,DuPage,Illinois,2020-08-30,14493,533
+17045,Edgar,Illinois,2020-08-30,83,0
+17047,Edwards,Illinois,2020-08-30,39,0
+17049,Effingham,Illinois,2020-08-30,523,1
+17051,Fayette,Illinois,2020-08-30,165,3
+17053,Ford,Illinois,2020-08-30,70,2
+17055,Franklin,Illinois,2020-08-30,337,1
+17057,Fulton,Illinois,2020-08-30,84,0
+17059,Gallatin,Illinois,2020-08-30,62,2
+17061,Greene,Illinois,2020-08-30,105,1
+17063,Grundy,Illinois,2020-08-30,474,5
+17065,Hamilton,Illinois,2020-08-30,45,0
+17067,Hancock,Illinois,2020-08-30,136,2
+17069,Hardin,Illinois,2020-08-30,18,0
+17071,Henderson,Illinois,2020-08-30,44,0
+17073,Henry,Illinois,2020-08-30,460,1
+17075,Iroquois,Illinois,2020-08-30,296,19
+17077,Jackson,Illinois,2020-08-30,915,21
+17079,Jasper,Illinois,2020-08-30,124,7
+17081,Jefferson,Illinois,2020-08-30,455,34
+17083,Jersey,Illinois,2020-08-30,275,6
+17085,Jo Daviess,Illinois,2020-08-30,173,2
+17087,Johnson,Illinois,2020-08-30,115,0
+17089,Kane,Illinois,2020-08-30,11203,312
+17091,Kankakee,Illinois,2020-08-30,2216,71
+17093,Kendall,Illinois,2020-08-30,1684,25
+17095,Knox,Illinois,2020-08-30,449,3
+17099,LaSalle,Illinois,2020-08-30,1237,45
+17097,Lake,Illinois,2020-08-30,14522,465
+17101,Lawrence,Illinois,2020-08-30,135,0
+17103,Lee,Illinois,2020-08-30,241,1
+17105,Livingston,Illinois,2020-08-30,189,4
+17107,Logan,Illinois,2020-08-30,260,1
+17115,Macon,Illinois,2020-08-30,936,26
+17117,Macoupin,Illinois,2020-08-30,345,3
+17119,Madison,Illinois,2020-08-30,3982,98
+17121,Marion,Illinois,2020-08-30,266,0
+17123,Marshall,Illinois,2020-08-30,46,0
+17125,Mason,Illinois,2020-08-30,84,1
+17127,Massac,Illinois,2020-08-30,65,1
+17109,McDonough,Illinois,2020-08-30,196,15
+17111,McHenry,Illinois,2020-08-30,3891,117
+17113,McLean,Illinois,2020-08-30,1674,16
+17129,Menard,Illinois,2020-08-30,68,0
+17131,Mercer,Illinois,2020-08-30,99,4
+17133,Monroe,Illinois,2020-08-30,448,14
+17135,Montgomery,Illinois,2020-08-30,248,7
+17137,Morgan,Illinois,2020-08-30,500,18
+17139,Moultrie,Illinois,2020-08-30,156,1
+17141,Ogle,Illinois,2020-08-30,482,5
+17143,Peoria,Illinois,2020-08-30,2382,40
+17145,Perry,Illinois,2020-08-30,287,8
+17147,Piatt,Illinois,2020-08-30,78,0
+17149,Pike,Illinois,2020-08-30,71,0
+17151,Pope,Illinois,2020-08-30,19,1
+17153,Pulaski,Illinois,2020-08-30,121,1
+17155,Putnam,Illinois,2020-08-30,19,0
+17157,Randolph,Illinois,2020-08-30,730,7
+17159,Richland,Illinois,2020-08-30,62,3
+17161,Rock Island,Illinois,2020-08-30,2219,60
+17165,Saline,Illinois,2020-08-30,162,3
+17167,Sangamon,Illinois,2020-08-30,1806,40
+17169,Schuyler,Illinois,2020-08-30,21,0
+17171,Scott,Illinois,2020-08-30,45,0
+17173,Shelby,Illinois,2020-08-30,194,3
+17163,St. Clair,Illinois,2020-08-30,5794,174
+17175,Stark,Illinois,2020-08-30,22,0
+17177,Stephenson,Illinois,2020-08-30,378,6
+17179,Tazewell,Illinois,2020-08-30,1068,9
+17181,Union,Illinois,2020-08-30,424,24
+NA,Unknown,Illinois,2020-08-30,1645,207
+17183,Vermilion,Illinois,2020-08-30,329,3
+17185,Wabash,Illinois,2020-08-30,106,1
+17187,Warren,Illinois,2020-08-30,255,1
+17189,Washington,Illinois,2020-08-30,111,1
+17191,Wayne,Illinois,2020-08-30,101,2
+17193,White,Illinois,2020-08-30,121,0
+17195,Whiteside,Illinois,2020-08-30,523,19
+17197,Will,Illinois,2020-08-30,11447,359
+17199,Williamson,Illinois,2020-08-30,879,12
+17201,Winnebago,Illinois,2020-08-30,4218,150
+17203,Woodford,Illinois,2020-08-30,273,4
+18001,Adams,Indiana,2020-08-30,185,3
+18003,Allen,Indiana,2020-08-30,4979,187
+18005,Bartholomew,Indiana,2020-08-30,1065,58
+18007,Benton,Indiana,2020-08-30,79,0
+18009,Blackford,Indiana,2020-08-30,79,2
+18011,Boone,Indiana,2020-08-30,852,49
+18013,Brown,Indiana,2020-08-30,89,2
+18015,Carroll,Indiana,2020-08-30,255,13
+18017,Cass,Indiana,2020-08-30,1872,10
+18019,Clark,Indiana,2020-08-30,1747,58
+18021,Clay,Indiana,2020-08-30,227,5
+18023,Clinton,Indiana,2020-08-30,547,11
+18025,Crawford,Indiana,2020-08-30,63,1
+18027,Daviess,Indiana,2020-08-30,482,25
+18033,DeKalb,Indiana,2020-08-30,333,8
+18029,Dearborn,Indiana,2020-08-30,578,30
+18031,Decatur,Indiana,2020-08-30,423,38
+18035,Delaware,Indiana,2020-08-30,1144,57
+18037,Dubois,Indiana,2020-08-30,837,17
+18039,Elkhart,Indiana,2020-08-30,5668,102
+18041,Fayette,Indiana,2020-08-30,418,8
+18043,Floyd,Indiana,2020-08-30,1075,57
+18045,Fountain,Indiana,2020-08-30,94,2
+18047,Franklin,Indiana,2020-08-30,283,26
+18049,Fulton,Indiana,2020-08-30,207,2
+18051,Gibson,Indiana,2020-08-30,314,4
+18053,Grant,Indiana,2020-08-30,946,33
+18055,Greene,Indiana,2020-08-30,371,38
+18057,Hamilton,Indiana,2020-08-30,3883,116
+18059,Hancock,Indiana,2020-08-30,832,44
+18061,Harrison,Indiana,2020-08-30,480,26
+18063,Hendricks,Indiana,2020-08-30,2332,128
+18065,Henry,Indiana,2020-08-30,610,21
+18067,Howard,Indiana,2020-08-30,1075,65
+18069,Huntington,Indiana,2020-08-30,166,3
+18071,Jackson,Indiana,2020-08-30,700,9
+18073,Jasper,Indiana,2020-08-30,321,2
+18075,Jay,Indiana,2020-08-30,134,0
+18077,Jefferson,Indiana,2020-08-30,206,3
+18079,Jennings,Indiana,2020-08-30,270,14
+18081,Johnson,Indiana,2020-08-30,2061,129
+18083,Knox,Indiana,2020-08-30,340,3
+18085,Kosciusko,Indiana,2020-08-30,1043,18
+18087,LaGrange,Indiana,2020-08-30,601,11
+18091,LaPorte,Indiana,2020-08-30,1177,31
+18089,Lake,Indiana,2020-08-30,9135,314
+18093,Lawrence,Indiana,2020-08-30,453,29
+18095,Madison,Indiana,2020-08-30,1295,80
+18097,Marion,Indiana,2020-08-30,18500,799
+18099,Marshall,Indiana,2020-08-30,888,23
+18101,Martin,Indiana,2020-08-30,109,0
+18103,Miami,Indiana,2020-08-30,320,2
+18105,Monroe,Indiana,2020-08-30,1098,40
+18107,Montgomery,Indiana,2020-08-30,425,22
+18109,Morgan,Indiana,2020-08-30,600,38
+18111,Newton,Indiana,2020-08-30,144,11
+18113,Noble,Indiana,2020-08-30,805,31
+18115,Ohio,Indiana,2020-08-30,73,7
+18117,Orange,Indiana,2020-08-30,239,26
+18119,Owen,Indiana,2020-08-30,141,2
+18121,Parke,Indiana,2020-08-30,86,2
+18123,Perry,Indiana,2020-08-30,207,14
+18125,Pike,Indiana,2020-08-30,99,1
+18127,Porter,Indiana,2020-08-30,1715,43
+18129,Posey,Indiana,2020-08-30,212,0
+18131,Pulaski,Indiana,2020-08-30,101,1
+18133,Putnam,Indiana,2020-08-30,437,8
+18135,Randolph,Indiana,2020-08-30,200,7
+18137,Ripley,Indiana,2020-08-30,244,8
+18139,Rush,Indiana,2020-08-30,175,4
+18143,Scott,Indiana,2020-08-30,318,12
+18145,Shelby,Indiana,2020-08-30,1073,36
+18147,Spencer,Indiana,2020-08-30,161,3
+18141,St. Joseph,Indiana,2020-08-30,5117,97
+18149,Starke,Indiana,2020-08-30,211,8
+18151,Steuben,Indiana,2020-08-30,271,4
+18153,Sullivan,Indiana,2020-08-30,293,8
+18155,Switzerland,Indiana,2020-08-30,66,0
+18157,Tippecanoe,Indiana,2020-08-30,1573,14
+18159,Tipton,Indiana,2020-08-30,188,21
+18161,Union,Indiana,2020-08-30,85,0
+18163,Vanderburgh,Indiana,2020-08-30,2563,19
+18165,Vermillion,Indiana,2020-08-30,95,0
+18167,Vigo,Indiana,2020-08-30,1253,18
+18169,Wabash,Indiana,2020-08-30,210,5
+18171,Warren,Indiana,2020-08-30,39,1
+18173,Warrick,Indiana,2020-08-30,765,33
+18175,Washington,Indiana,2020-08-30,218,1
+18177,Wayne,Indiana,2020-08-30,876,10
+18179,Wells,Indiana,2020-08-30,225,2
+18181,White,Indiana,2020-08-30,439,12
+18183,Whitley,Indiana,2020-08-30,211,6
+19001,Adair,Iowa,2020-08-30,51,1
+19003,Adams,Iowa,2020-08-30,22,0
+19005,Allamakee,Iowa,2020-08-30,174,4
+19007,Appanoose,Iowa,2020-08-30,82,3
+19009,Audubon,Iowa,2020-08-30,41,1
+19011,Benton,Iowa,2020-08-30,200,1
+19013,Black Hawk,Iowa,2020-08-30,3787,74
+19015,Boone,Iowa,2020-08-30,344,4
+19017,Bremer,Iowa,2020-08-30,298,7
+19019,Buchanan,Iowa,2020-08-30,174,1
+19021,Buena Vista,Iowa,2020-08-30,1826,12
+19023,Butler,Iowa,2020-08-30,201,2
+19025,Calhoun,Iowa,2020-08-30,126,2
+19027,Carroll,Iowa,2020-08-30,387,2
+19029,Cass,Iowa,2020-08-30,112,2
+19031,Cedar,Iowa,2020-08-30,154,1
+19033,Cerro Gordo,Iowa,2020-08-30,822,20
+19035,Cherokee,Iowa,2020-08-30,140,2
+19037,Chickasaw,Iowa,2020-08-30,107,0
+19039,Clarke,Iowa,2020-08-30,239,3
+19041,Clay,Iowa,2020-08-30,236,3
+19043,Clayton,Iowa,2020-08-30,179,3
+19045,Clinton,Iowa,2020-08-30,821,10
+19047,Crawford,Iowa,2020-08-30,832,3
+19049,Dallas,Iowa,2020-08-30,2378,39
+19051,Davis,Iowa,2020-08-30,81,2
+19053,Decatur,Iowa,2020-08-30,44,0
+19055,Delaware,Iowa,2020-08-30,212,3
+19057,Des Moines,Iowa,2020-08-30,567,5
+19059,Dickinson,Iowa,2020-08-30,424,6
+19061,Dubuque,Iowa,2020-08-30,2027,36
+19063,Emmet,Iowa,2020-08-30,221,8
+19065,Fayette,Iowa,2020-08-30,138,1
+19067,Floyd,Iowa,2020-08-30,215,3
+19069,Franklin,Iowa,2020-08-30,296,17
+19071,Fremont,Iowa,2020-08-30,58,0
+19073,Greene,Iowa,2020-08-30,54,0
+19075,Grundy,Iowa,2020-08-30,128,1
+19077,Guthrie,Iowa,2020-08-30,173,5
+19079,Hamilton,Iowa,2020-08-30,279,2
+19081,Hancock,Iowa,2020-08-30,154,2
+19083,Hardin,Iowa,2020-08-30,230,1
+19085,Harrison,Iowa,2020-08-30,147,1
+19087,Henry,Iowa,2020-08-30,279,4
+19089,Howard,Iowa,2020-08-30,132,2
+19091,Humboldt,Iowa,2020-08-30,153,2
+19093,Ida,Iowa,2020-08-30,40,0
+19095,Iowa,Iowa,2020-08-30,113,1
+19097,Jackson,Iowa,2020-08-30,208,1
+19099,Jasper,Iowa,2020-08-30,585,30
+19101,Jefferson,Iowa,2020-08-30,117,0
+19103,Johnson,Iowa,2020-08-30,3828,26
+19105,Jones,Iowa,2020-08-30,170,2
+19107,Keokuk,Iowa,2020-08-30,60,1
+19109,Kossuth,Iowa,2020-08-30,121,0
+19111,Lee,Iowa,2020-08-30,409,5
+19113,Linn,Iowa,2020-08-30,2971,94
+19115,Louisa,Iowa,2020-08-30,397,14
+19117,Lucas,Iowa,2020-08-30,93,5
+19119,Lyon,Iowa,2020-08-30,148,2
+19121,Madison,Iowa,2020-08-30,164,2
+19123,Mahaska,Iowa,2020-08-30,216,18
+19125,Marion,Iowa,2020-08-30,475,0
+19127,Marshall,Iowa,2020-08-30,1639,32
+19129,Mills,Iowa,2020-08-30,128,1
+19131,Mitchell,Iowa,2020-08-30,109,0
+19133,Monona,Iowa,2020-08-30,107,1
+19135,Monroe,Iowa,2020-08-30,107,8
+19137,Montgomery,Iowa,2020-08-30,76,5
+19139,Muscatine,Iowa,2020-08-30,959,51
+19141,O'Brien,Iowa,2020-08-30,196,7
+19143,Osceola,Iowa,2020-08-30,99,0
+19145,Page,Iowa,2020-08-30,112,0
+19147,Palo Alto,Iowa,2020-08-30,112,0
+19149,Plymouth,Iowa,2020-08-30,737,18
+19151,Pocahontas,Iowa,2020-08-30,130,2
+19153,Polk,Iowa,2020-08-30,13292,225
+19155,Pottawattamie,Iowa,2020-08-30,1631,34
+19157,Poweshiek,Iowa,2020-08-30,184,8
+19159,Ringgold,Iowa,2020-08-30,32,1
+19161,Sac,Iowa,2020-08-30,114,0
+19163,Scott,Iowa,2020-08-30,2208,21
+19165,Shelby,Iowa,2020-08-30,215,1
+19167,Sioux,Iowa,2020-08-30,893,3
+19169,Story,Iowa,2020-08-30,2362,16
+19171,Tama,Iowa,2020-08-30,622,29
+19173,Taylor,Iowa,2020-08-30,113,1
+19175,Union,Iowa,2020-08-30,93,3
+NA,Unknown,Iowa,2020-08-30,19,0
+19177,Van Buren,Iowa,2020-08-30,101,1
+19179,Wapello,Iowa,2020-08-30,1082,49
+19181,Warren,Iowa,2020-08-30,775,5
+19183,Washington,Iowa,2020-08-30,336,11
+19185,Wayne,Iowa,2020-08-30,48,2
+19187,Webster,Iowa,2020-08-30,1006,8
+19189,Winnebago,Iowa,2020-08-30,161,8
+19191,Winneshiek,Iowa,2020-08-30,217,3
+19193,Woodbury,Iowa,2020-08-30,4126,56
+19195,Worth,Iowa,2020-08-30,79,0
+19197,Wright,Iowa,2020-08-30,519,1
+20001,Allen,Kansas,2020-08-30,24,0
+20003,Anderson,Kansas,2020-08-30,33,0
+20005,Atchison,Kansas,2020-08-30,219,1
+20007,Barber,Kansas,2020-08-30,5,0
+20009,Barton,Kansas,2020-08-30,267,5
+20011,Bourbon,Kansas,2020-08-30,92,2
+20013,Brown,Kansas,2020-08-30,68,0
+20015,Butler,Kansas,2020-08-30,430,2
+20017,Chase,Kansas,2020-08-30,65,0
+20019,Chautauqua,Kansas,2020-08-30,8,0
+20021,Cherokee,Kansas,2020-08-30,241,2
+20023,Cheyenne,Kansas,2020-08-30,6,0
+20025,Clark,Kansas,2020-08-30,47,1
+20027,Clay,Kansas,2020-08-30,32,2
+20029,Cloud,Kansas,2020-08-30,52,1
+20031,Coffey,Kansas,2020-08-30,79,8
+20033,Comanche,Kansas,2020-08-30,9,0
+20035,Cowley,Kansas,2020-08-30,249,3
+20037,Crawford,Kansas,2020-08-30,515,1
+20039,Decatur,Kansas,2020-08-30,6,0
+20041,Dickinson,Kansas,2020-08-30,70,1
+20043,Doniphan,Kansas,2020-08-30,62,0
+20045,Douglas,Kansas,2020-08-30,1303,8
+20047,Edwards,Kansas,2020-08-30,23,0
+20049,Elk,Kansas,2020-08-30,1,0
+20051,Ellis,Kansas,2020-08-30,343,1
+20053,Ellsworth,Kansas,2020-08-30,25,0
+20055,Finney,Kansas,2020-08-30,1872,12
+20057,Ford,Kansas,2020-08-30,2309,10
+20059,Franklin,Kansas,2020-08-30,258,2
+20061,Geary,Kansas,2020-08-30,281,2
+20063,Gove,Kansas,2020-08-30,10,0
+20065,Graham,Kansas,2020-08-30,25,1
+20067,Grant,Kansas,2020-08-30,159,3
+20069,Gray,Kansas,2020-08-30,87,0
+20071,Greeley,Kansas,2020-08-30,5,0
+20073,Greenwood,Kansas,2020-08-30,25,0
+20075,Hamilton,Kansas,2020-08-30,44,0
+20077,Harper,Kansas,2020-08-30,110,0
+20079,Harvey,Kansas,2020-08-30,288,5
+20081,Haskell,Kansas,2020-08-30,57,0
+20083,Hodgeman,Kansas,2020-08-30,14,0
+20085,Jackson,Kansas,2020-08-30,201,1
+20087,Jefferson,Kansas,2020-08-30,117,0
+20089,Jewell,Kansas,2020-08-30,14,1
+20091,Johnson,Kansas,2020-08-30,8050,116
+20093,Kearny,Kansas,2020-08-30,72,1
+20095,Kingman,Kansas,2020-08-30,40,0
+20097,Kiowa,Kansas,2020-08-30,9,0
+20099,Labette,Kansas,2020-08-30,183,1
+20101,Lane,Kansas,2020-08-30,7,0
+20103,Leavenworth,Kansas,2020-08-30,1674,9
+20105,Lincoln,Kansas,2020-08-30,8,0
+20107,Linn,Kansas,2020-08-30,55,0
+20109,Logan,Kansas,2020-08-30,3,0
+20111,Lyon,Kansas,2020-08-30,855,17
+20115,Marion,Kansas,2020-08-30,64,1
+20117,Marshall,Kansas,2020-08-30,14,0
+20113,McPherson,Kansas,2020-08-30,195,1
+20119,Meade,Kansas,2020-08-30,71,0
+20121,Miami,Kansas,2020-08-30,194,0
+20123,Mitchell,Kansas,2020-08-30,30,0
+20125,Montgomery,Kansas,2020-08-30,244,5
+20127,Morris,Kansas,2020-08-30,20,0
+20129,Morton,Kansas,2020-08-30,10,2
+20131,Nemaha,Kansas,2020-08-30,55,1
+20133,Neosho,Kansas,2020-08-30,82,0
+20135,Ness,Kansas,2020-08-30,22,0
+20137,Norton,Kansas,2020-08-30,23,0
+20139,Osage,Kansas,2020-08-30,63,0
+20141,Osborne,Kansas,2020-08-30,4,0
+20143,Ottawa,Kansas,2020-08-30,40,0
+20145,Pawnee,Kansas,2020-08-30,210,0
+20147,Phillips,Kansas,2020-08-30,51,8
+20149,Pottawatomie,Kansas,2020-08-30,151,0
+20151,Pratt,Kansas,2020-08-30,44,0
+20153,Rawlins,Kansas,2020-08-30,1,0
+20155,Reno,Kansas,2020-08-30,740,1
+20157,Republic,Kansas,2020-08-30,38,0
+20159,Rice,Kansas,2020-08-30,44,1
+20161,Riley,Kansas,2020-08-30,822,5
+20163,Rooks,Kansas,2020-08-30,25,0
+20165,Rush,Kansas,2020-08-30,18,0
+20167,Russell,Kansas,2020-08-30,27,0
+20169,Saline,Kansas,2020-08-30,460,9
+20171,Scott,Kansas,2020-08-30,95,1
+20173,Sedgwick,Kansas,2020-08-30,7093,50
+20175,Seward,Kansas,2020-08-30,1341,4
+20177,Shawnee,Kansas,2020-08-30,2125,22
+20179,Sheridan,Kansas,2020-08-30,8,0
+20181,Sherman,Kansas,2020-08-30,17,0
+20183,Smith,Kansas,2020-08-30,3,0
+20185,Stafford,Kansas,2020-08-30,35,1
+20187,Stanton,Kansas,2020-08-30,43,2
+20189,Stevens,Kansas,2020-08-30,67,0
+20191,Sumner,Kansas,2020-08-30,121,3
+20193,Thomas,Kansas,2020-08-30,52,0
+20195,Trego,Kansas,2020-08-30,24,1
+20197,Wabaunsee,Kansas,2020-08-30,54,0
+20199,Wallace,Kansas,2020-08-30,1,0
+20201,Washington,Kansas,2020-08-30,5,0
+20203,Wichita,Kansas,2020-08-30,4,0
+20205,Wilson,Kansas,2020-08-30,21,0
+20207,Woodson,Kansas,2020-08-30,12,0
+20209,Wyandotte,Kansas,2020-08-30,6022,113
+21001,Adair,Kentucky,2020-08-30,267,19
+21003,Allen,Kentucky,2020-08-30,253,9
+21005,Anderson,Kentucky,2020-08-30,115,1
+21007,Ballard,Kentucky,2020-08-30,42,0
+21009,Barren,Kentucky,2020-08-30,499,8
+21011,Bath,Kentucky,2020-08-30,65,1
+21013,Bell,Kentucky,2020-08-30,395,7
+21015,Boone,Kentucky,2020-08-30,1290,25
+21017,Bourbon,Kentucky,2020-08-30,123,1
+21019,Boyd,Kentucky,2020-08-30,239,4
+21021,Boyle,Kentucky,2020-08-30,208,0
+21023,Bracken,Kentucky,2020-08-30,37,0
+21025,Breathitt,Kentucky,2020-08-30,55,0
+21027,Breckinridge,Kentucky,2020-08-30,95,2
+21029,Bullitt,Kentucky,2020-08-30,617,5
+21031,Butler,Kentucky,2020-08-30,321,16
+21033,Caldwell,Kentucky,2020-08-30,79,0
+21035,Calloway,Kentucky,2020-08-30,395,6
+21037,Campbell,Kentucky,2020-08-30,692,13
+21039,Carlisle,Kentucky,2020-08-30,60,1
+21041,Carroll,Kentucky,2020-08-30,191,3
+21043,Carter,Kentucky,2020-08-30,113,3
+21045,Casey,Kentucky,2020-08-30,250,15
+21047,Christian,Kentucky,2020-08-30,872,13
+21049,Clark,Kentucky,2020-08-30,243,8
+21051,Clay,Kentucky,2020-08-30,214,6
+21053,Clinton,Kentucky,2020-08-30,71,1
+21055,Crittenden,Kentucky,2020-08-30,50,1
+21057,Cumberland,Kentucky,2020-08-30,89,0
+21059,Daviess,Kentucky,2020-08-30,975,12
+21061,Edmonson,Kentucky,2020-08-30,132,12
+21063,Elliott,Kentucky,2020-08-30,25,0
+21065,Estill,Kentucky,2020-08-30,41,0
+21067,Fayette,Kentucky,2020-08-30,5520,55
+21069,Fleming,Kentucky,2020-08-30,70,0
+21071,Floyd,Kentucky,2020-08-30,145,2
+21073,Franklin,Kentucky,2020-08-30,466,11
+21075,Fulton,Kentucky,2020-08-30,120,2
+21077,Gallatin,Kentucky,2020-08-30,93,8
+21079,Garrard,Kentucky,2020-08-30,119,2
+21081,Grant,Kentucky,2020-08-30,138,6
+21083,Graves,Kentucky,2020-08-30,643,29
+21085,Grayson,Kentucky,2020-08-30,258,11
+21087,Green,Kentucky,2020-08-30,161,8
+21089,Greenup,Kentucky,2020-08-30,195,2
+21091,Hancock,Kentucky,2020-08-30,56,0
+21093,Hardin,Kentucky,2020-08-30,915,9
+21095,Harlan,Kentucky,2020-08-30,293,7
+21097,Harrison,Kentucky,2020-08-30,151,0
+21099,Hart,Kentucky,2020-08-30,143,1
+21101,Henderson,Kentucky,2020-08-30,440,4
+21103,Henry,Kentucky,2020-08-30,162,2
+21105,Hickman,Kentucky,2020-08-30,66,0
+21107,Hopkins,Kentucky,2020-08-30,513,37
+21109,Jackson,Kentucky,2020-08-30,223,15
+21111,Jefferson,Kentucky,2020-08-30,12223,279
+21113,Jessamine,Kentucky,2020-08-30,457,0
+21115,Johnson,Kentucky,2020-08-30,117,1
+21117,Kenton,Kentucky,2020-08-30,1710,41
+21119,Knott,Kentucky,2020-08-30,89,1
+21121,Knox,Kentucky,2020-08-30,356,9
+21123,Larue,Kentucky,2020-08-30,95,1
+21125,Laurel,Kentucky,2020-08-30,561,5
+21127,Lawrence,Kentucky,2020-08-30,43,0
+21129,Lee,Kentucky,2020-08-30,12,0
+21131,Leslie,Kentucky,2020-08-30,40,0
+21133,Letcher,Kentucky,2020-08-30,73,2
+21135,Lewis,Kentucky,2020-08-30,162,10
+21137,Lincoln,Kentucky,2020-08-30,138,6
+21139,Livingston,Kentucky,2020-08-30,46,1
+21141,Logan,Kentucky,2020-08-30,430,26
+21143,Lyon,Kentucky,2020-08-30,37,4
+21151,Madison,Kentucky,2020-08-30,1001,3
+21153,Magoffin,Kentucky,2020-08-30,67,0
+21155,Marion,Kentucky,2020-08-30,174,2
+21157,Marshall,Kentucky,2020-08-30,187,2
+21159,Martin,Kentucky,2020-08-30,55,0
+21161,Mason,Kentucky,2020-08-30,89,2
+21145,McCracken,Kentucky,2020-08-30,504,6
+21147,McCreary,Kentucky,2020-08-30,96,0
+21149,McLean,Kentucky,2020-08-30,56,0
+21163,Meade,Kentucky,2020-08-30,145,3
+21165,Menifee,Kentucky,2020-08-30,33,0
+21167,Mercer,Kentucky,2020-08-30,111,1
+21169,Metcalfe,Kentucky,2020-08-30,86,2
+21171,Monroe,Kentucky,2020-08-30,139,2
+21173,Montgomery,Kentucky,2020-08-30,190,1
+21175,Morgan,Kentucky,2020-08-30,45,0
+21177,Muhlenberg,Kentucky,2020-08-30,681,12
+21179,Nelson,Kentucky,2020-08-30,331,2
+21181,Nicholas,Kentucky,2020-08-30,22,1
+21183,Ohio,Kentucky,2020-08-30,417,9
+21185,Oldham,Kentucky,2020-08-30,810,23
+21187,Owen,Kentucky,2020-08-30,80,0
+21189,Owsley,Kentucky,2020-08-30,34,0
+21191,Pendleton,Kentucky,2020-08-30,63,0
+21193,Perry,Kentucky,2020-08-30,287,7
+21195,Pike,Kentucky,2020-08-30,314,3
+21197,Powell,Kentucky,2020-08-30,76,0
+21199,Pulaski,Kentucky,2020-08-30,552,7
+21201,Robertson,Kentucky,2020-08-30,6,0
+21203,Rockcastle,Kentucky,2020-08-30,121,0
+21205,Rowan,Kentucky,2020-08-30,159,0
+21207,Russell,Kentucky,2020-08-30,180,6
+21209,Scott,Kentucky,2020-08-30,572,5
+21211,Shelby,Kentucky,2020-08-30,900,23
+21213,Simpson,Kentucky,2020-08-30,208,7
+21215,Spencer,Kentucky,2020-08-30,169,0
+21217,Taylor,Kentucky,2020-08-30,203,5
+21219,Todd,Kentucky,2020-08-30,139,0
+21221,Trigg,Kentucky,2020-08-30,85,0
+21223,Trimble,Kentucky,2020-08-30,46,0
+21225,Union,Kentucky,2020-08-30,100,1
+21227,Warren,Kentucky,2020-08-30,3284,27
+21229,Washington,Kentucky,2020-08-30,122,1
+21231,Wayne,Kentucky,2020-08-30,95,0
+21233,Webster,Kentucky,2020-08-30,115,2
+21235,Whitley,Kentucky,2020-08-30,195,2
+21237,Wolfe,Kentucky,2020-08-30,27,0
+21239,Woodford,Kentucky,2020-08-30,207,0
+22001,Acadia,Louisiana,2020-08-30,2808,93
+22003,Allen,Louisiana,2020-08-30,1443,37
+22005,Ascension,Louisiana,2020-08-30,3324,92
+22007,Assumption,Louisiana,2020-08-30,664,22
+22009,Avoyelles,Louisiana,2020-08-30,1279,44
+22011,Beauregard,Louisiana,2020-08-30,940,31
+22013,Bienville,Louisiana,2020-08-30,417,31
+22015,Bossier,Louisiana,2020-08-30,2693,92
+22017,Caddo,Louisiana,2020-08-30,7407,318
+22019,Calcasieu,Louisiana,2020-08-30,7439,182
+22021,Caldwell,Louisiana,2020-08-30,278,3
+22023,Cameron,Louisiana,2020-08-30,203,1
+22025,Catahoula,Louisiana,2020-08-30,369,6
+22027,Claiborne,Louisiana,2020-08-30,373,13
+22029,Concordia,Louisiana,2020-08-30,433,10
+22031,De Soto,Louisiana,2020-08-30,816,33
+22033,East Baton Rouge,Louisiana,2020-08-30,13727,411
+22035,East Carroll,Louisiana,2020-08-30,532,3
+22037,East Feliciana,Louisiana,2020-08-30,1079,43
+22039,Evangeline,Louisiana,2020-08-30,1115,24
+22041,Franklin,Louisiana,2020-08-30,1081,29
+22043,Grant,Louisiana,2020-08-30,430,27
+22045,Iberia,Louisiana,2020-08-30,2711,87
+22047,Iberville,Louisiana,2020-08-30,1331,54
+22049,Jackson,Louisiana,2020-08-30,470,21
+22051,Jefferson,Louisiana,2020-08-30,16438,545
+22053,Jefferson Davis,Louisiana,2020-08-30,1160,35
+22059,LaSalle,Louisiana,2020-08-30,382,5
+22055,Lafayette,Louisiana,2020-08-30,8251,110
+22057,Lafourche,Louisiana,2020-08-30,3263,108
+22061,Lincoln,Louisiana,2020-08-30,905,40
+22063,Livingston,Louisiana,2020-08-30,3368,65
+22065,Madison,Louisiana,2020-08-30,790,7
+22067,Morehouse,Louisiana,2020-08-30,595,17
+22069,Natchitoches,Louisiana,2020-08-30,920,22
+22071,Orleans,Louisiana,2020-08-30,11494,577
+22073,Ouachita,Louisiana,2020-08-30,5468,128
+22075,Plaquemines,Louisiana,2020-08-30,521,19
+22077,Pointe Coupee,Louisiana,2020-08-30,941,37
+22079,Rapides,Louisiana,2020-08-30,3827,135
+22081,Red River,Louisiana,2020-08-30,318,20
+22083,Richland,Louisiana,2020-08-30,686,9
+22085,Sabine,Louisiana,2020-08-30,742,13
+22087,St. Bernard,Louisiana,2020-08-30,1233,27
+22089,St. Charles,Louisiana,2020-08-30,1643,55
+22091,St. Helena,Louisiana,2020-08-30,367,2
+22093,St. James,Louisiana,2020-08-30,759,36
+22095,St. John the Baptist,Louisiana,2020-08-30,1513,95
+22097,St. Landry,Louisiana,2020-08-30,3096,112
+22099,St. Martin,Louisiana,2020-08-30,1964,56
+22101,St. Mary,Louisiana,2020-08-30,1757,69
+22103,St. Tammany,Louisiana,2020-08-30,6037,236
+22105,Tangipahoa,Louisiana,2020-08-30,4030,97
+22107,Tensas,Louisiana,2020-08-30,147,1
+22109,Terrebonne,Louisiana,2020-08-30,3333,98
+22111,Union,Louisiana,2020-08-30,823,39
+NA,Unknown,Louisiana,2020-08-30,351,163
+22113,Vermilion,Louisiana,2020-08-30,1861,44
+22115,Vernon,Louisiana,2020-08-30,956,39
+22117,Washington,Louisiana,2020-08-30,1460,60
+22119,Webster,Louisiana,2020-08-30,1030,19
+22121,West Baton Rouge,Louisiana,2020-08-30,832,39
+22123,West Carroll,Louisiana,2020-08-30,312,9
+22125,West Feliciana,Louisiana,2020-08-30,549,20
+22127,Winn,Louisiana,2020-08-30,546,16
+23001,Androscoggin,Maine,2020-08-30,612,10
+23003,Aroostook,Maine,2020-08-30,38,1
+23005,Cumberland,Maine,2020-08-30,2187,70
+23007,Franklin,Maine,2020-08-30,53,1
+23009,Hancock,Maine,2020-08-30,45,1
+23011,Kennebec,Maine,2020-08-30,188,11
+23013,Knox,Maine,2020-08-30,29,1
+23015,Lincoln,Maine,2020-08-30,36,1
+23017,Oxford,Maine,2020-08-30,61,0
+23019,Penobscot,Maine,2020-08-30,229,6
+23021,Piscataquis,Maine,2020-08-30,8,0
+23023,Sagadahoc,Maine,2020-08-30,60,0
+23025,Somerset,Maine,2020-08-30,51,1
+NA,Unknown,Maine,2020-08-30,1,0
+23027,Waldo,Maine,2020-08-30,69,14
+23029,Washington,Maine,2020-08-30,15,0
+23031,York,Maine,2020-08-30,830,15
+24001,Allegany,Maryland,2020-08-30,391,20
+24003,Anne Arundel,Maryland,2020-08-30,8310,236
+24005,Baltimore,Maryland,2020-08-30,15405,601
+24510,Baltimore city,Maryland,2020-08-30,14444,463
+24009,Calvert,Maryland,2020-08-30,787,28
+24011,Caroline,Maryland,2020-08-30,504,3
+24013,Carroll,Maryland,2020-08-30,1689,123
+24015,Cecil,Maryland,2020-08-30,783,31
+24017,Charles,Maryland,2020-08-30,2384,94
+24019,Dorchester,Maryland,2020-08-30,458,6
+24021,Frederick,Maryland,2020-08-30,3484,125
+24023,Garrett,Maryland,2020-08-30,63,0
+24025,Harford,Maryland,2020-08-30,2462,69
+24027,Howard,Maryland,2020-08-30,4373,117
+24029,Kent,Maryland,2020-08-30,265,24
+24031,Montgomery,Maryland,2020-08-30,19985,820
+24033,Prince George's,Maryland,2020-08-30,26527,791
+24035,Queen Anne's,Maryland,2020-08-30,544,26
+24039,Somerset,Maryland,2020-08-30,192,4
+24037,St. Mary's,Maryland,2020-08-30,1108,55
+24041,Talbot,Maryland,2020-08-30,472,4
+NA,Unknown,Maryland,2020-08-30,0,8
+24043,Washington,Maryland,2020-08-30,1308,33
+24045,Wicomico,Maryland,2020-08-30,1547,47
+24047,Worcester,Maryland,2020-08-30,801,24
+25001,Barnstable,Massachusetts,2020-08-30,1852,165
+25003,Berkshire,Massachusetts,2020-08-30,702,46
+25005,Bristol,Massachusetts,2020-08-30,9757,659
+25007,Dukes,Massachusetts,2020-08-30,74,0
+25009,Essex,Massachusetts,2020-08-30,18835,1236
+25011,Franklin,Massachusetts,2020-08-30,428,65
+25013,Hampden,Massachusetts,2020-08-30,7908,746
+25015,Hampshire,Massachusetts,2020-08-30,1279,138
+25017,Middlesex,Massachusetts,2020-08-30,27595,2068
+25019,Nantucket,Massachusetts,2020-08-30,44,1
+25021,Norfolk,Massachusetts,2020-08-30,11006,1017
+25023,Plymouth,Massachusetts,2020-08-30,9612,741
+25025,Suffolk,Massachusetts,2020-08-30,23403,1107
+NA,Unknown,Massachusetts,2020-08-30,1580,5
+25027,Worcester,Massachusetts,2020-08-30,14154,1055
+26001,Alcona,Michigan,2020-08-30,33,2
+26003,Alger,Michigan,2020-08-30,17,0
+26005,Allegan,Michigan,2020-08-30,637,6
+26007,Alpena,Michigan,2020-08-30,132,14
+26009,Antrim,Michigan,2020-08-30,58,0
+26011,Arenac,Michigan,2020-08-30,55,3
+26013,Baraga,Michigan,2020-08-30,8,0
+26015,Barry,Michigan,2020-08-30,215,2
+26017,Bay,Michigan,2020-08-30,814,41
+26019,Benzie,Michigan,2020-08-30,46,2
+26021,Berrien,Michigan,2020-08-30,1673,70
+26023,Branch,Michigan,2020-08-30,1287,26
+26025,Calhoun,Michigan,2020-08-30,983,44
+26027,Cass,Michigan,2020-08-30,411,17
+26029,Charlevoix,Michigan,2020-08-30,74,2
+26031,Cheboygan,Michigan,2020-08-30,79,2
+26033,Chippewa,Michigan,2020-08-30,58,0
+26035,Clare,Michigan,2020-08-30,100,4
+26037,Clinton,Michigan,2020-08-30,488,13
+26039,Crawford,Michigan,2020-08-30,113,5
+26041,Delta,Michigan,2020-08-30,151,3
+26043,Dickinson,Michigan,2020-08-30,65,2
+26045,Eaton,Michigan,2020-08-30,510,8
+26047,Emmet,Michigan,2020-08-30,122,2
+26049,Genesee,Michigan,2020-08-30,3960,305
+26051,Gladwin,Michigan,2020-08-30,75,2
+26053,Gogebic,Michigan,2020-08-30,144,1
+26055,Grand Traverse,Michigan,2020-08-30,348,6
+26057,Gratiot,Michigan,2020-08-30,191,15
+26059,Hillsdale,Michigan,2020-08-30,302,26
+26061,Houghton,Michigan,2020-08-30,72,1
+26063,Huron,Michigan,2020-08-30,200,4
+26065,Ingham,Michigan,2020-08-30,1772,39
+26067,Ionia,Michigan,2020-08-30,301,7
+26069,Iosco,Michigan,2020-08-30,143,12
+26071,Iron,Michigan,2020-08-30,33,1
+26073,Isabella,Michigan,2020-08-30,472,9
+26075,Jackson,Michigan,2020-08-30,2547,62
+26077,Kalamazoo,Michigan,2020-08-30,1935,88
+26079,Kalkaska,Michigan,2020-08-30,66,4
+26081,Kent,Michigan,2020-08-30,8449,167
+26083,Keweenaw,Michigan,2020-08-30,2,0
+26085,Lake,Michigan,2020-08-30,29,0
+26087,Lapeer,Michigan,2020-08-30,840,42
+26089,Leelanau,Michigan,2020-08-30,90,1
+26091,Lenawee,Michigan,2020-08-30,1291,17
+26093,Livingston,Michigan,2020-08-30,1121,30
+26095,Luce,Michigan,2020-08-30,121,0
+26097,Mackinac,Michigan,2020-08-30,36,0
+26099,Macomb,Michigan,2020-08-30,12998,973
+26101,Manistee,Michigan,2020-08-30,66,1
+26103,Marquette,Michigan,2020-08-30,243,11
+26105,Mason,Michigan,2020-08-30,120,0
+26107,Mecosta,Michigan,2020-08-30,86,2
+26109,Menominee,Michigan,2020-08-30,246,0
+26111,Midland,Michigan,2020-08-30,413,11
+26113,Missaukee,Michigan,2020-08-30,44,1
+26115,Monroe,Michigan,2020-08-30,1310,27
+26117,Montcalm,Michigan,2020-08-30,227,4
+26119,Montmorency,Michigan,2020-08-30,12,0
+26121,Muskegon,Michigan,2020-08-30,1947,67
+26123,Newaygo,Michigan,2020-08-30,298,0
+26125,Oakland,Michigan,2020-08-30,17996,1163
+26127,Oceana,Michigan,2020-08-30,500,6
+26129,Ogemaw,Michigan,2020-08-30,57,4
+26131,Ontonagon,Michigan,2020-08-30,34,0
+26133,Osceola,Michigan,2020-08-30,77,0
+26135,Oscoda,Michigan,2020-08-30,29,1
+26137,Otsego,Michigan,2020-08-30,154,11
+26139,Ottawa,Michigan,2020-08-30,2133,63
+26141,Presque Isle,Michigan,2020-08-30,21,1
+26143,Roscommon,Michigan,2020-08-30,76,3
+26145,Saginaw,Michigan,2020-08-30,2510,133
+26151,Sanilac,Michigan,2020-08-30,125,7
+26153,Schoolcraft,Michigan,2020-08-30,15,0
+26155,Shiawassee,Michigan,2020-08-30,419,29
+26147,St. Clair,Michigan,2020-08-30,922,53
+26149,St. Joseph,Michigan,2020-08-30,680,11
+26157,Tuscola,Michigan,2020-08-30,451,29
+NA,Unknown,Michigan,2020-08-30,433,5
+26159,Van Buren,Michigan,2020-08-30,624,16
+26161,Washtenaw,Michigan,2020-08-30,3381,124
+26163,Wayne,Michigan,2020-08-30,31178,2883
+26165,Wexford,Michigan,2020-08-30,104,4
+27001,Aitkin,Minnesota,2020-08-30,48,1
+27003,Anoka,Minnesota,2020-08-30,4681,121
+27005,Becker,Minnesota,2020-08-30,197,2
+27007,Beltrami,Minnesota,2020-08-30,319,1
+27009,Benton,Minnesota,2020-08-30,398,3
+27011,Big Stone,Minnesota,2020-08-30,34,0
+27013,Blue Earth,Minnesota,2020-08-30,1223,5
+27015,Brown,Minnesota,2020-08-30,130,2
+27017,Carlton,Minnesota,2020-08-30,188,1
+27019,Carver,Minnesota,2020-08-30,1113,4
+27021,Cass,Minnesota,2020-08-30,103,3
+27023,Chippewa,Minnesota,2020-08-30,135,1
+27025,Chisago,Minnesota,2020-08-30,311,1
+27027,Clay,Minnesota,2020-08-30,872,40
+27029,Clearwater,Minnesota,2020-08-30,19,0
+27031,Cook,Minnesota,2020-08-30,6,0
+27033,Cottonwood,Minnesota,2020-08-30,200,0
+27035,Crow Wing,Minnesota,2020-08-30,303,16
+27037,Dakota,Minnesota,2020-08-30,5867,110
+27039,Dodge,Minnesota,2020-08-30,157,0
+27041,Douglas,Minnesota,2020-08-30,166,1
+27043,Faribault,Minnesota,2020-08-30,115,0
+27045,Fillmore,Minnesota,2020-08-30,86,0
+27047,Freeborn,Minnesota,2020-08-30,400,1
+27049,Goodhue,Minnesota,2020-08-30,263,9
+27051,Grant,Minnesota,2020-08-30,55,4
+27053,Hennepin,Minnesota,2020-08-30,22984,879
+27055,Houston,Minnesota,2020-08-30,76,0
+27057,Hubbard,Minnesota,2020-08-30,44,0
+27059,Isanti,Minnesota,2020-08-30,174,0
+27061,Itasca,Minnesota,2020-08-30,196,12
+27063,Jackson,Minnesota,2020-08-30,95,1
+27065,Kanabec,Minnesota,2020-08-30,65,5
+27067,Kandiyohi,Minnesota,2020-08-30,814,1
+27069,Kittson,Minnesota,2020-08-30,7,0
+27071,Koochiching,Minnesota,2020-08-30,87,3
+27073,Lac qui Parle,Minnesota,2020-08-30,15,0
+27075,Lake,Minnesota,2020-08-30,33,0
+27077,Lake of the Woods,Minnesota,2020-08-30,7,0
+27079,Le Sueur,Minnesota,2020-08-30,375,2
+27081,Lincoln,Minnesota,2020-08-30,68,0
+27083,Lyon,Minnesota,2020-08-30,516,3
+27087,Mahnomen,Minnesota,2020-08-30,35,1
+27089,Marshall,Minnesota,2020-08-30,35,0
+27091,Martin,Minnesota,2020-08-30,231,6
+27085,McLeod,Minnesota,2020-08-30,360,1
+27093,Meeker,Minnesota,2020-08-30,108,2
+27095,Mille Lacs,Minnesota,2020-08-30,99,3
+27097,Morrison,Minnesota,2020-08-30,114,1
+27099,Mower,Minnesota,2020-08-30,1176,3
+27101,Murray,Minnesota,2020-08-30,141,1
+27103,Nicollet,Minnesota,2020-08-30,438,15
+27105,Nobles,Minnesota,2020-08-30,1863,13
+27107,Norman,Minnesota,2020-08-30,46,0
+27109,Olmsted,Minnesota,2020-08-30,2016,24
+27111,Otter Tail,Minnesota,2020-08-30,293,4
+27113,Pennington,Minnesota,2020-08-30,87,1
+27115,Pine,Minnesota,2020-08-30,152,0
+27117,Pipestone,Minnesota,2020-08-30,187,9
+27119,Polk,Minnesota,2020-08-30,199,4
+27121,Pope,Minnesota,2020-08-30,64,0
+27123,Ramsey,Minnesota,2020-08-30,9132,298
+27125,Red Lake,Minnesota,2020-08-30,29,0
+27127,Redwood,Minnesota,2020-08-30,61,0
+27129,Renville,Minnesota,2020-08-30,84,6
+27131,Rice,Minnesota,2020-08-30,1185,8
+27133,Rock,Minnesota,2020-08-30,103,0
+27135,Roseau,Minnesota,2020-08-30,73,0
+27139,Scott,Minnesota,2020-08-30,1992,31
+27141,Sherburne,Minnesota,2020-08-30,910,13
+27143,Sibley,Minnesota,2020-08-30,139,3
+27137,St. Louis,Minnesota,2020-08-30,867,23
+27145,Stearns,Minnesota,2020-08-30,3244,22
+27147,Steele,Minnesota,2020-08-30,428,2
+27149,Stevens,Minnesota,2020-08-30,45,0
+27151,Swift,Minnesota,2020-08-30,63,1
+27153,Todd,Minnesota,2020-08-30,449,2
+27155,Traverse,Minnesota,2020-08-30,21,0
+NA,Unknown,Minnesota,2020-08-30,203,49
+27157,Wabasha,Minnesota,2020-08-30,122,0
+27159,Wadena,Minnesota,2020-08-30,49,0
+27161,Waseca,Minnesota,2020-08-30,258,2
+27163,Washington,Minnesota,2020-08-30,2962,54
+27165,Watonwan,Minnesota,2020-08-30,438,4
+27167,Wilkin,Minnesota,2020-08-30,51,3
+27169,Winona,Minnesota,2020-08-30,427,17
+27171,Wright,Minnesota,2020-08-30,1229,6
+27173,Yellow Medicine,Minnesota,2020-08-30,85,1
+28001,Adams,Mississippi,2020-08-30,790,31
+28003,Alcorn,Mississippi,2020-08-30,624,6
+28005,Amite,Mississippi,2020-08-30,273,7
+28007,Attala,Mississippi,2020-08-30,583,25
+28009,Benton,Mississippi,2020-08-30,194,1
+28011,Bolivar,Mississippi,2020-08-30,1488,49
+28013,Calhoun,Mississippi,2020-08-30,470,10
+28015,Carroll,Mississippi,2020-08-30,291,12
+28017,Chickasaw,Mississippi,2020-08-30,584,20
+28019,Choctaw,Mississippi,2020-08-30,155,4
+28021,Claiborne,Mississippi,2020-08-30,439,16
+28023,Clarke,Mississippi,2020-08-30,462,30
+28025,Clay,Mississippi,2020-08-30,472,15
+28027,Coahoma,Mississippi,2020-08-30,975,18
+28029,Copiah,Mississippi,2020-08-30,1092,31
+28031,Covington,Mississippi,2020-08-30,719,17
+28033,DeSoto,Mississippi,2020-08-30,4585,43
+28035,Forrest,Mississippi,2020-08-30,2125,61
+28037,Franklin,Mississippi,2020-08-30,175,3
+28039,George,Mississippi,2020-08-30,684,13
+28041,Greene,Mississippi,2020-08-30,294,14
+28043,Grenada,Mississippi,2020-08-30,941,32
+28045,Hancock,Mississippi,2020-08-30,490,20
+28047,Harrison,Mississippi,2020-08-30,3285,54
+28049,Hinds,Mississippi,2020-08-30,6523,139
+28051,Holmes,Mississippi,2020-08-30,1039,54
+28053,Humphreys,Mississippi,2020-08-30,335,14
+28055,Issaquena,Mississippi,2020-08-30,97,3
+28057,Itawamba,Mississippi,2020-08-30,555,16
+28059,Jackson,Mississippi,2020-08-30,2990,60
+28061,Jasper,Mississippi,2020-08-30,480,13
+28063,Jefferson,Mississippi,2020-08-30,219,9
+28065,Jefferson Davis,Mississippi,2020-08-30,303,8
+28067,Jones,Mississippi,2020-08-30,2153,72
+28069,Kemper,Mississippi,2020-08-30,270,15
+28071,Lafayette,Mississippi,2020-08-30,1419,34
+28073,Lamar,Mississippi,2020-08-30,1438,29
+28075,Lauderdale,Mississippi,2020-08-30,1755,106
+28077,Lawrence,Mississippi,2020-08-30,402,10
+28079,Leake,Mississippi,2020-08-30,878,31
+28081,Lee,Mississippi,2020-08-30,2162,54
+28083,Leflore,Mississippi,2020-08-30,1234,75
+28085,Lincoln,Mississippi,2020-08-30,970,51
+28087,Lowndes,Mississippi,2020-08-30,1279,53
+28089,Madison,Mississippi,2020-08-30,2967,83
+28091,Marion,Mississippi,2020-08-30,781,26
+28093,Marshall,Mississippi,2020-08-30,940,12
+28095,Monroe,Mississippi,2020-08-30,1035,57
+28097,Montgomery,Mississippi,2020-08-30,408,16
+28099,Neshoba,Mississippi,2020-08-30,1429,99
+28101,Newton,Mississippi,2020-08-30,664,14
+28103,Noxubee,Mississippi,2020-08-30,518,14
+28105,Oktibbeha,Mississippi,2020-08-30,1426,46
+28107,Panola,Mississippi,2020-08-30,1293,23
+28109,Pearl River,Mississippi,2020-08-30,748,48
+28111,Perry,Mississippi,2020-08-30,293,9
+28113,Pike,Mississippi,2020-08-30,1129,45
+28115,Pontotoc,Mississippi,2020-08-30,1058,11
+28117,Prentiss,Mississippi,2020-08-30,615,12
+28119,Quitman,Mississippi,2020-08-30,320,3
+28121,Rankin,Mississippi,2020-08-30,2842,63
+28123,Scott,Mississippi,2020-08-30,1092,22
+28125,Sharkey,Mississippi,2020-08-30,250,8
+28127,Simpson,Mississippi,2020-08-30,938,39
+28129,Smith,Mississippi,2020-08-30,467,13
+28131,Stone,Mississippi,2020-08-30,312,10
+28133,Sunflower,Mississippi,2020-08-30,1258,36
+28135,Tallahatchie,Mississippi,2020-08-30,629,13
+28137,Tate,Mississippi,2020-08-30,854,32
+28139,Tippah,Mississippi,2020-08-30,545,15
+28141,Tishomingo,Mississippi,2020-08-30,551,28
+28143,Tunica,Mississippi,2020-08-30,449,12
+28145,Union,Mississippi,2020-08-30,878,21
+28147,Walthall,Mississippi,2020-08-30,563,24
+28149,Warren,Mississippi,2020-08-30,1313,46
+28151,Washington,Mississippi,2020-08-30,1983,60
+28153,Wayne,Mississippi,2020-08-30,846,21
+28155,Webster,Mississippi,2020-08-30,303,13
+28157,Wilkinson,Mississippi,2020-08-30,277,17
+28159,Winston,Mississippi,2020-08-30,694,19
+28161,Yalobusha,Mississippi,2020-08-30,363,12
+28163,Yazoo,Mississippi,2020-08-30,954,21
+29001,Adair,Missouri,2020-08-30,228,0
+29003,Andrew,Missouri,2020-08-30,127,1
+29005,Atchison,Missouri,2020-08-30,28,0
+29007,Audrain,Missouri,2020-08-30,264,1
+29009,Barry,Missouri,2020-08-30,353,4
+29011,Barton,Missouri,2020-08-30,102,0
+29013,Bates,Missouri,2020-08-30,72,1
+29015,Benton,Missouri,2020-08-30,156,1
+29017,Bollinger,Missouri,2020-08-30,125,1
+29019,Boone,Missouri,2020-08-30,2532,7
+29021,Buchanan,Missouri,2020-08-30,1298,10
+29023,Butler,Missouri,2020-08-30,373,2
+29025,Caldwell,Missouri,2020-08-30,41,1
+29027,Callaway,Missouri,2020-08-30,325,2
+29029,Camden,Missouri,2020-08-30,519,8
+29031,Cape Girardeau,Missouri,2020-08-30,1002,8
+29033,Carroll,Missouri,2020-08-30,110,0
+29035,Carter,Missouri,2020-08-30,36,1
+29037,Cass,Missouri,2020-08-30,1129,16
+29039,Cedar,Missouri,2020-08-30,51,0
+29041,Chariton,Missouri,2020-08-30,26,0
+29043,Christian,Missouri,2020-08-30,676,2
+29045,Clark,Missouri,2020-08-30,42,0
+29047,Clay,Missouri,2020-08-30,1363,36
+29049,Clinton,Missouri,2020-08-30,132,0
+29051,Cole,Missouri,2020-08-30,831,8
+29053,Cooper,Missouri,2020-08-30,223,1
+29055,Crawford,Missouri,2020-08-30,179,1
+29057,Dade,Missouri,2020-08-30,27,0
+29059,Dallas,Missouri,2020-08-30,108,1
+29061,Daviess,Missouri,2020-08-30,24,0
+29063,DeKalb,Missouri,2020-08-30,65,1
+29065,Dent,Missouri,2020-08-30,38,0
+29067,Douglas,Missouri,2020-08-30,110,2
+29069,Dunklin,Missouri,2020-08-30,487,4
+29071,Franklin,Missouri,2020-08-30,1018,21
+29073,Gasconade,Missouri,2020-08-30,94,4
+29075,Gentry,Missouri,2020-08-30,93,9
+29077,Greene,Missouri,2020-08-30,3266,30
+29079,Grundy,Missouri,2020-08-30,43,1
+29081,Harrison,Missouri,2020-08-30,71,1
+29083,Henry,Missouri,2020-08-30,114,3
+29085,Hickory,Missouri,2020-08-30,63,0
+29087,Holt,Missouri,2020-08-30,62,0
+29089,Howard,Missouri,2020-08-30,114,0
+29091,Howell,Missouri,2020-08-30,255,3
+29093,Iron,Missouri,2020-08-30,48,0
+29095,Jackson,Missouri,2020-08-30,5462,77
+29097,Jasper,Missouri,2020-08-30,1617,15
+29099,Jefferson,Missouri,2020-08-30,2776,45
+29101,Johnson,Missouri,2020-08-30,592,3
+NA,Joplin,Missouri,2020-08-30,711,21
+NA,Kansas City,Missouri,2020-08-30,9183,96
+29103,Knox,Missouri,2020-08-30,38,0
+29105,Laclede,Missouri,2020-08-30,290,1
+29107,Lafayette,Missouri,2020-08-30,234,2
+29109,Lawrence,Missouri,2020-08-30,352,2
+29111,Lewis,Missouri,2020-08-30,59,2
+29113,Lincoln,Missouri,2020-08-30,559,1
+29115,Linn,Missouri,2020-08-30,47,1
+29117,Livingston,Missouri,2020-08-30,74,1
+29121,Macon,Missouri,2020-08-30,76,0
+29123,Madison,Missouri,2020-08-30,131,0
+29125,Maries,Missouri,2020-08-30,46,0
+29127,Marion,Missouri,2020-08-30,463,3
+29119,McDonald,Missouri,2020-08-30,1045,11
+29129,Mercer,Missouri,2020-08-30,17,0
+29131,Miller,Missouri,2020-08-30,245,1
+29133,Mississippi,Missouri,2020-08-30,234,0
+29135,Moniteau,Missouri,2020-08-30,188,2
+29137,Monroe,Missouri,2020-08-30,68,0
+29139,Montgomery,Missouri,2020-08-30,56,1
+29141,Morgan,Missouri,2020-08-30,118,0
+29143,New Madrid,Missouri,2020-08-30,407,4
+29145,Newton,Missouri,2020-08-30,1077,13
+29147,Nodaway,Missouri,2020-08-30,392,1
+29149,Oregon,Missouri,2020-08-30,50,0
+29151,Osage,Missouri,2020-08-30,78,1
+29153,Ozark,Missouri,2020-08-30,25,0
+29155,Pemiscot,Missouri,2020-08-30,328,9
+29157,Perry,Missouri,2020-08-30,388,4
+29159,Pettis,Missouri,2020-08-30,790,8
+29161,Phelps,Missouri,2020-08-30,208,0
+29163,Pike,Missouri,2020-08-30,143,1
+29165,Platte,Missouri,2020-08-30,484,11
+29167,Polk,Missouri,2020-08-30,317,1
+29169,Pulaski,Missouri,2020-08-30,385,2
+29171,Putnam,Missouri,2020-08-30,23,1
+29173,Ralls,Missouri,2020-08-30,109,0
+29175,Randolph,Missouri,2020-08-30,118,1
+29177,Ray,Missouri,2020-08-30,125,0
+29179,Reynolds,Missouri,2020-08-30,22,0
+29181,Ripley,Missouri,2020-08-30,87,0
+29195,Saline,Missouri,2020-08-30,543,7
+29197,Schuyler,Missouri,2020-08-30,18,0
+29199,Scotland,Missouri,2020-08-30,18,1
+29201,Scott,Missouri,2020-08-30,619,14
+29203,Shannon,Missouri,2020-08-30,52,1
+29205,Shelby,Missouri,2020-08-30,46,0
+29183,St. Charles,Missouri,2020-08-30,5693,108
+29185,St. Clair,Missouri,2020-08-30,27,0
+29187,St. Francois,Missouri,2020-08-30,1049,4
+29189,St. Louis,Missouri,2020-08-30,19278,729
+29510,St. Louis city,Missouri,2020-08-30,6147,188
+29186,Ste. Genevieve,Missouri,2020-08-30,109,1
+29207,Stoddard,Missouri,2020-08-30,294,9
+29209,Stone,Missouri,2020-08-30,274,2
+29211,Sullivan,Missouri,2020-08-30,173,0
+29213,Taney,Missouri,2020-08-30,906,14
+29215,Texas,Missouri,2020-08-30,98,1
+29217,Vernon,Missouri,2020-08-30,82,0
+29219,Warren,Missouri,2020-08-30,331,0
+29221,Washington,Missouri,2020-08-30,237,1
+29223,Wayne,Missouri,2020-08-30,84,0
+29225,Webster,Missouri,2020-08-30,217,1
+29227,Worth,Missouri,2020-08-30,12,0
+29229,Wright,Missouri,2020-08-30,89,0
+30001,Beaverhead,Montana,2020-08-30,70,1
+30003,Big Horn,Montana,2020-08-30,652,15
+30005,Blaine,Montana,2020-08-30,15,0
+30007,Broadwater,Montana,2020-08-30,16,0
+30009,Carbon,Montana,2020-08-30,86,0
+30013,Cascade,Montana,2020-08-30,280,5
+30015,Chouteau,Montana,2020-08-30,10,0
+30017,Custer,Montana,2020-08-30,66,2
+30019,Daniels,Montana,2020-08-30,3,0
+30021,Dawson,Montana,2020-08-30,44,0
+30023,Deer Lodge,Montana,2020-08-30,33,0
+30025,Fallon,Montana,2020-08-30,2,0
+30027,Fergus,Montana,2020-08-30,31,0
+30029,Flathead,Montana,2020-08-30,588,7
+30031,Gallatin,Montana,2020-08-30,1074,3
+30033,Garfield,Montana,2020-08-30,13,0
+30035,Glacier,Montana,2020-08-30,135,1
+30037,Golden Valley,Montana,2020-08-30,3,0
+30039,Granite,Montana,2020-08-30,19,0
+30041,Hill,Montana,2020-08-30,81,2
+30043,Jefferson,Montana,2020-08-30,39,0
+30045,Judith Basin,Montana,2020-08-30,6,0
+30047,Lake,Montana,2020-08-30,202,1
+30049,Lewis and Clark,Montana,2020-08-30,196,2
+30051,Liberty,Montana,2020-08-30,5,0
+30053,Lincoln,Montana,2020-08-30,89,2
+30057,Madison,Montana,2020-08-30,93,1
+30055,McCone,Montana,2020-08-30,12,0
+30059,Meagher,Montana,2020-08-30,4,0
+30061,Mineral,Montana,2020-08-30,2,0
+30063,Missoula,Montana,2020-08-30,433,3
+30065,Musselshell,Montana,2020-08-30,12,0
+30067,Park,Montana,2020-08-30,63,0
+30071,Phillips,Montana,2020-08-30,110,0
+30073,Pondera,Montana,2020-08-30,15,0
+30075,Powder River,Montana,2020-08-30,2,0
+30077,Powell,Montana,2020-08-30,10,0
+30079,Prairie,Montana,2020-08-30,1,0
+30081,Ravalli,Montana,2020-08-30,107,2
+30083,Richland,Montana,2020-08-30,58,2
+30085,Roosevelt,Montana,2020-08-30,34,1
+30087,Rosebud,Montana,2020-08-30,260,2
+30089,Sanders,Montana,2020-08-30,31,0
+30091,Sheridan,Montana,2020-08-30,5,0
+30093,Silver Bow,Montana,2020-08-30,111,0
+30095,Stillwater,Montana,2020-08-30,36,2
+30097,Sweet Grass,Montana,2020-08-30,14,1
+30099,Teton,Montana,2020-08-30,18,0
+30101,Toole,Montana,2020-08-30,47,6
+30103,Treasure,Montana,2020-08-30,3,0
+30105,Valley,Montana,2020-08-30,40,0
+30107,Wheatland,Montana,2020-08-30,3,0
+30109,Wibaux,Montana,2020-08-30,5,0
+30111,Yellowstone,Montana,2020-08-30,2053,43
+31001,Adams,Nebraska,2020-08-30,403,11
+31003,Antelope,Nebraska,2020-08-30,25,1
+31005,Arthur,Nebraska,2020-08-30,1,0
+31007,Banner,Nebraska,2020-08-30,2,0
+31011,Boone,Nebraska,2020-08-30,24,0
+31013,Box Butte,Nebraska,2020-08-30,23,0
+31015,Boyd,Nebraska,2020-08-30,10,0
+31017,Brown,Nebraska,2020-08-30,3,0
+31019,Buffalo,Nebraska,2020-08-30,676,3
+31021,Burt,Nebraska,2020-08-30,64,0
+31023,Butler,Nebraska,2020-08-30,94,0
+31025,Cass,Nebraska,2020-08-30,253,2
+31027,Cedar,Nebraska,2020-08-30,46,0
+31029,Chase,Nebraska,2020-08-30,11,0
+31031,Cherry,Nebraska,2020-08-30,21,0
+31033,Cheyenne,Nebraska,2020-08-30,28,0
+31035,Clay,Nebraska,2020-08-30,57,0
+31037,Colfax,Nebraska,2020-08-30,726,5
+31039,Cuming,Nebraska,2020-08-30,82,0
+31041,Custer,Nebraska,2020-08-30,73,4
+31043,Dakota,Nebraska,2020-08-30,2000,42
+31045,Dawes,Nebraska,2020-08-30,73,0
+31047,Dawson,Nebraska,2020-08-30,1002,10
+31049,Deuel,Nebraska,2020-08-30,2,0
+31051,Dixon,Nebraska,2020-08-30,61,2
+31053,Dodge,Nebraska,2020-08-30,911,11
+31055,Douglas,Nebraska,2020-08-30,13445,160
+31057,Dundy,Nebraska,2020-08-30,8,0
+31059,Fillmore,Nebraska,2020-08-30,31,1
+31061,Franklin,Nebraska,2020-08-30,19,0
+31063,Frontier,Nebraska,2020-08-30,6,0
+31065,Furnas,Nebraska,2020-08-30,26,1
+31067,Gage,Nebraska,2020-08-30,130,4
+31069,Garden,Nebraska,2020-08-30,7,0
+31071,Garfield,Nebraska,2020-08-30,6,0
+31073,Gosper,Nebraska,2020-08-30,23,0
+31077,Greeley,Nebraska,2020-08-30,12,0
+31079,Hall,Nebraska,2020-08-30,1845,46
+31081,Hamilton,Nebraska,2020-08-30,106,13
+31083,Harlan,Nebraska,2020-08-30,5,0
+31087,Hitchcock,Nebraska,2020-08-30,2,0
+31089,Holt,Nebraska,2020-08-30,20,0
+31091,Hooker,Nebraska,2020-08-30,4,0
+31093,Howard,Nebraska,2020-08-30,64,5
+31095,Jefferson,Nebraska,2020-08-30,19,0
+31097,Johnson,Nebraska,2020-08-30,23,0
+31099,Kearney,Nebraska,2020-08-30,110,0
+31101,Keith,Nebraska,2020-08-30,46,0
+31103,Keya Paha,Nebraska,2020-08-30,1,0
+31105,Kimball,Nebraska,2020-08-30,15,0
+31107,Knox,Nebraska,2020-08-30,62,0
+31109,Lancaster,Nebraska,2020-08-30,3990,21
+31111,Lincoln,Nebraska,2020-08-30,269,2
+31113,Logan,Nebraska,2020-08-30,3,0
+31115,Loup,Nebraska,2020-08-30,2,0
+31119,Madison,Nebraska,2020-08-30,588,6
+31117,McPherson,Nebraska,2020-08-30,6,0
+31121,Merrick,Nebraska,2020-08-30,66,1
+31123,Morrill,Nebraska,2020-08-30,64,0
+31125,Nance,Nebraska,2020-08-30,11,0
+31127,Nemaha,Nebraska,2020-08-30,78,0
+31129,Nuckolls,Nebraska,2020-08-30,10,0
+31131,Otoe,Nebraska,2020-08-30,114,1
+31133,Pawnee,Nebraska,2020-08-30,10,0
+31135,Perkins,Nebraska,2020-08-30,29,7
+31137,Phelps,Nebraska,2020-08-30,67,0
+31139,Pierce,Nebraska,2020-08-30,60,2
+31141,Platte,Nebraska,2020-08-30,864,3
+31143,Polk,Nebraska,2020-08-30,33,0
+31145,Red Willow,Nebraska,2020-08-30,18,0
+31147,Richardson,Nebraska,2020-08-30,34,1
+31149,Rock,Nebraska,2020-08-30,9,0
+31151,Saline,Nebraska,2020-08-30,633,2
+31153,Sarpy,Nebraska,2020-08-30,2832,17
+31155,Saunders,Nebraska,2020-08-30,222,2
+31157,Scotts Bluff,Nebraska,2020-08-30,357,6
+31159,Seward,Nebraska,2020-08-30,163,2
+31161,Sheridan,Nebraska,2020-08-30,21,0
+31163,Sherman,Nebraska,2020-08-30,15,1
+31165,Sioux,Nebraska,2020-08-30,6,0
+31167,Stanton,Nebraska,2020-08-30,33,0
+31169,Thayer,Nebraska,2020-08-30,27,0
+31171,Thomas,Nebraska,2020-08-30,3,0
+31173,Thurston,Nebraska,2020-08-30,221,4
+NA,Unknown,Nebraska,2020-08-30,110,0
+31175,Valley,Nebraska,2020-08-30,18,0
+31177,Washington,Nebraska,2020-08-30,175,1
+31179,Wayne,Nebraska,2020-08-30,52,0
+31181,Webster,Nebraska,2020-08-30,13,0
+31183,Wheeler,Nebraska,2020-08-30,1,0
+31185,York,Nebraska,2020-08-30,113,0
+32510,Carson City,Nevada,2020-08-30,427,8
+32001,Churchill,Nevada,2020-08-30,110,1
+32003,Clark,Nevada,2020-08-30,59153,1126
+32005,Douglas,Nevada,2020-08-30,247,1
+32007,Elko,Nevada,2020-08-30,792,4
+32011,Eureka,Nevada,2020-08-30,5,0
+32013,Humboldt,Nevada,2020-08-30,111,4
+32015,Lander,Nevada,2020-08-30,59,1
+32017,Lincoln,Nevada,2020-08-30,6,0
+32019,Lyon,Nevada,2020-08-30,327,6
+32021,Mineral,Nevada,2020-08-30,12,0
+32023,Nye,Nevada,2020-08-30,475,14
+32027,Pershing,Nevada,2020-08-30,21,0
+32029,Storey,Nevada,2020-08-30,7,0
+32031,Washoe,Nevada,2020-08-30,7204,139
+32033,White Pine,Nevada,2020-08-30,25,1
+33001,Belknap,New Hampshire,2020-08-30,125,4
+33003,Carroll,New Hampshire,2020-08-30,104,1
+33005,Cheshire,New Hampshire,2020-08-30,129,3
+33007,Coos,New Hampshire,2020-08-30,18,0
+33009,Grafton,New Hampshire,2020-08-30,113,1
+33011,Hillsborough,New Hampshire,2020-08-30,4027,286
+33013,Merrimack,New Hampshire,2020-08-30,500,23
+33015,Rockingham,New Hampshire,2020-08-30,1805,100
+33017,Strafford,New Hampshire,2020-08-30,383,13
+33019,Sullivan,New Hampshire,2020-08-30,47,1
+NA,Unknown,New Hampshire,2020-08-30,3,0
+34001,Atlantic,New Jersey,2020-08-30,3750,251
+34003,Bergen,New Jersey,2020-08-30,21799,2032
+34005,Burlington,New Jersey,2020-08-30,6421,481
+34007,Camden,New Jersey,2020-08-30,9194,590
+34009,Cape May,New Jersey,2020-08-30,905,94
+34011,Cumberland,New Jersey,2020-08-30,3568,155
+34013,Essex,New Jersey,2020-08-30,20530,2113
+34015,Gloucester,New Jersey,2020-08-30,3674,219
+34017,Hudson,New Jersey,2020-08-30,20291,1507
+34019,Hunterdon,New Jersey,2020-08-30,1266,124
+34021,Mercer,New Jersey,2020-08-30,8362,627
+34023,Middlesex,New Jersey,2020-08-30,18633,1418
+34025,Monmouth,New Jersey,2020-08-30,10802,858
+34027,Morris,New Jersey,2020-08-30,7618,829
+34029,Ocean,New Jersey,2020-08-30,11207,1020
+34031,Passaic,New Jersey,2020-08-30,18469,1245
+34033,Salem,New Jersey,2020-08-30,986,89
+34035,Somerset,New Jersey,2020-08-30,5474,567
+34037,Sussex,New Jersey,2020-08-30,1430,197
+34039,Union,New Jersey,2020-08-30,17243,1350
+NA,Unknown,New Jersey,2020-08-30,364,0
+34041,Warren,New Jersey,2020-08-30,1405,171
+35001,Bernalillo,New Mexico,2020-08-30,5795,155
+35003,Catron,New Mexico,2020-08-30,5,1
+35005,Chaves,New Mexico,2020-08-30,722,6
+35006,Cibola,New Mexico,2020-08-30,726,20
+35007,Colfax,New Mexico,2020-08-30,19,1
+35009,Curry,New Mexico,2020-08-30,671,3
+35013,Doña Ana,New Mexico,2020-08-30,2830,41
+35015,Eddy,New Mexico,2020-08-30,486,5
+35017,Grant,New Mexico,2020-08-30,79,2
+35019,Guadalupe,New Mexico,2020-08-30,32,1
+35021,Harding,New Mexico,2020-08-30,2,0
+35023,Hidalgo,New Mexico,2020-08-30,97,1
+35025,Lea,New Mexico,2020-08-30,1130,11
+35027,Lincoln,New Mexico,2020-08-30,168,2
+35028,Los Alamos,New Mexico,2020-08-30,27,0
+35029,Luna,New Mexico,2020-08-30,315,5
+35031,McKinley,New Mexico,2020-08-30,4195,242
+35033,Mora,New Mexico,2020-08-30,6,0
+35035,Otero,New Mexico,2020-08-30,1119,12
+35037,Quay,New Mexico,2020-08-30,62,2
+35039,Rio Arriba,New Mexico,2020-08-30,358,12
+35041,Roosevelt,New Mexico,2020-08-30,201,1
+35045,San Juan,New Mexico,2020-08-30,3187,190
+35047,San Miguel,New Mexico,2020-08-30,78,0
+35043,Sandoval,New Mexico,2020-08-30,1246,37
+35049,Santa Fe,New Mexico,2020-08-30,819,4
+35051,Sierra,New Mexico,2020-08-30,37,1
+35053,Socorro,New Mexico,2020-08-30,77,6
+35055,Taos,New Mexico,2020-08-30,115,2
+35057,Torrance,New Mexico,2020-08-30,107,1
+35059,Union,New Mexico,2020-08-30,32,2
+NA,Unknown,New Mexico,2020-08-30,1,0
+35061,Valencia,New Mexico,2020-08-30,539,4
+36001,Albany,New York,2020-08-30,2764,122
+36003,Allegany,New York,2020-08-30,89,2
+36007,Broome,New York,2020-08-30,1295,82
+36009,Cattaraugus,New York,2020-08-30,201,6
+36011,Cayuga,New York,2020-08-30,177,2
+36013,Chautauqua,New York,2020-08-30,382,4
+36015,Chemung,New York,2020-08-30,200,2
+36017,Chenango,New York,2020-08-30,227,6
+36019,Clinton,New York,2020-08-30,150,5
+36021,Columbia,New York,2020-08-30,569,47
+36023,Cortland,New York,2020-08-30,99,1
+36025,Delaware,New York,2020-08-30,115,4
+36027,Dutchess,New York,2020-08-30,4852,153
+36029,Erie,New York,2020-08-30,9807,606
+36031,Essex,New York,2020-08-30,136,6
+36033,Franklin,New York,2020-08-30,58,1
+36035,Fulton,New York,2020-08-30,311,28
+36037,Genesee,New York,2020-08-30,294,6
+36039,Greene,New York,2020-08-30,307,13
+36041,Hamilton,New York,2020-08-30,14,1
+36043,Herkimer,New York,2020-08-30,297,10
+36045,Jefferson,New York,2020-08-30,150,1
+36049,Lewis,New York,2020-08-30,49,5
+36051,Livingston,New York,2020-08-30,182,6
+36053,Madison,New York,2020-08-30,461,9
+36055,Monroe,New York,2020-08-30,5444,257
+36057,Montgomery,New York,2020-08-30,202,8
+36059,Nassau,New York,2020-08-30,44610,2198
+NA,New York City,New York,2020-08-30,238677,23689
+36063,Niagara,New York,2020-08-30,1612,89
+36065,Oneida,New York,2020-08-30,2272,120
+36067,Onondaga,New York,2020-08-30,3883,179
+36069,Ontario,New York,2020-08-30,389,28
+36071,Orange,New York,2020-08-30,11433,409
+36073,Orleans,New York,2020-08-30,306,55
+36075,Oswego,New York,2020-08-30,295,3
+36077,Otsego,New York,2020-08-30,143,4
+36079,Putnam,New York,2020-08-30,1500,63
+36083,Rensselaer,New York,2020-08-30,833,41
+36087,Rockland,New York,2020-08-30,14233,508
+36091,Saratoga,New York,2020-08-30,842,15
+36093,Schenectady,New York,2020-08-30,1260,43
+36095,Schoharie,New York,2020-08-30,69,2
+36097,Schuyler,New York,2020-08-30,26,0
+36099,Seneca,New York,2020-08-30,100,1
+36089,St. Lawrence,New York,2020-08-30,274,4
+36101,Steuben,New York,2020-08-30,315,39
+36103,Suffolk,New York,2020-08-30,44763,2002
+36105,Sullivan,New York,2020-08-30,1521,37
+36107,Tioga,New York,2020-08-30,208,21
+36109,Tompkins,New York,2020-08-30,264,0
+36111,Ulster,New York,2020-08-30,2168,82
+36113,Warren,New York,2020-08-30,321,30
+36115,Washington,New York,2020-08-30,267,14
+36117,Wayne,New York,2020-08-30,280,3
+36119,Westchester,New York,2020-08-30,36948,1451
+36121,Wyoming,New York,2020-08-30,126,5
+36123,Yates,New York,2020-08-30,61,6
+37001,Alamance,North Carolina,2020-08-30,3100,46
+37003,Alexander,North Carolina,2020-08-30,397,2
+37005,Alleghany,North Carolina,2020-08-30,203,0
+37007,Anson,North Carolina,2020-08-30,438,3
+37009,Ashe,North Carolina,2020-08-30,196,1
+37011,Avery,North Carolina,2020-08-30,136,0
+37013,Beaufort,North Carolina,2020-08-30,573,9
+37015,Bertie,North Carolina,2020-08-30,427,6
+37017,Bladen,North Carolina,2020-08-30,708,10
+37019,Brunswick,North Carolina,2020-08-30,1385,24
+37021,Buncombe,North Carolina,2020-08-30,2440,80
+37023,Burke,North Carolina,2020-08-30,1846,30
+37025,Cabarrus,North Carolina,2020-08-30,3142,53
+37027,Caldwell,North Carolina,2020-08-30,1419,17
+37029,Camden,North Carolina,2020-08-30,97,3
+37031,Carteret,North Carolina,2020-08-30,492,5
+37033,Caswell,North Carolina,2020-08-30,245,2
+37035,Catawba,North Carolina,2020-08-30,2594,44
+37037,Chatham,North Carolina,2020-08-30,1480,56
+37039,Cherokee,North Carolina,2020-08-30,410,5
+37041,Chowan,North Carolina,2020-08-30,214,2
+37043,Clay,North Carolina,2020-08-30,88,1
+37045,Cleveland,North Carolina,2020-08-30,1592,36
+37047,Columbus,North Carolina,2020-08-30,1096,51
+37049,Craven,North Carolina,2020-08-30,967,26
+37051,Cumberland,North Carolina,2020-08-30,4016,66
+37053,Currituck,North Carolina,2020-08-30,96,0
+37055,Dare,North Carolina,2020-08-30,242,2
+37057,Davidson,North Carolina,2020-08-30,2159,32
+37059,Davie,North Carolina,2020-08-30,474,6
+37061,Duplin,North Carolina,2020-08-30,2078,52
+37063,Durham,North Carolina,2020-08-30,6914,84
+37065,Edgecombe,North Carolina,2020-08-30,948,19
+37067,Forsyth,North Carolina,2020-08-30,6141,74
+37069,Franklin,North Carolina,2020-08-30,1050,29
+37071,Gaston,North Carolina,2020-08-30,4068,63
+37073,Gates,North Carolina,2020-08-30,85,3
+37075,Graham,North Carolina,2020-08-30,55,0
+37077,Granville,North Carolina,2020-08-30,1522,43
+37079,Greene,North Carolina,2020-08-30,410,4
+37081,Guilford,North Carolina,2020-08-30,6810,170
+37083,Halifax,North Carolina,2020-08-30,862,11
+37085,Harnett,North Carolina,2020-08-30,1606,46
+37087,Haywood,North Carolina,2020-08-30,505,25
+37089,Henderson,North Carolina,2020-08-30,1694,60
+37091,Hertford,North Carolina,2020-08-30,542,14
+37093,Hoke,North Carolina,2020-08-30,872,12
+37095,Hyde,North Carolina,2020-08-30,94,0
+37097,Iredell,North Carolina,2020-08-30,2323,24
+37099,Jackson,North Carolina,2020-08-30,489,7
+37101,Johnston,North Carolina,2020-08-30,3806,50
+37103,Jones,North Carolina,2020-08-30,135,7
+37105,Lee,North Carolina,2020-08-30,1427,12
+37107,Lenoir,North Carolina,2020-08-30,788,16
+37109,Lincoln,North Carolina,2020-08-30,1103,12
+37113,Macon,North Carolina,2020-08-30,539,2
+37115,Madison,North Carolina,2020-08-30,68,1
+37117,Martin,North Carolina,2020-08-30,342,7
+37111,McDowell,North Carolina,2020-08-30,788,24
+37119,Mecklenburg,North Carolina,2020-08-30,25386,295
+37121,Mitchell,North Carolina,2020-08-30,93,3
+37123,Montgomery,North Carolina,2020-08-30,881,18
+37125,Moore,North Carolina,2020-08-30,1293,21
+37127,Nash,North Carolina,2020-08-30,1652,22
+37129,New Hanover,North Carolina,2020-08-30,3004,21
+37131,Northampton,North Carolina,2020-08-30,337,17
+37133,Onslow,North Carolina,2020-08-30,1460,12
+37135,Orange,North Carolina,2020-08-30,2255,50
+37137,Pamlico,North Carolina,2020-08-30,146,2
+37139,Pasquotank,North Carolina,2020-08-30,546,23
+37141,Pender,North Carolina,2020-08-30,767,4
+37143,Perquimans,North Carolina,2020-08-30,135,2
+37145,Person,North Carolina,2020-08-30,322,5
+37147,Pitt,North Carolina,2020-08-30,3490,19
+37149,Polk,North Carolina,2020-08-30,225,7
+37151,Randolph,North Carolina,2020-08-30,2413,43
+37153,Richmond,North Carolina,2020-08-30,665,11
+37155,Robeson,North Carolina,2020-08-30,3511,60
+37157,Rockingham,North Carolina,2020-08-30,804,8
+37159,Rowan,North Carolina,2020-08-30,2777,63
+37161,Rutherford,North Carolina,2020-08-30,986,24
+37163,Sampson,North Carolina,2020-08-30,1607,21
+37165,Scotland,North Carolina,2020-08-30,645,8
+37167,Stanly,North Carolina,2020-08-30,1475,31
+37169,Stokes,North Carolina,2020-08-30,331,3
+37171,Surry,North Carolina,2020-08-30,1155,16
+37173,Swain,North Carolina,2020-08-30,131,3
+37175,Transylvania,North Carolina,2020-08-30,244,2
+37177,Tyrrell,North Carolina,2020-08-30,107,2
+37179,Union,North Carolina,2020-08-30,3912,48
+37181,Vance,North Carolina,2020-08-30,904,42
+37183,Wake,North Carolina,2020-08-30,14950,199
+37185,Warren,North Carolina,2020-08-30,287,6
+37187,Washington,North Carolina,2020-08-30,175,5
+37189,Watauga,North Carolina,2020-08-30,426,0
+37191,Wayne,North Carolina,2020-08-30,2812,51
+37193,Wilkes,North Carolina,2020-08-30,1021,22
+37195,Wilson,North Carolina,2020-08-30,1721,36
+37197,Yadkin,North Carolina,2020-08-30,632,7
+37199,Yancey,North Carolina,2020-08-30,91,0
+38001,Adams,North Dakota,2020-08-30,4,0
+38003,Barnes,North Dakota,2020-08-30,107,0
+38005,Benson,North Dakota,2020-08-30,227,4
+38007,Billings,North Dakota,2020-08-30,4,0
+38009,Bottineau,North Dakota,2020-08-30,28,0
+38011,Bowman,North Dakota,2020-08-30,15,0
+38013,Burke,North Dakota,2020-08-30,24,1
+38015,Burleigh,North Dakota,2020-08-30,1987,16
+38017,Cass,North Dakota,2020-08-30,3510,76
+38019,Cavalier,North Dakota,2020-08-30,33,0
+38021,Dickey,North Dakota,2020-08-30,26,0
+38023,Divide,North Dakota,2020-08-30,5,0
+38025,Dunn,North Dakota,2020-08-30,49,0
+38027,Eddy,North Dakota,2020-08-30,33,0
+38029,Emmons,North Dakota,2020-08-30,26,1
+38031,Foster,North Dakota,2020-08-30,32,0
+38033,Golden Valley,North Dakota,2020-08-30,35,0
+38035,Grand Forks,North Dakota,2020-08-30,1468,10
+38037,Grant,North Dakota,2020-08-30,9,0
+38039,Griggs,North Dakota,2020-08-30,38,1
+38041,Hettinger,North Dakota,2020-08-30,23,0
+38043,Kidder,North Dakota,2020-08-30,34,0
+38045,LaMoure,North Dakota,2020-08-30,20,0
+38047,Logan,North Dakota,2020-08-30,11,0
+38049,McHenry,North Dakota,2020-08-30,38,1
+38051,McIntosh,North Dakota,2020-08-30,44,3
+38053,McKenzie,North Dakota,2020-08-30,118,2
+38055,McLean,North Dakota,2020-08-30,164,1
+38057,Mercer,North Dakota,2020-08-30,38,0
+38059,Morton,North Dakota,2020-08-30,632,5
+38061,Mountrail,North Dakota,2020-08-30,172,1
+38063,Nelson,North Dakota,2020-08-30,29,0
+38065,Oliver,North Dakota,2020-08-30,10,0
+38067,Pembina,North Dakota,2020-08-30,34,0
+38069,Pierce,North Dakota,2020-08-30,25,0
+38071,Ramsey,North Dakota,2020-08-30,120,2
+38073,Ransom,North Dakota,2020-08-30,41,0
+38075,Renville,North Dakota,2020-08-30,11,0
+38077,Richland,North Dakota,2020-08-30,135,1
+38079,Rolette,North Dakota,2020-08-30,119,2
+38081,Sargent,North Dakota,2020-08-30,15,0
+38083,Sheridan,North Dakota,2020-08-30,9,0
+38085,Sioux,North Dakota,2020-08-30,119,2
+38087,Slope,North Dakota,2020-08-30,6,0
+38089,Stark,North Dakota,2020-08-30,677,6
+38091,Steele,North Dakota,2020-08-30,18,0
+38093,Stutsman,North Dakota,2020-08-30,207,3
+38095,Towner,North Dakota,2020-08-30,7,0
+38097,Traill,North Dakota,2020-08-30,68,0
+NA,Unknown,North Dakota,2020-08-30,4,4
+38099,Walsh,North Dakota,2020-08-30,141,1
+38101,Ward,North Dakota,2020-08-30,502,1
+38103,Wells,North Dakota,2020-08-30,28,0
+38105,Williams,North Dakota,2020-08-30,427,2
+39001,Adams,Ohio,2020-08-30,91,4
+39003,Allen,Ohio,2020-08-30,1135,53
+39005,Ashland,Ohio,2020-08-30,165,4
+39007,Ashtabula,Ohio,2020-08-30,609,46
+39009,Athens,Ohio,2020-08-30,387,2
+39011,Auglaize,Ohio,2020-08-30,416,8
+39013,Belmont,Ohio,2020-08-30,682,26
+39015,Brown,Ohio,2020-08-30,209,2
+39017,Butler,Ohio,2020-08-30,3972,73
+39019,Carroll,Ohio,2020-08-30,125,6
+39021,Champaign,Ohio,2020-08-30,246,2
+39023,Clark,Ohio,2020-08-30,1407,27
+39025,Clermont,Ohio,2020-08-30,1265,15
+39027,Clinton,Ohio,2020-08-30,243,10
+39029,Columbiana,Ohio,2020-08-30,1820,64
+39031,Coshocton,Ohio,2020-08-30,217,9
+39033,Crawford,Ohio,2020-08-30,193,5
+39035,Cuyahoga,Ohio,2020-08-30,15624,574
+39037,Darke,Ohio,2020-08-30,616,35
+39039,Defiance,Ohio,2020-08-30,209,5
+39041,Delaware,Ohio,2020-08-30,1645,20
+39043,Erie,Ohio,2020-08-30,772,36
+39045,Fairfield,Ohio,2020-08-30,1709,40
+39047,Fayette,Ohio,2020-08-30,189,5
+39049,Franklin,Ohio,2020-08-30,21619,562
+39051,Fulton,Ohio,2020-08-30,181,1
+39053,Gallia,Ohio,2020-08-30,140,3
+39055,Geauga,Ohio,2020-08-30,608,46
+39057,Greene,Ohio,2020-08-30,969,18
+39059,Guernsey,Ohio,2020-08-30,130,7
+39061,Hamilton,Ohio,2020-08-30,11102,286
+39063,Hancock,Ohio,2020-08-30,519,7
+39065,Hardin,Ohio,2020-08-30,219,13
+39067,Harrison,Ohio,2020-08-30,28,1
+39069,Henry,Ohio,2020-08-30,210,3
+39071,Highland,Ohio,2020-08-30,190,3
+39073,Hocking,Ohio,2020-08-30,139,9
+39075,Holmes,Ohio,2020-08-30,349,7
+39077,Huron,Ohio,2020-08-30,470,6
+39079,Jackson,Ohio,2020-08-30,165,1
+39081,Jefferson,Ohio,2020-08-30,267,4
+39083,Knox,Ohio,2020-08-30,245,14
+39085,Lake,Ohio,2020-08-30,1310,44
+39087,Lawrence,Ohio,2020-08-30,429,14
+39089,Licking,Ohio,2020-08-30,1576,57
+39091,Logan,Ohio,2020-08-30,233,2
+39093,Lorain,Ohio,2020-08-30,2103,81
+39095,Lucas,Ohio,2020-08-30,6389,341
+39097,Madison,Ohio,2020-08-30,689,11
+39099,Mahoning,Ohio,2020-08-30,2847,265
+39101,Marion,Ohio,2020-08-30,3001,46
+39103,Medina,Ohio,2020-08-30,1190,37
+39105,Meigs,Ohio,2020-08-30,127,3
+39107,Mercer,Ohio,2020-08-30,817,17
+39109,Miami,Ohio,2020-08-30,1054,43
+39111,Monroe,Ohio,2020-08-30,103,18
+39113,Montgomery,Ohio,2020-08-30,5728,128
+39115,Morgan,Ohio,2020-08-30,43,0
+39117,Morrow,Ohio,2020-08-30,226,2
+39119,Muskingum,Ohio,2020-08-30,296,2
+39121,Noble,Ohio,2020-08-30,22,0
+39123,Ottawa,Ohio,2020-08-30,448,29
+39125,Paulding,Ohio,2020-08-30,81,0
+39127,Perry,Ohio,2020-08-30,226,6
+39129,Pickaway,Ohio,2020-08-30,2493,43
+39131,Pike,Ohio,2020-08-30,104,0
+39133,Portage,Ohio,2020-08-30,850,65
+39135,Preble,Ohio,2020-08-30,345,4
+39137,Putnam,Ohio,2020-08-30,325,17
+39139,Richland,Ohio,2020-08-30,696,17
+39141,Ross,Ohio,2020-08-30,692,10
+39143,Sandusky,Ohio,2020-08-30,517,17
+39145,Scioto,Ohio,2020-08-30,350,3
+39147,Seneca,Ohio,2020-08-30,347,11
+39149,Shelby,Ohio,2020-08-30,359,4
+39151,Stark,Ohio,2020-08-30,2308,151
+39153,Summit,Ohio,2020-08-30,4418,236
+39155,Trumbull,Ohio,2020-08-30,1744,121
+39157,Tuscarawas,Ohio,2020-08-30,858,16
+39159,Union,Ohio,2020-08-30,362,1
+39161,Van Wert,Ohio,2020-08-30,88,2
+39163,Vinton,Ohio,2020-08-30,38,2
+39165,Warren,Ohio,2020-08-30,2286,42
+39167,Washington,Ohio,2020-08-30,227,23
+39169,Wayne,Ohio,2020-08-30,756,61
+39171,Williams,Ohio,2020-08-30,159,3
+39173,Wood,Ohio,2020-08-30,1320,61
+39175,Wyandot,Ohio,2020-08-30,186,10
+40001,Adair,Oklahoma,2020-08-30,442,8
+40003,Alfalfa,Oklahoma,2020-08-30,12,0
+40005,Atoka,Oklahoma,2020-08-30,108,1
+40007,Beaver,Oklahoma,2020-08-30,44,0
+40009,Beckham,Oklahoma,2020-08-30,123,1
+40011,Blaine,Oklahoma,2020-08-30,73,1
+40013,Bryan,Oklahoma,2020-08-30,595,3
+40015,Caddo,Oklahoma,2020-08-30,561,20
+40017,Canadian,Oklahoma,2020-08-30,1518,11
+40019,Carter,Oklahoma,2020-08-30,405,6
+40021,Cherokee,Oklahoma,2020-08-30,662,6
+40023,Choctaw,Oklahoma,2020-08-30,240,1
+40025,Cimarron,Oklahoma,2020-08-30,14,0
+40027,Cleveland,Oklahoma,2020-08-30,3882,64
+40029,Coal,Oklahoma,2020-08-30,54,0
+40031,Comanche,Oklahoma,2020-08-30,1225,11
+40033,Cotton,Oklahoma,2020-08-30,28,2
+40035,Craig,Oklahoma,2020-08-30,118,1
+40037,Creek,Oklahoma,2020-08-30,803,21
+40039,Custer,Oklahoma,2020-08-30,324,0
+40041,Delaware,Oklahoma,2020-08-30,543,21
+40043,Dewey,Oklahoma,2020-08-30,21,0
+40045,Ellis,Oklahoma,2020-08-30,6,0
+40047,Garfield,Oklahoma,2020-08-30,960,12
+40049,Garvin,Oklahoma,2020-08-30,264,4
+40051,Grady,Oklahoma,2020-08-30,530,7
+40053,Grant,Oklahoma,2020-08-30,24,0
+40055,Greer,Oklahoma,2020-08-30,88,8
+40057,Harmon,Oklahoma,2020-08-30,39,0
+40059,Harper,Oklahoma,2020-08-30,17,0
+40061,Haskell,Oklahoma,2020-08-30,163,4
+40063,Hughes,Oklahoma,2020-08-30,214,3
+40065,Jackson,Oklahoma,2020-08-30,591,9
+40067,Jefferson,Oklahoma,2020-08-30,36,0
+40069,Johnston,Oklahoma,2020-08-30,89,1
+40071,Kay,Oklahoma,2020-08-30,309,12
+40073,Kingfisher,Oklahoma,2020-08-30,257,1
+40075,Kiowa,Oklahoma,2020-08-30,43,1
+40077,Latimer,Oklahoma,2020-08-30,109,2
+40079,Le Flore,Oklahoma,2020-08-30,641,5
+40081,Lincoln,Oklahoma,2020-08-30,294,8
+40083,Logan,Oklahoma,2020-08-30,292,1
+40085,Love,Oklahoma,2020-08-30,102,0
+40093,Major,Oklahoma,2020-08-30,49,1
+40095,Marshall,Oklahoma,2020-08-30,130,1
+40097,Mayes,Oklahoma,2020-08-30,413,9
+40087,McClain,Oklahoma,2020-08-30,570,4
+40089,McCurtain,Oklahoma,2020-08-30,1021,29
+40091,McIntosh,Oklahoma,2020-08-30,235,4
+40099,Murray,Oklahoma,2020-08-30,89,1
+40101,Muskogee,Oklahoma,2020-08-30,1126,16
+40103,Noble,Oklahoma,2020-08-30,104,2
+40105,Nowata,Oklahoma,2020-08-30,97,1
+40107,Okfuskee,Oklahoma,2020-08-30,101,3
+40109,Oklahoma,Oklahoma,2020-08-30,13357,155
+40111,Okmulgee,Oklahoma,2020-08-30,614,4
+40113,Osage,Oklahoma,2020-08-30,636,12
+40115,Ottawa,Oklahoma,2020-08-30,520,4
+40117,Pawnee,Oklahoma,2020-08-30,217,3
+40119,Payne,Oklahoma,2020-08-30,1145,5
+40121,Pittsburg,Oklahoma,2020-08-30,576,15
+40123,Pontotoc,Oklahoma,2020-08-30,235,3
+40125,Pottawatomie,Oklahoma,2020-08-30,852,9
+40127,Pushmataha,Oklahoma,2020-08-30,126,1
+40129,Roger Mills,Oklahoma,2020-08-30,13,1
+40131,Rogers,Oklahoma,2020-08-30,1308,41
+40133,Seminole,Oklahoma,2020-08-30,319,5
+40135,Sequoyah,Oklahoma,2020-08-30,580,8
+40137,Stephens,Oklahoma,2020-08-30,251,4
+40139,Texas,Oklahoma,2020-08-30,1144,7
+40141,Tillman,Oklahoma,2020-08-30,68,1
+40143,Tulsa,Oklahoma,2020-08-30,13175,132
+NA,Unknown,Oklahoma,2020-08-30,4,0
+40145,Wagoner,Oklahoma,2020-08-30,1137,23
+40147,Washington,Oklahoma,2020-08-30,790,39
+40149,Washita,Oklahoma,2020-08-30,43,0
+40151,Woods,Oklahoma,2020-08-30,24,0
+40153,Woodward,Oklahoma,2020-08-30,88,0
+41001,Baker,Oregon,2020-08-30,70,2
+41003,Benton,Oregon,2020-08-30,213,6
+41005,Clackamas,Oregon,2020-08-30,1939,57
+41007,Clatsop,Oregon,2020-08-30,95,0
+41009,Columbia,Oregon,2020-08-30,130,1
+41011,Coos,Oregon,2020-08-30,115,0
+41013,Crook,Oregon,2020-08-30,54,1
+41015,Curry,Oregon,2020-08-30,20,0
+41017,Deschutes,Oregon,2020-08-30,690,11
+41019,Douglas,Oregon,2020-08-30,177,3
+41021,Gilliam,Oregon,2020-08-30,4,0
+41023,Grant,Oregon,2020-08-30,8,0
+41025,Harney,Oregon,2020-08-30,12,0
+41027,Hood River,Oregon,2020-08-30,233,0
+41029,Jackson,Oregon,2020-08-30,805,2
+41031,Jefferson,Oregon,2020-08-30,457,7
+41033,Josephine,Oregon,2020-08-30,154,2
+41035,Klamath,Oregon,2020-08-30,235,2
+41037,Lake,Oregon,2020-08-30,30,0
+41039,Lane,Oregon,2020-08-30,702,6
+41041,Lincoln,Oregon,2020-08-30,465,13
+41043,Linn,Oregon,2020-08-30,385,12
+41045,Malheur,Oregon,2020-08-30,1170,19
+41047,Marion,Oregon,2020-08-30,3794,80
+41049,Morrow,Oregon,2020-08-30,437,3
+41051,Multnomah,Oregon,2020-08-30,5975,122
+41053,Polk,Oregon,2020-08-30,419,14
+41055,Sherman,Oregon,2020-08-30,17,0
+41057,Tillamook,Oregon,2020-08-30,38,0
+41059,Umatilla,Oregon,2020-08-30,2674,37
+41061,Union,Oregon,2020-08-30,419,2
+41063,Wallowa,Oregon,2020-08-30,22,1
+41065,Wasco,Oregon,2020-08-30,206,3
+41067,Washington,Oregon,2020-08-30,3760,43
+41071,Yamhill,Oregon,2020-08-30,630,14
+42001,Adams,Pennsylvania,2020-08-30,637,23
+42003,Allegheny,Pennsylvania,2020-08-30,10310,330
+42005,Armstrong,Pennsylvania,2020-08-30,313,9
+42007,Beaver,Pennsylvania,2020-08-30,1603,96
+42009,Bedford,Pennsylvania,2020-08-30,170,5
+42011,Berks,Pennsylvania,2020-08-30,6041,380
+42013,Blair,Pennsylvania,2020-08-30,456,11
+42015,Bradford,Pennsylvania,2020-08-30,98,3
+42017,Bucks,Pennsylvania,2020-08-30,7777,586
+42019,Butler,Pennsylvania,2020-08-30,780,18
+42021,Cambria,Pennsylvania,2020-08-30,460,4
+42023,Cameron,Pennsylvania,2020-08-30,8,0
+42025,Carbon,Pennsylvania,2020-08-30,422,28
+42027,Centre,Pennsylvania,2020-08-30,469,11
+42029,Chester,Pennsylvania,2020-08-30,5607,356
+42031,Clarion,Pennsylvania,2020-08-30,99,3
+42033,Clearfield,Pennsylvania,2020-08-30,227,1
+42035,Clinton,Pennsylvania,2020-08-30,135,5
+42037,Columbia,Pennsylvania,2020-08-30,659,35
+42039,Crawford,Pennsylvania,2020-08-30,214,2
+42041,Cumberland,Pennsylvania,2020-08-30,1523,72
+42043,Dauphin,Pennsylvania,2020-08-30,3302,163
+42045,Delaware,Pennsylvania,2020-08-30,10317,773
+42047,Elk,Pennsylvania,2020-08-30,64,2
+42049,Erie,Pennsylvania,2020-08-30,1348,33
+42051,Fayette,Pennsylvania,2020-08-30,689,6
+42053,Forest,Pennsylvania,2020-08-30,14,0
+42055,Franklin,Pennsylvania,2020-08-30,1508,46
+42057,Fulton,Pennsylvania,2020-08-30,34,2
+42059,Greene,Pennsylvania,2020-08-30,139,1
+42061,Huntingdon,Pennsylvania,2020-08-30,364,5
+42063,Indiana,Pennsylvania,2020-08-30,426,10
+42065,Jefferson,Pennsylvania,2020-08-30,97,1
+42067,Juniata,Pennsylvania,2020-08-30,148,6
+42069,Lackawanna,Pennsylvania,2020-08-30,2079,213
+42071,Lancaster,Pennsylvania,2020-08-30,6697,432
+42073,Lawrence,Pennsylvania,2020-08-30,455,18
+42075,Lebanon,Pennsylvania,2020-08-30,1721,57
+42077,Lehigh,Pennsylvania,2020-08-30,5196,343
+42079,Luzerne,Pennsylvania,2020-08-30,3771,188
+42081,Lycoming,Pennsylvania,2020-08-30,518,22
+42083,McKean,Pennsylvania,2020-08-30,37,1
+42085,Mercer,Pennsylvania,2020-08-30,545,13
+42087,Mifflin,Pennsylvania,2020-08-30,160,1
+42089,Monroe,Pennsylvania,2020-08-30,1712,127
+42091,Montgomery,Pennsylvania,2020-08-30,10996,861
+42093,Montour,Pennsylvania,2020-08-30,133,5
+42095,Northampton,Pennsylvania,2020-08-30,4114,300
+42097,Northumberland,Pennsylvania,2020-08-30,672,34
+42099,Perry,Pennsylvania,2020-08-30,175,5
+42101,Philadelphia,Pennsylvania,2020-08-30,33607,1767
+42103,Pike,Pennsylvania,2020-08-30,542,21
+42105,Potter,Pennsylvania,2020-08-30,25,0
+42107,Schuylkill,Pennsylvania,2020-08-30,985,51
+42109,Snyder,Pennsylvania,2020-08-30,164,2
+42111,Somerset,Pennsylvania,2020-08-30,164,3
+42113,Sullivan,Pennsylvania,2020-08-30,10,0
+42115,Susquehanna,Pennsylvania,2020-08-30,265,27
+42117,Tioga,Pennsylvania,2020-08-30,48,3
+42119,Union,Pennsylvania,2020-08-30,371,4
+42121,Venango,Pennsylvania,2020-08-30,70,1
+42123,Warren,Pennsylvania,2020-08-30,27,1
+42125,Washington,Pennsylvania,2020-08-30,1042,27
+42127,Wayne,Pennsylvania,2020-08-30,175,10
+42129,Westmoreland,Pennsylvania,2020-08-30,1809,49
+42131,Wyoming,Pennsylvania,2020-08-30,66,8
+42133,York,Pennsylvania,2020-08-30,3328,122
+44001,Bristol,Rhode Island,2020-08-30,349,16
+44003,Kent,Rhode Island,2020-08-30,1664,103
+44005,Newport,Rhode Island,2020-08-30,434,6
+44007,Providence,Rhode Island,2020-08-30,16668,836
+NA,Unknown,Rhode Island,2020-08-30,1874,19
+44009,Washington,Rhode Island,2020-08-30,694,66
+45001,Abbeville,South Carolina,2020-08-30,415,10
+45003,Aiken,South Carolina,2020-08-30,2354,63
+45005,Allendale,South Carolina,2020-08-30,291,6
+45007,Anderson,South Carolina,2020-08-30,3146,120
+45009,Bamberg,South Carolina,2020-08-30,538,28
+45011,Barnwell,South Carolina,2020-08-30,532,13
+45013,Beaufort,South Carolina,2020-08-30,4749,65
+45015,Berkeley,South Carolina,2020-08-30,4805,78
+45017,Calhoun,South Carolina,2020-08-30,416,15
+45019,Charleston,South Carolina,2020-08-30,14000,236
+45021,Cherokee,South Carolina,2020-08-30,790,32
+45023,Chester,South Carolina,2020-08-30,870,18
+45025,Chesterfield,South Carolina,2020-08-30,997,26
+45027,Clarendon,South Carolina,2020-08-30,972,62
+45029,Colleton,South Carolina,2020-08-30,889,39
+45031,Darlington,South Carolina,2020-08-30,1631,46
+45033,Dillon,South Carolina,2020-08-30,757,28
+45035,Dorchester,South Carolina,2020-08-30,3625,76
+45037,Edgefield,South Carolina,2020-08-30,494,13
+45039,Fairfield,South Carolina,2020-08-30,644,28
+45041,Florence,South Carolina,2020-08-30,4226,150
+45043,Georgetown,South Carolina,2020-08-30,1725,37
+45045,Greenville,South Carolina,2020-08-30,12089,256
+45047,Greenwood,South Carolina,2020-08-30,1830,47
+45049,Hampton,South Carolina,2020-08-30,542,22
+45051,Horry,South Carolina,2020-08-30,9358,182
+45053,Jasper,South Carolina,2020-08-30,687,18
+45055,Kershaw,South Carolina,2020-08-30,1600,29
+45057,Lancaster,South Carolina,2020-08-30,1639,39
+45059,Laurens,South Carolina,2020-08-30,1483,54
+45061,Lee,South Carolina,2020-08-30,648,31
+45063,Lexington,South Carolina,2020-08-30,5736,136
+45067,Marion,South Carolina,2020-08-30,687,17
+45069,Marlboro,South Carolina,2020-08-30,705,5
+45065,McCormick,South Carolina,2020-08-30,159,5
+45071,Newberry,South Carolina,2020-08-30,966,15
+45073,Oconee,South Carolina,2020-08-30,1062,19
+45075,Orangeburg,South Carolina,2020-08-30,2819,100
+45077,Pickens,South Carolina,2020-08-30,2180,35
+45079,Richland,South Carolina,2020-08-30,11011,196
+45081,Saluda,South Carolina,2020-08-30,558,13
+45083,Spartanburg,South Carolina,2020-08-30,4994,149
+45085,Sumter,South Carolina,2020-08-30,2830,64
+45087,Union,South Carolina,2020-08-30,455,5
+45089,Williamsburg,South Carolina,2020-08-30,1192,36
+45091,York,South Carolina,2020-08-30,4228,47
+46003,Aurora,South Dakota,2020-08-30,42,0
+46005,Beadle,South Dakota,2020-08-30,636,9
+46007,Bennett,South Dakota,2020-08-30,22,0
+46009,Bon Homme,South Dakota,2020-08-30,51,1
+46011,Brookings,South Dakota,2020-08-30,308,1
+46013,Brown,South Dakota,2020-08-30,662,3
+46015,Brule,South Dakota,2020-08-30,66,0
+46017,Buffalo,South Dakota,2020-08-30,110,3
+46019,Butte,South Dakota,2020-08-30,46,1
+46021,Campbell,South Dakota,2020-08-30,5,0
+46023,Charles Mix,South Dakota,2020-08-30,122,0
+46025,Clark,South Dakota,2020-08-30,19,0
+46027,Clay,South Dakota,2020-08-30,344,2
+46029,Codington,South Dakota,2020-08-30,310,2
+46031,Corson,South Dakota,2020-08-30,55,0
+46033,Custer,South Dakota,2020-08-30,116,0
+46035,Davison,South Dakota,2020-08-30,135,2
+46037,Day,South Dakota,2020-08-30,37,0
+46039,Deuel,South Dakota,2020-08-30,44,0
+46041,Dewey,South Dakota,2020-08-30,79,0
+46043,Douglas,South Dakota,2020-08-30,26,0
+46045,Edmunds,South Dakota,2020-08-30,31,0
+46047,Fall River,South Dakota,2020-08-30,38,1
+46049,Faulk,South Dakota,2020-08-30,32,1
+46051,Grant,South Dakota,2020-08-30,42,0
+46053,Gregory,South Dakota,2020-08-30,19,0
+46055,Haakon,South Dakota,2020-08-30,6,0
+46057,Hamlin,South Dakota,2020-08-30,54,0
+46059,Hand,South Dakota,2020-08-30,15,0
+46061,Hanson,South Dakota,2020-08-30,23,0
+46063,Harding,South Dakota,2020-08-30,2,0
+46065,Hughes,South Dakota,2020-08-30,133,4
+46067,Hutchinson,South Dakota,2020-08-30,39,1
+46069,Hyde,South Dakota,2020-08-30,7,0
+46071,Jackson,South Dakota,2020-08-30,12,1
+46073,Jerauld,South Dakota,2020-08-30,40,1
+46075,Jones,South Dakota,2020-08-30,3,0
+46077,Kingsbury,South Dakota,2020-08-30,23,0
+46079,Lake,South Dakota,2020-08-30,116,6
+46081,Lawrence,South Dakota,2020-08-30,217,3
+46083,Lincoln,South Dakota,2020-08-30,888,2
+46085,Lyman,South Dakota,2020-08-30,105,3
+46091,Marshall,South Dakota,2020-08-30,19,0
+46087,McCook,South Dakota,2020-08-30,49,1
+46089,McPherson,South Dakota,2020-08-30,11,0
+46093,Meade,South Dakota,2020-08-30,294,1
+46095,Mellette,South Dakota,2020-08-30,24,0
+46097,Miner,South Dakota,2020-08-30,16,0
+46099,Minnehaha,South Dakota,2020-08-30,5235,70
+46101,Moody,South Dakota,2020-08-30,41,0
+46102,Oglala Lakota,South Dakota,2020-08-30,173,2
+46103,Pennington,South Dakota,2020-08-30,1406,33
+46105,Perkins,South Dakota,2020-08-30,13,0
+46107,Potter,South Dakota,2020-08-30,16,0
+46109,Roberts,South Dakota,2020-08-30,97,1
+46111,Sanborn,South Dakota,2020-08-30,15,0
+46115,Spink,South Dakota,2020-08-30,52,0
+46117,Stanley,South Dakota,2020-08-30,21,0
+46119,Sully,South Dakota,2020-08-30,8,0
+46121,Todd,South Dakota,2020-08-30,78,5
+46123,Tripp,South Dakota,2020-08-30,22,0
+46125,Turner,South Dakota,2020-08-30,81,0
+46127,Union,South Dakota,2020-08-30,263,4
+46129,Walworth,South Dakota,2020-08-30,42,0
+46135,Yankton,South Dakota,2020-08-30,218,3
+46137,Ziebach,South Dakota,2020-08-30,48,0
+47001,Anderson,Tennessee,2020-08-30,862,8
+47003,Bedford,Tennessee,2020-08-30,1107,14
+47005,Benton,Tennessee,2020-08-30,253,5
+47007,Bledsoe,Tennessee,2020-08-30,775,4
+47009,Blount,Tennessee,2020-08-30,2003,17
+47011,Bradley,Tennessee,2020-08-30,2468,16
+47013,Campbell,Tennessee,2020-08-30,325,2
+47015,Cannon,Tennessee,2020-08-30,198,0
+47017,Carroll,Tennessee,2020-08-30,624,8
+47019,Carter,Tennessee,2020-08-30,818,18
+47021,Cheatham,Tennessee,2020-08-30,710,10
+47023,Chester,Tennessee,2020-08-30,376,5
+47025,Claiborne,Tennessee,2020-08-30,363,3
+47027,Clay,Tennessee,2020-08-30,111,0
+47029,Cocke,Tennessee,2020-08-30,641,7
+47031,Coffee,Tennessee,2020-08-30,760,6
+47033,Crockett,Tennessee,2020-08-30,401,14
+47035,Cumberland,Tennessee,2020-08-30,812,8
+47037,Davidson,Tennessee,2020-08-30,25945,258
+47041,DeKalb,Tennessee,2020-08-30,469,5
+47039,Decatur,Tennessee,2020-08-30,302,4
+47043,Dickson,Tennessee,2020-08-30,907,9
+47045,Dyer,Tennessee,2020-08-30,952,10
+47047,Fayette,Tennessee,2020-08-30,882,10
+47049,Fentress,Tennessee,2020-08-30,218,0
+47051,Franklin,Tennessee,2020-08-30,488,4
+47053,Gibson,Tennessee,2020-08-30,1104,14
+47055,Giles,Tennessee,2020-08-30,441,14
+47057,Grainger,Tennessee,2020-08-30,274,1
+47059,Greene,Tennessee,2020-08-30,814,16
+47061,Grundy,Tennessee,2020-08-30,149,2
+47063,Hamblen,Tennessee,2020-08-30,1649,22
+47065,Hamilton,Tennessee,2020-08-30,7965,74
+47067,Hancock,Tennessee,2020-08-30,92,2
+47069,Hardeman,Tennessee,2020-08-30,1237,21
+47071,Hardin,Tennessee,2020-08-30,685,10
+47073,Hawkins,Tennessee,2020-08-30,667,13
+47075,Haywood,Tennessee,2020-08-30,740,11
+47077,Henderson,Tennessee,2020-08-30,873,7
+47079,Henry,Tennessee,2020-08-30,455,5
+47081,Hickman,Tennessee,2020-08-30,371,3
+47083,Houston,Tennessee,2020-08-30,93,0
+47085,Humphreys,Tennessee,2020-08-30,169,3
+47087,Jackson,Tennessee,2020-08-30,217,1
+47089,Jefferson,Tennessee,2020-08-30,805,6
+47091,Johnson,Tennessee,2020-08-30,407,1
+47093,Knox,Tennessee,2020-08-30,6716,57
+47095,Lake,Tennessee,2020-08-30,834,2
+47097,Lauderdale,Tennessee,2020-08-30,720,12
+47099,Lawrence,Tennessee,2020-08-30,759,9
+47101,Lewis,Tennessee,2020-08-30,132,1
+47103,Lincoln,Tennessee,2020-08-30,409,1
+47105,Loudon,Tennessee,2020-08-30,944,3
+47111,Macon,Tennessee,2020-08-30,907,15
+47113,Madison,Tennessee,2020-08-30,1781,41
+47115,Marion,Tennessee,2020-08-30,325,7
+47117,Marshall,Tennessee,2020-08-30,532,4
+47119,Maury,Tennessee,2020-08-30,1735,15
+47107,McMinn,Tennessee,2020-08-30,791,23
+47109,McNairy,Tennessee,2020-08-30,544,11
+47121,Meigs,Tennessee,2020-08-30,162,2
+47123,Monroe,Tennessee,2020-08-30,738,15
+47125,Montgomery,Tennessee,2020-08-30,2467,30
+47127,Moore,Tennessee,2020-08-30,93,0
+47129,Morgan,Tennessee,2020-08-30,207,2
+47131,Obion,Tennessee,2020-08-30,820,8
+47133,Overton,Tennessee,2020-08-30,433,2
+47135,Perry,Tennessee,2020-08-30,107,0
+47137,Pickett,Tennessee,2020-08-30,61,1
+47139,Polk,Tennessee,2020-08-30,326,10
+47141,Putnam,Tennessee,2020-08-30,2362,30
+47143,Rhea,Tennessee,2020-08-30,647,3
+47145,Roane,Tennessee,2020-08-30,643,2
+47147,Robertson,Tennessee,2020-08-30,1885,26
+47149,Rutherford,Tennessee,2020-08-30,7799,70
+47151,Scott,Tennessee,2020-08-30,155,2
+47153,Sequatchie,Tennessee,2020-08-30,142,1
+47155,Sevier,Tennessee,2020-08-30,2232,12
+47157,Shelby,Tennessee,2020-08-30,27467,385
+47159,Smith,Tennessee,2020-08-30,515,8
+47161,Stewart,Tennessee,2020-08-30,96,0
+47163,Sullivan,Tennessee,2020-08-30,1615,25
+47165,Sumner,Tennessee,2020-08-30,4065,86
+47167,Tipton,Tennessee,2020-08-30,1455,15
+47169,Trousdale,Tennessee,2020-08-30,1618,6
+47171,Unicoi,Tennessee,2020-08-30,221,1
+47173,Union,Tennessee,2020-08-30,222,1
+NA,Unknown,Tennessee,2020-08-30,102,5
+47175,Van Buren,Tennessee,2020-08-30,71,0
+47177,Warren,Tennessee,2020-08-30,851,7
+47179,Washington,Tennessee,2020-08-30,1718,13
+47181,Wayne,Tennessee,2020-08-30,312,3
+47183,Weakley,Tennessee,2020-08-30,831,13
+47185,White,Tennessee,2020-08-30,560,7
+47187,Williamson,Tennessee,2020-08-30,4334,28
+47189,Wilson,Tennessee,2020-08-30,2811,31
+48001,Anderson,Texas,2020-08-30,2502,18
+48003,Andrews,Texas,2020-08-30,362,8
+48005,Angelina,Texas,2020-08-30,2222,66
+48007,Aransas,Texas,2020-08-30,210,18
+48009,Archer,Texas,2020-08-30,49,0
+48011,Armstrong,Texas,2020-08-30,11,0
+48013,Atascosa,Texas,2020-08-30,568,27
+48015,Austin,Texas,2020-08-30,417,6
+48017,Bailey,Texas,2020-08-30,202,4
+48019,Bandera,Texas,2020-08-30,109,3
+48021,Bastrop,Texas,2020-08-30,1580,27
+48023,Baylor,Texas,2020-08-30,16,0
+48025,Bee,Texas,2020-08-30,1591,22
+48027,Bell,Texas,2020-08-30,4768,64
+48029,Bexar,Texas,2020-08-30,46413,1086
+48031,Blanco,Texas,2020-08-30,124,5
+48035,Bosque,Texas,2020-08-30,216,5
+48037,Bowie,Texas,2020-08-30,970,68
+48039,Brazoria,Texas,2020-08-30,9309,138
+48041,Brazos,Texas,2020-08-30,5103,55
+48043,Brewster,Texas,2020-08-30,191,2
+48045,Briscoe,Texas,2020-08-30,12,1
+48047,Brooks,Texas,2020-08-30,215,16
+48049,Brown,Texas,2020-08-30,620,26
+48051,Burleson,Texas,2020-08-30,287,6
+48053,Burnet,Texas,2020-08-30,665,12
+48055,Caldwell,Texas,2020-08-30,1230,32
+48057,Calhoun,Texas,2020-08-30,603,7
+48059,Callahan,Texas,2020-08-30,88,3
+48061,Cameron,Texas,2020-08-30,20853,752
+48063,Camp,Texas,2020-08-30,296,8
+48065,Carson,Texas,2020-08-30,17,0
+48067,Cass,Texas,2020-08-30,257,11
+48069,Castro,Texas,2020-08-30,227,4
+48071,Chambers,Texas,2020-08-30,1123,11
+48073,Cherokee,Texas,2020-08-30,1408,16
+48075,Childress,Texas,2020-08-30,57,0
+48077,Clay,Texas,2020-08-30,63,1
+48079,Cochran,Texas,2020-08-30,37,1
+48081,Coke,Texas,2020-08-30,49,3
+48083,Coleman,Texas,2020-08-30,52,2
+48085,Collin,Texas,2020-08-30,10946,111
+48087,Collingsworth,Texas,2020-08-30,16,0
+48089,Colorado,Texas,2020-08-30,444,3
+48091,Comal,Texas,2020-08-30,2969,95
+48093,Comanche,Texas,2020-08-30,214,3
+48095,Concho,Texas,2020-08-30,53,1
+48097,Cooke,Texas,2020-08-30,318,4
+48099,Coryell,Texas,2020-08-30,868,10
+48101,Cottle,Texas,2020-08-30,18,2
+48103,Crane,Texas,2020-08-30,70,2
+48105,Crockett,Texas,2020-08-30,162,6
+48107,Crosby,Texas,2020-08-30,81,1
+48109,Culberson,Texas,2020-08-30,23,2
+48111,Dallam,Texas,2020-08-30,208,7
+48113,Dallas,Texas,2020-08-30,73685,947
+48115,Dawson,Texas,2020-08-30,207,8
+48123,DeWitt,Texas,2020-08-30,844,25
+48117,Deaf Smith,Texas,2020-08-30,943,20
+48119,Delta,Texas,2020-08-30,17,0
+48121,Denton,Texas,2020-08-30,9994,131
+48125,Dickens,Texas,2020-08-30,27,1
+48127,Dimmit,Texas,2020-08-30,180,6
+48129,Donley,Texas,2020-08-30,55,1
+48131,Duval,Texas,2020-08-30,257,10
+48133,Eastland,Texas,2020-08-30,130,2
+48135,Ector,Texas,2020-08-30,4217,69
+48137,Edwards,Texas,2020-08-30,34,1
+48141,El Paso,Texas,2020-08-30,20350,428
+48139,Ellis,Texas,2020-08-30,3758,56
+48143,Erath,Texas,2020-08-30,667,9
+48145,Falls,Texas,2020-08-30,166,3
+48147,Fannin,Texas,2020-08-30,585,12
+48149,Fayette,Texas,2020-08-30,368,16
+48151,Fisher,Texas,2020-08-30,58,1
+48153,Floyd,Texas,2020-08-30,100,7
+48155,Foard,Texas,2020-08-30,3,0
+48157,Fort Bend,Texas,2020-08-30,14933,234
+48159,Franklin,Texas,2020-08-30,111,4
+48161,Freestone,Texas,2020-08-30,384,1
+48163,Frio,Texas,2020-08-30,633,7
+48165,Gaines,Texas,2020-08-30,247,7
+48167,Galveston,Texas,2020-08-30,10543,140
+48169,Garza,Texas,2020-08-30,102,3
+48171,Gillespie,Texas,2020-08-30,198,6
+48173,Glasscock,Texas,2020-08-30,6,0
+48175,Goliad,Texas,2020-08-30,121,6
+48177,Gonzales,Texas,2020-08-30,813,13
+48179,Gray,Texas,2020-08-30,242,4
+48181,Grayson,Texas,2020-08-30,1474,25
+48183,Gregg,Texas,2020-08-30,1983,47
+48185,Grimes,Texas,2020-08-30,970,30
+48187,Guadalupe,Texas,2020-08-30,1899,72
+48189,Hale,Texas,2020-08-30,1606,45
+48191,Hall,Texas,2020-08-30,16,1
+48193,Hamilton,Texas,2020-08-30,101,3
+48195,Hansford,Texas,2020-08-30,102,3
+48197,Hardeman,Texas,2020-08-30,22,0
+48199,Hardin,Texas,2020-08-30,1254,19
+48201,Harris,Texas,2020-08-30,105757,2188
+48203,Harrison,Texas,2020-08-30,796,35
+48205,Hartley,Texas,2020-08-30,101,2
+48207,Haskell,Texas,2020-08-30,54,2
+48209,Hays,Texas,2020-08-30,5361,56
+48211,Hemphill,Texas,2020-08-30,55,0
+48213,Henderson,Texas,2020-08-30,815,16
+48215,Hidalgo,Texas,2020-08-30,27349,1162
+48217,Hill,Texas,2020-08-30,369,8
+48219,Hockley,Texas,2020-08-30,262,5
+48221,Hood,Texas,2020-08-30,767,22
+48223,Hopkins,Texas,2020-08-30,244,7
+48225,Houston,Texas,2020-08-30,538,9
+48227,Howard,Texas,2020-08-30,280,8
+48229,Hudspeth,Texas,2020-08-30,38,2
+48231,Hunt,Texas,2020-08-30,1415,29
+48233,Hutchinson,Texas,2020-08-30,147,3
+48235,Irion,Texas,2020-08-30,10,0
+48237,Jack,Texas,2020-08-30,121,0
+48239,Jackson,Texas,2020-08-30,501,14
+48241,Jasper,Texas,2020-08-30,393,18
+48243,Jeff Davis,Texas,2020-08-30,8,0
+48245,Jefferson,Texas,2020-08-30,6615,107
+48247,Jim Hogg,Texas,2020-08-30,77,2
+48249,Jim Wells,Texas,2020-08-30,1034,24
+48251,Johnson,Texas,2020-08-30,2500,44
+48253,Jones,Texas,2020-08-30,598,0
+48255,Karnes,Texas,2020-08-30,740,12
+48257,Kaufman,Texas,2020-08-30,2757,37
+48259,Kendall,Texas,2020-08-30,197,5
+48261,Kenedy,Texas,2020-08-30,7,1
+48263,Kent,Texas,2020-08-30,7,0
+48265,Kerr,Texas,2020-08-30,435,9
+48267,Kimble,Texas,2020-08-30,16,1
+48271,Kinney,Texas,2020-08-30,22,1
+48273,Kleberg,Texas,2020-08-30,632,26
+48275,Knox,Texas,2020-08-30,67,8
+48283,La Salle,Texas,2020-08-30,365,4
+48277,Lamar,Texas,2020-08-30,791,26
+48279,Lamb,Texas,2020-08-30,278,19
+48281,Lampasas,Texas,2020-08-30,154,6
+48285,Lavaca,Texas,2020-08-30,682,30
+48287,Lee,Texas,2020-08-30,197,14
+48289,Leon,Texas,2020-08-30,188,4
+48291,Liberty,Texas,2020-08-30,1826,43
+48293,Limestone,Texas,2020-08-30,457,7
+48295,Lipscomb,Texas,2020-08-30,25,0
+48297,Live Oak,Texas,2020-08-30,330,6
+48299,Llano,Texas,2020-08-30,101,1
+48303,Lubbock,Texas,2020-08-30,7397,98
+48305,Lynn,Texas,2020-08-30,79,4
+48313,Madison,Texas,2020-08-30,830,5
+48315,Marion,Texas,2020-08-30,140,10
+48317,Martin,Texas,2020-08-30,71,5
+48319,Mason,Texas,2020-08-30,73,1
+48321,Matagorda,Texas,2020-08-30,913,38
+48323,Maverick,Texas,2020-08-30,3258,82
+48307,McCulloch,Texas,2020-08-30,109,1
+48309,McLennan,Texas,2020-08-30,6264,83
+48311,McMullen,Texas,2020-08-30,15,0
+48325,Medina,Texas,2020-08-30,1111,35
+48327,Menard,Texas,2020-08-30,20,0
+48329,Midland,Texas,2020-08-30,3239,64
+48331,Milam,Texas,2020-08-30,425,5
+48333,Mills,Texas,2020-08-30,34,0
+48335,Mitchell,Texas,2020-08-30,73,1
+48337,Montague,Texas,2020-08-30,122,3
+48339,Montgomery,Texas,2020-08-30,8580,120
+48341,Moore,Texas,2020-08-30,1118,18
+48343,Morris,Texas,2020-08-30,156,3
+48345,Motley,Texas,2020-08-30,6,0
+48347,Nacogdoches,Texas,2020-08-30,1338,48
+48349,Navarro,Texas,2020-08-30,1315,23
+48351,Newton,Texas,2020-08-30,162,6
+48353,Nolan,Texas,2020-08-30,150,4
+48355,Nueces,Texas,2020-08-30,18830,352
+48357,Ochiltree,Texas,2020-08-30,109,3
+48359,Oldham,Texas,2020-08-30,15,1
+48361,Orange,Texas,2020-08-30,1782,35
+48363,Palo Pinto,Texas,2020-08-30,423,11
+48365,Panola,Texas,2020-08-30,313,21
+48367,Parker,Texas,2020-08-30,1645,25
+48369,Parmer,Texas,2020-08-30,385,7
+48371,Pecos,Texas,2020-08-30,296,3
+48373,Polk,Texas,2020-08-30,850,18
+48375,Potter,Texas,2020-08-30,4034,51
+48377,Presidio,Texas,2020-08-30,50,5
+48379,Rains,Texas,2020-08-30,59,3
+48381,Randall,Texas,2020-08-30,2168,33
+48383,Reagan,Texas,2020-08-30,83,6
+48385,Real,Texas,2020-08-30,104,5
+48387,Red River,Texas,2020-08-30,145,14
+48389,Reeves,Texas,2020-08-30,169,5
+48391,Refugio,Texas,2020-08-30,266,10
+48393,Roberts,Texas,2020-08-30,8,0
+48395,Robertson,Texas,2020-08-30,248,4
+48397,Rockwall,Texas,2020-08-30,1316,26
+48399,Runnels,Texas,2020-08-30,191,3
+48401,Rusk,Texas,2020-08-30,720,4
+48403,Sabine,Texas,2020-08-30,72,6
+48405,San Augustine,Texas,2020-08-30,210,12
+48407,San Jacinto,Texas,2020-08-30,202,8
+48409,San Patricio,Texas,2020-08-30,1257,59
+48411,San Saba,Texas,2020-08-30,38,0
+48413,Schleicher,Texas,2020-08-30,38,2
+48415,Scurry,Texas,2020-08-30,546,2
+48417,Shackelford,Texas,2020-08-30,23,0
+48419,Shelby,Texas,2020-08-30,436,19
+48421,Sherman,Texas,2020-08-30,53,0
+48423,Smith,Texas,2020-08-30,3646,58
+48425,Somervell,Texas,2020-08-30,118,4
+48427,Starr,Texas,2020-08-30,3153,134
+48429,Stephens,Texas,2020-08-30,110,3
+48431,Sterling,Texas,2020-08-30,2,0
+48433,Stonewall,Texas,2020-08-30,10,1
+48435,Sutton,Texas,2020-08-30,76,2
+48437,Swisher,Texas,2020-08-30,93,3
+48439,Tarrant,Texas,2020-08-30,41486,610
+48441,Taylor,Texas,2020-08-30,2469,34
+48443,Terrell,Texas,2020-08-30,3,0
+48445,Terry,Texas,2020-08-30,199,3
+48447,Throckmorton,Texas,2020-08-30,4,2
+48449,Titus,Texas,2020-08-30,1454,24
+48451,Tom Green,Texas,2020-08-30,3217,52
+48453,Travis,Texas,2020-08-30,26434,380
+48455,Trinity,Texas,2020-08-30,178,6
+48457,Tyler,Texas,2020-08-30,175,3
+48459,Upshur,Texas,2020-08-30,327,6
+48461,Upton,Texas,2020-08-30,19,1
+48463,Uvalde,Texas,2020-08-30,689,18
+48465,Val Verde,Texas,2020-08-30,1944,87
+48467,Van Zandt,Texas,2020-08-30,516,18
+48469,Victoria,Texas,2020-08-30,3773,75
+48471,Walker,Texas,2020-08-30,3647,48
+48473,Waller,Texas,2020-08-30,668,8
+48475,Ward,Texas,2020-08-30,106,1
+48477,Washington,Texas,2020-08-30,564,45
+48479,Webb,Texas,2020-08-30,10814,243
+48481,Wharton,Texas,2020-08-30,1198,43
+48483,Wheeler,Texas,2020-08-30,42,0
+48485,Wichita,Texas,2020-08-30,1295,14
+48487,Wilbarger,Texas,2020-08-30,103,2
+48489,Willacy,Texas,2020-08-30,864,42
+48491,Williamson,Texas,2020-08-30,8079,123
+48493,Wilson,Texas,2020-08-30,539,25
+48495,Winkler,Texas,2020-08-30,93,1
+48497,Wise,Texas,2020-08-30,646,12
+48499,Wood,Texas,2020-08-30,398,15
+48501,Yoakum,Texas,2020-08-30,145,4
+48503,Young,Texas,2020-08-30,244,6
+48505,Zapata,Texas,2020-08-30,272,4
+48507,Zavala,Texas,2020-08-30,287,10
+49001,Beaver,Utah,2020-08-30,33,0
+49003,Box Elder,Utah,2020-08-30,443,5
+49005,Cache,Utah,2020-08-30,2109,6
+49007,Carbon,Utah,2020-08-30,80,0
+49011,Davis,Utah,2020-08-30,3870,23
+49013,Duchesne,Utah,2020-08-30,95,0
+49015,Emery,Utah,2020-08-30,16,0
+49017,Garfield,Utah,2020-08-30,46,2
+49019,Grand,Utah,2020-08-30,54,1
+49021,Iron,Utah,2020-08-30,637,2
+49023,Juab,Utah,2020-08-30,103,1
+49025,Kane,Utah,2020-08-30,63,1
+49027,Millard,Utah,2020-08-30,141,0
+49029,Morgan,Utah,2020-08-30,68,0
+49031,Piute,Utah,2020-08-30,6,0
+49033,Rich,Utah,2020-08-30,11,0
+49035,Salt Lake,Utah,2020-08-30,23862,231
+49037,San Juan,Utah,2020-08-30,666,28
+49039,Sanpete,Utah,2020-08-30,162,1
+49041,Sevier,Utah,2020-08-30,90,1
+49043,Summit,Utah,2020-08-30,841,1
+49045,Tooele,Utah,2020-08-30,689,0
+49047,Uintah,Utah,2020-08-30,96,0
+NA,Unknown,Utah,2020-08-30,32,1
+49049,Utah,Utah,2020-08-30,10947,46
+49051,Wasatch,Utah,2020-08-30,633,7
+49053,Washington,Utah,2020-08-30,2786,22
+49055,Wayne,Utah,2020-08-30,2,0
+49057,Weber,Utah,2020-08-30,3273,29
+50001,Addison,Vermont,2020-08-30,81,2
+50003,Bennington,Vermont,2020-08-30,102,1
+50005,Caledonia,Vermont,2020-08-30,34,0
+50007,Chittenden,Vermont,2020-08-30,789,39
+50009,Essex,Vermont,2020-08-30,6,0
+50011,Franklin,Vermont,2020-08-30,122,7
+50013,Grand Isle,Vermont,2020-08-30,13,0
+50015,Lamoille,Vermont,2020-08-30,45,1
+50017,Orange,Vermont,2020-08-30,20,0
+50019,Orleans,Vermont,2020-08-30,15,0
+50021,Rutland,Vermont,2020-08-30,117,1
+NA,Unknown,Vermont,2020-08-30,8,0
+50023,Washington,Vermont,2020-08-30,62,2
+50025,Windham,Vermont,2020-08-30,123,3
+50027,Windsor,Vermont,2020-08-30,79,2
+51001,Accomack,Virginia,2020-08-30,1143,19
+51003,Albemarle,Virginia,2020-08-30,1027,18
+51510,Alexandria city,Virginia,2020-08-30,3369,62
+51005,Alleghany,Virginia,2020-08-30,64,4
+51007,Amelia,Virginia,2020-08-30,98,3
+51009,Amherst,Virginia,2020-08-30,286,1
+51011,Appomattox,Virginia,2020-08-30,166,1
+51013,Arlington,Virginia,2020-08-30,3540,137
+51015,Augusta,Virginia,2020-08-30,363,4
+51017,Bath,Virginia,2020-08-30,4,0
+51019,Bedford,Virginia,2020-08-30,537,8
+51021,Bland,Virginia,2020-08-30,47,0
+51023,Botetourt,Virginia,2020-08-30,248,8
+51520,Bristol city,Virginia,2020-08-30,121,2
+51025,Brunswick,Virginia,2020-08-30,285,2
+51027,Buchanan,Virginia,2020-08-30,97,1
+51029,Buckingham,Virginia,2020-08-30,644,8
+51530,Buena Vista city,Virginia,2020-08-30,73,1
+51031,Campbell,Virginia,2020-08-30,317,3
+51033,Caroline,Virginia,2020-08-30,261,5
+51035,Carroll,Virginia,2020-08-30,395,19
+51036,Charles City,Virginia,2020-08-30,70,5
+51037,Charlotte,Virginia,2020-08-30,69,0
+51540,Charlottesville city,Virginia,2020-08-30,674,18
+51550,Chesapeake city,Virginia,2020-08-30,3778,47
+51041,Chesterfield,Virginia,2020-08-30,5027,82
+51043,Clarke,Virginia,2020-08-30,80,0
+51570,Colonial Heights city,Virginia,2020-08-30,219,22
+51580,Covington city,Virginia,2020-08-30,23,0
+51045,Craig,Virginia,2020-08-30,21,0
+51047,Culpeper,Virginia,2020-08-30,1113,13
+51049,Cumberland,Virginia,2020-08-30,97,0
+51590,Danville city,Virginia,2020-08-30,604,14
+51051,Dickenson,Virginia,2020-08-30,65,1
+51053,Dinwiddie,Virginia,2020-08-30,286,8
+51595,Emporia city,Virginia,2020-08-30,230,16
+51057,Essex,Virginia,2020-08-30,122,2
+51059,Fairfax,Virginia,2020-08-30,18310,555
+51600,Fairfax city,Virginia,2020-08-30,120,7
+51610,Falls Church city,Virginia,2020-08-30,66,7
+51061,Fauquier,Virginia,2020-08-30,756,9
+51063,Floyd,Virginia,2020-08-30,153,2
+51065,Fluvanna,Virginia,2020-08-30,225,9
+51067,Franklin,Virginia,2020-08-30,212,1
+51620,Franklin city,Virginia,2020-08-30,298,6
+51069,Frederick,Virginia,2020-08-30,763,10
+51630,Fredericksburg city,Virginia,2020-08-30,479,5
+51640,Galax city,Virginia,2020-08-30,396,28
+51071,Giles,Virginia,2020-08-30,41,0
+51073,Gloucester,Virginia,2020-08-30,201,2
+51075,Goochland,Virginia,2020-08-30,219,7
+51077,Grayson,Virginia,2020-08-30,190,6
+51079,Greene,Virginia,2020-08-30,199,3
+51081,Greensville,Virginia,2020-08-30,706,11
+51083,Halifax,Virginia,2020-08-30,205,2
+51650,Hampton city,Virginia,2020-08-30,1542,16
+51085,Hanover,Virginia,2020-08-30,787,35
+51660,Harrisonburg city,Virginia,2020-08-30,1285,32
+51087,Henrico,Virginia,2020-08-30,4579,192
+51089,Henry,Virginia,2020-08-30,844,16
+51091,Highland,Virginia,2020-08-30,6,0
+51670,Hopewell city,Virginia,2020-08-30,348,4
+51093,Isle of Wight,Virginia,2020-08-30,546,11
+51095,James City,Virginia,2020-08-30,735,18
+51099,King George,Virginia,2020-08-30,201,4
+51101,King William,Virginia,2020-08-30,114,2
+51097,King and Queen,Virginia,2020-08-30,49,1
+51103,Lancaster,Virginia,2020-08-30,69,0
+51105,Lee,Virginia,2020-08-30,194,3
+51678,Lexington city,Virginia,2020-08-30,43,0
+51107,Loudoun,Virginia,2020-08-30,5945,118
+51109,Louisa,Virginia,2020-08-30,248,2
+51111,Lunenburg,Virginia,2020-08-30,93,2
+51680,Lynchburg city,Virginia,2020-08-30,980,5
+51113,Madison,Virginia,2020-08-30,91,2
+51685,Manassas Park city,Virginia,2020-08-30,562,7
+51683,Manassas city,Virginia,2020-08-30,1795,23
+51690,Martinsville city,Virginia,2020-08-30,326,6
+51115,Mathews,Virginia,2020-08-30,23,0
+51117,Mecklenburg,Virginia,2020-08-30,506,33
+51119,Middlesex,Virginia,2020-08-30,55,1
+51121,Montgomery,Virginia,2020-08-30,477,4
+51125,Nelson,Virginia,2020-08-30,85,0
+51127,New Kent,Virginia,2020-08-30,150,1
+51700,Newport News city,Virginia,2020-08-30,2300,24
+51710,Norfolk city,Virginia,2020-08-30,4361,52
+51131,Northampton,Virginia,2020-08-30,304,29
+51133,Northumberland,Virginia,2020-08-30,88,4
+51720,Norton city,Virginia,2020-08-30,26,0
+51135,Nottoway,Virginia,2020-08-30,198,14
+51137,Orange,Virginia,2020-08-30,262,4
+51139,Page,Virginia,2020-08-30,360,25
+51141,Patrick,Virginia,2020-08-30,224,11
+51730,Petersburg city,Virginia,2020-08-30,627,20
+51143,Pittsylvania,Virginia,2020-08-30,768,4
+51735,Poquoson city,Virginia,2020-08-30,67,0
+51740,Portsmouth city,Virginia,2020-08-30,2213,34
+51145,Powhatan,Virginia,2020-08-30,187,4
+51147,Prince Edward,Virginia,2020-08-30,488,11
+51149,Prince George,Virginia,2020-08-30,529,2
+51153,Prince William,Virginia,2020-08-30,10767,184
+51155,Pulaski,Virginia,2020-08-30,132,3
+51750,Radford city,Virginia,2020-08-30,384,0
+51157,Rappahannock,Virginia,2020-08-30,53,2
+51159,Richmond,Virginia,2020-08-30,332,5
+51760,Richmond city,Virginia,2020-08-30,3879,47
+51161,Roanoke,Virginia,2020-08-30,590,4
+51770,Roanoke city,Virginia,2020-08-30,1189,15
+51163,Rockbridge,Virginia,2020-08-30,85,1
+51165,Rockingham,Virginia,2020-08-30,1050,20
+51167,Russell,Virginia,2020-08-30,179,4
+51775,Salem city,Virginia,2020-08-30,210,3
+51169,Scott,Virginia,2020-08-30,151,4
+51171,Shenandoah,Virginia,2020-08-30,766,48
+51173,Smyth,Virginia,2020-08-30,268,3
+51175,Southampton,Virginia,2020-08-30,344,13
+51177,Spotsylvania,Virginia,2020-08-30,1793,38
+51179,Stafford,Virginia,2020-08-30,1691,10
+51790,Staunton city,Virginia,2020-08-30,170,0
+51800,Suffolk city,Virginia,2020-08-30,1631,60
+51181,Surry,Virginia,2020-08-30,66,3
+51183,Sussex,Virginia,2020-08-30,337,9
+51185,Tazewell,Virginia,2020-08-30,189,1
+51810,Virginia Beach city,Virginia,2020-08-30,5985,68
+51187,Warren,Virginia,2020-08-30,391,6
+51191,Washington,Virginia,2020-08-30,362,9
+51820,Waynesboro city,Virginia,2020-08-30,215,3
+51193,Westmoreland,Virginia,2020-08-30,223,3
+51830,Williamsburg city,Virginia,2020-08-30,154,6
+51840,Winchester city,Virginia,2020-08-30,438,4
+51195,Wise,Virginia,2020-08-30,328,5
+51197,Wythe,Virginia,2020-08-30,159,3
+51199,York,Virginia,2020-08-30,454,5
+53001,Adams,Washington,2020-08-30,625,7
+53003,Asotin,Washington,2020-08-30,52,2
+53005,Benton,Washington,2020-08-30,4323,125
+53007,Chelan,Washington,2020-08-30,1734,14
+53009,Clallam,Washington,2020-08-30,209,1
+53011,Clark,Washington,2020-08-30,2536,56
+53013,Columbia,Washington,2020-08-30,13,1
+53015,Cowlitz,Washington,2020-08-30,539,6
+53017,Douglas,Washington,2020-08-30,1153,9
+53019,Ferry,Washington,2020-08-30,25,0
+53021,Franklin,Washington,2020-08-30,4067,58
+53023,Garfield,Washington,2020-08-30,4,0
+53025,Grant,Washington,2020-08-30,2310,14
+53027,Grays Harbor,Washington,2020-08-30,236,6
+53029,Island,Washington,2020-08-30,273,15
+53031,Jefferson,Washington,2020-08-30,69,0
+53033,King,Washington,2020-08-30,19573,742
+53035,Kitsap,Washington,2020-08-30,989,10
+53037,Kittitas,Washington,2020-08-30,451,21
+53039,Klickitat,Washington,2020-08-30,175,3
+53041,Lewis,Washington,2020-08-30,338,4
+53043,Lincoln,Washington,2020-08-30,31,1
+53045,Mason,Washington,2020-08-30,313,1
+53047,Okanogan,Washington,2020-08-30,996,9
+53049,Pacific,Washington,2020-08-30,60,3
+53051,Pend Oreille,Washington,2020-08-30,53,0
+53053,Pierce,Washington,2020-08-30,7468,179
+53055,San Juan,Washington,2020-08-30,30,0
+53057,Skagit,Washington,2020-08-30,1018,24
+53059,Skamania,Washington,2020-08-30,58,1
+53061,Snohomish,Washington,2020-08-30,7005,220
+53063,Spokane,Washington,2020-08-30,5293,134
+53065,Stevens,Washington,2020-08-30,125,1
+53067,Thurston,Washington,2020-08-30,993,14
+NA,Unknown,Washington,2020-08-30,2,2
+53069,Wahkiakum,Washington,2020-08-30,6,0
+53071,Walla Walla,Washington,2020-08-30,758,7
+53073,Whatcom,Washington,2020-08-30,1098,50
+53075,Whitman,Washington,2020-08-30,472,1
+53077,Yakima,Washington,2020-08-30,11650,252
+54001,Barbour,West Virginia,2020-08-30,33,1
+54003,Berkeley,West Virginia,2020-08-30,798,11
+54005,Boone,West Virginia,2020-08-30,139,0
+54007,Braxton,West Virginia,2020-08-30,9,0
+54009,Brooke,West Virginia,2020-08-30,88,2
+54011,Cabell,West Virginia,2020-08-30,530,8
+54013,Calhoun,West Virginia,2020-08-30,9,0
+54015,Clay,West Virginia,2020-08-30,26,2
+54017,Doddridge,West Virginia,2020-08-30,6,0
+54019,Fayette,West Virginia,2020-08-30,268,9
+54021,Gilmer,West Virginia,2020-08-30,18,0
+54023,Grant,West Virginia,2020-08-30,139,6
+54025,Greenbrier,West Virginia,2020-08-30,106,3
+54027,Hampshire,West Virginia,2020-08-30,92,1
+54029,Hancock,West Virginia,2020-08-30,122,0
+54031,Hardy,West Virginia,2020-08-30,73,0
+54033,Harrison,West Virginia,2020-08-30,265,1
+54035,Jackson,West Virginia,2020-08-30,201,19
+54037,Jefferson,West Virginia,2020-08-30,355,4
+54039,Kanawha,West Virginia,2020-08-30,1393,31
+54041,Lewis,West Virginia,2020-08-30,32,2
+54043,Lincoln,West Virginia,2020-08-30,115,1
+54045,Logan,West Virginia,2020-08-30,479,27
+54049,Marion,West Virginia,2020-08-30,217,2
+54051,Marshall,West Virginia,2020-08-30,133,1
+54053,Mason,West Virginia,2020-08-30,102,1
+54047,McDowell,West Virginia,2020-08-30,70,0
+54055,Mercer,West Virginia,2020-08-30,297,23
+54057,Mineral,West Virginia,2020-08-30,144,4
+54059,Mingo,West Virginia,2020-08-30,236,5
+54061,Monongalia,West Virginia,2020-08-30,1113,5
+54063,Monroe,West Virginia,2020-08-30,117,4
+54065,Morgan,West Virginia,2020-08-30,37,0
+54067,Nicholas,West Virginia,2020-08-30,52,2
+54069,Ohio,West Virginia,2020-08-30,290,5
+54071,Pendleton,West Virginia,2020-08-30,44,1
+54073,Pleasants,West Virginia,2020-08-30,15,2
+54075,Pocahontas,West Virginia,2020-08-30,42,0
+54077,Preston,West Virginia,2020-08-30,140,4
+54079,Putnam,West Virginia,2020-08-30,278,0
+54081,Raleigh,West Virginia,2020-08-30,356,3
+54083,Randolph,West Virginia,2020-08-30,223,0
+54085,Ritchie,West Virginia,2020-08-30,5,0
+54087,Roane,West Virginia,2020-08-30,29,1
+54089,Summers,West Virginia,2020-08-30,19,0
+54091,Taylor,West Virginia,2020-08-30,105,4
+54093,Tucker,West Virginia,2020-08-30,11,0
+54095,Tyler,West Virginia,2020-08-30,15,0
+54097,Upshur,West Virginia,2020-08-30,43,0
+54099,Wayne,West Virginia,2020-08-30,248,10
+54101,Webster,West Virginia,2020-08-30,7,0
+54103,Wetzel,West Virginia,2020-08-30,46,0
+54105,Wirt,West Virginia,2020-08-30,9,0
+54107,Wood,West Virginia,2020-08-30,305,5
+54109,Wyoming,West Virginia,2020-08-30,66,3
+55001,Adams,Wisconsin,2020-08-30,110,3
+55003,Ashland,Wisconsin,2020-08-30,34,1
+55005,Barron,Wisconsin,2020-08-30,370,3
+55007,Bayfield,Wisconsin,2020-08-30,45,1
+55009,Brown,Wisconsin,2020-08-30,5370,58
+55011,Buffalo,Wisconsin,2020-08-30,64,2
+55013,Burnett,Wisconsin,2020-08-30,40,2
+55015,Calumet,Wisconsin,2020-08-30,500,2
+55017,Chippewa,Wisconsin,2020-08-30,345,0
+55019,Clark,Wisconsin,2020-08-30,240,8
+55021,Columbia,Wisconsin,2020-08-30,351,2
+55023,Crawford,Wisconsin,2020-08-30,102,0
+55025,Dane,Wisconsin,2020-08-30,5427,40
+55027,Dodge,Wisconsin,2020-08-30,1133,5
+55029,Door,Wisconsin,2020-08-30,128,3
+55031,Douglas,Wisconsin,2020-08-30,249,0
+55033,Dunn,Wisconsin,2020-08-30,176,0
+55035,Eau Claire,Wisconsin,2020-08-30,801,6
+55037,Florence,Wisconsin,2020-08-30,25,0
+55039,Fond du Lac,Wisconsin,2020-08-30,1093,10
+55041,Forest,Wisconsin,2020-08-30,77,4
+55043,Grant,Wisconsin,2020-08-30,435,17
+55045,Green,Wisconsin,2020-08-30,268,1
+55047,Green Lake,Wisconsin,2020-08-30,91,0
+55049,Iowa,Wisconsin,2020-08-30,120,0
+55051,Iron,Wisconsin,2020-08-30,122,1
+55053,Jackson,Wisconsin,2020-08-30,76,1
+55055,Jefferson,Wisconsin,2020-08-30,900,6
+55057,Juneau,Wisconsin,2020-08-30,197,1
+55059,Kenosha,Wisconsin,2020-08-30,2961,63
+55061,Kewaunee,Wisconsin,2020-08-30,171,2
+55063,La Crosse,Wisconsin,2020-08-30,1177,1
+55065,Lafayette,Wisconsin,2020-08-30,185,0
+55067,Langlade,Wisconsin,2020-08-30,83,2
+55069,Lincoln,Wisconsin,2020-08-30,82,1
+55071,Manitowoc,Wisconsin,2020-08-30,517,2
+55073,Marathon,Wisconsin,2020-08-30,773,13
+55075,Marinette,Wisconsin,2020-08-30,610,6
+55077,Marquette,Wisconsin,2020-08-30,89,1
+55078,Menominee,Wisconsin,2020-08-30,29,0
+55079,Milwaukee,Wisconsin,2020-08-30,24040,489
+55081,Monroe,Wisconsin,2020-08-30,281,2
+55083,Oconto,Wisconsin,2020-08-30,424,2
+55085,Oneida,Wisconsin,2020-08-30,210,0
+55087,Outagamie,Wisconsin,2020-08-30,1845,20
+55089,Ozaukee,Wisconsin,2020-08-30,915,19
+55091,Pepin,Wisconsin,2020-08-30,46,0
+55093,Pierce,Wisconsin,2020-08-30,291,5
+55095,Polk,Wisconsin,2020-08-30,171,2
+55097,Portage,Wisconsin,2020-08-30,596,1
+55099,Price,Wisconsin,2020-08-30,36,0
+55101,Racine,Wisconsin,2020-08-30,4429,89
+55103,Richland,Wisconsin,2020-08-30,49,4
+55105,Rock,Wisconsin,2020-08-30,1818,26
+55107,Rusk,Wisconsin,2020-08-30,24,1
+55111,Sauk,Wisconsin,2020-08-30,644,3
+55113,Sawyer,Wisconsin,2020-08-30,159,0
+55115,Shawano,Wisconsin,2020-08-30,268,0
+55117,Sheboygan,Wisconsin,2020-08-30,1032,9
+55109,St. Croix,Wisconsin,2020-08-30,640,7
+55119,Taylor,Wisconsin,2020-08-30,103,3
+55121,Trempealeau,Wisconsin,2020-08-30,411,2
+NA,Unknown,Wisconsin,2020-08-30,4381,8
+55123,Vernon,Wisconsin,2020-08-30,98,0
+55125,Vilas,Wisconsin,2020-08-30,104,0
+55127,Walworth,Wisconsin,2020-08-30,1695,27
+55129,Washburn,Wisconsin,2020-08-30,64,0
+55131,Washington,Wisconsin,2020-08-30,1622,29
+55133,Waukesha,Wisconsin,2020-08-30,5565,74
+55135,Waupaca,Wisconsin,2020-08-30,662,17
+55137,Waushara,Wisconsin,2020-08-30,154,2
+55139,Winnebago,Wisconsin,2020-08-30,1512,21
+55141,Wood,Wisconsin,2020-08-30,456,2
+56001,Albany,Wyoming,2020-08-30,134,0
+56003,Big Horn,Wyoming,2020-08-30,42,1
+56005,Campbell,Wyoming,2020-08-30,189,1
+56007,Carbon,Wyoming,2020-08-30,190,2
+56009,Converse,Wyoming,2020-08-30,43,0
+56011,Crook,Wyoming,2020-08-30,14,0
+56013,Fremont,Wyoming,2020-08-30,604,13
+56015,Goshen,Wyoming,2020-08-30,60,1
+56017,Hot Springs,Wyoming,2020-08-30,30,0
+56019,Johnson,Wyoming,2020-08-30,27,1
+56021,Laramie,Wyoming,2020-08-30,568,4
+56023,Lincoln,Wyoming,2020-08-30,112,0
+56025,Natrona,Wyoming,2020-08-30,291,1
+56027,Niobrara,Wyoming,2020-08-30,3,0
+56029,Park,Wyoming,2020-08-30,160,0
+56031,Platte,Wyoming,2020-08-30,7,1
+56033,Sheridan,Wyoming,2020-08-30,148,1
+56035,Sublette,Wyoming,2020-08-30,48,1
+56037,Sweetwater,Wyoming,2020-08-30,301,2
+56039,Teton,Wyoming,2020-08-30,429,1
+56041,Uinta,Wyoming,2020-08-30,295,2
+56043,Washakie,Wyoming,2020-08-30,107,5
+56045,Weston,Wyoming,2020-08-30,18,0
