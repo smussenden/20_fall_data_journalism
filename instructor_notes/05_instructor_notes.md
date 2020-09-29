@@ -1,5 +1,7 @@
 
 
+
+
 Ida wells, how she used grouping and summarization.
 Review of data acquisition projects -- breakout rooms.
 Questions on data reporting projects.  
@@ -45,17 +47,16 @@ Sara
 
 
 
-# Session 04 Instructor Notes
+# Session 05 Instructor Notes
 
 ## To Have Up on Desktop
 
-1. Session 03 Instructor Notes -
+1. Session 05 Instructor Notes -
 2. Webpage of roster pictures on UMEG -
 3. Roster sheet with presence - https://docs.google.com/spreadsheets/d/1HKt0Dr6YajcRXLu-0IpWRWBMb4C9J-detlI0TE45jh8/edit#gid=1136077922
 3. Course Canvas Page - https://umd.instructure.com/courses/1288268/modules
-4. Slides - NO SLIDES TODAY
+4. Slides - https://docs.google.com/presentation/d/18-LMiujZ67s6_duLvo9CJ7iKL4HOspo9G6kHmoRz2GY/edit#slide=id.g94540b6654_0_0
 8. GitHub Desktop
-9. R Studio with lab_03 in my file to show exercises
 11. Email to check at regular intervals at beginning.
 12. Phone to check for "can't get in texts"
 
@@ -64,81 +65,35 @@ Sara
 [START RECORDING]
 * I'm recording.
 * Reminders to mute your microphone.  
-* And unless you've sent me a note explaining that you don't want to keep your video on during class, I'3 ask that you turn it on now.  I won't force you to do it, just a reminder that it helps me teach.  
+* And unless you've sent me a note explaining that you don't want to keep your video on during class, I'd ask that you turn it on now.  I won't force you to do it, just a reminder that it helps me teach.  
 * And also a reminder to keep the chat up, cause I'll be asking you questions.
 
 # SLIDES
-https://docs.google.com/presentation/d/1FuLFjQdTSjPVu6B8d15nMrjr-EtNDZkmlQnhxY06bvw/edit#slide=id.g94540b6654_0_0
+https://docs.google.com/presentation/d/18-LMiujZ67s6_duLvo9CJ7iKL4HOspo9G6kHmoRz2GY/edit#slide=id.g94540b6654_0_0
 * Do you need help?
 * Review of what we're doing
 
-# Review of answers to previous lab.
- * Call on people who got it right to answer question
- * Q1: Sara, Kellina, Hana, Rona, Sasha, Susannah, Jummy
- * Q2: Rayonna, Jack, Hana, Rona, Sasha, Jummy
- * Q3: A lot of variations on other questions, which looked great.
-      * Call on Spencer.  He created change and percent change in the same block! Double mutate.
-      * Call on Kara to show what she tried to do, filtering by 23%
-      * Call on Audrey to show str_detect()
- * Issues:
-  * precision: questions asking specific things.  Accuracy matters.  If you get the wrong answer, and someone calls you on it, that's a correction!
-  * confusing percent change with change
-  * A lot of you are still sorting from lowest to highest by using desc()
-  * In some of your code, it's clear to me you're not running before you submit (or getting an error and not fixing). A common one I'm seeing is misspelled column names.
-# WHat are people hearing from data acquisition assignment and what's due.
-  * Problems people are running into
-# Reading based discussion, on data points from the climate story.
-  #### **Clues to data driven sentences**
-  * Comparison: something was the highest or lowest, or higher and lower than something else. "McElderry Park, which despite its lyrical name offers little green space, is one of these: the hottest neighborhood in Baltimore, a city whose climate has long been classified as humid subtropical."
-  * Change: something went up or down. "Average annual temperatures in Baltimore have gone up more than 3 degrees over the last century, nearly twice as much as the rest of the country.”
-  * Measure of central tendency: the average of something or median or something.  "Average annual temperatures in Baltimore have gone up more than 3 degrees over the last century, nearly twice as much as the rest of the country.”
-  * Relationship: In a place or at a time where one feature of that place is high, another feature is also high (or low).  I.E. we haven't established causality, but it's true that places that are hotter have higher crime rates.  
-  ### **Number 1**
-  * "McElderry Park, which despite its lyrical name offers little green space, is one of these: the hottest neighborhood in Baltimore, a city whose climate has long been classified as humid subtropical."
-  * Explanation: "Using the mean afternoon temperature in the urban heat island study, McElderry Park was the city’s hottest neighborhood, with a mean afternoon temperature of 99.4 degrees F."
-  * The code:
-    * Show in the MD Document what we did
-    * Selecting
-    * Sorting
-    * NOTE: before we got to this point, we did some cleaning! The code to get the data into a format where we could write a fairly simple function was more complicated.     
-  * Discussion points:
-    * The data led us to a specific point for a story.  
-    * But it also led us to CENTER our reporting in McElderry Park.
-    * In many ways, even when we quote people from the story from McElderry Park, or show a photo in McElderry Park, those were all decisions that eminated from data analysis.
-    * Note the writing here.  General, backed up by specifics in the markdown document.
-  #### **Number 2**
-  * Sentence 1: “The heat index on the first floor of Tammy Jackson’s McElderry Park home registered 93 degrees, 9 degrees hotter than it was outside, at 10 p.m. Sunday, July 21”  
-  * Explanation: Tammy Jackson, a resident of Baltimore’s McElderry Park neighborhood, had a temperature and humidity sensor installed in her house by our reporters. In her home, at 10 p.m. on Sunday, July 21, the heat index was 93 degrees F, 9 degrees hotter than the outside heat index of 84 degrees.
-  * The code:
-    * Show in the MD Document what we did
-    * Took the processed data: https://github.com/Howard-Center-Investigations/code-red-baltimore-climate-divide/blob/master/data/output-data/temperature_sensors/tammy/tammy_day_hourly_averages.csv
-      * Had indoor and outdoor heat index values.  
-      * Filter and Selected
-      * The code to get the data into a format where we could write a fairly simple function was more complicated.  
-    * Discussion Points:
-      * Used this data to flesh out the experience of one character
-      * Also used it to establish a pattern: that it was often hotter inside than outside, especially at night. As we'll see in next one.
-      * This data didn't exist, so we had to make it. A form of journalism called "sensor journalism". Show video on temperature sensors https://cnsmaryland.org/interactives/summer-2019/code-red/behind-scenes.html
-  #### **Number 3**
-  * Sentence 2: “The heat index was consistently higher inside Pingley’s home than it was outside.”
-  Sentence 2: "A sensor inside a bedroom showed that the heat index during the heat wave was consistently higher inside than outside Pingley’s house."
-  * Explanation: Between July 16 and July 23, the heat index inside of Pingley’s house was higher than the outside for more hours (108) than hours when the opposite was true (60).
-  * The Code:
-    * Show in the MD Document what we did
-    * Took in the processed data: https://github.com/Howard-Center-Investigations/code-red-baltimore-climate-divide/blob/master/data/output-data/temperature_sensors/stephanie/stephanie_day_hourly_averages.csv
-    * Filtered for just what we defined as heat wave (July 16 to July 23)
-    * Created a new column in our data that had one of two values -- either it was hotter inside than outside.  
-    * Then we grouped and summarized, which is process we will learn today and in this week's lab.
+# Ida Wells
+Run through slides, including student response to data.
+Show them one way she did it.
 
-# What's due this week
-* Upcoming reading Ida B Wells - pioneering investigative journalist - in the reading she groups and summarizes. We'll talk more about her next week.
-* In class assignment
-* Lab this week
-* Data acquistion memo due this week
-* You should be reaching out to your groups for data analysis assignment
+# Data acusition project.
+
+* I'm in the middle of grading the first response.  
+* In general, I was looking for a good deal of persistence on your part to get someone to respond.  If you started calling late, and only made a few calls, I was looking for more effort.  
+* Persistince is key in this process.
+* We're now at the point where we're going to send letters, if it's required. And we'll be going over next week what template to use.
+* Some of you indicated you may be wanting to make some more calls before sending letter to get data, and I would STRONGLY encourage that.   
+
+# Data analysis project
+* What's due this week
+* Be sure reached out to group.
+* One response you work on together, but EVERYONE on your team submits.
+* Questions
 
 # In class ASSIGNMENT
 * Show grouping and summarizing.
+* We're taking a nother run at thsi, because I think last weeks' intro was overly complicated, too many other factors, and I want to make sure everyone gets this before we proceed. 
 
 
 
