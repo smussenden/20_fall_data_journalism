@@ -89,7 +89,6 @@ Alaska,Petersburg Borough,02195,11,0
 Alaska,Prince of Wales-Hyder Census Area,02198,25,0
 Alaska,Sitka City and Borough,02220,51,0
 Alaska,Southeast Fairbanks Census Area,02240,32,0
-Alaska,Unknown,NA,59,0
 Alaska,Valdez-Cordova Census Area,02261,121,0
 Alaska,Wrangell City and Borough,02275,17,0
 Alaska,Yukon-Koyukuk Census Area,02290,73,1
@@ -178,7 +177,6 @@ Arkansas,Sharp,05135,147,5
 Arkansas,St. Francis,05123,1344,4
 Arkansas,Stone,05137,194,2
 Arkansas,Union,05139,690,19
-Arkansas,Unknown,NA,904,0
 Arkansas,Van Buren,05141,118,2
 Arkansas,Washington,05143,6883,61
 Arkansas,White,05145,524,11
@@ -312,12 +310,10 @@ Connecticut,Middlesex,09007,1446,192
 Connecticut,New Haven,09009,13622,1109
 Connecticut,New London,09011,1554,106
 Connecticut,Tolland,09013,1126,65
-Connecticut,Unknown,NA,104,0
 Connecticut,Windham,09015,789,15
 Delaware,Kent,10001,2608,109
 Delaware,New Castle,10003,8139,300
 Delaware,Sussex,10005,6317,195
-Delaware,Unknown,NA,279,0
 District of Columbia,District of Columbia,11001,13959,606
 Florida,Alachua,12001,5193,33
 Florida,Baker,12003,1151,5
@@ -382,7 +378,6 @@ Florida,Sumter,12119,1848,50
 Florida,Suwannee,12121,2431,60
 Florida,Taylor,12123,1199,5
 Florida,Union,12125,592,5
-Florida,Unknown,NA,998,0
 Florida,Volusia,12127,9244,189
 Florida,Wakulla,12129,886,7
 Florida,Walton,12131,1636,20
@@ -531,7 +526,6 @@ Georgia,Troup,13285,2588,84
 Georgia,Turner,13287,277,19
 Georgia,Twiggs,13289,165,7
 Georgia,Union,13291,474,10
-Georgia,Unknown,NA,2598,4
 Georgia,Upson,13293,659,55
 Georgia,Walker,13295,1025,21
 Georgia,Walton,13297,1458,47
@@ -686,7 +680,6 @@ Illinois,Stark,17175,22,0
 Illinois,Stephenson,17177,378,6
 Illinois,Tazewell,17179,1068,9
 Illinois,Union,17181,424,24
-Illinois,Unknown,NA,1645,207
 Illinois,Vermilion,17183,329,3
 Illinois,Wabash,17185,106,1
 Illinois,Warren,17187,255,1
@@ -878,7 +871,6 @@ Iowa,Story,19169,2362,16
 Iowa,Tama,19171,622,29
 Iowa,Taylor,19173,113,1
 Iowa,Union,19175,93,3
-Iowa,Unknown,NA,19,0
 Iowa,Van Buren,19177,101,1
 Iowa,Wapello,19179,1082,49
 Iowa,Warren,19181,775,5
@@ -1171,7 +1163,6 @@ Louisiana,Tangipahoa,22105,4030,97
 Louisiana,Tensas,22107,147,1
 Louisiana,Terrebonne,22109,3333,98
 Louisiana,Union,22111,823,39
-Louisiana,Unknown,NA,351,163
 Louisiana,Vermilion,22113,1861,44
 Louisiana,Vernon,22115,956,39
 Louisiana,Washington,22117,1460,60
@@ -1193,7 +1184,6 @@ Maine,Penobscot,23019,229,6
 Maine,Piscataquis,23021,8,0
 Maine,Sagadahoc,23023,60,0
 Maine,Somerset,23025,51,1
-Maine,Unknown,NA,1,0
 Maine,Waldo,23027,69,14
 Maine,Washington,23029,15,0
 Maine,York,23031,830,15
@@ -1218,7 +1208,6 @@ Maryland,Queen Anne's,24035,544,26
 Maryland,Somerset,24039,192,4
 Maryland,St. Mary's,24037,1108,55
 Maryland,Talbot,24041,472,4
-Maryland,Unknown,NA,0,8
 Maryland,Washington,24043,1308,33
 Maryland,Wicomico,24045,1547,47
 Maryland,Worcester,24047,801,24
@@ -1235,7 +1224,6 @@ Massachusetts,Nantucket,25019,44,1
 Massachusetts,Norfolk,25021,11006,1017
 Massachusetts,Plymouth,25023,9612,741
 Massachusetts,Suffolk,25025,23403,1107
-Massachusetts,Unknown,NA,1580,5
 Massachusetts,Worcester,25027,14154,1055
 Michigan,Alcona,26001,33,2
 Michigan,Alger,26003,17,0
@@ -1316,7 +1304,6 @@ Michigan,Shiawassee,26155,419,29
 Michigan,St. Clair,26147,922,53
 Michigan,St. Joseph,26149,680,11
 Michigan,Tuscola,26157,451,29
-Michigan,Unknown,NA,433,5
 Michigan,Van Buren,26159,624,16
 Michigan,Washtenaw,26161,3381,124
 Michigan,Wayne,26163,31178,2883
@@ -1399,7 +1386,6 @@ Minnesota,Stevens,27149,45,0
 Minnesota,Swift,27151,63,1
 Minnesota,Todd,27153,449,2
 Minnesota,Traverse,27155,21,0
-Minnesota,Unknown,NA,203,49
 Minnesota,Wabasha,27157,122,0
 Minnesota,Wadena,27159,49,0
 Minnesota,Waseca,27161,258,2
@@ -1746,7 +1732,6 @@ Nebraska,Stanton,31167,33,0
 Nebraska,Thayer,31169,27,0
 Nebraska,Thomas,31171,3,0
 Nebraska,Thurston,31173,221,4
-Nebraska,Unknown,NA,110,0
 Nebraska,Valley,31175,18,0
 Nebraska,Washington,31177,175,1
 Nebraska,Wayne,31179,52,0
@@ -1779,7 +1764,6 @@ New Hampshire,Merrimack,33013,500,23
 New Hampshire,Rockingham,33015,1805,100
 New Hampshire,Strafford,33017,383,13
 New Hampshire,Sullivan,33019,47,1
-New Hampshire,Unknown,NA,3,0
 New Jersey,Atlantic,34001,3750,251
 New Jersey,Bergen,34003,21799,2032
 New Jersey,Burlington,34005,6421,481
@@ -1800,7 +1784,6 @@ New Jersey,Salem,34033,986,89
 New Jersey,Somerset,34035,5474,567
 New Jersey,Sussex,34037,1430,197
 New Jersey,Union,34039,17243,1350
-New Jersey,Unknown,NA,364,0
 New Jersey,Warren,34041,1405,171
 New Mexico,Bernalillo,35001,5795,155
 New Mexico,Catron,35003,5,1
@@ -1833,7 +1816,6 @@ New Mexico,Socorro,35053,77,6
 New Mexico,Taos,35055,115,2
 New Mexico,Torrance,35057,107,1
 New Mexico,Union,35059,32,2
-New Mexico,Unknown,NA,1,0
 New Mexico,Valencia,35061,539,4
 New York,Albany,36001,2764,122
 New York,Allegany,36003,89,2
@@ -2042,7 +2024,6 @@ North Dakota,Steele,38091,18,0
 North Dakota,Stutsman,38093,207,3
 North Dakota,Towner,38095,7,0
 North Dakota,Traill,38097,68,0
-North Dakota,Unknown,NA,4,4
 North Dakota,Walsh,38099,141,1
 North Dakota,Ward,38101,502,1
 North Dakota,Wells,38103,28,0
@@ -2207,7 +2188,6 @@ Oklahoma,Stephens,40137,251,4
 Oklahoma,Texas,40139,1144,7
 Oklahoma,Tillman,40141,68,1
 Oklahoma,Tulsa,40143,13175,132
-Oklahoma,Unknown,NA,4,0
 Oklahoma,Wagoner,40145,1137,23
 Oklahoma,Washington,40147,790,39
 Oklahoma,Washita,40149,43,0
@@ -2319,7 +2299,6 @@ Rhode Island,Bristol,44001,349,16
 Rhode Island,Kent,44003,1664,103
 Rhode Island,Newport,44005,434,6
 Rhode Island,Providence,44007,16668,836
-Rhode Island,Unknown,NA,1874,19
 Rhode Island,Washington,44009,694,66
 South Carolina,Abbeville,45001,415,10
 South Carolina,Aiken,45003,2354,63
@@ -2520,7 +2499,6 @@ Tennessee,Tipton,47167,1455,15
 Tennessee,Trousdale,47169,1618,6
 Tennessee,Unicoi,47171,221,1
 Tennessee,Union,47173,222,1
-Tennessee,Unknown,NA,102,5
 Tennessee,Van Buren,47175,71,0
 Tennessee,Warren,47177,851,7
 Tennessee,Washington,47179,1718,13
@@ -2803,7 +2781,6 @@ Utah,Sevier,49041,90,1
 Utah,Summit,49043,841,1
 Utah,Tooele,49045,689,0
 Utah,Uintah,49047,96,0
-Utah,Unknown,NA,32,1
 Utah,Utah,49049,10947,46
 Utah,Wasatch,49051,633,7
 Utah,Washington,49053,2786,22
@@ -2820,7 +2797,6 @@ Vermont,Lamoille,50015,45,1
 Vermont,Orange,50017,20,0
 Vermont,Orleans,50019,15,0
 Vermont,Rutland,50021,117,1
-Vermont,Unknown,NA,8,0
 Vermont,Washington,50023,62,2
 Vermont,Windham,50025,123,3
 Vermont,Windsor,50027,79,2
@@ -2991,7 +2967,6 @@ Washington,Snohomish,53061,7005,220
 Washington,Spokane,53063,5293,134
 Washington,Stevens,53065,125,1
 Washington,Thurston,53067,993,14
-Washington,Unknown,NA,2,2
 Washington,Wahkiakum,53069,6,0
 Washington,Walla Walla,53071,758,7
 Washington,Whatcom,53073,1098,50
@@ -3114,7 +3089,6 @@ Wisconsin,Sheboygan,55117,1032,9
 Wisconsin,St. Croix,55109,640,7
 Wisconsin,Taylor,55119,103,3
 Wisconsin,Trempealeau,55121,411,2
-Wisconsin,Unknown,NA,4381,8
 Wisconsin,Vernon,55123,98,0
 Wisconsin,Vilas,55125,104,0
 Wisconsin,Walworth,55127,1695,27

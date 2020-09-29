@@ -1,5 +1,5 @@
 ---
-title: "JOUR472/772 in_class_05 | heat analysis, grouping and summarizing"
+title: "JOUR472/772 in_class_05 | covid analysis, grouping and summarizing"
 author: "Sean Mussenden"
 date: "9/28/2020"
 output: 
@@ -19,6 +19,7 @@ This notebook is designed as an in-class introduction to concepts we'll delve de
 
 * grouping data by one or more features
 * calculating summary statistics, including counting, averages, min and max
+* In short, we are taking raw data and "aggregating it".
 
 ## Install packages
 
@@ -32,7 +33,7 @@ Today, we're going to load one packages:
 
 * The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
 
-**Task (Write and Run Code)**: write the necessary code below to load the tidyverse and lubridate, using the library() function.
+**Task (Run Code)**: write the necessary code below to load the tidyverse, using the library() function.
 
 ```{r}
 # Load the tidyverse
@@ -49,6 +50,8 @@ From the New York Times COVID-19 tracking project GitHub, dataset has cumulative
 * cases | numeric | number of cumulative confirmed COVID-19 cases on 2020-08-30
 * deaths | numeric | number of cumulative confirmed COVID-19 cases on 2020-08-30
 
+**Task (Run Code)**: run the necessary code below to load the data we'll be using today.
+
 ```{r}
 
 # Read in the data.
@@ -56,20 +59,24 @@ covid_county <- read_csv("data/covid_county_2020_08_30.csv")
 
 ```
 
-Today, we're going to **tranform** the raw data, with one record per county, through a process called grouping and summarizing, and use it to answer some questions about what's happening at the state level.  
+Today, we're going to **tranform** the raw data -- which has one record per county -- through a process called grouping and summarizing, and use it to answer some questions about what's happening at the state level.  
 
 Here's a peek at where we're headed.  
 
-Read in the data below, which I produced ahead of time by grouping and summarizing the raw data. 
+Read in the data below, which I produced ahead of time by grouping and summarizing the raw data.   
+
+**Task (Run Code)**: run the necessary code below to load the data.
 
 ```{r}
 # Read in the data 
 covid_state <- read_csv("data/covid_state_2020_08_30.csv")
 ```
 
-There's one record per state. The values in the "total_cases" column were produced by adding up all of the values in "cases" for each county.  The values in the "total_deaths" column were produced by adding up all of the values in "deaths" for each county.
+There's one record per state. The values in the "total_cases" column were produced by adding up all of the values in "cases" for each county.  
 
-I'll review this on Zoom, using Delaware as an example. 
+The values in the "total_deaths" column were produced by adding up all of the values in "deaths" for each county.
+
+I'll review this, using Delaware as an example. 
 
 For now, we're going to remove covid_state from our environment, using a new function rm(). 
 
@@ -80,19 +87,20 @@ rm(covid_state)
 
 ## Grouping and Summarizing
 
-Today, we'll be asking a series of questions about COVID-19 cases and deaths at the level of states.  
+Today, we'll be asking a series of questions about COVID-19 cases and deaths at the state level.  
 
 But, as we saw, our raw data is stored at the level of counties.      
 
-To answer questions about states, we need to do the following to our raw:
+To answer questions about states, we need to do the following to our raw data:
 
-* Group all of the rows that represent a single state together.
-* Calculate some summary statistic (count, average, min, max) from the values in either cases or deaths. 
+* Group all of the rows that represent a single state together using group_by().  
+* Calculate some summary statistic (count, average, min, max) from the values in either cases or deaths using summarise().  
 
 For those of you who have worked in Excel or Google Sheets and created a "pivot table", this is the same process. 
 
-And it's an important one, because this process allows us to work with data in it's more original form.  We don't have to rely on others to do the summarization for us! 
+And it's an important one, because this process allows us to work with data in it's more original form.  
 
+We don't have to rely on others to do the summarization for us! 
 
 ## Grouping and Summarizing | Adding
 
@@ -100,19 +108,21 @@ Let's answer some questions!
 
 Q: Which state had the fewest total covid cases on August 30?
 
-**Task (Run Code)**: Run the codeblock below and examine the answer.  
+I'll explain by showing you what happens with Delaware. I'll also show you that it doesn't matter what we name the columns we create inside of summarise. 
+
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.   
 
 ```{r}
 
 # Group by state, add up all cases for each state, sort from lowest to highest
-# I'll review what's happening here.
+# I'll review what's happening here. 
 least_covid_cases_state <- covid_county %>%
   group_by(state) %>%
   summarise(total_cases = sum(cases)) %>%
   arrange(total_cases)
 
 # Display below
-most_covid_cases_state
+least_covid_cases_state
 
 # Write the answer in a comment
 # Q: Which state had the fewest total covid cases on August 30? How many cases?
@@ -121,12 +131,12 @@ most_covid_cases_state
 
 Q: Which state had the fewest total covid cases on August 30?
 
-**Task (Run Code)**: Run the codeblock below and examine the answer.  
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.   
 
 ```{r}
 
 # Group by state, add up all cases for each state, sort from highest to lowest
-# I'll review what's happening here.
+# I'll review what's happening here. The only difference from above is the sort order. 
 most_covid_cases_state <- covid_county %>%
   group_by(state) %>%
   summarise(total_cases = sum(cases)) %>%
@@ -142,16 +152,18 @@ most_covid_cases_state
 
 ## Grouping and Summarizing | Calculating averages
 
-Let's calculate the average number of cases in each county in each state, and answer this question:
+To answer this next question, we're going to calculate the average number of cases per county for each state.  To answer that, we use the mean() function inside of our summarise() function. Here's the question.
 
-Q: Which state had the highest average number of cases in a county?
+Q: Which state had the highest average number of cases per county? 
 
-To answer that, we use the mean() function.
+I'll explain by showing you what happens with Delaware. 
+
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.   
 
 ```{r}
 
 # Group by state, take the average, sort from highest to lowest
-# I'll review what's happening here. Show delaware
+# I'll review what's happening here. 
 averages_county_cases_by_state <- covid_county %>%
   group_by(state) %>%
   summarise(average_county_cases = mean(cases)) %>%
@@ -167,13 +179,21 @@ averages_county_cases_by_state
 
 ## Grouping and Summarizing | Counting
 
-Not a super important question, but it helps us understand something about our data.  
+This next question is not a super important question, but it helps us understand something about our data.  And it shows us how to count the number of rows. The question:  
 
 Q: Which state has the most counties in our data? How many? 
 
-This time, inside of our summarize statement, instead of sum(), we have a new function, n(). sum() adds values in a specific column.  n() counts values in a specific row. 
+This time, inside of our summarize statement, instead of sum(), we have a new function, n(). 
 
-**Task (Run Code)**: Run the codeblock below and examine the answer.
+sum() adds values in a specific column.  
+
+n() counts the number of rows. 
+
+Because our data has one record per county, using n() counts the number of counties. 
+
+I'll explain by showing you what happens with Delaware. 
+
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom. 
 
 ```{r}
 
@@ -194,11 +214,15 @@ most_counties_state
 
 ## Grouping and Summarizing | Calculating Min and Max
 
-We can also calculate the smallest and largest number of cases, using two new functions min() and max(). In showing you this, I'll also show you how you can create more than one summarize column at a time. 
+We can also calculate the smallest and largest number of cases, using two new functions min() and max(). In showing you this, I'll also show you how we can create more than one new column summarizing data at a time. 
 
-Q: Which state had the single county with the largest case count?  
+Here's the question:
 
-**Task (Run Code)**: Run the codeblock below and examine the answer.
+Q: Which state had the single county with the largest case count? What was that case count? 
+
+I'll show you what's happening with Delaware to explain how min and max work.
+
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom. 
 
 ```{r}
 
@@ -223,13 +247,20 @@ min_max_state
 
 ## Breakout Room Exercise
 
-Okay, now it's your turn to examine Michael's house and answer some questions.  
+Okay, now it's your turn to work together in small groups to answer some questions about COVID-19 deaths in states by transforming our raw county data.   
 
-You can create one codeblock, or create multiple codeblocks. 
+You can create one codeblock to answer the question, or you can create multiple codeblocks. You can create multiple summarise columns at once -- as we did with min() and max() above -- or you can stick with doing one at a time. 
 
-* Q: Which state had the highest number of deaths? Which state had the lowest?
-* Q: Which state had the county with the lowest number of total deaths? What was that number?
+Here are the questions.  
+
+It's okay if you don't get through all of them, just get through as many as you can.  
+
+* Q: Which state had the highest total number of deaths? 
+* Q: Which state had the lowest total number of deaths?
 * Q: Which state had the highest average number of deaths per county? What was that number? 
+* Q: Which state had the lowest average number of deaths per county? What was that number? 
+
+If you finish all of those, create your own questions and answer them! 
 
 -30-
 
