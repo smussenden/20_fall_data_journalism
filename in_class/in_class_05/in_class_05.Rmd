@@ -2,7 +2,7 @@
 title: "JOUR472/772 in_class_05 | covid analysis, grouping and summarizing"
 author: "Sean Mussenden"
 date: "9/28/2020"
-output: 
+output:
   html_document:
     toc: true
     toc_depth: 3
@@ -13,7 +13,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## About this notebook 
+## About this notebook
 
 This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_05.  In particular, it will show:
 
@@ -23,7 +23,7 @@ This notebook is designed as an in-class introduction to concepts we'll delve de
 
 ## Install packages
 
-There are no packages to install for this lab. 
+There are no packages to install for this lab.
 
 ## Load packages
 
@@ -42,7 +42,7 @@ library(tidyverse)
 
 ## Load Data
 
-From the New York Times COVID-19 tracking project GitHub, dataset has cumulative totals of cases and deaths by county.  There is one row per county, with totals for that county. 
+From the New York Times COVID-19 tracking project GitHub, dataset has cumulative totals of cases and deaths by county.  There is one row per county, with totals for that county.
 
 * State | character | state
 * County | character | county
@@ -68,7 +68,7 @@ Read in the data below, which I produced ahead of time by grouping and summarizi
 **Task (Run Code)**: run the necessary code below to load the data.
 
 ```{r}
-# Read in the data 
+# Read in the data
 covid_state <- read_csv("data/covid_state_2020_08_30.csv")
 ```
 
@@ -76,12 +76,12 @@ There's one record per state. The values in the "total_cases" column were produc
 
 The values in the "total_deaths" column were produced by adding up all of the values in "deaths" for each county.
 
-I'll review this, using Delaware as an example. 
+I'll review this, using Delaware as an example.
 
-For now, we're going to remove covid_state from our environment, using a new function rm(). 
+For now, we're going to remove covid_state from our environment, using a new function rm().
 
 ```{r}
-# rm() removes objects from our environment. 
+# rm() removes objects from our environment.
 rm(covid_state)
 ```
 
@@ -96,26 +96,26 @@ To answer questions about states, we need to do the following to our raw data:
 * Group all of the rows that represent a single state together using group_by().  
 * Calculate some summary statistic (count, average, min, max) from the values in either cases or deaths using summarise().  
 
-For those of you who have worked in Excel or Google Sheets and created a "pivot table", this is the same process. 
+For those of you who have worked in Excel or Google Sheets and created a "pivot table", this is the same process.
 
 And it's an important one, because this process allows us to work with data in it's more original form.  
 
-We don't have to rely on others to do the summarization for us! 
+We don't have to rely on others to do the summarization for us!
 
 ## Grouping and Summarizing | Adding
 
-Let's answer some questions! 
+Let's answer some questions!
 
 Q: Which state had the fewest total covid cases on August 30?
 
-I'll explain by showing you what happens with Delaware. I'll also show you that it doesn't matter what we name the columns we create inside of summarise. 
+I'll explain by showing you what happens with Delaware. I'll also show you that it doesn't matter what we name the columns we create inside of summarise.
 
 **Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.   
 
 ```{r}
 
 # Group by state, add up all cases for each state, sort from lowest to highest
-# I'll review what's happening here. 
+# I'll review what's happening here.
 least_covid_cases_state <- covid_county %>%
   group_by(state) %>%
   summarise(total_cases = sum(cases)) %>%
@@ -126,7 +126,7 @@ least_covid_cases_state
 
 # Write the answer in a comment
 # Q: Which state had the fewest total covid cases on August 30? How many cases?
-# A: 
+# A:
 ```
 
 Q: Which state had the fewest total covid cases on August 30?
@@ -136,7 +136,7 @@ Q: Which state had the fewest total covid cases on August 30?
 ```{r}
 
 # Group by state, add up all cases for each state, sort from highest to lowest
-# I'll review what's happening here. The only difference from above is the sort order. 
+# I'll review what's happening here. The only difference from above is the sort order.
 most_covid_cases_state <- covid_county %>%
   group_by(state) %>%
   summarise(total_cases = sum(cases)) %>%
@@ -147,23 +147,23 @@ most_covid_cases_state
 
 # Write the answer in a comment
 # Q: Which state had the most total covid cases on August 30? How many cases?
-# A: 
+# A:
 ```
 
 ## Grouping and Summarizing | Calculating averages
 
 To answer this next question, we're going to calculate the average number of cases per county for each state.  To answer that, we use the mean() function inside of our summarise() function. Here's the question.
 
-Q: Which state had the highest average number of cases per county? 
+Q: Which state had the highest average number of cases per county?
 
-I'll explain by showing you what happens with Delaware. 
+I'll explain by showing you what happens with Delaware.
 
 **Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.   
 
 ```{r}
 
 # Group by state, take the average, sort from highest to lowest
-# I'll review what's happening here. 
+# I'll review what's happening here.
 averages_county_cases_by_state <- covid_county %>%
   group_by(state) %>%
   summarise(average_county_cases = mean(cases)) %>%
@@ -174,26 +174,26 @@ averages_county_cases_by_state
 
 # Write the answer in a comment
 # Q: Which state has the most counties in our data? How many?
-# A: 
+# A:
 ```
 
 ## Grouping and Summarizing | Counting
 
 This next question is not a super important question, but it helps us understand something about our data.  And it shows us how to count the number of rows. The question:  
 
-Q: Which state has the most counties in our data? How many? 
+Q: Which state has the most counties in our data? How many?
 
-This time, inside of our summarize statement, instead of sum(), we have a new function, n(). 
+This time, inside of our summarize statement, instead of sum(), we have a new function, n().
 
 sum() adds values in a specific column.  
 
-n() counts the number of rows. 
+n() counts the number of rows.
 
-Because our data has one record per county, using n() counts the number of counties. 
+Because our data has one record per county, using n() counts the number of counties.
 
-I'll explain by showing you what happens with Delaware. 
+I'll explain by showing you what happens with Delaware.
 
-**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom. 
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.
 
 ```{r}
 
@@ -209,20 +209,20 @@ most_counties_state
 
 # Write the answer in a comment
 # Q: Which state has the most counties in our data? How many?
-# A: 
+# A:
 ```
 
 ## Grouping and Summarizing | Calculating Min and Max
 
-We can also calculate the smallest and largest number of cases, using two new functions min() and max(). In showing you this, I'll also show you how we can create more than one new column summarizing data at a time. 
+We can also calculate the smallest and largest number of cases, using two new functions min() and max(). In showing you this, I'll also show you how we can create more than one new column summarizing data at a time.
 
 Here's the question:
 
-Q: Which state had the single county with the largest case count? What was that case count? 
+Q: Which state had the single county with the largest case count? What was that case count?
 
 I'll show you what's happening with Delaware to explain how min and max work.
 
-**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom. 
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.
 
 ```{r}
 
@@ -240,7 +240,7 @@ min_max_state
 
 # Write the answer in a comment
 # Q: Which state had the single county with the largest case count?  
-# A: 
+# A:
 
 
 ```
@@ -249,19 +249,169 @@ min_max_state
 
 Okay, now it's your turn to work together in small groups to answer some questions about COVID-19 deaths in states by transforming our raw county data.   
 
-You can create one codeblock to answer the question, or you can create multiple codeblocks. You can create multiple summarise columns at once -- as we did with min() and max() above -- or you can stick with doing one at a time. 
+You can create one codeblock to answer the question, or you can create multiple codeblocks. You can create multiple summarise columns at once -- as we did with min() and max() above -- or you can stick with doing one at a time.
 
 Here are the questions.  
 
 It's okay if you don't get through all of them, just get through as many as you can.  
 
-* Q: Which state had the highest total number of deaths? 
+* Q: Which state had the highest total number of deaths?
 * Q: Which state had the lowest total number of deaths?
-* Q: Which state had the highest average number of deaths per county? What was that number? 
-* Q: Which state had the lowest average number of deaths per county? What was that number? 
+* Q: Which state had the highest average number of deaths per county? What was that number?
+* Q: Which state had the lowest average number of deaths per county? What was that number?
 
-If you finish all of those, create your own questions and answer them! 
+If you finish all of those, create your own questions and answer them!
 
 -30-
 
+## Summarizing
 
+Another way we can create new columns is through a process by summarization.  
+
+This is the R equivalent of creating pivot tables. That is to say, we group by like values in one or more columns and then calculate some things based on those groupings. It's a way of synthesizing new knowledge from raw records.   
+
+Here is perhaps the most simple example.  We're grouping by the name of each pharmacy in our database and counting the total number of shipments to each one.
+
+One note: I'm no longer storing these queries as a new object that needs to be viewed in a separate. By aggregating, they return tables that are typically small enough explore in the table that appears below the codeblock.
+
+``` {r}
+
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n())
+
+```
+
+We can combine our grouping and summarizing statements with a sort. This orders from highest to lowest by number of shipments.
+
+```{r}
+
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n()) %>%
+  arrange(desc(shipments))
+
+```
+
+And we can use filters, too.  In this case, I'm returning my summary table, but I only want to look at the pharmacies that got the largest number of shipments (over 1,000). In this case, I'm putting the filter after I aggregate.  
+
+```{r}
+
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n()) %>%
+  arrange(desc(shipments)) %>%
+  filter(shipments > 1000)
+```
+
+Where you put them in the statement matters. I can also filter the raw data BEFORE I group and summarize.  In this case, I'm filtering to only look at shipments of HYDROCODONE before I group and summarize.  And I'm filtering after to look at only larger shipments.  Notice the results are a bit different than the table above.
+
+```{r}
+
+mingo %>%
+  filter(drug_name == "HYDROCODONE") %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n()) %>%
+  arrange(desc(shipments)) %>%
+  filter(shipments > 1000)
+```
+
+We can do more than count - a lot more!  Here, I'm taking the count of shipments, but I'm also adding up the total number of pills in all shipments, using sum(), and sorting.
+
+```{r}
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit)
+            ) %>%
+  arrange(desc(total_pills))
+```
+
+Here, I'm adding a new summary stat, the average number of pills per shipment.
+
+```{r}
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit),
+            avg_pills_per_shipment = mean(dosage_unit)
+            ) %>%
+  arrange(desc(avg_pills_per_shipment))
+```
+
+Now I'm adding two new lines, the minimum and maximum number of pills in a single shipment.
+
+```{r}
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit),
+            avg_pills_per_shipment = mean(dosage_unit),
+            min_pills_in_shipment = min(dosage_unit),
+            max_pills_in_shipment = max(dosage_unit)
+            ) %>%
+  arrange(desc(max_pills_in_shipment))
+```
+
+There are many other summary stats to calculate, including some more advanced ones. The Dplyr [summarize documentation](https://dplyr.tidyverse.org/reference/summarise.html) and [cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) help.  
+
+**Task**: copy the last codeblock above and add one line inside of your summarise function, to create a new column with the median pills per shipment.
+
+```{r}
+mingo %>%
+  group_by(buyer_name) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit),
+            avg_pills_per_shipment = mean(dosage_unit),
+            min_pills_in_shipment = min(dosage_unit),
+            max_pills_in_shipment = max(dosage_unit),
+            median_pills_per_shipment = median(dosage_unit)
+            ) %>%
+  arrange(desc(median_pills_per_shipment))
+```
+
+Just as in pivot tables, you can also group by more than one row.  We may draw eroneous conclusions just grouping by pharmacy name.  Why? It's possible that two locations have the same name.  Let's group by both name and dea identification number.     
+
+```{r}
+mingo %>%
+  group_by(buyer_name, buyer_dea_no) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit),
+            avg_pills_per_shipment = mean(dosage_unit),
+            min_pills_in_shipment = min(dosage_unit),
+            max_pills_in_shipment = max(dosage_unit)
+            ) %>%
+  arrange(buyer_name)
+
+```
+
+Hmm.  Now we see that there are two "APPALACHIAN, REG HEALTHCARE INC, DBA MATEWAN CLINIC PHARMACY" and two "MEDICINE CABINET PHARMACY" each with a different dea number. Are there two dea numbers for each name because of an error, or because they represent different entities?  Let's add some more columns.
+
+
+```{r}
+
+mingo %>%
+  group_by(buyer_name, buyer_dea_no, buyer_city) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit),
+            avg_pills_per_shipment = mean(dosage_unit),
+            min_pills_in_shipment = min(dosage_unit),
+            max_pills_in_shipment = max(dosage_unit)
+            ) %>%
+  arrange(buyer_name)
+
+```
+
+They both have the same city.  Let's add address info.  
+
+``` {r}
+mingo %>%
+  group_by(buyer_name, buyer_dea_no, buyer_city, buyer_address1) %>%
+  summarise(shipments = n(),
+            total_pills = sum(dosage_unit),
+            avg_pills_per_shipment = mean(dosage_unit),
+            min_pills_in_shipment = min(dosage_unit),
+            max_pills_in_shipment = max(dosage_unit)
+            ) %>%
+  arrange(buyer_name)
+```

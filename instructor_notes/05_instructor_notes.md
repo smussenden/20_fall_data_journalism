@@ -2,50 +2,6 @@
 
 
 
-Ida wells, how she used grouping and summarization.
-Review of data acquisition projects -- breakout rooms.
-Questions on data reporting projects.  
-Nothing on previous lab.
-Longer lab on grouping and summarizing, a little easier this time.
-
-### Me: show raw data, group and count.
-Q: Was Ida Wells a data journalist?
-
-Arguments for:
-* She used quantitate analysis, even before advent of computers, to discover important stories.
-* Took raw data, She gathered data into a structured format and used original analysis to lend extra weight to her reporting.  
-
-"Hana: She didn’t have a tool like r to help her through her statistical analyst — and if anything, that makes her data journalism all the more impressive. The dearth of technology that existed when she was writing means that what she did doesn’t quite fit into our definition of data journalism (her info is not digital), but it hits all the most important points: she used statistical analysis to meticulously unearth key facts and patterns in the service of telling telling deeply-reported investigative stories that made a difference in the world. That’s data journalism, in my book."
-
-Arguments against:
-* She was a civil rights advocate, she was an investigative reporter, a gifted writer.  She was more than just a data journalist.
-
-Tori, Sara: she was more than just a data journalist, she was also an investigative reporter.  Me: good, and illustrates that data journalists contain multitudes.  
-
-Rayonna: Wells used the technique of grouping and counting which allowed her to see what was the reason that different lynchings were happening. She was able to pull together data over a 5 year period that showed the number of colored getting lynched and their alleged crime. This data allowed her to draw the conclusion that many of the "alleged crimes" that lynchers used to justify the lynchings were wrong and false.  
-
-Sara: Her analysis shows that men black men are being lynched for alleged misdemeanors and for crimes they did not commit at an extremely higher rate than the reason given by those who committed the murder. Her dataset proves that the reason of lynching is most often race prejudice. "  AND Spencer:  In her comparison between the skin color and reason of a person being lynched during the same five year period, Wells was able to find that whites weren't being lynched for things that African-Americans were .
-
-Kellina: She arranged the numbers by rows and by year which is similar to putting those information in R studio and getting the overall result. Her efforts to bring racial injustice through number crunching is admirable because readers can see and evaluate the facts themselves.
-
-She took raw records, report in chicago tribune.
-Turned that data into a structured data set that had date, race, reason, gender.
-Grouped by  date, race, reason. Create a new column where she further grouped reason.
-Findings - Her dataset proves that the reason of lynching is most often race prejudice.  Wells was able to find that whites weren't being lynched for things that African-Americans were
-
-HANA: Ida B. Wells had one record, per person, per year (she analyzed five years’ worth of data). She began by grouping records by year, then grouping them by listed offence, then counting the number of records in each sub-groups — that’s what allowed her to create the chart (of sorts) showing the number of lynchings for various listed offences every year. Then, she re-grouped all lynchings with trivial, random and unknown listed offences under the “Racial prejudice” banner and counted the new section. This allowed her to find, for example, that 31 of the 86 lynchings in 1896 were due to racial prejudice — equal to the number listed for rape and greater than the number listed for murder. Her analysis allowed her to reach the conclusion that hundreds of Black people were lynched not for some great offense as Addams conjectured, but for misdemeanors and imagined slights. She uncovered the truth of lynching: that it was not an “understandable” emotional response to egregious criminal acts, but brutal murder justified with petty disputes — when really the victims’ crime in the eyes of their killers was...well, exisiting.
-
-KARA: In her article in the Chicago Tribune, Wells first grouped all the lynching cases from 1896 to 1900 by year and counted how many lynchings occurred for each cause (Table 1). She then grouped misdemeanors or non-crimes as one cause (race prejudice) and counted again with consolidated categories (Table 2). In that step Wells also calculated totals for each cause across the five years (though she wouldn’t have to group by year first to do that) and total lynchings per year. Wells’ analysis allowed her to debunk Jane Addams’ assumption that the majority of lynchers were seeking justice for alleged rapes of white women.
-
-
-
-### Data acquisition
-Tori: only way to get more information about the data is to put in a request. And she wanted to know how to respond. My answer: at this point, a request.
-90
-Wesley: 75
-Sara
-
-
 
 # Session 05 Instructor Notes
 
@@ -93,7 +49,7 @@ Show them one way she did it.
 
 # In class ASSIGNMENT
 * Show grouping and summarizing.
-* We're taking a nother run at thsi, because I think last weeks' intro was overly complicated, too many other factors, and I want to make sure everyone gets this before we proceed. 
+* We're taking a nother run at thsi, because I think last weeks' intro was overly complicated, too many other factors, and I want to make sure everyone gets this before we proceed.
 
 
 

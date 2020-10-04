@@ -1,0 +1,495 @@
+---
+title: "JOUR472/772 lab_05 | covid analysis, grouping and summarizing"
+author: "Sean Mussenden"
+date: "9/28/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook will review the concepts introduced in the in_class_05 assignment:   
+
+In particular, it will show:
+
+* calculating summary statistics, including counting, averages, min and max
+* grouping data by one or more features and then summarizing
+
+## How to work through this notebook
+
+This notebook contains text and code that I have written.  
+
+You should read the text.  
+
+When you see **Task**, that's an indication that you should do one of several things as instructed:
+
+* **Task (Run Code): ** Run some code I've written in a codeblock and examine the output, answering a question if required.
+* **Task (Edit and Run Code): ** Edit some code I've written in a codeblock, run it, and examine the output, answering a question if required.
+* **Task (Write and Run Code): ** Write some code of your own inside of a codeblock I've already created and run it, answering a question if required.
+* **Task (Create a Codeblock, Write and Run Code):** Create a codeblock in the existing whitespace of the markdown file, write some code inside of it, run it and answer a question if required.
+* **Task (Watch Video): ** Run a codeblock that contains a YouTube video, and then watch the video. In the video, I may explain a concept, or assign you to do something that is not detailed in the text.
+
+## Submission details
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.
+
+## Load Packages
+
+There are two packages you'll need to load today:
+
+* The Tidyverse, so we can analyze data the tidyverse way.
+* Vembedr, so you can load the videos directly in the markdown notebook.
+
+**Task (Run Code)**: Run the code block below to load the Tidyverse and Vembedr. Note the special instructions in comments, if you are using a new computer to run this notebook.
+
+```{r}
+# If you are on a new machine you haven't used before, you may need to install these packages before loading.  If that's the case, remove the comment # from in front of the next two lines before running the codeblock, to install the packages before loading.
+# install.packages('tidyverse')
+# install.packages('vembedr')
+
+# Load the tidyverse, vembedr
+library(tidyverse)
+library(vembedr)
+```
+
+## Load Data
+
+From the New York Times COVID-19 tracking project GitHub [NYT Covid GitHub repo](https://github.com/nytimes/covid-19-data), the dataset we'll use today has cumulative totals of cases and deaths by county.  There is one row per county, with totals for that county.
+
+* State | character | state
+* County | character | county
+* FIPS | character | unique id for each county
+* cases | numeric | number of cumulative confirmed COVID-19 cases on 2020-08-30
+* deaths | numeric | number of cumulative confirmed COVID-19 cases on 2020-08-30
+
+**Task (Run Code)**: run the necessary code below to load the data we'll be using today.
+
+```{r}
+# Read in the data.
+covid_county <- read_csv("data/covid_county_2020_08_30.csv")
+```
+
+## Examining data with glimpse()
+
+**Task (Edit and Run code)**:  In the empty codeblock below, edit the existing code to glimpse the covid_county dataframe. You'll need to add the name of the dataframe inside the glimpse function.
+
+```{r}
+
+glimpse()
+
+```
+
+## Overview of summarization
+
+Watch the video below, for an overview of summarization. 
+
+**Task (Watch Video)**: Watch video below, as I review the data, and give you a task to complete after the video ends. 
+
+```{r}
+# Video A 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("E4lXmVIZgQE", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/E4lXmVIZgQE
+
+```
+
+We'll start with asking a series of questions about COVID-19 cases and deaths at the level of the U.S., and using summarise() to generate summary statistics. 
+
+We can use summarise() in combination with another function() to:
+
+* total up values, adding them up with sum()
+* count the number of values, with n()
+* find the smallest value, with min()
+* find the largest value, with max()
+* find average values, with mean()
+
+There are other summary functions, which you [can find here](https://dplyr.tidyverse.org/reference/summarise.html).  T
+
+The [R for data science online textbook](https://r4ds.had.co.nz/transform.html#grouped-summaries-with-summarise) also has a helpful review of summarizing. 
+
+The [dplyr cheatsheet](https://github.com/rstudio/cheatsheets/blob/master/data-transformation.pdf) also has a nice list of summary functions. 
+
+## Summarizing (Calculating Totals)
+
+Let's start by answering a basic question.  
+
+Q: How many total COVID cases were there in the U.S. on August 30?
+
+**Task (Run Code)**: Run the code below to answer the question, "How many total COVID cases were there in the U.S. on August 30?" **Read the comments, and edit the comment at the end of the codeblock with the answer**.    
+
+```{r}
+
+# This code creates a new object called us_total_covid_cases
+# It starts with covid_county AND THEN
+# It uses summarise() to create a single column, single row dataframe. 
+  # The single column in this new dataframe it creates is called "total_cases". 
+  # In this newly created "total_cases" column, all of the county case values, which are stored in a column called "cases", are added together with sum() to produce one number. 
+
+us_total_covid_cases <- covid_county %>%
+  summarise(total_cases = sum(cases))
+
+# This code displays the results of the code we created above
+us_total_covid_cases
+
+# Q: How many total COVID cases were there in the U.S. on August 30?
+# A: (Put the answer here)
+
+```
+
+Let's answer another, similar question. 
+
+Q: How many total COVID **deaths** were there in the U.S. on August 30?
+
+This time, you'll need to edit the code I've written in order to produce the correct result, filling in some missing information. 
+
+**Task (Edit and Run Code)**: Edit the code below to answer the question, "How many total COVID deaths were there in the U.S. on August 30?" There's one problem to fix: it's missing the correct name of the column inside of the sum() function. Edit the code as instructed, read the comments, and edit the comment at the end of the codeblock with the answer.    
+
+```{r}
+
+# This code creates a new object called us_total_covid_deaths
+# It starts with covid_county AND THEN
+# It uses summarise() to create a single column, single row dataframe. 
+  # The single column in this new dataframe it creates is called "total_deaths". 
+  # In this newly created "total_deaths" column, we want to put together all of the county case values, which are stored in a column called "deaths", and add them together with sum() to produce one number. 
+  # BUT, our sum() function is missing something important: the name of the column that contains the information we want to summarize. 
+  # If we don't fix it and run the code, it will look like the answer is 0 deaths, which isn't correct.
+
+us_total_covid_deaths <- covid_county %>%
+  summarise(total_deaths = sum())
+
+# This code displays the results of the code we created above
+us_total_covid_deaths
+
+# Q: How many total COVID deaths were there in the U.S. on August 30?
+# A: (Put the answer here)
+
+```
+
+**Task (Watch Video)**: Watch the video and I'll run through the correct answer to the above question. 
+
+```{r}
+# Video b 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("HeAaQ2ta1zw", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/HeAaQ2ta1zw
+
+```
+
+## Summarizing (Calculating Averages)
+
+Let's answer another question.
+
+Q: How many cases did the average U.S. county have on August 30?
+
+For that, we use the mean() function inside of our summarise() function. 
+
+**Task (Run Code)**: Run the code below to answer the question, "How many cases did the average U.S. county have on August 30?" **Read the comments, and edit the comment at the end of the codeblock with the answer**.    
+
+```{r}
+
+# This code creates a new object called us_county_average_covid_cases
+# It starts with covid_county AND THEN
+# It uses summarise() to create a single column, single row dataframe. 
+  # The single column in this new dataframe it creates is called "cases_in_average_county". 
+  # In this newly created "cases_in_average_county" column, all of the county case values, which are stored in a column called "cases", are averged together with mean() function to produce one number. 
+
+us_county_average_covid_cases <- covid_county %>%
+  summarise(cases_in_average_county = mean(cases))
+
+# This code displays the results of the code we created above
+us_county_average_covid_cases
+
+# Q: How many cases did the average U.S. county have on August 30?
+# A: (Put the answer here)
+
+```
+
+On your own, let's answer another nearly identical question:
+
+Q: How many **deaths** did the average U.S. county have on August 30?
+
+* **Task (Write and Run Code): ** Write your own code in the designated spaces in the codeblock below to produce a dataframe to answer this question.  Write the code to display that dataframe below the codeblock. Lastly, put the answer in the designated space inside the codeblock. After you answer it, watch the video below, and I'll run through the answer. 
+
+```{r}
+# Create a new object called us_county_average_covid_deaths and write the code necessary to answer the question.
+
+
+# Write the code necessary to display us_county_average_covid_deaths below this codeblock
+
+
+# Q: How many **deaths** did the average U.S. county have on August 30?
+# A: (Put the answer here)
+
+```
+
+**Task (Watch Video)**: Watch the video and I'll run through the answer to the previous question. 
+
+```{r}
+# Video c 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("jA_FUmfkPzs", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/jA_FUmfkPzs
+
+```
+
+## Grouping and Summarizing
+
+In the above examples, we calculated some summary statistics for the country as a whole.  
+
+But what if we want to generate summary statistics to answer questions about what's happening in states covered by our COVID data, not the U.S. as a whole.  
+
+Questions like:
+
+* Which state had the lowest total number of COVID cases as of August 30?
+* What was the average number of deaths per county in each state? Which state had the lowest average?
+* How many counties does Maryland have?
+
+To answer questions about states, we need to add in one extra step before we summarise(), and that is a function called group_by(). 
+
+**Task (Watch Video)**: Watch the video and I'll explain a bit about how the group_by() process works. 
+
+```{r}
+# Video 1 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("yQRcEB1iDNk", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/yQRcEB1iDNk
+
+```
+
+## Grouping and Summarizing (Calculating Totals)
+
+Let's run the code I demonstrated in the video, and answer this question:  
+
+Q: How many total COVID cases did each U.S. state have on August 30? Which one had the least?
+
+To answer that, we will first group_by() the state column, and then use the sum() function inside of summarise() to add up cases. 
+
+**Task (Run Code)**: Run the code below to answer the question, "How many total COVID cases did each U.S. state have on August 30? Which one had the least?" **Read the comments, and edit the comment at the end of the codeblock with the answer**.    
+
+```{r}
+# This code creates a new dataframe object called least_covid_cases_state
+# It starts with covid_county AND THEN
+# It groups all of the counties in each state together, with group_by()
+# It uses summarise(), creating a new column called "total_cases" 
+  # In this newly created "total_cases" column, it uses sum() to add up all of the values in the "cases" column in the original covid_county dataframe to create one value for each state. 
+  # Then, it sorts the newly created dataframe from lowest to highest on total_cases
+
+least_covid_cases_state <- covid_county %>%
+  group_by(state) %>%
+  summarise(total_cases = sum(cases)) %>%
+  arrange(total_cases)
+
+# Display below
+least_covid_cases_state
+
+# Write the answer in a comment
+# Q: Which state had the fewest total covid cases on August 30? How many cases?
+# A:
+```
+Let's answer another, similar question. 
+ 
+This time, you'll need to edit the code I've written in order to produce the correct result.  If you run it as is, it won't work. 
+
+Q: How many total COVID **deaths** were there in each U.S. state as of August 30? which one had the fewest?
+
+**Task (Edit and Run Code)**: Edit the code below to answer the question, "How many total COVID **deaths** were there in each U.S. state as of August 30? which one had the fewest?" 
+
+There are two problems:
+
+* Inside of the group_by() function, it's missing the name of the column that contains the name of the states. 
+* Inside of the summarise() function, to the right of the equals sign, it's missing the function and column name needed to add up all of the deaths. 
+
+Edit the code as instructed, read the comments, and edit the comment at the end of the codeblock with the answer.  **After you answer it, watch the video below, and I'll run through the answer.**    
+
+```{r}
+
+# This code creates a new dataframe object called least_covid_deaths_state
+# It starts with covid_county AND THEN
+# It groups all of the counties in each state together, with group_by() AND THEN
+# It uses summarise(), creating a new column called "total_deaths" 
+  # In this newly created "total_deaths" column, it uses sum() to add up all of the values in the "deaths" column in the original covid_county dataframe to create one value for each state. 
+# Then, it sorts the newly created dataframe from lowest to highest on total_deaths.
+# That's what it's supposed to do..but it has two errors you need to fix, detailed above.
+least_covid_deaths_state <- covid_county %>%
+  group_by() %>%
+  summarise(total_deaths = ) %>%
+  arrange(total_deaths)
+
+# Display below
+least_covid_deaths_state
+
+# Write the answer in a comment
+# Q: Which state had the fewest total covid deaths August 30? How many cases?
+# A:d
+
+```
+
+**Task (Watch Video)**: Watch the video and I'll run through the answer. 
+
+```{r}
+# Video 1 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("cQacjtGG2_E", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/cQacjtGG2_E
+
+```
+
+## Summarizing (Calculating Averages)
+
+Let's answer another question. 
+
+Q: What was the average number of cases per county in each state? Which state had the lowest average?
+
+**Task (Run Code)**: Run the code below to answer the question, "What was the average number of cases per county in each state? Which state had the lowest average?" **Read the comments, and edit the comment at the end of the codeblock with the answer**.    
+
+```{r}
+# This code creates a new dataframe object called state_cases_in_average_county
+# It starts with covid_county AND THEN
+# It groups all of the counties in each state together, with group_by()
+# It uses summarise(), creating a new column called "cases_in_average_county" 
+  # In this newly created "cases_in_average_county" column, all of the county case values, which are stored in a column called "cases", are averaged together with mean() function to produce one number for each state AND THEN
+# arrange() it sorts the newly created dataframe from lowest to highest on cases_in_average_county by state
+state_cases_in_average_county <- covid_county %>%
+  group_by(state) %>%
+  summarise(cases_in_average_county = mean(cases)) %>%
+  arrange(cases_in_average_county)
+
+# Display below
+state_cases_in_average_county
+
+# Write the answer in a comment
+# Q: Which state had the fewest total covid cases on August 30? How many cases?
+# A:
+
+
+# It uses summarise() to create a single column, single row dataframe. 
+# The single column in this new dataframe it creates is called "cases_in_average_county". 
+# In this newly created "cases_in_average_county" column, all of the county case values, which are stored in a column called "cases", are averged together with mean() function to produce one number. 
+us_county_average_covid_cases <- covid_county %>%
+  summarise(cases_in_average_county = mean(cases))
+```
+
+On your own, let's answer another nearly identical question (with two small differences):
+
+Q: What was the average number of deaths per county in each state? Which state had the highest average?
+
+* **Task (Write and Run Code): ** Write your own code in the designated spaces in the codeblock below to produce a dataframe to answer this question.  Write the code to display that dataframe below the codeblock. Lastly,put the answer in the designated space inside the codeblock. After you answer it, watch the video below, and I'll run through the answer. 
+
+```{r}
+# Create a new object called state_deaths_in_average_county and write the code necessary to answer the question.
+
+
+# Write the code necessary to display state_deaths_in_average_county below this codeblock
+
+
+# Q:  Which state had the highest average deaths per county?
+# A: (Put the answer here)
+
+
+```
+
+
+**Task (Watch Video)**: Watch the video and I'll run through the answer. 
+
+```{r}
+# Video 1 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("KQAEoppkAC8", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/KQAEoppkAC8
+
+```
+
+## Grouping and Summarizing (Counting)
+
+This next question is not a super important question, but it helps us understand something about our data.  And it shows us how to count the number of rows. The question:  
+
+Q: Which state has the most counties in our data? How many?
+
+This time, inside of our summarize statement, instead of mean() or sum(), we have a new function, n().
+
+sum() adds values in a specific column.  
+
+n() counts the number of rows.
+
+Because our data has one record per county, using n() counts the number of counties.
+
+**Task (Run Code)**: Run the codeblock below and examine the answer. Write the answer inside the codeblock at the bottom.
+
+```{r}
+
+
+# This code creates a new dataframe object called counties_per_state 
+# It starts with covid_county AND THEN
+# It groups all of the counties in each state together, with group_by()
+# It uses summarise(), creating a new column called "total_counties" 
+  # In this newly created "total_counties" column, the number of rows for each state are counted with n() to produce one number for each state AND THEN
+# arrange() it sorts the newly created dataframe from highest to lowest on total_counties by state.
+
+
+# Group by state, count the number of rows, sort from highest to lowest
+# I'll review what's happening here.
+counties_per_state <- covid_county %>%
+  group_by(state) %>%
+  summarise(total_counties = n()) %>%
+  arrange(desc(total_counties))
+
+# Display below
+counties_per_state 
+
+# Write the answer in a comment
+# Q: Which state has the most counties in our data? How many?
+# A:
+```
+## Putting it all together
+
+To finish the lab, you have three exercises to complete.
+
+* **Exercise 1**: You'll answer a question I give you in an empty codeblock I've created for you.
+* **Exercise 2**: You'll answer a question I give you, but you'll need to create the empty codeblock.
+
+### Exercise 1
+
+**Task (Write and Run Code): ** In the codeblock below, answer the question: which state has the smallest number of counties? 
+
+```{r}
+# Write your code to answer the question below by creating a new object.
+
+# Write the name of the object you just created below so it displays below in the markdown document
+
+# Q: which state has the smallest number of counties? 
+# A: write the answer here
+
+```
+
+### Exercise 2
+
+**Task (Create a Codeblock, Write and Run Code): ** Develop your own question, and write code to answer it below.  It can be anything you like, but be sure to use summarise() in answering your question.
+
+## You're done
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.
