@@ -380,15 +380,10 @@ state_cases_in_average_county <- covid_county %>%
 state_cases_in_average_county
 
 # Write the answer in a comment
-# Q: Which state had the fewest total covid cases on August 30? How many cases?
+# Q: What was the average number of cases per county in each state? Which state had the lowest average?
 # A:
 
 
-# It uses summarise() to create a single column, single row dataframe. 
-# The single column in this new dataframe it creates is called "cases_in_average_county". 
-# In this newly created "cases_in_average_county" column, all of the county case values, which are stored in a column called "cases", are averged together with mean() function to produce one number. 
-us_county_average_covid_cases <- covid_county %>%
-  summarise(cases_in_average_county = mean(cases))
 ```
 
 On your own, let's answer another nearly identical question (with two small differences):
