@@ -348,11 +348,11 @@ least_covid_deaths_state
 ```{r}
 # Video 1 
 # Click play to run the codeblock and the video will display in the markdown document. 
-embed_youtube("cQacjtGG2_E", width = "100%", height="480", frameborder = 0,
+embed_youtube("KD-WgV65XCk", width = "100%", height="480", frameborder = 0,
 allowfullscreen = FALSE, query = NULL)
 
 # If the video doesn't work here, load this URL in your browser: 
-# https://youtu.be/cQacjtGG2_E
+# https://youtu.be/KD-WgV65XCk
 
 ```
 

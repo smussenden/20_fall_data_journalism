@@ -342,7 +342,7 @@ least_covid_deaths_state <- covid_county %>%
   arrange(total_deaths)
 
 # Display below
-least_covid_cases_state
+least_covid_deaths_state
 
 # Write the answer in a comment
 # Q: Which state had the fewest total covid deaths August 30? How many cases?
