@@ -1,7 +1,7 @@
 ---
 title: "JOUR472/772 in_class_06 | covid analysis, joins"
 author: "Sean Mussenden"
-date: "9/28/2020"
+date: "10/06/2020"
 output:
   html_document:
     toc: true
@@ -21,13 +21,15 @@ This notebook is designed as an in-class introduction to concepts we'll delve de
 
 Here's the question we will endeavor to answer: Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020?  
 
-The catch: the information we need to answer these questions are stored in two separate tables.  
+The catch: the information we need to answer these questions are stored in two separate tables.  And we have to put them together. 
 
-And we have to put them together. In the real world, it's pretty rare that we'll encounter a single magical data source that contains all of the information we need to answer our questions.  
+In the real world, it's pretty rare that we'll encounter a single magical data source that contains all of the information we need to answer our questions.  
 
-Data journalists call this process of putting together two unrelated tables together to find something new "an enterprise join." As we'll read over the next few weeks, enterprise joins are at the heart of some truly notable works of investigative data journalism.
+Data journalists call this process of putting together two unrelated tables together to find something new "an enterprise join," because it helps us produce "enterprise" stories, stories that required some ingenuity to discover.        
 
-The example we'll do today is simple, but we're laying the foundation for more complex work.
+As we'll read over the next few weeks, enterprise joins are at the heart of some truly notable works of investigative data journalism.
+
+The example we'll do today is simple, but we're laying the foundation for more complex work. Everything we've done in this class before, we could have done in Google Sheets or Excel. Joins aren't really doable in either of those programs. 
 
 ## Install packages
 

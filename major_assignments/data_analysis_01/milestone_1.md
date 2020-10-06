@@ -1,7 +1,7 @@
 # Data Analysis Project 01
 ## Milestone 1
 
-For each group, I've listed the paragraphs you need to incorporate into your data analysis.  You should use data analysis to reproduce these findings. 
+For each group, I've listed the paragraphs you need to incorporate into your data analysis.  You should use data analysis to reproduce these findings.
 
 ## Group 1
 

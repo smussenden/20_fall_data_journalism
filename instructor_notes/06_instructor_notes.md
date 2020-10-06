@@ -31,10 +31,20 @@ https://docs.google.com/presentation/d/1T4gJrFP8ADBHJCl-M9un89I9-fNDfwNtV4KKfwBu
 
 ## Review lab 05
 * Ask if any questions, things people didn't understand
+ * One mistake I saw a few of you make: confusing sum() and n()
+   deaths_per_state <- covid_county %>%
+     group_by(state) %>%
+     summarise(total_deaths = n()) %>%
+     arrange(total_deaths)
+   # Display below
+   deaths_per_state
 
+ # Q: which state has the smallest number of deaths?
+ # A: District of Columbia
 * Review exercise 1 - Tori, Wesley, Audrey
 * Ask people to volunteer what they did for exercise 2.
 * Kellina question: Is there a way to find the county within a state that had the most amount of covid deaths? I tried the "filter" option but it didn't work. Maybe I needed to add something else? I would please like to know.
+  * Kara:
   * Let's look at Spencers.  Florida filter.  
   * And John's.
   * And Hana's
@@ -56,12 +66,18 @@ counties_per_state <- covid_county %>%
 # Display below
 counties_per_state
 ```
-
+* Kara: double
 
 ## Grouping and Summarizing Stories
 * Review methodology for two stories we reviewed in forum over the weekend.
 
-##
+## Data Acquisition Project
+* Review what's due.
+* * Meticulously accurate, grammatical.  Treat this like a story, in terms of accuracy. Tone: Polite, professional and firm.
+
+## Data Analysis project
+* Review what's due. 
+
 
 # Session 06
 
@@ -77,26 +93,6 @@ counties_per_state
 Questions people didn't understand.
 
 
-### Using public records laws to get data
-
-* Different from federal FOIA, but same concept.
-* Every state has one, but the details are different. They are designed to  
-* Sometimes called Sunshine Laws or Freedom of Information Act Laws or Public Information Act laws.
-* Knowing the specifics of state law in which you're requesting is helpful.  
-* The law is your friend! Knowing it can mean the difference between getting info you need in a timely fashion and getting denied.
-* Muckrock guides and ag opinions.  Every state will have them. Links in syllabus.
-
-### Writing public records request letters
-* Use a template: [Sample request letters state by state](https://www.nfoic.org/organizations/state-sample-foia-request-letters) or [PIA letter generator](https://splc.org/lettergenerator/).
-If you regard any of the requested records as subject to exemption from disclosure at your discretion, I hereby request that you exercise your discretion and disclose them nonetheless.
-* Even if you are going to send a form in, I want you go to through this exercise.
-* Provide as much detail as possible about records you are seeking, based on your reporting. Time period, name of data, sample fields.
-* If you have determined the data contains information exempt from public records laws, ask them to redact that information and provide everything.
-* Request a fee waiver (if the law allows for that), and an up-front estimate of costs before they begin work.
-* Tone: Polite, professional and firm.
-* Meticulously accurate, grammatical.  Treat this like a story, in terms of accuracy.
-* Requesting from more than one agency? Multiple letters. Requesting multiple data sets from one agency? One letter.
-* Do not send until I approve.
 
 
 # Session 05 Instructor Notes
