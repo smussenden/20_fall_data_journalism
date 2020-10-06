@@ -1,0 +1,117 @@
+---
+title: "JOUR472/772 in_class_06 | covid analysis, joins"
+author: "Sean Mussenden"
+date: "9/28/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_06.  In particular, it will show:
+
+* how to join together two different data sets.  
+
+Here's the question we will endeavor to answer: Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020?  
+
+The catch: the information we need to answer these questions are stored in two separate tables.  
+
+And we have to put them together. In the real world, it's pretty rare that we'll encounter a single magical data source that contains all of the information we need to answer our questions.  
+
+Data journalists call this process of putting together two unrelated tables together to find something new "an enterprise join." As we'll read over the next few weeks, enterprise joins are at the heart of some truly notable works of investigative data journalism.
+
+The example we'll do today is simple, but we're laying the foundation for more complex work. 
+
+## Install packages
+
+There are no packages to install for this assignment.
+
+## Load packages
+
+Remember, we typically need to install packages only once on our computer.  But we have to load them every time we want to make use of them during an R session.  
+
+Today, we're going to load one package:
+
+* The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+
+**Task (Run Code)**: run the code below to load the tidyverse, using the library() function.
+
+```{r}
+# Load the tidyverse
+library(tidyverse)
+
+```
+
+## Load Data
+
+### COVID data
+From the New York Times COVID-19 tracking project GitHub, dataset has cumulative totals of cases and deaths by state.  There is one row per state, with totals for that state.
+
+* state | character | state name
+* total_cases | numeric | number of cumulative confirmed COVID-19 cases on 2020-08-30
+* total_deaths | numeric | number of cumulative confirmed COVID-19 cases on 2020-08-30
+
+### Census Population data
+
+From the U.S. Census, total population of each state in 2018.  There is one row per state, with total population for that state. 
+
+* state | character | state name
+* population | numeric | 2018 population
+
+**Task (Run Code)**: run the necessary code below to load the two data sets we'll be using today.
+
+```{r}
+
+# Read in COVID data as an object called covid_state
+state_covid <- read_csv("data/covid_state_2020_08_30.csv")
+
+# Read in state population data as an object called state_population
+state_population <- read_csv("data/state_population.csv")
+
+```
+
+## Joins
+
+Here's our question:  Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020? 
+
+* Our COVID case data is stored in "covid_state"  
+* Our population data is stored in "state_population"
+
+The catch: the data we need to answer this question is stored in two separate tables.  
+
+Let's examine these tables. 
+
+Before we can calculate a cases_per_person rate, we need to put our two tables together. 
+
+Fortunately, each table shares a common field -- state -- that is populated with a list of states. And because they share that common feature, we can put them together with a join. 
+
+**Task (Run Code)**: run the necessary code below to load the two data sets we'll be using today.
+
+
+```{r}
+# Create a new object, covid_state_population, and join together our two fields
+
+state_covid_population <- state_covid %>%
+  inner_join(state_population)
+
+```
+Let's examine this newly created table together, and I'll walk you through what happened. 
+
+Joining gets much more complicated than this.  But at its core, this is how it works.    
+
+## Breakout Room Exercise
+
+Okay, now it's your turn to work together in small groups to use this newly created table to answer our key question. 
+
+*  Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020?
+*  And while you're at it, answer this question: Which state had the lowest number of COVID-19 deaths per 1,000 people on August 30, 2020?
+
+-30-
+
