@@ -31,6 +31,8 @@ https://docs.google.com/presentation/d/1T4gJrFP8ADBHJCl-M9un89I9-fNDfwNtV4KKfwBu
 
 ## Review lab 05
 * Ask if any questions, things people didn't understand
+ * Review exercise 1: Tori, Wesley, Audrey
+ * How many total COVID **deaths** were there in each U.S. state as of August 30? which one had the fewest? Video showed wrong answer for some of you, I updated it, thanks Kara and Rona.
  * One mistake I saw a few of you make: confusing sum() and n()
    deaths_per_state <- covid_county %>%
      group_by(state) %>%
@@ -76,7 +78,7 @@ counties_per_state
 * * Meticulously accurate, grammatical.  Treat this like a story, in terms of accuracy. Tone: Polite, professional and firm.
 
 ## Data Analysis project
-* Review what's due. 
+* Review what's due.
 
 
 # Session 06
