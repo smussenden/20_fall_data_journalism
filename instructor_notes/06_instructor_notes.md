@@ -1,3 +1,68 @@
+# Session 06 Instructor Notes
+
+## To Have Up on Desktop
+
+1. Session 06 Instructor Notes -
+2. Webpage of roster pictures on UMEG -
+3. Roster sheet with presence - https://docs.google.com/spreadsheets/d/1HKt0Dr6YajcRXLu-0IpWRWBMb4C9J-detlI0TE45jh8/edit#gid=1136077922
+3. Course Canvas Page - https://umd.instructure.com/courses/1288268/modules
+4. Slides -
+8. GitHub Desktop
+11. Email to check at regular intervals at beginning.
+12. Phone to check for "can't get in texts"
+
+## Openers
+
+[START RECORDING]
+* I'm recording.
+* Reminders to mute your microphone.  
+* And unless you've sent me a note explaining that you don't want to keep your video on during class, I'd ask that you turn it on now.  I won't force you to do it, just a reminder that it helps me teach.  
+* And also a reminder to keep the chat up, cause I'll be asking you questions.
+
+## Slides and what's due
+https://docs.google.com/presentation/d/1T4gJrFP8ADBHJCl-M9un89I9-fNDfwNtV4KKfwBuTFw/edit#slide=id.g94540b6654_0_0
+* Review lab_05
+* Review discussion_05 - grouping and summarizing stories
+* Review data_acquisition_project next milestone [this week]
+  * Write and send in letter
+* Review data_analysis_project next milestone [next week]
+  * Should be preparing for this now.  
+* Exercise enterprise joins
+
+## Review lab 05
+* Ask if any questions, things people didn't understand
+
+* Review exercise 1 - Tori, Wesley, Audrey
+* Ask people to volunteer what they did for exercise 2.
+* Kellina question: Is there a way to find the county within a state that had the most amount of covid deaths? I tried the "filter" option but it didn't work. Maybe I needed to add something else? I would please like to know.
+  * Let's look at Spencers.  Florida filter.  
+  * And John's.
+  * And Hana's
+  ```{r}
+#Q: which county in Texas had the highest average number of deaths?
+texas_most_deaths <- covid_county%>%
+  group_by(county)%>%
+  filter(state == "Texas")%>%
+  summarise(texas_deaths = mean(deaths))%>%
+  arrange(desc(texas_deaths))
+texas_most_deaths
+#A: It looks like the answer is Harris county with 2188 deaths....I'm suspicious of the whole number. I'd love to check this out in class.  
+```
+* And Rona: adding a filter would help here. ```{r}
+counties_per_state <- covid_county %>%
+  group_by(state) %>%
+  summarise(total_counties = n()) %>%
+  arrange(desc(total_counties))
+# Display below
+counties_per_state
+```
+
+
+## Grouping and Summarizing Stories
+* Review methodology for two stories we reviewed in forum over the weekend.
+
+##
+
 # Session 06
 
 1.  Review previous week's lab.  Look at questions people answered.
@@ -8,7 +73,30 @@
 3.  Review findings from your posts.
 4.  
 
+# Review previous week lab
+Questions people didn't understand.
 
+
+### Using public records laws to get data
+
+* Different from federal FOIA, but same concept.
+* Every state has one, but the details are different. They are designed to  
+* Sometimes called Sunshine Laws or Freedom of Information Act Laws or Public Information Act laws.
+* Knowing the specifics of state law in which you're requesting is helpful.  
+* The law is your friend! Knowing it can mean the difference between getting info you need in a timely fashion and getting denied.
+* Muckrock guides and ag opinions.  Every state will have them. Links in syllabus.
+
+### Writing public records request letters
+* Use a template: [Sample request letters state by state](https://www.nfoic.org/organizations/state-sample-foia-request-letters) or [PIA letter generator](https://splc.org/lettergenerator/).
+If you regard any of the requested records as subject to exemption from disclosure at your discretion, I hereby request that you exercise your discretion and disclose them nonetheless.
+* Even if you are going to send a form in, I want you go to through this exercise.
+* Provide as much detail as possible about records you are seeking, based on your reporting. Time period, name of data, sample fields.
+* If you have determined the data contains information exempt from public records laws, ask them to redact that information and provide everything.
+* Request a fee waiver (if the law allows for that), and an up-front estimate of costs before they begin work.
+* Tone: Polite, professional and firm.
+* Meticulously accurate, grammatical.  Treat this like a story, in terms of accuracy.
+* Requesting from more than one agency? Multiple letters. Requesting multiple data sets from one agency? One letter.
+* Do not send until I approve.
 
 
 # Session 05 Instructor Notes

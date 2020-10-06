@@ -27,7 +27,7 @@ And we have to put them together. In the real world, it's pretty rare that we'll
 
 Data journalists call this process of putting together two unrelated tables together to find something new "an enterprise join." As we'll read over the next few weeks, enterprise joins are at the heart of some truly notable works of investigative data journalism.
 
-The example we'll do today is simple, but we're laying the foundation for more complex work. 
+The example we'll do today is simple, but we're laying the foundation for more complex work.
 
 ## Install packages
 
@@ -60,7 +60,7 @@ From the New York Times COVID-19 tracking project GitHub, dataset has cumulative
 
 ### Census Population data
 
-From the U.S. Census, total population of each state in 2018.  There is one row per state, with total population for that state. 
+From the U.S. Census, total population of each state in 2018.  There is one row per state, with total population for that state.
 
 * state | character | state name
 * population | numeric | 2018 population
@@ -79,18 +79,18 @@ state_population <- read_csv("data/state_population.csv")
 
 ## Joins
 
-Here's our question:  Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020? 
+Here's our question:  Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020?
 
 * Our COVID case data is stored in "covid_state"  
 * Our population data is stored in "state_population"
 
 The catch: the data we need to answer this question is stored in two separate tables.  
 
-Let's examine these tables. 
+Let's examine these tables.
 
-Before we can calculate a cases_per_person rate, we need to put our two tables together. 
+Before we can calculate a cases_per_person rate, we need to put our two tables together.
 
-Fortunately, each table shares a common field -- state -- that is populated with a list of states. And because they share that common feature, we can put them together with a join. 
+Fortunately, each table shares a common field -- state -- that is populated with a list of states. And because they share that common feature, we can put them together with a join.
 
 **Task (Run Code)**: run the necessary code below to load the two data sets we'll be using today.
 
@@ -102,16 +102,15 @@ state_covid_population <- state_covid %>%
   inner_join(state_population)
 
 ```
-Let's examine this newly created table together, and I'll walk you through what happened. 
+Let's examine this newly created table together, and I'll walk you through what happened.
 
 Joining gets much more complicated than this.  But at its core, this is how it works.    
 
 ## Breakout Room Exercise
 
-Okay, now it's your turn to work together in small groups to use this newly created table to answer our key question. 
+Okay, now it's your turn to work together in small groups to use this newly created table to answer our key question.
 
 *  Which state had the highest number of COVID-19 cases per 1,000 people on August 30, 2020?
 *  And while you're at it, answer this question: Which state had the lowest number of COVID-19 deaths per 1,000 people on August 30, 2020?
 
 -30-
-
