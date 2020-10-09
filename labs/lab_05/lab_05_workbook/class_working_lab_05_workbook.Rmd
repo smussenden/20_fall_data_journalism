@@ -485,6 +485,18 @@ To finish the lab, you have three exercises to complete.
 
 **Task (Create a Codeblock, Write and Run Code): ** Develop your own question, and write code to answer it below.  It can be anything you like, but be sure to use summarise() in answering your question.
 
+```{r}
+# Which state had the fewest total deaths
+deaths_per_state <- covid_county %>%
+     group_by(state) %>%
+     summarise(total_deaths = sum(deaths)) %>%
+     arrange(total_deaths)
+   # Display below
+
+deaths_per_state
+
+```
+
 ## You're done
 
 When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.

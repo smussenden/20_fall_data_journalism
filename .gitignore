@@ -40,6 +40,7 @@ vignettes/*.pdf
 
 # DS STORE
 *.DS_Store
+.DS_Store
 
 # Lab videos
 labs/lab_01/lab_01_videos/
@@ -47,3 +48,8 @@ labs/lab_02/lab_02_videos/
 labs/lab_03/lab_03_videos/
 labs/lab_04/lab_04_videos/
 labs/lab_05/lab_05_videos/
+labs/lab_06/lab_06_videos/
+labs/lab_07/lab_07_videos/
+labs/lab_08/lab_08_videos/
+labs/lab_09/lab_09_videos/
+

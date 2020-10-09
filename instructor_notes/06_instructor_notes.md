@@ -1,3 +1,62 @@
+VIDEO LAB Notes
+AYWCM-3WHHV-CF3QH-5Y6HA-E2D7C
+# 1
+* First, let's look at the original tables
+* Each contains the same first three columns, and a fourth that's different.
+* The inner join worked by looking for matches.  
+* Consider autuaga alabama.  the fipscode, state and city are exact same in both tables.
+* So it knew to put them together.
+* same for the next county
+* everytime it found a mtach, it put them together.
+* if it didn't find a match, it left them out.
+* thats why, by the way, these tables have different numbers of rows
+* population has 3143
+* pills per year has 3130
+* but our county pills population table has 3036 -- fewer than either?
+* why? Because there are some counties in our pills table not in our population table.  And some counties in our population table not in our pills table.
+* We'll see more below.
+
+# inner join
+* Show VENN - The inner join worked by looking for matches.  
+* An inner join returns all columns from both tables.  But it only returns those rows where there's a match in both tables in the three columns we're joining on (countyfips, buyer_county and buyer_state).
+* Consider autuaga alabama.  the fipscode, state and city are exact same in both tables.
+* So it knew to put them together.
+* same for the next county
+* everytime it found a mtach, it put them together.
+* if it didn't find a match, it left them out.
+* Again, let's look at the numbers of rows
+* population has 3143
+* pills per year has 3130
+* but our county pills population table has 3036 -- fewer than either?
+* why? Because there are some counties in our pills table not in our population table.  And some counties in our population table not in our pills table.
+* For example, our pills table has Puerto Rico -- PR. And our population table does not. And so PR doesn't end up in joined table.
+* Oh, and BRISTOL BAY AK is in our pills table. But not in our population table. So Bristol Bay does not end up in joined table.
+* When we do the inner join, they get left out.
+
+# left join
+* Show VENN - The left join
+* a left join returns ALL rows from Table A (county_pills_per_year) regardless of whether there's a match in Table B (county_population).  If it finds a match in Table B, it will pull that information in and put it in the appropriate column.  If it doesn't find a match, it leaves it blank.
+* Consider autuaga alabama.  the fipscode, state and city are exact same in both tables.
+* So it knew to put them together.
+* But now let's look at something our pills table has that our population table DOES NOT -- Puerto Rico.
+* Look what it did here.  It included the value for pills.  But because there was NO match in our population table, it included the row, but left that blank.
+* Notice that when we do the left join, the number of records in our joined table is the same as our pills table.  
+* Because it's keeping all the rows.
+* Also notice Bristol Bay AK isn't here.  Why, it wasn't in our pills table. So it doesn't get returned here.
+
+# right join
+
+* Show VENN - The right join
+* It returns ALL rows from Table B (county_population) regardless of whether there's a match in Table B (county_pills_per_year).  If it finds a match in Table A, it will pull that information in and put it in the appropriate column.  If it doesn't find a match, it leaves it blank.
+* Consider autuaga alabama.  the fipscode, state and city are exact same in both tables.
+* So it knew to put them together.
+* But now let's look at something our population table has that our pills table DOES NOT -- Bristol Bay AK.
+* Look what it did here.  It included the value for population.  But because there was NO match in our pills table, it included the row, but left that blank.
+* Notice that when we do the right join, the number of records in our joined table is the same as our population table.  
+* Because it's keeping all the rows from that table.
+* Also notice Puerto Rico isn't here.  Why, it wasn't in our pills table. So it doesn't get returned here.
+
+
 # Session 06 Instructor Notes
 
 ## To Have Up on Desktop
@@ -21,6 +80,7 @@
 
 ## Slides and what's due
 https://docs.google.com/presentation/d/1T4gJrFP8ADBHJCl-M9un89I9-fNDfwNtV4KKfwBuTFw/edit#slide=id.g94540b6654_0_0
+Get Help
 * Review lab_05
 * Review discussion_05 - grouping and summarizing stories
 * Review data_acquisition_project next milestone [this week]

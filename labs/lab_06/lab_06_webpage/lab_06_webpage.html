@@ -12,7 +12,7 @@
 <meta name="author" content="Sean Mussenden" />
 
 
-<title>JOUR472/772 lab_01 | Environment setup</title>
+<title>JOUR472/772 lab_06 | joins</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1504,100 +1504,24 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">JOUR472/772 lab_01 | Environment setup</h1>
+<h1 class="title toc-ignore">JOUR472/772 lab_06 | joins</h1>
 <h4 class="author">Sean Mussenden</h4>
-<h4 class="date">9/2/2020</h4>
+<h4 class="date">10/7/2020</h4>
 
 </div>
 
 
 <div id="lab-overview" class="section level2">
 <h2>Lab overview</h2>
-<p>This lab serves as a foundation for all the work we’ll be doing this semester. It will help you set up your computer to do classwork by installing the necessary software tools. It will give you an overview of how to use those tools. And it will show you how to submit completed labwork for grading.</p>
-<p>This lab describes several <strong>objectives</strong> for you to complete, and it will walk you step-by-step through completing those objectives.</p>
-<p>The objectives are:</p>
-<ul>
-<li><strong>Objective 01_a</strong>: Install on your local machine the necessary software tools for this course.</li>
-<li><strong>Objective 01_b</strong>: Set up a GitHub repository for classwork.</li>
-<li><strong>Objective 01_c</strong>: Develop an understanding of the basics of RStudio, and write code and text in RMarkdown files.</li>
-<li><strong>Objective 01_d</strong>: Develop an understanding of how to submit changes you’ve made locally to your repo on GitHub.com, and submit to ELMS.</li>
-</ul>
+<p>This lab serves as an introduction to joins.</p>
+<p>This lab has one <strong>objective</strong> for you to complete, and it will walk you step-by-step through completing that objective.</p>
+<p>The <strong>objectives</strong> is: Download the zip file linked below to your local computer, add it to your GitHub repo, and work through the data notebook (lab_06_workbook.Rmd) step-by-step, reading the text watching embedded videos and editing it as instructed. When you are finished, push the edited file to GitHub.com, and submit the link on ELMS.</p>
 </div>
 <div id="how-this-lab-works" class="section level2">
 <h2>How this lab works</h2>
-<p>You should read the text on this web page and watch the embedded videos, and follow the instructions I give as you go along.</p>
-<p>It’s very important to watch the videos.</p>
-<p>In addition to showing you how to do things step-by-step, the audio track also contains some key contextual information to help make sense of what you’re doing.</p>
-<p>You’ll know you’re done the lab when you successfully work through each objective as described in the text and videos, and submit a link to the edited R Markdown file stored in your GitHub.com repo to the lab_01 assignment on ELMS.</p>
-</div>
-<div id="objectives-to-complete" class="section level2">
-<h2>Objectives to complete</h2>
-<div id="objective-01_a" class="section level3">
-<h3>Objective 01_a</h3>
-<div id="install-on-your-local-machine-the-necessary-software-tools-for-this-course" class="section level4">
-<h4>Install on your local machine the necessary software tools for this course</h4>
-<p>To complete this objective, you’ll need to install on your machine the necessary software tools for this course.</p>
-<p>They are:</p>
-<ul>
-<li>R, the programming language we’ll be using to do data programming in this course. <a href="https://cloud.r-project.org/">Download link</a>. <a href="https://www.r-project.org/about.html">About R</a></li>
-<li>R Studio, the software tool we’ll be using to write R code and load, clean and analyze data. <a href="https://rstudio.com/products/rstudio/download/#download">Download link</a>. <a href="https://rstudio.com/products/rstudio/">Brief explainer video</a></li>
-<li>GitHub Desktop, a software tool we’ll be using to transfer code to our local machine to the GitHub.com website. <a href="https://desktop.github.com/">Download link</a></li>
-</ul>
-<p>In the video below, I show you step-by-step how to do that, while offering some thoughts on what each thing does.</p>
-<p>Before moving on to the next objective, please watch the video in full and complete the objective by successfully installing the three things listed above.</p>
-<p><strong>For windows users</strong>: in the video, I show how to install the R language for a Mac. To install for Windows, go to <a href="https://cloud.r-project.org/">https://cloud.r-project.org/</a>, and click Download R for Windows. On the next page, click the first link, “base”. On the next page, click the top link to download for Windows.</p>
-<iframe src="https://www.youtube.com/embed/ulKZkmcMiHQ" width="672" height="400px">
-</iframe>
-</div>
-</div>
-<div id="objective-01_b" class="section level3">
-<h3>Objective 01_b</h3>
-<div id="set-up-a-github-repository-for-classwork" class="section level4">
-<h4>Set up a GitHub repository for classwork</h4>
-<p>To complete this objective, you’ll need to:</p>
-<ul>
-<li>Create an account on <a href="https://github.com">GitHub.com</a>, a code repository website where we’ll be storing much of the work you do in this class. You should also sign up for <a href="https://education.github.com/students">GitHub student developer pack</a>, which gives you free access to several features that you would otherwise have to pay for.<br />
-</li>
-<li>Create a private repository (or public if you wish) on GitHub.com specifically for this class and give me permission to access it.</li>
-<li>Use GitHub Desktop to pull your class repository to your local machine, a process called “cloning.”</li>
-</ul>
-<p>In the video below, I show you step-by-step how to do each of those things, while explaining what you need to know about GitHub as we’ll use it in this class.</p>
-<p>Before moving on to the next objective, please watch the video in full and complete the objective by successfully doing the three things listed above.</p>
-<iframe src="https://www.youtube.com/embed/je0rdg81p7s" width="672" height="400px">
-</iframe>
-</div>
-</div>
-<div id="objective-01_c" class="section level3">
-<h3>Objective 01_c</h3>
-<div id="develop-an-understanding-of-the-basics-of-rstudio-and-write-code-and-text-in-rmarkdown-files" class="section level4">
-<h4>Develop an understanding of the basics of RStudio, and write code and text in RMarkdown files</h4>
-<p>To complete this objective, you’ll need to:</p>
-<ul>
-<li>Watch me describe the RStudio workspace.</li>
-<li>Load a sample RMarkdown file, a file format tailor made for the “data notebooks” that we’ll use all semester. <a href="https://raw.githubusercontent.com/smussenden/20_fall_data_journalism/master/labs/lab_01/lab_01_workbook/lab_01_workbook.Rmd">Right click to download the file lab_01_workbook</a></li>
-<li>Make some minor edits to the sample RMarkdown file I’ve provided and run some very basic code.</li>
-</ul>
-<p>In the video below, I show you step-by-step how to do each of those things, while explaining some fundamentals about R, RStudio and RMarkdown.</p>
-<p>Before moving on to the next objective, please watch the video in full and complete the objective by successfully doing the three things listed above.</p>
-<iframe src="https://www.youtube.com/embed/SzqJLGEoIyY" width="672" height="400px">
-</iframe>
-</div>
-</div>
-<div id="objective-01_d" class="section level3">
-<h3>Objective 01_d</h3>
-<div id="develop-an-understanding-of-how-to-submit-changes-youve-made-locally-to-your-repo-on-github.com-and-submit-to-elms" class="section level4">
-<h4>Develop an understanding of how to submit changes you’ve made locally to your repo on GitHub.com, and submit to ELMS</h4>
-<p>To complete this objective, you’ll need to:</p>
-<ul>
-<li>Save changes you’ve made to the RMarkdown file in RStudio.</li>
-<li>Upload the changes made to your local repository to your code repository on GitHub.com.</li>
-<li>Submit your lab assignment on ELMS by pasting in the url to your RMarkdown file in your GitHub.com repository.</li>
-</ul>
-<p>In the video below, I show you step-by-step how to do that, while explaining some fundamentals about GitHub.</p>
-<iframe src="https://www.youtube.com/embed/Ds4idIBjVvM" width="672" height="400px">
-</iframe>
-</div>
-</div>
+<p>First, download <a href="https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_06/lab_06_workbook/lab_06_workbook.zip">this zip file</a> to your desktop and open it up. <a href="https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_06/lab_06_workbook/lab_06_workbook.zip">Click the link to download</a>.</p>
+<p>Then, unpack the zip file. Drag it into your labs folder in your GitHub repo. Commit the changes in GitHub desktop and push the changes to your repo on GitHub.com.</p>
+<p>Open the lab_06_workbook.Rmd in R studio, and work through it step-by-step, following the instructions.</p>
 </div>
 <div id="lab-complete" class="section level2">
 <h2>Lab complete</h2>
