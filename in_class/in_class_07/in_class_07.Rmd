@@ -1,0 +1,182 @@
+---
+title: "JOUR472/772 in_class_07 | more joins"
+author: "Sean Mussenden"
+date: "10/06/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_07.  In particular, it will show:
+
+* a review of joins basics from prior lab.
+* some additional information about joins and some new joins.
+
+## Install packages
+
+There are no packages to install for this assignment.
+
+## Load packages
+
+Remember, we typically need to install packages only once on our computer.  But we have to load them every time we want to make use of them during an R session.  
+
+Today, we're going to load one package:
+
+* The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+
+**Task (Run Code)**: run the code below to load the tidyverse, using the library() function.
+
+```{r}
+# Load the tidyverse
+library(tidyverse)
+
+```
+
+## Load Data
+
+We're going to load two very small dataframes today to reinforce our understanding of how joins work.
+
+These are samples of dataframe from the New York Times COVID-19 tracking project GitHub, with cumulative totals of deaths by state. We also have population data from the Census.
+
+We're filtering the data as we load it, to only keep data for four states for each dataframe.  Three of the states are the same -- Maryland, Virginia and Delaware.  The deaths table has DC, but not Pennsylvania.  The population table has Pennsylvania, but not DC.
+
+**Task (Run Code)**: run the code below to load data.
+
+```{r}
+
+# Read in COVID data as an object called covid_state_deaths
+# Filter to keep data only for Maryland, Virgina, Delaware, DC
+state_covid_deaths <- read_csv("data/covid_state_2020_08_30.csv") %>%
+  filter(state %in% c("Maryland", "Virginia","Delaware","District of Columbia")) %>%
+  select(-total_cases)
+
+# Read in state population data as an object called state_population
+# Filter to keep data only for Maryland, Virgina, Delaware, Pennsylvania
+state_population <- read_csv("data/state_population.csv") %>%
+  filter(state %in% c("Maryland", "Virginia","Delaware","Pennsylvania"))
+
+# display state_covid_deaths
+state_covid_deaths
+
+# display state_population
+state_population
+
+```
+
+## Reviewing Joins
+
+### Inner Join
+
+Let's "inner join" state_covid_deaths to state_population and examine which records are returned. 
+
+```{r}
+inner_state_covid_population <- state_covid_deaths %>%
+  inner_join(state_population)
+
+inner_state_covid_population
+
+# Q: which states are returned by this join?
+# A: 
+```
+
+
+### Left Join
+
+Let's "left join" state_covid_deaths to state_population and examine which records are returned. 
+
+```{r}
+
+left_state_covid_population <- state_covid_deaths %>%
+  left_join(state_population)
+
+left_state_covid_population
+
+# Q: which states are returned by this join?
+# A: 
+```
+### Right Join
+
+Let's "right join" state_covid_deaths to state_population and examine which records are returned. 
+
+```{r}
+
+right_state_covid_population <- state_covid_deaths %>%
+  right_join(state_population)
+
+right_state_covid_population
+
+# Q: which states are returned by this join?
+# A: 
+```
+### Left Join -- Switch order of data frames
+
+Let's "left join" state_population to state_covid_deaths and examine which records are returned. 
+
+```{r}
+
+left_state_population_covid <- state_population %>%
+  left_join(state_covid_deaths)
+
+left_state_population_covid
+
+# Q: which states are returned by this join?
+# A: 
+```
+## New Joins
+
+### Full join
+
+A "full join" returns all rows from both tables.  If there's a matching record in each table, it links them up.  Otherwise, it leaves the corresponding rows blank. 
+
+Let's "full join" state_covid_deaths to state_population and examine which records are returned. 
+
+```{r}
+
+full_state_covid_population <- state_covid_deaths %>%
+  full_join(state_population)
+
+full_state_covid_population
+
+# Q: which states are returned by this join?
+# A: 
+```
+
+### Anti Join
+
+An "anti join" helps us determine what records in a table do NOT have a match in another table.  
+
+Let's "anti join" state_covid_deaths to state_population and examine which records are returned. Any record that is returned will exist in our state_covid_deaths table but NOT have a match in state_population. 
+
+```{r}
+
+anti_state_population_covid <- state_covid_deaths %>%
+  anti_join(state_population)
+
+anti_state_population_covid
+
+# Q: which states are returned by this join?
+# A: 
+```
+
+Now let's do the anti_join the other direction. Any record that's returned will exist in our state population table but NOT have a match in state_covid_deaths. 
+
+```{r}
+
+anti_state_covid_population <- state_population %>%
+  anti_join(state_covid_deaths)
+
+anti_state_covid_population
+
+# Q: which states are returned by this join?
+# A: 
+```
+
+-30-
