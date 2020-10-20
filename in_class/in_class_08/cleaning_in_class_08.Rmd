@@ -1,0 +1,298 @@
+---
+title: "JOUR472/772 in_class_08 | cleaning demonstration"
+author: "Sean Mussenden"
+date: "10/20/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_08.  In particular, it will show:
+
+* some common data cleaning tasks.
+
+## Install packages
+
+There is one package to install for this assignment:
+* [Janitor](https://github.com/sfirke/janitor)
+
+## Load packages
+  
+Today, we're going to load one package:
+
+* The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+
+**Task (Run Code)**: run the code below to load the tidyverse and janitor, using the library() function.
+
+```{r}
+# Load the tidyverse
+library(tidyverse)
+
+# Load janitor
+# If you need to install it, run this code
+# install.packages('janitor')
+library(janitor)
+
+```
+
+## Load Data
+
+We're going to load a "dirty" example of our county-level COVID data for Maryland. The sample is from the New York Times COVID-19 tracking project GitHub, with cumulative totals of deaths by county. 
+
+We're filtering the data as we load it, to only keep data for Maryland for each dataframe. 
+
+**Task (Run Code)**: run the code below to load data.
+
+```{r}
+
+# Read in dirty COVID data as an object called county_covid_deaths_dirty
+
+county_covid_deaths_dirty <- read_csv("data/county_covid_deaths_dirty.csv")
+
+```
+## Examine data
+
+Let's glimpse our data.
+
+```{r}
+
+glimpse(county_covid_deaths_dirty)
+
+```
+
+And let's examine it as a dataframe.
+
+```{r}
+county_covid_deaths_dirty
+```
+
+What flaws jump out at you? 
+
+## Questions
+
+Let's try asking some questions.
+
+Q: How many deaths are there in the county with FIPS code 24003 -- Anne Arundel?
+
+```{r}
+county_covid_deaths_dirty %>%
+  filter(FIPS code !, == 24003)
+```
+
+Q: How many counties are in Maryland?
+
+```{r}
+county_covid_deaths_dirty %>%
+  group_by(state) %>%
+  count()
+```
+
+Q: How many total deaths are there in Maryland?
+
+```{r}
+county_covid_deaths_dirty %>%
+  summarize(total_deaths = sum(deaths))
+
+```
+
+## Flaws
+
+There are several flaws that became apparent when we tried to answer questions. 
+
+* Multiple variations of Maryland in state column. 
+* Missing value in deaths column. 
+* Number written out as text in deaths column. 
+* Deaths column stored as "character" instead of number.
+* Funky column name that contains a comma for fips code. 
+
+## Cleaning
+
+### Clean up column headers
+
+First, let's use the clean_names() function from the janitor package to standardize the column names, making them lowercase and removing special characters. 
+
+Note: as we make changes, we're going to save our changes in a new dataframe, called covid_county_deaths. 
+
+```{r}
+county_covid_deaths <- county_covid_deaths_dirty %>%
+  clean_names()
+
+county_covid_deaths
+
+```
+
+Let's try answering a question again.
+
+Q: How many deaths are there in the county with FIPS code 24003 -- Anne Arundel?
+
+```{r}
+county_covid_deaths %>%
+  filter(fips_code == 24003)
+
+# A: 
+```
+
+### Fix multiple values in state column
+
+We can use a function -- tolower() -- to make every value in the state column lowercase.  
+
+That will fix one of the problems,  the all caps version of MARYLAND in the first row. 
+
+
+```{r}
+county_covid_deaths <- county_covid_deaths_dirty %>%
+  clean_names() %>%
+  mutate(state = tolower(state))
+
+county_covid_deaths
+
+```
+
+Let's try answering this question again.
+
+Q: How many counties are in Maryland?
+
+```{r}
+county_covid_deaths %>%
+  group_by(state) %>%
+  count()
+```
+
+We're close, but we haven't fixed the problem in the fifth row. The state value for Calvert county is still "mary land".
+
+To fix that, we can use a function called case_when() to edit ONLY the state value for Calvert, and keep all the rest the same.
+
+```{r}
+county_covid_deaths <- county_covid_deaths_dirty %>%
+  clean_names() %>%
+  mutate(state = tolower(state)) %>%
+  mutate(state = case_when(
+    county == "Calvert" ~ "maryland",
+    TRUE ~ state
+  ))
+
+county_covid_deaths
+
+```
+
+Let's try answering this question again.
+
+Q: How many counties are in Maryland?
+
+```{r}
+county_covid_deaths %>%
+  group_by(state) %>%
+  count()
+```
+
+### Fix the deaths column 
+
+The deaths column has several problems.  Let's fix the first one. For Caroline county, it says "three" instead of the number 3.  We can again use case_when().
+
+```{r}
+county_covid_deaths <- county_covid_deaths_dirty %>%
+  clean_names() %>%
+  mutate(state = tolower(state)) %>%
+  mutate(state = case_when(
+    county == "Calvert" ~ "maryland",
+    TRUE ~ state
+  )) %>%
+  mutate(deaths = case_when(
+    deaths == "three" ~ "3",
+    TRUE ~ deaths
+  )) 
+
+county_covid_deaths
+```
+
+Let's try answering our question again.
+
+Q: How many total deaths are there in Maryland?
+
+```{r}
+
+county_covid_deaths %>%
+  summarize(total_deaths = sum(deaths))
+
+```
+
+We get an error, because we can't summarize a column with the values stored as "character", instead of numbers. If we want to do math, we need to make it a numeric column. Let's fix that with the function as.numeric(). 
+
+```{r}
+county_covid_deaths <- county_covid_deaths_dirty %>%
+  clean_names() %>%
+  mutate(state = tolower(state)) %>%
+  mutate(state = case_when(
+    county == "Calvert" ~ "maryland",
+    TRUE ~ state
+  )) %>%
+  mutate(deaths = case_when(
+    deaths == "three" ~ "3",
+    TRUE ~ deaths
+  )) %>%
+  mutate(deaths = as.numeric(deaths))
+
+county_covid_deaths
+```
+Let's try answering our question again.
+
+Q: How many total deaths are there in Maryland?
+
+```{r}
+
+county_covid_deaths %>%
+  summarize(total_deaths = sum(deaths))
+
+```
+
+We get NA for total deaths, which clearly isn't the right answer. 
+
+We are getting this error because the data has NA for deaths for Garrett county.
+
+After checking with the original source of the data, we determine that if it says NA, that means 0. 
+
+So we can safely make the change. To convert the NA value to 0, we can use a handy function called replace_na()
+
+```{r}
+county_covid_deaths <- county_covid_deaths_dirty %>%
+  clean_names() %>%
+  mutate(state = tolower(state)) %>%
+  mutate(state = case_when(
+    county == "Calvert" ~ "maryland",
+    TRUE ~ state
+  )) %>%
+  mutate(deaths = case_when(
+    deaths == "three" ~ "3",
+    TRUE ~ deaths
+  )) %>%
+  mutate(deaths = as.numeric(deaths)) %>%
+  mutate(deaths = replace_na(deaths, 0))
+
+county_covid_deaths
+```
+Let's try answering our question again.
+
+Q: How many total deaths are there in Maryland?
+
+```{r}
+
+county_covid_deaths %>%
+  summarize(total_deaths = sum(deaths))
+
+```
+
+## Takeaways
+
+* Real data in the wild is rarely perfect.  Expect to spend a lot of time cleaning data. 
+* Always examine your data for flaws. ALWAYS assume there's a flaw that is preventing you from getting the right answer. 
+* Cleaning is an iterative process.  We can fix some problems from the jump. But more common is to discover something as you're trying to answer a question.  At the end of my process, I usually take all of the cleaning and put it in its own codeblock after I load data.  Load > Clean > Analyze.    
+
+-30-

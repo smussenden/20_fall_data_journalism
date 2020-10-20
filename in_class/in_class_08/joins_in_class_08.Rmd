@@ -1,0 +1,159 @@
+---
+title: "JOUR472/772 in_class_08 | one-to-many joins demonstration"
+author: "Sean Mussenden"
+date: "10/20/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook is designed to demonstrate one-to-many joins. 
+
+## Install packages
+
+There are no packages to install for this assignment.
+
+## Load packages
+  
+Today, we're going to load one package:
+
+* The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+
+**Task (Run Code)**: run the code below to load the tidyverse, using the library() function.
+
+```{r}
+# Load the tidyverse
+library(tidyverse)
+
+```
+
+## Load Data
+
+We're going to load two very small dataframes today to examine one-to-many joins.
+
+These are samples from the New York Times COVID-19 tracking project GitHub, with cumulative totals of deaths by county. We also have population data by the state from the Census.
+
+We're filtering the data as we load it, to only keep data for Maryland for each dataframe. 
+
+**Task (Run Code)**: run the code below to load data.
+
+```{r}
+
+# Read in COVID data as an object called covid_state_deaths
+# Filter to keep data only for Maryland and drop cases column
+county_covid_deaths <- read_csv("data/covid_county_2020_08_30.csv") %>%
+  filter(state %in% c("Maryland")) %>%
+  select(-cases)
+
+# Read in state population data as an object called state_population
+# Filter to keep data only for Maryland, rename population column state_population
+state_population <- read_csv("data/state_population.csv") %>%
+  filter(state %in% c("Maryland")) %>%
+  rename(state_population = population)
+
+# display state_covid_deaths
+county_covid_deaths
+
+# display state_population
+state_population
+
+```
+
+## One to many joins
+
+When a value we're joining is duplicated in one of our tables, it's important to understand what happens. 
+
+In our COVID table, we have one value for each Maryland county.  That means the value for state -- Maryland -- repeats 24 times.
+
+```{r}
+
+county_covid_deaths
+
+```
+
+In our population table, we have one value for Maryland in state. 
+
+```{r}
+
+state_population
+
+```
+
+When we join them together, the population data is joined 24 discrete times, even though it exists only once in the population table. 
+
+```{r}
+inner_covid_population <- county_covid_deaths %>%
+  inner_join(state_population)
+
+inner_covid_population
+
+```
+The type of join we do doesn't affect this repetition. 
+
+For example, this repetition occurs when we do a left join.
+
+```{r}
+left_covid_population <- county_covid_deaths %>%
+  left_join(state_population)
+
+left_covid_population
+
+```
+It also occurs when we do a right join.
+
+```{r}
+right_covid_population <- county_covid_deaths %>%
+  right_join(state_population)
+
+right_covid_population
+
+```
+How can this go wrong? This was a simple example.  
+
+If you have duplicates in both of your join tables, and aren't aware of that fact, you could end up with an erroneous result if you try to count.  
+
+Let's read in a version of our state population table has two rows for Maryland -- one for population in 2010 and one for population to 2020. 
+
+```{r}
+
+state_population_duplicates <- read_csv("data/state_population_duplicates.csv")
+  
+state_population_duplicates
+
+```
+
+Now let's inner_join it to our deaths table. 
+
+```{r}
+inner_covid_population <- county_covid_deaths %>%
+  inner_join(state_population_duplicates)
+
+inner_covid_population
+
+```
+We get 48 records, not 24.  Note that for each county, we have two population values -- one for 2020 and one for 2010.  
+
+Is this a problem.  On its face, not really.  If we tried to use this table to, say, count the number of counties in Maryland, we'd end up with 48, not 24.
+
+```{r}
+inner_covid_population %>%
+  count()
+
+```
+
+Or if we try to add up all the deaths, we'll get a number that's double the real number. 
+
+```{r}
+inner_covid_population %>%
+  summarise(total_deaths = sum(deaths))
+
+```
+-30-
