@@ -1,5 +1,39 @@
+VIDEO.
+Video 1.
+#### VIDEO TEXT
+
+For now, let's look at the table.  It's pretty messy:
+
+* The column names are very complicated.  
+* It's got a blank row in the middle, plus a row with a bunch of meaningless text.
+* Half of the death rate values have an asterisk, instead of being a proper N/A value.
+* It's got a blank row in the middle, plus a row with a bunch of meaningless text.
+* Half of the death rate values have an asterisk, instead of being a proper N/A value.
+* The death rate values are characters, as are opioid rates.
+* There's an N/A value in the state column.
+
+It will prevent us from answering questions.  
+
+```{r}
+opioid_scrape %>%
+  summarise(avg_death_rate = mean(`Opioid.Prescriptions.100.persons2..2018`))
+
+```
+
+
 # JOINS
+
+
 1. SUN-SENTINEL
+
+* Review findings
+* I love this story, because it's not like there was some magic data set of cops speed.  Like, there wasn't a transponder in cars that reocrded devery time they speed.
+* They had to get creative.
+* Realized sunpass tolls data is public. Realized they could get list of sunpass ids from each agency.
+* And then had to build data set of location.   
+* As data journalists, we often need to think about how we can use data that was captured for some other purpose entirely to answer questiosn we want to answer.  
+* And if we put them togethe rin creative ways, WOW.
+
 
 Data set one.  
 * Had data showing sun pass ids, time it went through different toll plazas.  Used that to calculate time it took for cops to go through two different toll plazas.

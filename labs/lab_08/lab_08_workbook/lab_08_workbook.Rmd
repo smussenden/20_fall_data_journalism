@@ -1,0 +1,372 @@
+---
+title: "JOUR472/772 lab_08 | data cleaning"
+author: "Sean Mussenden"
+date: "10/9/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook will review the concepts introduced in the in_class_08 assignment.   
+
+In particular, it will show:
+
+* data cleaning.
+
+## How to work through this notebook
+
+This notebook contains text and code that I have written.  
+
+You should read the text.  
+
+When you see **Task**, that's an indication that you should do one of several things as instructed:
+
+* **Task (Run Code): ** Run some code I've written in a codeblock and examine the output, answering a question if required.
+* **Task (Edit and Run Code): ** Edit some code I've written in a codeblock, run it, and examine the output, answering a question if required.
+* **Task (Write and Run Code): ** Write some code of your own inside of a codeblock I've already created and run it, answering a question if required.
+* **Task (Create a Codeblock, Write and Run Code):** Create a codeblock in the existing whitespace of the markdown file, write some code inside of it, run it and answer a question if required.
+* **Task (Watch Video): ** Run a codeblock that contains a YouTube video, and then watch the video. In the video, I may explain a concept, or assign you to do something that is not detailed in the text.
+
+## Submission details
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.
+
+## Load Packages
+
+There are three packages you'll need to load today:
+
+* The Tidyverse, so we can analyze data the tidyverse way.
+* Vembedr, so you can load the videos directly in the markdown notebook.
+* [Janitor](https://github.com/sfirke/janitor), for data cleaning.
+
+**Task (Run Code)**: Run the code block below to load the Tidyverse and Vembedr and Janitor. Note the special instructions in comments, if you are using a new computer to run this notebook.
+
+```{r}
+# If you are on a new machine you haven't used before, you may need to install these packages before loading.  If that's the case, remove the comment # from in front of the next two lines before running the codeblock, to install the packages before loading.
+# install.packages('tidyverse')
+# install.packages('vembedr')
+# install.packages('janitor')
+
+# Load the tidyverse, vembedr, janitor
+library(tidyverse)
+library(vembedr)
+library(janitor)
+
+```
+
+## Load Data
+
+To work through this lab, we're going to load in a simple table scraped from the National Institute on Drug Abuse with details on opioid deaths and prescriptions.  
+
+In this table, each row is a state.  There are three columns. 
+
+* State 
+* Opioid-Involved Overdose Deaths/100,000 persons1 (2018) 
+* Opioid Prescriptions/100 persons2 (2018)   
+
+For definitions, visit the NIDA website [link](https://www.drugabuse.gov/drug-topics/opioids/opioid-summaries-by-state)
+
+The data is exceedingly messy. 
+
+**Task (Run Code)**: run the code below to load data.
+
+```{r}
+# Read in dirty 
+opioid_scrape <- read_csv("data/opioid_scrape.csv")
+
+```
+## Examine data
+
+Let's glimpse our data to get a sense of it, and display it in the markdown document. It will also be helpful to open it as a spreadsheet by clicking the dataframe name in the Environment window.
+
+What flaws jump out at you?  What problems could keep you from answering questions?  Write some of the flaws in the block below
+
+**Task (Run Code)**: run the code below to glimpse the data.
+```{r}
+# glimpse the data
+glimpse(opioid_scrape)
+
+# view it
+opioid_scrape
+
+# What flaws did you see?
+
+```
+
+Now, I'll walk you through what I saw.  
+
+See if you picked out everything I did.  
+
+**Task (Watch Video)**: Watch video below, and I'll walk you through some of what I found, and how those things will affect our ability to answer questions.   
+
+```{r}
+# Video A 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("gD687oB8jiU", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/gD687oB8jiU
+
+```
+
+## Cleaning
+
+Data cleaning is a big part of data journalism. I rarely know all of the flaws in a particular data set as soon as I load it.  I generally spend a good bit of time looking for problems.  
+
+But some only become apparent during the process of asking questions. Nor is it particularly wise to preemptively clean a column that you know you aren't going to use in your analysis. Cleaning takes time, and on deadline, time is precious. 
+
+Our ultimate goal, when cleaning data, is to end up with one unified block of code that we can execute right after we load the data.  The cleaning script should correct any errors that prevent us from answering questions we need to answer, or those that could lead to erroneous results.   
+
+As we work through the rest of this lab, you'll notice that we will continually add to a single script that overwrites and updates a dataframe called "opioid_scrape_clean". 
+
+### Fixing column names
+
+The data set we read in had two very unwiedly column names. 
+
+* `Opioid-Involved Overdose Deaths/100,000 persons1 (2018 )`
+* `Opioid Prescriptions/100 persons2 (2018)`
+
+First, let's use the clean_names() function from the janitor package to standardize the column names, making them lowercase and removing special characters. 
+
+**Task (Run Code)**: run the code below to clean_names()
+
+```{r}
+# Create a new object called "opioid_scrape_clean"
+# Run the clean_names() function to fix the messy column names
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names()
+
+# Display it below
+opioid_scrape_clean
+
+```
+The clean_names() function got rid of spaces in our column names, making the opioid overdose death rate and opioid prescription rate, and replaced them with underscores.  But these column names are still too unwieldy. 
+
+To further shorten them, we can use the function rename(), a version of mutate(). 
+
+First, let's use rename() to fix the opioid overdose death column, changing the name from "opioid_involved_overdose_deaths_100_000_persons1_2018" to "opioid_death_rate".
+
+**Task (Run Code)**: run the code below to rename "opioid_involved_overdose_deaths_100_000_persons1_2018" to "opioid_death_rate".
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018)
+
+opioid_scrape_clean
+
+```
+Now, it's your turn to use rename() to fix the opioid prescription rate column, changing the name from "opioid_prescriptions_100_persons2_2018" to "opioid_prescription_rate".
+
+**Task (Edit and Run Code): **: Edit and run the code below to rename "opioid_prescriptions_100_persons2_2018" to "opioid_prescription_rate".
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018) 
+  # Add an additional rename() function here as instructed
+
+opioid_scrape_clean
+
+```
+
+**Task (Watch Video)**: Watch video below, and I'll show you the answer to the above codeblock.   
+
+```{r}
+# Video B 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("ZC67K4LLGDY", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/ZC67K4LLGDY
+
+```
+
+### Remove Problematic Rows
+
+We have two problematic rows. 
+
+* Row number 41 is all blank -- it has NA in every column. 
+* Row number 40 has "*Not included - Did not meet inclusion criteria" in each column. 
+
+Let's get rid of them. 
+
+First, we can get rid of the entirely blank row (41) using function from the janitor package called  remove_empty().
+
+**Task (Run Code): **: run the code below to remove the empty row. 
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018) %>%
+  rename(opioid_prescription_rate = opioid_prescriptions_100_persons2_2018) %>%
+  remove_empty()
+
+opioid_scrape_clean
+
+```
+Now let's remove row 40, which contained "*Not included - Did not meet inclusion criteria" for each column. 
+
+We'll use a filter to do this, telling it to return all rows that DO NOT match the text we want gone, using != to do so.  
+
+**Task (Run Code): **: run the code below to remove row 40. 
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018) %>%
+  rename(opioid_prescription_rate = opioid_prescriptions_100_persons2_2018) %>%
+  remove_empty() %>%
+  filter(state != "*Not included - Did not meet inclusion criteria")
+
+opioid_scrape_clean
+
+```
+**Task (Watch Video)**: Watch video below, and I'll show you some alternate ways of removing that problematic row. 
+
+```{r}
+# Video C 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("x4r_Nq0RKkk", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/x4r_Nq0RKkk
+
+```
+
+### Replace problematic values
+
+We're getting close to a clean data set.  
+
+But, we still have asterisks in the opioid death rate column for 11 states. Those asterisks indicate that NIDA could not calculate a death rate for those states.  
+
+Importantly, those are not supposed to be 0.  To fix this problem, we need to store them as NA. 
+
+The tidyverse has a nice function called na_if() which allows us to convert values that match a certain pattern to a real NA.
+
+**Task (Run Code): **: run the code below to convert all of the asterisks to NA.  
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018) %>%
+  rename(opioid_prescription_rate = opioid_prescriptions_100_persons2_2018) %>%
+  remove_empty() %>%
+  filter(state != "*Not included - Did not meet inclusion criteria") %>%
+  mutate(opioid_death_rate = na_if(opioid_death_rate,"*"))
+  
+
+opioid_scrape_clean
+
+```
+**Task (Watch Video)**: Watch video below, and I'll explain how the na_if() function works. 
+
+```{r}
+# Video D
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("E3NUaUY5y5s", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/E3NUaUY5y5s
+
+```
+
+### Changing column types
+
+Because the opioid_death_rate and opioid_prescription_rate data originally had text characters, they were read in as character columns.  
+
+Even when we cleaned the data to remove text characters, the column format persisted.  
+
+We can see it if we glimpse() our cleaned data.
+
+**Task (Run Code): **: run the code below to glimpse() cleaned data.
+
+```{r}
+
+glimpse(opioid_scrape_clean)
+
+```
+
+Both opioid_death rate and opioid_prescription_rate are "chr" or character columns.  That means we won't be able to do math to them.  
+
+When we try to calculate the average opioid_prescription_rate, look at the result. 
+
+**Task (Run Code): **: run the code below to calculate the average opioid_prescription_rate.  
+
+```{r}
+
+opioid_scrape_clean %>%
+  summarise(avg_opioid_death_rate = mean(opioid_prescription_rate))
+
+```
+
+It says the answer is NA, which obviously isn't correct. This happened because the column was stored as character. 
+
+Let's fix that by converting it by using two functions together -- mutate() and as.numeric().
+
+**Task (Run Code): **: run the code below to convert opioid_prescription_rate to a numeric column.  
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018) %>%
+  rename(opioid_prescription_rate = opioid_prescriptions_100_persons2_2018) %>%
+  remove_empty() %>%
+  filter(state != "*Not included - Did not meet inclusion criteria") %>%
+  mutate(opioid_death_rate = na_if(opioid_death_rate,"*")) %>%
+  mutate(opioid_prescription_rate = as.numeric(opioid_prescription_rate))
+  
+
+opioid_scrape_clean
+
+```
+Notice now that the column type is a "dbl" -- a number format.  
+
+Now, on your own, fix the opioid_death_rate column to convert it to numeric. 
+
+**Task (Edit and Run Code): **: Edit the code below to convert opioid_death_rate to numeric.
+
+```{r}
+opioid_scrape_clean <- opioid_scrape %>%
+  clean_names() %>%
+  rename(opioid_death_rate = opioid_involved_overdose_deaths_100_000_persons1_2018) %>%
+  rename(opioid_prescription_rate = opioid_prescriptions_100_persons2_2018) %>%
+  remove_empty() %>%
+  filter(state != "*Not included - Did not meet inclusion criteria") %>%
+  mutate(opioid_death_rate = na_if(opioid_death_rate,"*")) %>%
+  mutate(opioid_prescription_rate = as.numeric(opioid_prescription_rate)) 
+  # Add an additional function here as instructed
+
+
+opioid_scrape_clean
+
+```
+
+**Task (Watch Video)**: Watch video below, and I'll explain how the as.numeric() function works, and the answer. 
+
+```{r}
+# Video E 
+# Click play to run the codeblock and the video will display in the markdown document. 
+embed_youtube("bm9PqSARhcs", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser: 
+# https://youtu.be/bm9PqSARhcs
+
+```
+
+## You're done
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.
