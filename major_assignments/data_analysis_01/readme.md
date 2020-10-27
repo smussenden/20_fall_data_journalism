@@ -10,6 +10,7 @@ Working with your team, you will:
 * Read the story, identify key facts produced by original data analysis and identify the data set(s) used by the reporters to produce that analysis.    
 * Use data programming techniques we learn in this class to create a well-commented, well-structured R markdown data notebook that loads and cleans the data, then faithfully reproduces one or more key facts from the story.
 * Produce a short memo (two-pages, single spaced) that critically analyzes the story and answers the following questions:
+  * Briefly summarize the main findings of the story. 
   * What did the reporter(s) do to bring the story to life, beyond the data findings? Did they use the data as a tool to find and tell a compelling story? Was their approach effective? Why?     
   * How did the reporter(s) communicate their specific data findings in the story? How could it have been improved?
   * How did the reporter(s) communicate any flaws or shortcomings in the data or analysis method that could affect their findings? Did they make it easy for readers to see their work?
@@ -27,7 +28,7 @@ This project is worth 20 percent of your total final grade.
   * In a short forum post, identify the five most important paragraphs from the story that appear to have resulted directly from original data analysis by the reporters and detail why you chose those paragraphs. You should also indicate if any characters, organizations or locations highlighted in the story appear to have been chosen as a result of data analysis. The forum post should be about 300 words, excluding the sentences from the story in the word count. The post you write should be done as a group, but each person needs to post it separately.  From this, your group and I will settle on four findings to reproduce.    
 * Deliverable 2 (week 7) - 5 percent
   * Turn in, via GitHub, a draft of the data notebook you will produce for this project. You should work on this notebook together, but everyone needs to upload a copy to their own GitHub repo and turn in a link for grading. At a minimum, your data notebook should load the data you'll use with this project and have answered at least one of the findings you are to reproduce. The more you have finished, the more feedback I'll be able to give you before you turn in your final notebook.  
-  * [List of findings you need to reproduce](https://github.com/smussenden/20_fall_data_journalism/blob/master/major_assignments/data_analysis_01/milestone_1.md) 
+  * [List of findings you need to reproduce](https://github.com/smussenden/20_fall_data_journalism/blob/master/major_assignments/data_analysis_01/milestone_1.md)
 * Deliverable 3 (week 9) - 60 percent
   * Turn in, via GitHub, your final data notebook that contains the code to load, clean, analyze and reproduce your story's central findings. It should be well-formatted and well-structured, using the methods described in this class. It should contain text and comments to put your findings in context. I should be able to run it without errors. It should be free of factual and grammatical errors. You'll also turn in a ZIP file that contains both your data notebook and all accompanying data.
   * As a Google Doc, turn in the critical analysis memo as described in "How This Works".
