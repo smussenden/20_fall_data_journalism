@@ -22,6 +22,7 @@ As a group, you should pick one topic on which to focus, and a corresponding pri
 * NYPD police officer complaints, using ProPublica's "NYPD Files". [Interactive Database](https://projects.propublica.org/nypd-ccrb/). [Data download](https://www.propublica.org/datastore/dataset/civilian-complaints-against-new-york-city-police-officers)
 * Tracking symbols the Confederacy.  The Southern Poverty Law Center has for years gathered data on "public symbols of the Confederacy" -- monuments, official place names, schools, roads, et cetera.  It has also been tracking removal or changes of those symbols. [Information about the "Whose Heritage project"](https://www.splcenter.org/20190201/whose-heritage-public-symbols-confederacy) [Data in Google sheet](https://docs.google.com/spreadsheets/d/1W4H2qa2THM1ni53QYZftGob_k_Bf9HreFAtCERfjCIU/edit?pli=1#gid=1205021846)
 * The warming climate in the United States, using data from the Washington Posts's "2 degrees Celsius: Beyond the Limit." [Data download](https://github.com/washingtonpost/data-2C-beyond-the-limit-usa/). [Description](https://www.washingtonpost.com/climate-environment/2020/08/07/how-use-posts-climate-data-analysis/)
+* Dwindling polling places in 30 U.S. states. "As part of a new investigative series, the Center for Public Integrity and Stateline have published a dataset of polling places during the 2012–18 US general elections for 30 states...Polling place reductions and changes can lower turnout by creating confusion and barriers for voters." [GitHub link](https://github.com/PublicI/us-polling-places). [Overview](https://publicintegrity.org/politics/elections/ballotboxbarriers/data-release-sheds-light-on-past-polling-place-changes)
 * If your group has an idea for another data set you'd like to use, I'd be happy to consider it.  Please reach out to me this week to discuss.
 
 In addition to using the main data set I've provided, you will be expected to identify at least one additional data set -- either a simple one or complex -- to incorporate into your analysis.
@@ -41,9 +42,12 @@ You should develop a motivating question or working hypothesis to test with your
 The project is worth 25 percent of your total final grade.
 
 * Deliverable 1 (week 11) - 5 percent
-  * Milestone 1: as a joint forum post of 200-300 words, indicate which topic your group wishes to focus on. Provide three to four motivating questions you could use to begin to interrogate your data set.  For example:
-      * Using the climate data, "which parts of the country have seen faster rates of warming over the last century?" or "Have counties that are deeply relying on farming warmed faster than other parts of the country?"
-      * Using the fatal police shooting data, "have shootings where the victim had mental illness increased in recent years?"
+  * In a group forum post do the following:
+    * Indicate which topic and data set your group wishes to focus on.
+    * Provide links to at least two stories that made use of this data or similar data. You will need to find a different angle, but this research is essential to determining a new approach.   
+    * Provide three to four motivating questions you could use to begin to interrogate your data set:
+        * Using the climate data, "which parts of the country have seen faster rates of warming over the last century?" or "Have counties that are deeply relying on farming warmed faster than other parts of the country?"
+        * Using the fatal police shooting data, "have shootings where the victim had mental illness increased in recent years?"
 
 * Deliverable 2 (week 12) - 10 percent
   * Turn in, via GitHub, a draft of the data notebook showing your effort to answer those questions, or new questions that arise in the course of analysis.
