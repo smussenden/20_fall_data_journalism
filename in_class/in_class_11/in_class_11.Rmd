@@ -1,0 +1,106 @@
+---
+title: "JOUR472/772 in_class_11 | charts"
+author: "Sean Mussenden"
+date: "11/03/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_10.  In particular, it will show:
+
+* Exploratory data visualization.
+
+## Install packages
+
+There are no packages to install for this assignment.  The visualization library, ggplot2, comes installed as part of the Tidyverse.
+
+## Load packages
+
+Today, we're going to load one package:
+
+* The Tidyverse. [Tidyverse Site](https://www.Tidyverse.org/)
+
+**Task (Run Code)**: run the code below to load the tidyverse and janitor, using the library() function.
+
+```{r}
+# Load the tidyverse
+library(tidyverse)
+
+
+```
+
+## Load Data
+
+Load a dataframe of COVID case rates for Maryland counties on the 30th day of each month between March and August.  Rate is cases per 1000 population.  Source [NYT Covid GitHub repo](https://github.com/nytimes/covid-19-data).
+
+```{r}
+maryland <- read_csv("data/maryland_county_monthly_case_rate.csv")
+```
+
+Now, let's glimpse the data.
+
+```{r}
+glimpse(maryland)
+```
+
+## Visualize data
+
+Our goal here is to make a simple bar chart showing the rise in the case rate in Anne Arundel county between March and August.
+
+### Filter data
+
+First, let's filter the data to create a data frame with only Anne Arundel city data.
+
+```{r}
+anne_arundel <- maryland %>%
+  filter(county == "Anne Arundel")
+
+```
+
+### Make a chart
+
+We'll use two functions here to make a chart, both from the ggplot2 library. First, we'll use ggplot() to initialize an empty chart.
+
+```{r}
+# Take the anne_arundel data frame
+  # Draw an empty chart with month column on the x axis and case_rate column on the y axis.  
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate))
+
+```
+Now, let's display the data as a bar chart, using another function -  geom_bar() - to draw a bar chart.
+
+```{r}
+# Take the anne_arundel data frame.
+  # Make a chart with month on the x axis and case_rate on the y axis
+  # Display the data as a bar chart
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity") 
+
+```
+### Continue building the chart
+
+We can keep adding functions from the ggplot2 library to improve the chart, using a system called "the grammar of graphics".
+
+```{r}
+# Take the anne_arundel data frame.
+  # Make a chart with month on the x axis and case_rate on the y axis
+  # Display the data as a bar chart
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity")
+
+```
+
+-30-

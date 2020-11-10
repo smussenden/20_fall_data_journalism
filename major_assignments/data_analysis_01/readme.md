@@ -10,7 +10,7 @@ Working with your team, you will:
 * Read the story, identify key facts produced by original data analysis and identify the data set(s) used by the reporters to produce that analysis.    
 * Use data programming techniques we learn in this class to create a well-commented, well-structured R markdown data notebook that loads and cleans the data, then faithfully reproduces one or more key facts from the story.
 * Produce a short memo (two-pages, single spaced) that critically analyzes the story and answers the following questions:
-  * Briefly summarize the main findings of the story. 
+  * Briefly summarize the main findings of the story.
   * What did the reporter(s) do to bring the story to life, beyond the data findings? Did they use the data as a tool to find and tell a compelling story? Was their approach effective? Why?     
   * How did the reporter(s) communicate their specific data findings in the story? How could it have been improved?
   * How did the reporter(s) communicate any flaws or shortcomings in the data or analysis method that could affect their findings? Did they make it easy for readers to see their work?

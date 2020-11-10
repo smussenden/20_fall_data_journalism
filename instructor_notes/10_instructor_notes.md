@@ -5,7 +5,18 @@
    Wapo homicides
    Wapo police shootings
 
-3.
+GROUP 1
+* Great explainer
+* Looked great overall, but problems on q 4
+
+GROUP 2
+* Great present
+
+GROUP 3
+* Great present
+
+
+GROUPS
 
 
 1.  Review what's due this week
@@ -38,19 +49,13 @@ https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00005
 https://data.nodc.noaa.gov/cgi-bin/iso?id=gov.noaa.ncdc:C00332"
 
 
-
+https://www.splcenter.org/20190201/whose-heritage-public-symbols-confederacy#Download%20the%20data
 
 
 For several years, the Southern Poverty Law Center’s “Whose Heritage?” project has been gathering and mapping information on “public symbols of the Confederacy,” such as monuments, place names, official holidays, commemorative license plates, and municipal seals. For each of the 1,800+ entries, the project’s dataset indicates the type of monument/symbol, its location, sponsor, year dedicated, and (if applicable) year removed. [h/t Gita Jackson + Dan Brady]	"https://www.splcenter.org/
 https://www.splcenter.org/data-projects/whose-heritage
 https://www.splcenter.org/20190201/whose-heritage-public-symbols-confederacy
 https://docs.google.com/spreadsheets/d/17ps4aqRyaIfpu7KdGsy2HRZaaQiXUfLrpUbaR9yS51E/edit"
-
-
-
-New York City’s Department of Sanitation publishes a dataset of the monthly tonnage it collects from city residences, going back to 1990. For each community district and month, the dataset tallies the weight of household trash, recyclables, “organics,” and more — including, for each January, the tonnage of Christmas trees collected. Related: Reporters at The City recently analyzed the dataset, and found potential evidence of Manhattanites fleeing the city in March. They also interviewed the Department of Sanitation’s anthropologist-in-residence.	"https://data.cityofnewyork.us/City-Government/DSNY-Monthly-Tonnage-Data/ebb7-mvp5
-https://thecity.nyc/2020/04/garbage-pickups-tell-tale-of-two-cities-as-manhattan-shrinks.html
-https://robinnagle.com/"
 
 
 
