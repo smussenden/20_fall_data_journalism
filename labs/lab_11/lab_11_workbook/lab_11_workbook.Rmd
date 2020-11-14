@@ -1,0 +1,254 @@
+---
+title: "JOUR472/772 lab_11 | data visualization"
+author: "Sean Mussenden"
+date: "11/9/2020"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this notebook
+
+This notebook will review the concepts introduced in the in_class_11 assignment:   
+In particular, it will show:
+
+* data visualization.
+
+## How to work through this notebook
+
+This notebook contains text and code that I have written.  
+
+You should read the text.  
+
+When you see **Task**, that's an indication that you should do one of several things as instructed:
+
+* **Task (Run Code): ** Run some code I've written in a codeblock and examine the output, answering a question if required.
+* **Task (Edit and Run Code): ** Edit some code I've written in a codeblock, run it, and examine the output, answering a question if required.
+* **Task (Write and Run Code): ** Write some code of your own inside of a codeblock I've already created and run it, answering a question if required.
+* **Task (Create a Codeblock, Write and Run Code):** Create a codeblock in the existing whitespace of the markdown file, write some code inside of it, run it and answer a question if required.
+* **Task (Watch Video): ** Run a codeblock that contains a YouTube video, and then watch the video. In the video, I may explain a concept, or assign you to do something that is not detailed in the text.
+
+## Submission details
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.
+
+## Load Packages
+
+There are three packages you'll need to load today:
+
+* The Tidyverse, so we can analyze data the tidyverse way. It includes the ggplot2 package, for data visualization. 
+* Vembedr, so you can load the videos directly in the markdown notebook.
+
+**Task (Run Code)**: Run the code block below to load the Tidyverse and Vembedr. Note the special instructions in comments, if you are using a new computer to run this notebook.
+
+```{r}
+# If you are on a new machine you haven't used before, you may need to install these packages before loading.  If that's the case, remove the comment # from in front of the next two lines before running the codeblock, to install the packages before loading.
+# install.packages('tidyverse')
+# install.packages('vembedr')
+
+# Load the tidyverse, vembedr
+library(tidyverse)
+library(vembedr)
+
+```
+
+## Load Data
+
+To work through this lab, we're going to load a dataframe of COVID case rates for Maryland counties on the 30th day of each month between March and August.  The source is the [NYT Covid GitHub repo](https://github.com/nytimes/covid-19-data).  
+
+Each row is a county in Maryland. The columns are as follows:
+
+* state 
+* county 
+* month 
+* case_rate (cases per 1000 population).
+
+**Task (Run Code)**: run the code below to load data.
+
+```{r}
+maryland <- read_csv("data/maryland_county_monthly_case_rate.csv") 
+```
+
+## Examine data
+
+Let's glimpse our data to get a sense of it, and display it in the markdown document.
+
+**Task (Run Code)**: run the code below to glimpse the data.
+```{r}
+# glimpse the data
+glimpse(maryland)
+
+# view it
+maryland
+
+
+
+```
+
+## Filter data 
+
+First, let's filter the data to create a data frame with only Anne Arundel county data.
+
+**Task (Run Code)**: run the code below to filter the data.
+
+```{r}
+anne_arundel <- maryland %>%
+  filter(county == "Anne Arundel")
+
+```
+
+## Make a basic bar chart
+
+We're going to make a bar chart showing the increase in the case rate in Anne Arundel County between March and August.  
+
+We'll build this up progressively, adding features to the chart as we go. 
+
+First, let's create the basic chart. 
+
+**Task (Run Code)**: run the code below to visualize the data as a bar chart.
+
+```{r}
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity")
+
+
+```
+
+**Task (Watch Video)**: Watch video below, and I'll walk you through what happened. 
+
+```{r}
+# Video A
+# Click play to run the codeblock and the video will display in the markdown document.
+embed_youtube("ymaNpmN-W3E", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser:
+# https://youtu.be/ymaNpmN-W3E
+
+```
+
+## Style the chart 
+
+Let's make the chart a bit more presentable.  
+
+First, let's change the color to a nice "steel blue" by modifying the geom_bar() function
+
+**Task (Run Code)**: run the code below to change the color to steel blue. 
+
+```{r}
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity", fill="steelblue")
+
+```
+
+Now let's change the X and Y axis labels, changing them from the default to something a bit more presentable. For this, we'll use a function called labs() -- which is short for labels. 
+
+**Task (Run Code)**: run the code below to change the X and Y axis labels.
+
+```{r}
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  labs(
+    x="Month",
+    y="Cases per 1,000 people"
+  )
+
+```
+
+Now let's add a chart title and a source caption, to help people who see  the chart understand what they're supposed to take away. We'll add more properties to our labs() function.
+
+**Task (Run Code)**: run the code below to add a title and caption.
+
+```{r}
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  labs(
+    x="Month",
+    y="Cases per 1,000 people",
+    title="In Anne Arundel, steady increase in COVID cases",
+    caption="Source: Analysis of New York Times COVID data"
+  )
+
+```
+
+Now let's add some labels over each bar, to help people see specific values for each bar. For that, we'll add a new function, geom_text(), which allow us to visualize text values on the chart. 
+
+**Task (Run Code)**: run the code below to change the X and Y axis labels.
+
+```{r}
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  labs(
+    x="Month",
+    y="Cases per 1,000 people",
+    title="In Anne Arundel, steady increase in COVID cases",
+    caption="Source: Analysis of New York Times COVID data"
+  ) +
+  geom_text(aes(label=case_rate))
+
+``` 
+
+The labels are a little unwieldy.  First, let's round the values to two decimal places by using the round() function inside our geom_text() function.
+
+**Task (Run Code)**: run the code below to change the X and Y axis labels.
+
+```{r}
+
+anne_arundel %>%
+  ggplot(aes(month, case_rate)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  labs(
+    x="Month",
+    y="Cases per 1,000 people",
+    title="In Anne Arundel, steady increase in COVID cases",
+    caption="Source: Analysis of New York Times COVID data"
+  ) +
+  geom_text(aes(label=round(case_rate,0)))
+
+``` 
+
+
+**Task (Watch Video)**: Watch video below, and I'll walk you through some of the previous steps. 
+
+```{r}
+# Video B
+# Click play to run the codeblock and the video will display in the markdown document.
+embed_youtube("1EWVCIcX6no", width = "100%", height="480", frameborder = 0,
+allowfullscreen = FALSE, query = NULL)
+
+# If the video doesn't work here, load this URL in your browser:
+# https://youtu.be/1EWVCIcX6no
+
+```
+
+## On your own
+
+Now, it's your turn.  
+
+Create a code block below, and create a bar chart showing the increase in case rate between MAY and AUGUST in Baltimore city. Style the chart similarly to the chart we created for Anne Arundel county.  
+
+**Task (Create a Codeblock, Write and Run Code):** Create the chart below. 
+
+```{r}
+
+```
+
+## You're done
+
+When you're finished all the tasks, you should save your file in RStudio; commit the changes in GitHub desktop; and push the changes to your repo on GitHub.com.  Then you'll submit the GitHub.com link on ELMS.

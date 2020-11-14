@@ -1,0 +1,145 @@
+state,county,month,case_rate
+Maryland,Anne Arundel,March,0.1937656774
+Maryland,Anne Arundel,April,3.052690172
+Maryland,Anne Arundel,May,6.609171106
+Maryland,Anne Arundel,June,9.013627012
+Maryland,Anne Arundel,July,11.78799921
+Maryland,Anne Arundel,August,14.63811617
+Maryland,Baltimore,March,0.2247394653
+Maryland,Baltimore,April,3.436338922
+Maryland,Baltimore,May,7.213411871
+Maryland,Baltimore,June,9.6746715
+Maryland,Baltimore,July,14.0607159
+Maryland,Baltimore,August,18.61350249
+Maryland,Baltimore city,March,0.2472750935
+Maryland,Baltimore city,April,3.377257199
+Maryland,Baltimore city,May,9.06458435
+Maryland,Baltimore city,June,12.29217504
+Maryland,Baltimore city,July,17.92419066
+Maryland,Baltimore city,August,23.49764113
+Maryland,Calvert,March,0.1317494126
+Maryland,Calvert,April,1.646867658
+Maryland,Calvert,May,3.678004436
+Maryland,Calvert,June,4.556333853
+Maryland,Calvert,July,6.214180628
+Maryland,Calvert,August,8.640565644
+Maryland,Caroline,March,0.1216730038
+Maryland,Caroline,April,2.159695817
+Maryland,Caroline,May,7.69581749
+Maryland,Caroline,June,9.703422053
+Maryland,Caroline,July,12.7148289
+Maryland,Caroline,August,15.33079848
+Maryland,Carroll,March,0.4954573131
+Maryland,Carroll,April,2.602643235
+Maryland,Carroll,May,5.259010757
+Maryland,Carroll,June,6.679719679
+Maryland,Carroll,July,8.577977818
+Maryland,Carroll,August,10.08225785
+Maryland,Cecil,March,0.1268082367
+Maryland,Cecil,April,1.628998117
+Maryland,Cecil,May,3.570139587
+Maryland,Cecil,June,4.682150278
+Maryland,Cecil,July,6.047777442
+Maryland,Cecil,August,7.63775764
+Maryland,Charles,March,0.2092965732
+Maryland,Charles,April,3.583411027
+Maryland,Charles,May,6.887759956
+Maryland,Charles,June,8.84753696
+Maryland,Charles,July,11.54936545
+Maryland,Charles,August,15.12009184
+Maryland,Frederick,March,0.104639557
+Maryland,Frederick,April,3.722753469
+Maryland,Frederick,May,7.634663061
+Maryland,Frederick,June,10.04942207
+Maryland,Frederick,July,11.95708168
+Maryland,Frederick,August,14.02170063
+Maryland,Garrett,March,0.102124183
+Maryland,Garrett,April,0.1361655773
+Maryland,Garrett,May,0.3404139434
+Maryland,Garrett,June,0.3744553377
+Maryland,Garrett,July,1.531862745
+Maryland,Garrett,August,2.144607843
+Maryland,Harford,March,0.09560800717
+Maryland,Harford,April,1.677123792
+Maryland,Harford,May,3.441888258
+Maryland,Harford,June,4.457723334
+Maryland,Harford,July,6.847923514
+Maryland,Harford,August,9.807788069
+Maryland,Howard,March,0.304445861
+Maryland,Howard,April,2.749526682
+Maryland,Howard,May,6.054032798
+Maryland,Howard,June,8.064644004
+Maryland,Howard,July,11.02981984
+Maryland,Howard,August,13.86814323
+Maryland,Kent,March,0.1531159087
+Maryland,Kent,April,4.032052264
+Maryland,Kent,May,8.676568162
+Maryland,Kent,June,10.15668861
+Maryland,Kent,July,11.73888634
+Maryland,Kent,August,13.52523861
+Maryland,Montgomery,March,0.3278426893
+Maryland,Montgomery,April,4.159083502
+Maryland,Montgomery,May,10.85534254
+Maryland,Montgomery,June,14.20587559
+Maryland,Montgomery,July,16.76324085
+Maryland,Montgomery,August,19.21388899
+Maryland,Prince George's,March,0.3244309768
+Maryland,Prince George's,April,6.680629705
+Maryland,Prince George's,May,17.19153125
+Maryland,Prince George's,June,21.03614867
+Maryland,Prince George's,July,24.98118521
+Maryland,Prince George's,August,29.27272286
+Maryland,Queen Anne's,March,0.08104548678
+Maryland,Queen Anne's,April,1.053591328
+Maryland,Queen Anne's,May,3.221558099
+Maryland,Queen Anne's,June,4.66011549
+Maryland,Queen Anne's,July,7.679059872
+Maryland,Queen Anne's,August,11.0221862
+Maryland,Somerset,March,0.03885456735
+Maryland,Somerset,April,1.010218751
+Maryland,Somerset,May,2.836383417
+Maryland,Somerset,June,3.38034736
+Maryland,Somerset,July,4.54598438
+Maryland,Somerset,August,7.460076932
+Maryland,St. Mary's,March,0.08069505339
+Maryland,St. Mary's,April,1.362849791
+Maryland,St. Mary's,May,4.223041128
+Maryland,St. Mary's,June,5.711416557
+Maryland,St. Mary's,July,7.836386296
+Maryland,St. Mary's,August,9.934457684
+Maryland,Talbot,March,0.1074950955
+Maryland,Talbot,April,0.9405820859
+Maryland,Talbot,May,2.579882293
+Maryland,Talbot,June,3.681707022
+Maryland,Talbot,July,8.868345382
+Maryland,Talbot,August,12.68442127
+Maryland,Washington,March,0.04672554085
+Maryland,Washington,April,1.375065916
+Maryland,Washington,May,3.043835232
+Maryland,Washington,June,4.65920393
+Maryland,Washington,July,6.247872319
+Maryland,Washington,August,8.731001061
+Maryland,Wicomico,March,0.06851192107
+Maryland,Wicomico,April,3.973691422
+Maryland,Wicomico,May,9.22953451
+Maryland,Wicomico,June,10.44317426
+Maryland,Wicomico,July,12.42023255
+Maryland,Wicomico,August,15.14113456
+Maryland,Worcester,March,0.05818012567
+Maryland,Worcester,April,1.182995889
+Maryland,Worcester,May,4.092002172
+Maryland,Worcester,June,5.565898689
+Maryland,Worcester,July,10.06516174
+Maryland,Worcester,August,15.53409355
+Maryland,Allegany,March,0
+Maryland,Allegany,April,1.63941259
+Maryland,Allegany,May,2.459118885
+Maryland,Allegany,June,2.848132042
+Maryland,Allegany,July,3.667838337
+Maryland,Allegany,August,5.432290871
+Maryland,Dorchester,March,0
+Maryland,Dorchester,April,1.580856142
+Maryland,Dorchester,May,4.370602275
+Maryland,Dorchester,June,5.8274697
+Maryland,Dorchester,July,10.10508044
+Maryland,Dorchester,August,14.1967081
