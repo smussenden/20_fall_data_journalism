@@ -1,5 +1,5 @@
 ---
-title: "JOUR472/772 lab_05 | covid analysis, grouping and summarizing"
+title: "JOUR472/772 lab_04 | covid analysis, grouping and summarizing"
 author: "Sean Mussenden"
 date: "9/28/2020"
 output:
@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## About this notebook
 
-This notebook will review the concepts introduced in the in_class_05 assignment:   
+This notebook will review the concepts introduced in the in_class_04 assignment:   
 
 In particular, it will show:
 

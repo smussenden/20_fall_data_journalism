@@ -1,5 +1,5 @@
 ---
-title: "JOUR472/772 lab_05 | covid analysis, summarizing and grouping"
+title: "JOUR472/772 lab_04 | covid analysis, summarizing and grouping"
 author: "Sean Mussenden"
 date: "9/28/2020"
 output:
@@ -22,15 +22,15 @@ This lab serves as an introduction to grouping and summarizing.
 
 This lab has one **objective** for you to complete, and it will walk you step-by-step through completing that objective.  
 
-The **objectives** is:  Download the zip file linked below to your local computer, add it to your GitHub repo, and work through the data notebook (lab_05_workbook.Rmd) step-by-step, reading the text watching embedded videos and editing it as instructed. When you are finished, push the edited file to GitHub.com, and submit the link on ELMS. 
+The **objectives** is:  Download the zip file linked below to your local computer, add it to your GitHub repo, and work through the data notebook (lab_04_workbook.Rmd) step-by-step, reading the text watching embedded videos and editing it as instructed. When you are finished, push the edited file to GitHub.com, and submit the link on ELMS. 
 
 ## How this lab works
 
-First, download [this zip file](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_05/lab_05_workbook/lab_05_workbook.zip) to your desktop and open it up. [Click the link to download](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_05/lab_05_workbook/lab_05_workbook.zip).
+First, download [this zip file](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_04/lab_04_workbook/lab_04_workbook.zip) to your desktop and open it up. [Click the link to download](https://github.com/smussenden/20_fall_data_journalism/raw/master/labs/lab_04/lab_04_workbook/lab_04_workbook.zip).
 
 Then, unpack the zip file.  Drag it into your labs folder in your GitHub repo.  Commit the changes in GitHub desktop and push the changes to your repo on GitHub.com.  
 
-Open the lab_05_workbook.Rmd in R studio, and work through it step-by-step, following the instructions. 
+Open the lab_04_workbook.Rmd in R studio, and work through it step-by-step, following the instructions. 
 
 ## Lab complete
 
