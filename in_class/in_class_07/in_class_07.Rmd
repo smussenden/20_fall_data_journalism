@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## About this notebook
 
-This notebook is designed as an in-class introduction to concepts we'll delve deeper into during lab_07.  In particular, it will show:
+This notebook will show:
 
 * a review of joins basics from prior lab.
 * some additional information about joins and some new joins.
